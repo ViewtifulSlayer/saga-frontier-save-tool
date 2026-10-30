@@ -2,6 +2,33 @@
 
 All notable changes to the SaGa Frontier Remastered Save Tool.
 
+## [1.2.1] - 2026-10-30
+
+BUILD 2026-10-30.5.
+
+### Inspection
+
+- The **Monster Lab** card is now always present on a loaded slot. A Monster
+  PC gets the existing checklist, library and calculator; any other selection
+  gets a picker of the save's Monster PCs and a compact empty state. The card
+  stays in both the desktop page index and the phone "On this page" block, so
+  a loaded slot now has 15 index links instead of 14.
+- Phone layouts keep the Lab inside its card. The calculator controls stack,
+  the library cells wrap, and the Monster PC picker and filter labels wrap with
+  their controls at full width. The 300px card reports equal content and
+  scroll widths for both the empty state and the full Lab.
+- The stylesheet URL now carries the build stamp, so a phone-layout release
+  cannot be served with a stale CSS cache. No runtime table or save-format
+  change; the publish surface stays at 19 files and eleven tables.
+
+### Verification
+
+- 280 fixture, 961 viewer, 362 DOM, 35 platform and 136 publish checks.
+- Browser pass at 1600x900, 380x700, 360x800 and 300x700 with the Asellus
+  fixture: all eleven tables return 200, the empty card is in both indexes and
+  selects a Monster PC, the 300px card reports 191/191, and the console stays
+  empty.
+
 ## [1.2.0] - 2026-10-30
 
 BUILD 2026-10-30.4.

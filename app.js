@@ -66,7 +66,7 @@
   // Bump it whenever app.js, platform.js or a table changes. verify_viewer.js
   // fails if the index.html copies drift from this constant, which is the only
   // silent way a stale page could keep being served.
-  var BUILD = '2026-10-30.4';
+  var BUILD = '2026-10-30.5';
   var SLOT_PAGE_SIZE = 3;
   // Browser-only live-folder preferences. The directory handle itself lives in
   // IndexedDB inside platform.js; this is only the user's chosen behavior.

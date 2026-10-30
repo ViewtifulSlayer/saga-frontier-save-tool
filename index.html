@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SaGa Frontier Remastered Save Tool</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2026-10-30.5">
 </head>
 <body>
   <header class="app-header">
@@ -14,8 +14,9 @@
     </div>
     <div class="header-meta">
       <!-- Static copy of SaveCore.BUILD: it still reads correctly if app.js fails,
-           and verify_viewer.js fails when the header and both script URLs drift. -->
-      <span class="build-stamp" id="build-stamp">Build 2026-10-30.4</span>
+           and verify_viewer.js fails when the header, both script URLs and the
+           stylesheet URL drift. -->
+      <span class="build-stamp" id="build-stamp">Build 2026-10-30.5</span>
       <span class="pill">client-side only</span>
     </div>
   </header>
@@ -236,7 +237,7 @@
   <!-- v= is the build id: bump it with SaveCore.BUILD so a changed app is never
        served from a stale HTTP cache. platform.js must load before app.js so
        window.SaveSource exists when the controller binds. -->
-  <script src="platform.js?v=2026-10-30.4"></script>
-  <script src="app.js?v=2026-10-30.4"></script>
+  <script src="platform.js?v=2026-10-30.5"></script>
+  <script src="app.js?v=2026-10-30.5"></script>
 </body>
 </html>

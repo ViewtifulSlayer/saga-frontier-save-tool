@@ -61,13 +61,15 @@ Feature history is in [CHANGELOG.md](CHANGELOG.md).
   its Race line, as it does for a Mec body TYPE. Riki's starting green Lummox
   is labeled as inferred from his INIT record because it is not a
   transformation target.
-- **Monster Lab** - one card for the selected Monster PC, driven by the save:
-  a 128-ability checklist grouped by the six transformation categories, marked
-  absorbed or equipped and filterable by absorbed, missing or needed; a form
-  library of all 256 ids with Oulak's documented BHP, stats, hidden gear and
-  transformation rows; and a calculator that simulates the next absorb in the
-  documented 8, 1-7 slot order, resolves the Table 1 and Table 2 checks, and
-  plans the menu for a target form. A Try changes mode keeps the what-if menu
+- **Monster Lab** - one card on every loaded slot, driven by the save. For a
+  Monster PC it shows a 128-ability checklist grouped by the six transformation
+  categories, marked absorbed or equipped and filterable by absorbed, missing
+  or needed; a form library of all 256 ids with Oulak's documented BHP, stats,
+  hidden gear and transformation rows; and a calculator that simulates the next
+  absorb in the documented 8, 1-7 slot order, resolves the Table 1 and Table 2
+  checks, and plans the menu for a target form. For any other selection it
+  offers a picker of the save's Monster PCs and a compact empty state, so the
+  section stays in both page indexes. A Try changes mode keeps the what-if menu
   temporary and never writes to the file.
 - **Encyclopedia** - a searchable index of all 512 abilities, 256 Monster form
   ids and 248 named items, assembled from tables the page already loads. Open
