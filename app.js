@@ -2777,15 +2777,24 @@
     return options;
   }
 
-  function monsterPcOptions(vm, resolver, selectedChr) {
+  function monsterPcRecords(vm) {
     return (vm.roster || []).filter(function (record) {
       return MONSTER_RACES.indexOf(num(record.race)) !== -1;
-    }).map(function (record) {
+    });
+  }
+
+  // The placeholder lets a non-Monster selection show an unselected picker
+  // instead of letting the browser display the first Monster as if chosen.
+  function monsterPcOptions(vm, resolver, selectedChr, placeholder) {
+    var options = placeholder
+      ? [h('option', { value: '', selected: true, disabled: true }, placeholder)]
+      : [];
+    return options.concat(monsterPcRecords(vm).map(function (record) {
       return h('option', {
         value: String(record.chrNo),
         selected: record.chrNo === selectedChr
       }, displayName(resolver.character(record.chrNo), record.chrNo) + '  (' + hex2(record.chrNo) + ')');
-    });
+    }));
   }
 
   function monsterStatLine(entry) {
@@ -3466,7 +3475,37 @@
   function buildMonsterLab(vm, resolver, chrNo, options) {
     options = options || {};
     var record = rosterRecordFor(vm, chrNo);
-    if (!record || MONSTER_RACES.indexOf(num(record.race)) === -1) return null;
+    if (!record || MONSTER_RACES.indexOf(num(record.race)) === -1) {
+      // The card is part of every loaded slot, not only a Monster page. The
+      // desktop index and the phone index both walk the rendered tree, so this
+      // one empty state keeps the Monster Lab reachable from either menu.
+      var monsterRecords = monsterPcRecords(vm);
+      return h('section', { className: 'card card-wide monster-lab monster-lab-empty', id: 'monster-lab', 'data-index-label': 'Monster Lab' },
+        h('div', { className: 'monster-lab-head' },
+          h('div', null,
+            h('h3', null, 'Monster Lab'),
+            h('p', { className: 'hint' },
+              'Checklist, documented library and transformation calculator for Monster PCs.')
+          ),
+          monsterRecords.length
+            ? h('label', { className: 'monster-pc-picker' }, 'Monster PC',
+                h('select', {
+                  'data-lab-focus': 'monster-pc',
+                  onChange: function (event) {
+                    if (!event.target.value) return;
+                    if (typeof options.onSelectCharacter === 'function') {
+                      options.onSelectCharacter(Number(event.target.value));
+                    }
+                  }
+                }, monsterPcOptions(vm, resolver, chrNo, 'Choose a Monster PC'))
+              )
+            : null
+        ),
+        h('p', { className: 'empty monster-lab-empty-note' }, monsterRecords.length
+          ? 'Monster Lab applies to Monster PCs. Choose a Monster PC from this save to open the checklist, library and calculator.'
+          : 'Monster Lab applies to Monster PCs. No Monster PCs in this save.')
+      );
+    }
     var ui = options.monsterUi || {};
     var values = monsterLabUiValues(record, ui);
     var formsData = options.monsterForms || {};
