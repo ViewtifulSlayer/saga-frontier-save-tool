@@ -1,0 +1,5193 @@
+{
+  "enemies": {
+    "0x00": {
+      "arts": {
+        "boots": {
+          "guide_name": "Sweep",
+          "id": 465,
+          "name": "Sweep"
+        },
+        "glove": {
+          "guide_name": "Da-dum",
+          "id": 449,
+          "name": "Da-dum"
+        },
+        "sword": {
+          "guide_name": "Hypnotism",
+          "id": 439,
+          "name": "Hypnotism"
+        }
+      },
+      "name": "Rocky",
+      "normal": {
+        "str": 8
+      },
+      "variants": {}
+    },
+    "0x01": {
+      "arts": {
+        "boots": {
+          "guide_name": "Sweep",
+          "id": 465,
+          "name": "Sweep"
+        },
+        "glove": {
+          "guide_name": "Spoil",
+          "id": 452,
+          "name": "Spoil"
+        },
+        "sword": {
+          "guide_name": "Needle",
+          "id": 433,
+          "name": "Needle"
+        }
+      },
+      "name": "Hedgehog",
+      "normal": {
+        "str": 8,
+        "wil": 8
+      },
+      "variants": {}
+    },
+    "0x02": {
+      "arts": {
+        "boots": {
+          "guide_name": "PowerKick",
+          "id": 466,
+          "name": "PowerKick"
+        },
+        "glove": {
+          "guide_name": "PoisonusBlow",
+          "id": 453,
+          "name": "PoisonusBlow"
+        },
+        "sword": {
+          "guide_name": "Lance",
+          "id": 434,
+          "name": "Lance"
+        }
+      },
+      "name": "Razorback",
+      "normal": {
+        "qui": 9,
+        "str": 9,
+        "vit": 9
+      },
+      "variants": {}
+    },
+    "0x03": {
+      "arts": {
+        "boots": {
+          "guide_name": "Spiders",
+          "id": 470,
+          "name": "Spiders"
+        },
+        "glove": {
+          "guide_name": "Da-dum",
+          "id": 449,
+          "name": "Da-dum"
+        },
+        "sword": {
+          "guide_name": "Hypnotism",
+          "id": 439,
+          "name": "Hypnotism"
+        }
+      },
+      "name": "Aperider",
+      "normal": {
+        "int": 10,
+        "psy": 10,
+        "qui": 10,
+        "str": 10,
+        "vit": 10,
+        "wil": 10
+      },
+      "variants": {}
+    },
+    "0x04": {
+      "arts": {
+        "boots": {
+          "guide_name": "PowerKick",
+          "id": 466,
+          "name": "PowerKick"
+        },
+        "glove": {
+          "guide_name": "Psych-out",
+          "id": 455,
+          "name": "Psych-out"
+        },
+        "sword": {
+          "guide_name": "FireBreath",
+          "id": 440,
+          "name": "FireBreath"
+        }
+      },
+      "name": "Hellhound",
+      "normal": {
+        "qui": 12,
+        "str": 12,
+        "vit": 12
+      },
+      "variants": {}
+    },
+    "0x05": {
+      "arts": {
+        "boots": {
+          "guide_name": "Suffocation",
+          "id": 471,
+          "name": "Suffocation"
+        },
+        "glove": {
+          "guide_name": "PoisonusBlow",
+          "id": 453,
+          "name": "PoisonusBlow"
+        },
+        "sword": {
+          "guide_name": "Needle",
+          "id": 433,
+          "name": "Needle"
+        }
+      },
+      "name": "Manticore",
+      "normal": {
+        "str": 16,
+        "wil": 16
+      },
+      "variants": {}
+    },
+    "0x06": {
+      "arts": {
+        "boots": {
+          "guide_name": "PowerKick",
+          "id": 466,
+          "name": "PowerKick"
+        },
+        "glove": {
+          "guide_name": "SpreadBlaster",
+          "id": 456,
+          "name": "SpreadBlaster"
+        },
+        "sword": {
+          "guide_name": "MagicHeal",
+          "id": 437,
+          "name": "MagicHeal"
+        }
+      },
+      "name": "Unicorn",
+      "normal": {
+        "cha": 18,
+        "int": 18,
+        "qui": 18,
+        "wil": 18
+      },
+      "variants": {}
+    },
+    "0x07": {
+      "arts": {
+        "boots": {
+          "guide_name": "Thunderbolt",
+          "id": 475,
+          "name": "ThunderBolt"
+        },
+        "glove": {
+          "guide_name": "Spoil",
+          "id": 452,
+          "name": "Spoil"
+        },
+        "sword": {
+          "guide_name": "Needle",
+          "id": 433,
+          "name": "Needle"
+        }
+      },
+      "name": "Butch",
+      "normal": {
+        "qui": 20,
+        "str": 20,
+        "wil": 20
+      },
+      "variants": {}
+    },
+    "0x08": {
+      "arts": {
+        "boots": {
+          "guide_name": "Suffocation",
+          "id": 471,
+          "name": "Suffocation"
+        },
+        "glove": {
+          "guide_name": "PoisonusBlow",
+          "id": 453,
+          "name": "PoisonusBlow"
+        },
+        "sword": {
+          "guide_name": "HeatSmash",
+          "id": 443,
+          "name": "HeatSmash"
+        }
+      },
+      "name": "Chimera",
+      "normal": {
+        "str": 40
+      },
+      "variants": {}
+    },
+    "0x09": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assist",
+          "id": 469,
+          "name": "Assist"
+        },
+        "glove": {
+          "guide_name": "TigerRampage",
+          "id": 462,
+          "name": "TigerRampage"
+        },
+        "sword": {
+          "guide_name": "GriffithScratch",
+          "id": 445,
+          "name": "GriffithScratch"
+        }
+      },
+      "name": "Kylin",
+      "normal": {
+        "int": 25,
+        "psy": 25,
+        "qui": 25,
+        "str": 25,
+        "vit": 25,
+        "wil": 25
+      },
+      "variants": {}
+    },
+    "0x0A": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assist",
+          "id": 469,
+          "name": "Assist"
+        },
+        "glove": {
+          "guide_name": "Psych-out",
+          "id": 455,
+          "name": "Psych-out"
+        },
+        "sword": {
+          "guide_name": "PsyNet",
+          "id": 442,
+          "name": "PsyNet"
+        }
+      },
+      "name": "Tidi",
+      "normal": {
+        "int": 10,
+        "psy": 10,
+        "qui": 10,
+        "str": 10,
+        "vit": 10,
+        "wil": 10
+      },
+      "variants": {}
+    },
+    "0x0B": {
+      "arts": {
+        "boots": {
+          "guide_name": "Tremor",
+          "id": 472,
+          "name": "Tremor"
+        },
+        "glove": {
+          "guide_name": "Da-dum",
+          "id": 449,
+          "name": "Da-dum"
+        },
+        "sword": {
+          "guide_name": "GriffithScratch",
+          "id": 445,
+          "name": "GriffithScratch"
+        }
+      },
+      "name": "Gargantu",
+      "normal": {
+        "str": 30,
+        "vit": 30
+      },
+      "variants": {}
+    },
+    "0x0C": {
+      "arts": {
+        "boots": {
+          "guide_name": "MysteryTap",
+          "id": 473,
+          "name": "MysteryTap"
+        },
+        "glove": {
+          "guide_name": "GrapeShot",
+          "id": 458,
+          "name": "GrapeShot"
+        },
+        "sword": {
+          "guide_name": "Hypnotism",
+          "id": 439,
+          "name": "Hypnotism"
+        }
+      },
+      "name": "MaskCat",
+      "normal": {
+        "wil": 15
+      },
+      "variants": {}
+    },
+    "0x0D": {
+      "arts": {
+        "boots": {
+          "guide_name": "MysteryTap",
+          "id": 473,
+          "name": "MysteryTap"
+        },
+        "glove": {
+          "guide_name": "Psych-out",
+          "id": 455,
+          "name": "Psych-out"
+        },
+        "sword": {
+          "guide_name": "PsyNet",
+          "id": 442,
+          "name": "PsyNet"
+        }
+      },
+      "name": "RABI",
+      "normal": {
+        "cha": 40
+      },
+      "variants": {}
+    },
+    "0x0E": {
+      "arts": {
+        "boots": {
+          "guide_name": "Suffocation",
+          "id": 471,
+          "name": "Suffocation"
+        },
+        "glove": {
+          "guide_name": "PoisonusBlow",
+          "id": 453,
+          "name": "PoisonusBlow"
+        },
+        "sword": {
+          "guide_name": "HeatSmash",
+          "id": 443,
+          "name": "HeatSmash"
+        }
+      },
+      "name": "Chimera",
+      "normal": {
+        "str": 40
+      },
+      "variants": {}
+    },
+    "0x0F": {
+      "arts": {
+        "boots": {
+          "guide_name": "PowerKick",
+          "id": 466,
+          "name": "PowerKick"
+        },
+        "glove": {
+          "guide_name": "Psych-out",
+          "id": 455,
+          "name": "Psych-out"
+        },
+        "sword": {
+          "guide_name": "MagicHeal",
+          "id": 437,
+          "name": "MagicHeal"
+        }
+      },
+      "name": "Lummox",
+      "normal": {
+        "int": 10,
+        "psy": 10,
+        "qui": 10,
+        "str": 10,
+        "vit": 10,
+        "wil": 10
+      },
+      "variants": {}
+    },
+    "0x10": {
+      "arts": {
+        "boots": {
+          "guide_name": "PowerKick",
+          "id": 466,
+          "name": "PowerKick"
+        },
+        "glove": {
+          "guide_name": "Spoil",
+          "id": 452,
+          "name": "Spoil"
+        },
+        "sword": {
+          "guide_name": "Needle",
+          "id": 433,
+          "name": "Needle"
+        }
+      },
+      "name": "Cactus",
+      "normal": {
+        "wil": 8
+      },
+      "variants": {}
+    },
+    "0x11": {
+      "arts": {
+        "boots": {
+          "guide_name": "MysteryTap",
+          "id": 473,
+          "name": "MysteryTap"
+        },
+        "glove": {
+          "guide_name": "DeadlyPowder",
+          "id": 451,
+          "name": "DeadlyPowder"
+        },
+        "sword": {
+          "guide_name": "MagicHeal",
+          "id": 437,
+          "name": "MagicHeal"
+        }
+      },
+      "name": "Sporepile",
+      "normal": {
+        "int": 8,
+        "psy": 8,
+        "wil": 8
+      },
+      "variants": {}
+    },
+    "0x12": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assist",
+          "id": 469,
+          "name": "Assist"
+        },
+        "glove": {
+          "guide_name": "PoisonusBlow",
+          "id": 453,
+          "name": "PoisonusBlow"
+        },
+        "sword": {
+          "guide_name": "Hypnotism",
+          "id": 439,
+          "name": "Hypnotism"
+        }
+      },
+      "name": "Mandrake",
+      "normal": {
+        "int": 10,
+        "psy": 10,
+        "wil": 10
+      },
+      "variants": {
+        "Rei initial": {
+          "int": 9,
+          "psy": 9,
+          "wil": 9
+        }
+      }
+    },
+    "0x13": {
+      "arts": {
+        "boots": {
+          "guide_name": "Sweep",
+          "id": 465,
+          "name": "Sweep"
+        },
+        "glove": {
+          "guide_name": "Feeler",
+          "id": 454,
+          "name": "Feeler"
+        },
+        "sword": {
+          "guide_name": "BloodSucker",
+          "id": 435,
+          "name": "BloodSucker"
+        }
+      },
+      "name": "Trapvine",
+      "normal": {
+        "qui": 12,
+        "str": 12
+      },
+      "variants": {}
+    },
+    "0x14": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assasinate",
+          "id": 476,
+          "name": "Assasinate"
+        },
+        "glove": {
+          "guide_name": "GrapeShot",
+          "id": 458,
+          "name": "GrapeShot"
+        },
+        "sword": {
+          "guide_name": "PsyNet",
+          "id": 442,
+          "name": "PsyNet"
+        }
+      },
+      "name": "Nightshade",
+      "normal": {
+        "psy": 20
+      },
+      "variants": {}
+    },
+    "0x15": {
+      "arts": {
+        "boots": {
+          "guide_name": "BladeNet",
+          "id": 468,
+          "name": "BladeNet"
+        },
+        "glove": {
+          "guide_name": "Feeler",
+          "id": 454,
+          "name": "Feeler"
+        },
+        "sword": {
+          "guide_name": "MagicHeal",
+          "id": 437,
+          "name": "MagicHeal"
+        }
+      },
+      "name": "Treant",
+      "normal": {
+        "int": 18,
+        "psy": 18
+      },
+      "variants": {}
+    },
+    "0x16": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assist",
+          "id": 469,
+          "name": "Assist"
+        },
+        "glove": {
+          "guide_name": "GrapeShot",
+          "id": 458,
+          "name": "GrapeShot"
+        },
+        "sword": {
+          "guide_name": "MagicHeal",
+          "id": 437,
+          "name": "MagicHeal"
+        }
+      },
+      "name": "Sunflower",
+      "normal": {
+        "wil": 28
+      },
+      "variants": {}
+    },
+    "0x17": {
+      "arts": {
+        "boots": {
+          "guide_name": "Tremor",
+          "id": 472,
+          "name": "Tremor"
+        },
+        "glove": {
+          "guide_name": "Da-dum",
+          "id": 449,
+          "name": "Da-dum"
+        },
+        "sword": {
+          "guide_name": "Oscillation",
+          "id": 441,
+          "name": "Oscillation"
+        }
+      },
+      "name": "Shrieker",
+      "normal": {
+        "qui": 25,
+        "wil": 25
+      },
+      "variants": {}
+    },
+    "0x18": {
+      "arts": {
+        "boots": {
+          "guide_name": "Spiders",
+          "id": 470,
+          "name": "Spiders"
+        },
+        "glove": {
+          "guide_name": "Crystalizer",
+          "id": 461,
+          "name": "Crystalizer"
+        },
+        "sword": {
+          "guide_name": "Oscillation",
+          "id": 441,
+          "name": "Oscillation"
+        }
+      },
+      "name": "CrystalTree",
+      "normal": {
+        "psy": 22,
+        "str": 22,
+        "vit": 22,
+        "wil": 22
+      },
+      "variants": {}
+    },
+    "0x19": {
+      "arts": {},
+      "name": "Ironhopper",
+      "normal": {
+        "int": 10,
+        "psy": 10,
+        "qui": 10,
+        "str": 10,
+        "vit": 10,
+        "wil": 10
+      },
+      "variants": {}
+    },
+    "0x1A": {
+      "arts": {},
+      "name": "MecGod",
+      "normal": {
+        "int": 10,
+        "psy": 10,
+        "qui": 10,
+        "str": 10,
+        "vit": 10,
+        "wil": 10
+      },
+      "variants": {}
+    },
+    "0x1B": {
+      "arts": {
+        "boots": {
+          "guide_name": "Thunderbolt",
+          "id": 475,
+          "name": "ThunderBolt"
+        },
+        "glove": {
+          "guide_name": "HellWing",
+          "id": 457,
+          "name": "HellWing"
+        },
+        "sword": {
+          "guide_name": "GriffithScratch",
+          "id": 445,
+          "name": "GriffithScratch"
+        }
+      },
+      "name": "Thundragon",
+      "normal": {
+        "qui": 20,
+        "str": 20,
+        "vit": 20
+      },
+      "variants": {}
+    },
+    "0x1C": {
+      "arts": {},
+      "name": "Meiren",
+      "normal": {
+        "int": 10,
+        "psy": 10,
+        "qui": 10,
+        "str": 10,
+        "vit": 10,
+        "wil": 10
+      },
+      "variants": {}
+    },
+    "0x1D": {
+      "arts": {},
+      "name": "MasterRing",
+      "normal": {
+        "int": 10,
+        "psy": 10,
+        "qui": 10,
+        "str": 10,
+        "vit": 10,
+        "wil": 10
+      },
+      "variants": {}
+    },
+    "0x1E": {
+      "arts": {},
+      "name": "Target",
+      "normal": {
+        "int": 10,
+        "psy": 10,
+        "qui": 10,
+        "str": 10,
+        "vit": 10,
+        "wil": 10
+      },
+      "variants": {}
+    },
+    "0x1F": {
+      "arts": {
+        "boots": {
+          "guide_name": "PowerKick",
+          "id": 466,
+          "name": "PowerKick"
+        },
+        "glove": {
+          "guide_name": "Psych-out",
+          "id": 455,
+          "name": "Psych-out"
+        },
+        "sword": {
+          "guide_name": "MagicHeal",
+          "id": 437,
+          "name": "MagicHeal"
+        }
+      },
+      "name": "Lummox",
+      "normal": {
+        "int": 10,
+        "psy": 10,
+        "qui": 10,
+        "str": 10,
+        "vit": 10,
+        "wil": 10
+      },
+      "variants": {}
+    },
+    "0x20": {
+      "arts": {
+        "boots": {
+          "guide_name": "PowerKick",
+          "id": 466,
+          "name": "PowerKick"
+        },
+        "glove": {
+          "guide_name": "WaterCannon",
+          "id": 450,
+          "name": "WaterCannon"
+        },
+        "sword": {
+          "guide_name": "GremlinEffect",
+          "id": 438,
+          "name": "GremlinEffect"
+        }
+      },
+      "name": "Gekko",
+      "normal": {
+        "str": 8
+      },
+      "variants": {}
+    },
+    "0x21": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assist",
+          "id": 469,
+          "name": "Assist"
+        },
+        "glove": {
+          "guide_name": "WaterCannon",
+          "id": 450,
+          "name": "WaterCannon"
+        },
+        "sword": {
+          "guide_name": "Lance",
+          "id": 434,
+          "name": "Lance"
+        }
+      },
+      "name": "Gunfish",
+      "normal": {
+        "wil": 12
+      },
+      "variants": {
+        "Silence initial": {
+          "qui": 8,
+          "str": 8,
+          "wil": 8
+        }
+      }
+    },
+    "0x22": {
+      "arts": {
+        "boots": {
+          "guide_name": "MysteryTap",
+          "id": 473,
+          "name": "MysteryTap"
+        },
+        "glove": {
+          "guide_name": "Psych-out",
+          "id": 455,
+          "name": "Psych-out"
+        },
+        "sword": {
+          "guide_name": "Lance",
+          "id": 434,
+          "name": "Lance"
+        }
+      },
+      "name": "Platoonpus",
+      "normal": {
+        "str": 10,
+        "vit": 10,
+        "wil": 10
+      },
+      "variants": {
+        "Silence initial": {
+          "cha": 9,
+          "psy": 9,
+          "qui": 9,
+          "str": 9
+        }
+      }
+    },
+    "0x23": {
+      "arts": {
+        "boots": {
+          "guide_name": "PowerKick",
+          "id": 466,
+          "name": "PowerKick"
+        },
+        "glove": {
+          "guide_name": "SpreadBlaster",
+          "id": 456,
+          "name": "SpreadBlaster"
+        },
+        "sword": {
+          "guide_name": "Flash",
+          "id": 444,
+          "name": "Flash"
+        }
+      },
+      "name": "FrillNeck",
+      "normal": {
+        "qui": 18
+      },
+      "variants": {}
+    },
+    "0x24": {
+      "arts": {
+        "boots": {
+          "guide_name": "Tremor",
+          "id": 472,
+          "name": "Tremor"
+        },
+        "glove": {
+          "guide_name": "WaterCannon",
+          "id": 450,
+          "name": "WaterCannon"
+        },
+        "sword": {
+          "guide_name": "BloodSucker",
+          "id": 435,
+          "name": "BloodSucker"
+        }
+      },
+      "name": "Gaeatoad",
+      "normal": {
+        "vit": 30
+      },
+      "variants": {}
+    },
+    "0x25": {
+      "arts": {
+        "boots": {
+          "guide_name": "Tremor",
+          "id": 472,
+          "name": "Tremor"
+        },
+        "glove": {
+          "guide_name": "PoisonusBlow",
+          "id": 453,
+          "name": "PoisonusBlow"
+        },
+        "sword": {
+          "guide_name": "Lance",
+          "id": 434,
+          "name": "Lance"
+        }
+      },
+      "name": "Trisaur",
+      "normal": {
+        "str": 20,
+        "vit": 20
+      },
+      "variants": {}
+    },
+    "0x26": {
+      "arts": {
+        "boots": {
+          "guide_name": "Thunderbolt",
+          "id": 475,
+          "name": "ThunderBolt"
+        },
+        "glove": {
+          "guide_name": "ArcticBreath",
+          "id": 459,
+          "name": "ArcticBreath"
+        },
+        "sword": {
+          "guide_name": "GriffithScratch",
+          "id": 445,
+          "name": "GriffithScratch"
+        }
+      },
+      "name": "Genbu",
+      "normal": {
+        "int": 20,
+        "psy": 20,
+        "vit": 20
+      },
+      "variants": {}
+    },
+    "0x27": {
+      "arts": {
+        "boots": {
+          "guide_name": "TitasWave",
+          "id": 477,
+          "name": "TitasWave"
+        },
+        "glove": {
+          "guide_name": "Crystalizer",
+          "id": 461,
+          "name": "Crystalizer"
+        },
+        "sword": {
+          "guide_name": "BloodSucker",
+          "id": 435,
+          "name": "BloodSucker"
+        }
+      },
+      "name": "Basilisk",
+      "normal": {
+        "str": 25,
+        "wil": 25
+      },
+      "variants": {
+        "Zozma initial": {
+          "vit": 22,
+          "wil": 22
+        }
+      }
+    },
+    "0x28": {
+      "arts": {
+        "boots": {
+          "guide_name": "Thunderbolt",
+          "id": 475,
+          "name": "ThunderBolt"
+        },
+        "glove": {
+          "guide_name": "TigerRampage",
+          "id": 462,
+          "name": "TigerRampage"
+        },
+        "sword": {
+          "guide_name": "Oscillation",
+          "id": 441,
+          "name": "Oscillation"
+        }
+      },
+      "name": "Kraken",
+      "normal": {
+        "str": 30,
+        "vit": 30
+      },
+      "variants": {}
+    },
+    "0x29": {
+      "arts": {
+        "boots": {
+          "guide_name": "PowerKick",
+          "id": 466,
+          "name": "PowerKick"
+        },
+        "glove": {
+          "guide_name": "Da-dum",
+          "id": 449,
+          "name": "Da-dum"
+        },
+        "sword": {
+          "guide_name": "Lance",
+          "id": 434,
+          "name": "Lance"
+        }
+      },
+      "name": "PlatyKing",
+      "normal": {
+        "int": 15,
+        "psy": 15,
+        "qui": 15,
+        "str": 15,
+        "vit": 15,
+        "wil": 15
+      },
+      "variants": {}
+    },
+    "0x2A": {
+      "arts": {
+        "boots": {
+          "guide_name": "MysteryTap",
+          "id": 473,
+          "name": "MysteryTap"
+        },
+        "glove": {
+          "guide_name": "Da-dum",
+          "id": 449,
+          "name": "Da-dum"
+        },
+        "sword": {
+          "guide_name": "HeatSmash",
+          "id": 443,
+          "name": "HeatSmash"
+        }
+      },
+      "name": "Platyhooks",
+      "normal": {
+        "int": 15,
+        "psy": 15,
+        "qui": 15,
+        "str": 15,
+        "vit": 15,
+        "wil": 15
+      },
+      "variants": {}
+    },
+    "0x2B": {
+      "arts": {
+        "boots": {
+          "guide_name": "Thunderbolt",
+          "id": 475,
+          "name": "ThunderBolt"
+        },
+        "glove": {
+          "guide_name": "TigerRampage",
+          "id": 462,
+          "name": "TigerRampage"
+        },
+        "sword": {
+          "guide_name": "GremlinEffect",
+          "id": 438,
+          "name": "GremlinEffect"
+        }
+      },
+      "name": "DevilSquid",
+      "normal": {
+        "int": 8,
+        "psy": 8,
+        "qui": 8,
+        "str": 8,
+        "vit": 8,
+        "wil": 8
+      },
+      "variants": {}
+    },
+    "0x2C": {
+      "arts": {},
+      "name": "Hell'sLord",
+      "normal": {
+        "int": 30,
+        "psy": 30,
+        "qui": 30,
+        "str": 30,
+        "vit": 30,
+        "wil": 30
+      },
+      "variants": {}
+    },
+    "0x2D": {
+      "arts": {},
+      "name": "Hell'sLord",
+      "normal": {
+        "int": 30,
+        "psy": 30,
+        "qui": 30,
+        "str": 30,
+        "vit": 30,
+        "wil": 30
+      },
+      "variants": {}
+    },
+    "0x2E": {
+      "arts": {
+        "boots": {
+          "guide_name": "Thunderbolt",
+          "id": 475,
+          "name": "ThunderBolt"
+        },
+        "glove": {
+          "guide_name": "Feeler",
+          "id": 454,
+          "name": "Feeler"
+        },
+        "sword": {
+          "guide_name": "Oscillation",
+          "id": 441,
+          "name": "Oscillation"
+        }
+      },
+      "name": "kraken",
+      "normal": {
+        "str": 30,
+        "vit": 30
+      },
+      "variants": {}
+    },
+    "0x2F": {
+      "arts": {
+        "boots": {
+          "guide_name": "Tremor",
+          "id": 472,
+          "name": "Tremor"
+        },
+        "glove": {
+          "guide_name": "PoisonusBlow",
+          "id": 453,
+          "name": "PoisonusBlow"
+        },
+        "sword": {
+          "guide_name": "Lance",
+          "id": 434,
+          "name": "Lance"
+        }
+      },
+      "name": "TrisaurJr",
+      "normal": {
+        "str": 20,
+        "vit": 20
+      },
+      "variants": {}
+    },
+    "0x30": {
+      "arts": {
+        "boots": {
+          "guide_name": "Sweep",
+          "id": 465,
+          "name": "Sweep"
+        },
+        "glove": {
+          "guide_name": "WaterCannon",
+          "id": 450,
+          "name": "WaterCannon"
+        },
+        "sword": {
+          "guide_name": "Blade",
+          "id": 436,
+          "name": "Blade"
+        }
+      },
+      "name": "Shellworm",
+      "normal": {
+        "psy": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0x31": {
+      "arts": {
+        "boots": {
+          "guide_name": "BladeNet",
+          "id": 468,
+          "name": "BladeNet"
+        },
+        "glove": {
+          "guide_name": "Feeler",
+          "id": 454,
+          "name": "Feeler"
+        },
+        "sword": {
+          "guide_name": "Lance",
+          "id": 434,
+          "name": "Lance"
+        }
+      },
+      "name": "Armorpilla",
+      "normal": {
+        "vit": 8,
+        "wil": 8
+      },
+      "variants": {
+        "Ildon initial": {
+          "vit": 10,
+          "wil": 10
+        }
+      }
+    },
+    "0x32": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assist",
+          "id": 469,
+          "name": "Assist"
+        },
+        "glove": {
+          "guide_name": "HellWing",
+          "id": 457,
+          "name": "HellWing"
+        },
+        "sword": {
+          "guide_name": "Needle",
+          "id": 433,
+          "name": "Needle"
+        }
+      },
+      "name": "KillerBee",
+      "normal": {
+        "qui": 10,
+        "str": 10
+      },
+      "variants": {}
+    },
+    "0x33": {
+      "arts": {
+        "boots": {
+          "guide_name": "Spiders",
+          "id": 470,
+          "name": "Spiders"
+        },
+        "glove": {
+          "guide_name": "PoisonusBlow",
+          "id": 453,
+          "name": "PoisonusBlow"
+        },
+        "sword": {
+          "guide_name": "Blade",
+          "id": 436,
+          "name": "Blade"
+        }
+      },
+      "name": "Scorpion",
+      "normal": {
+        "str": 11,
+        "vit": 11,
+        "wil": 11
+      },
+      "variants": {}
+    },
+    "0x34": {
+      "arts": {
+        "boots": {
+          "guide_name": "Suffocation",
+          "id": 471,
+          "name": "Suffocation"
+        },
+        "glove": {
+          "guide_name": "DeadlyPowder",
+          "id": 451,
+          "name": "DeadlyPowder"
+        },
+        "sword": {
+          "guide_name": "PsyNet",
+          "id": 442,
+          "name": "PsyNet"
+        }
+      },
+      "name": "Battlefly",
+      "normal": {
+        "qui": 14,
+        "wil": 14
+      },
+      "variants": {
+        "Ildon initial": {
+          "cha": 14,
+          "int": 14,
+          "psy": 14,
+          "qui": 14
+        }
+      }
+    },
+    "0x35": {
+      "arts": {
+        "boots": {
+          "guide_name": "Quicksand",
+          "id": 474,
+          "name": "QuickSand"
+        },
+        "glove": {
+          "guide_name": "PoisonusBlow",
+          "id": 453,
+          "name": "PoisonusBlow"
+        },
+        "sword": {
+          "guide_name": "BloodSucker",
+          "id": 435,
+          "name": "BloodSucker"
+        }
+      },
+      "name": "Slugger",
+      "normal": {
+        "str": 18,
+        "vit": 18
+      },
+      "variants": {}
+    },
+    "0x36": {
+      "arts": {
+        "boots": {
+          "guide_name": "TitasWave",
+          "id": 477,
+          "name": "TitasWave"
+        },
+        "glove": {
+          "guide_name": "HellWing",
+          "id": 457,
+          "name": "HellWing"
+        },
+        "sword": {
+          "guide_name": "Oscillation",
+          "id": 441,
+          "name": "Oscillation"
+        }
+      },
+      "name": "SickleBug",
+      "normal": {
+        "qui": 20,
+        "str": 20,
+        "wil": 20
+      },
+      "variants": {}
+    },
+    "0x37": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assist",
+          "id": 469,
+          "name": "Assist"
+        },
+        "glove": {
+          "guide_name": "IceSmash",
+          "id": 460,
+          "name": "IceSmash"
+        },
+        "sword": {
+          "guide_name": "Blade",
+          "id": 436,
+          "name": "Blade"
+        }
+      },
+      "name": "Iceworm",
+      "normal": {
+        "qui": 22,
+        "str": 22,
+        "vit": 22
+      },
+      "variants": {}
+    },
+    "0x38": {
+      "arts": {
+        "boots": {
+          "guide_name": "Quicksand",
+          "id": 474,
+          "name": "QuickSand"
+        },
+        "glove": {
+          "guide_name": "Crystalizer",
+          "id": 461,
+          "name": "Crystalizer"
+        },
+        "sword": {
+          "guide_name": "Blade",
+          "id": 436,
+          "name": "Blade"
+        }
+      },
+      "name": "Zeroworm",
+      "normal": {
+        "qui": 25,
+        "str": 25,
+        "vit": 25
+      },
+      "variants": {}
+    },
+    "0x39": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assist",
+          "id": 469,
+          "name": "Assist"
+        },
+        "glove": {
+          "guide_name": "HellWing",
+          "id": 457,
+          "name": "HellWing"
+        },
+        "sword": {
+          "guide_name": "HeatSmash",
+          "id": 443,
+          "name": "HeatSmash"
+        }
+      },
+      "name": "Flamefolk",
+      "normal": {
+        "psy": 20,
+        "str": 20,
+        "wil": 20
+      },
+      "variants": {}
+    },
+    "0x3A": {
+      "arts": {
+        "boots": {
+          "guide_name": "ThunderBall",
+          "id": 467,
+          "name": "ThunderBall"
+        },
+        "glove": {
+          "guide_name": "WaterCannon",
+          "id": 450,
+          "name": "WaterCannon"
+        },
+        "sword": {
+          "guide_name": "MagicHeal",
+          "id": 437,
+          "name": "MagicHeal"
+        }
+      },
+      "name": "Waterfolk",
+      "normal": {
+        "psy": 20,
+        "str": 20,
+        "wil": 20
+      },
+      "variants": {}
+    },
+    "0x3B": {
+      "arts": {
+        "boots": {
+          "guide_name": "Quicksand",
+          "id": 474,
+          "name": "QuickSand"
+        },
+        "glove": {
+          "guide_name": "Feeler",
+          "id": 454,
+          "name": "Feeler"
+        },
+        "sword": {
+          "guide_name": "Blade",
+          "id": 436,
+          "name": "Blade"
+        }
+      },
+      "name": "Shifter",
+      "normal": {
+        "int": 20,
+        "psy": 20,
+        "wil": 20
+      },
+      "variants": {}
+    },
+    "0x3C": {
+      "arts": {
+        "boots": {
+          "guide_name": "BladeNet",
+          "id": 468,
+          "name": "BladeNet"
+        },
+        "glove": {
+          "guide_name": "HellWing",
+          "id": 457,
+          "name": "HellWing"
+        },
+        "sword": {
+          "guide_name": "Oscillation",
+          "id": 441,
+          "name": "Oscillation"
+        }
+      },
+      "name": "Sonicbat",
+      "normal": {
+        "qui": 15,
+        "wil": 15
+      },
+      "variants": {}
+    },
+    "0x3D": {
+      "arts": {
+        "boots": {
+          "guide_name": "Spiders",
+          "id": 470,
+          "name": "Spiders"
+        },
+        "glove": {
+          "guide_name": "Psych-out",
+          "id": 455,
+          "name": "Psych-out"
+        },
+        "sword": {
+          "guide_name": "MagicHeal",
+          "id": 437,
+          "name": "MagicHeal"
+        }
+      },
+      "name": "Straysheep",
+      "normal": {
+        "cha": 20,
+        "qui": 20
+      },
+      "variants": {}
+    },
+    "0x3E": {
+      "arts": {},
+      "name": "Virus",
+      "normal": {
+        "qui": 12,
+        "str": 12,
+        "vit": 12
+      },
+      "variants": {}
+    },
+    "0x3F": {
+      "arts": {},
+      "name": "Blue",
+      "normal": {
+        "qui": 12,
+        "str": 12,
+        "vit": 12
+      },
+      "variants": {}
+    },
+    "0x40": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assist",
+          "id": 469,
+          "name": "Assist"
+        },
+        "glove": {
+          "guide_name": "HellWing",
+          "id": 457,
+          "name": "HellWing"
+        },
+        "sword": {
+          "guide_name": "Lance",
+          "id": 434,
+          "name": "Lance"
+        }
+      },
+      "name": "Pickbird",
+      "normal": {
+        "qui": 9
+      },
+      "variants": {}
+    },
+    "0x41": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assist",
+          "id": 469,
+          "name": "Assist"
+        },
+        "glove": {
+          "guide_name": "Spoil",
+          "id": 452,
+          "name": "Spoil"
+        },
+        "sword": {
+          "guide_name": "BloodSucker",
+          "id": 435,
+          "name": "BloodSucker"
+        }
+      },
+      "name": "Rabbat",
+      "normal": {
+        "cha": 5,
+        "int": 5,
+        "psy": 5,
+        "qui": 5,
+        "str": 5,
+        "vit": 5,
+        "wil": 5
+      },
+      "variants": {}
+    },
+    "0x42": {
+      "arts": {
+        "boots": {
+          "guide_name": "ThunderBall",
+          "id": 467,
+          "name": "ThunderBall"
+        },
+        "glove": {
+          "guide_name": "HellWing",
+          "id": 457,
+          "name": "HellWing"
+        },
+        "sword": {
+          "guide_name": "Lance",
+          "id": 434,
+          "name": "Lance"
+        }
+      },
+      "name": "DragonPup",
+      "normal": {
+        "qui": 9,
+        "vit": 9,
+        "wil": 9
+      },
+      "variants": {}
+    },
+    "0x43": {
+      "arts": {
+        "boots": {
+          "guide_name": "BladeNet",
+          "id": 468,
+          "name": "BladeNet"
+        },
+        "glove": {
+          "guide_name": "Spoil",
+          "id": 452,
+          "name": "Spoil"
+        },
+        "sword": {
+          "guide_name": "Blade",
+          "id": 436,
+          "name": "Blade"
+        }
+      },
+      "name": "Harpy",
+      "normal": {
+        "int": 11,
+        "psy": 11,
+        "qui": 11
+      },
+      "variants": {}
+    },
+    "0x44": {
+      "arts": {
+        "boots": {
+          "guide_name": "PowerKick",
+          "id": 466,
+          "name": "PowerKick"
+        },
+        "glove": {
+          "guide_name": "DeadlyPowder",
+          "id": 451,
+          "name": "DeadlyPowder"
+        },
+        "sword": {
+          "guide_name": "Lance",
+          "id": 434,
+          "name": "Lance"
+        }
+      },
+      "name": "Axebeak",
+      "normal": {
+        "str": 15,
+        "vit": 15
+      },
+      "variants": {}
+    },
+    "0x45": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assasinate",
+          "id": 476,
+          "name": "Assasinate"
+        },
+        "glove": {
+          "guide_name": "HellWing",
+          "id": 457,
+          "name": "HellWing"
+        },
+        "sword": {
+          "guide_name": "Lance",
+          "id": 434,
+          "name": "Lance"
+        }
+      },
+      "name": "Wyvern",
+      "normal": {
+        "qui": 17,
+        "str": 17
+      },
+      "variants": {}
+    },
+    "0x46": {
+      "arts": {
+        "boots": {
+          "guide_name": "Spiders",
+          "id": 470,
+          "name": "Spiders"
+        },
+        "glove": {
+          "guide_name": "Crystalizer",
+          "id": 461,
+          "name": "Crystalizer"
+        },
+        "sword": {
+          "guide_name": "Lance",
+          "id": 434,
+          "name": "Lance"
+        }
+      },
+      "name": "Cockatrice",
+      "normal": {
+        "qui": 20,
+        "str": 20
+      },
+      "variants": {}
+    },
+    "0x47": {
+      "arts": {
+        "boots": {
+          "guide_name": "MysteryTap",
+          "id": 473,
+          "name": "MysteryTap"
+        },
+        "glove": {
+          "guide_name": "HellWing",
+          "id": 457,
+          "name": "HellWing"
+        },
+        "sword": {
+          "guide_name": "MagicHeal",
+          "id": 437,
+          "name": "MagicHeal"
+        }
+      },
+      "name": "Sphinx",
+      "normal": {
+        "int": 40
+      },
+      "variants": {}
+    },
+    "0x48": {
+      "arts": {
+        "boots": {
+          "guide_name": "TitasWave",
+          "id": 477,
+          "name": "TitasWave"
+        },
+        "glove": {
+          "guide_name": "HellWing",
+          "id": 457,
+          "name": "HellWing"
+        },
+        "sword": {
+          "guide_name": "FireBreath",
+          "id": 440,
+          "name": "FireBreath"
+        }
+      },
+      "name": "Suzaku",
+      "normal": {
+        "int": 20,
+        "psy": 20,
+        "qui": 20,
+        "str": 20,
+        "vit": 20,
+        "wil": 20
+      },
+      "variants": {}
+    },
+    "0x49": {
+      "arts": {
+        "boots": {
+          "guide_name": "TitasWave",
+          "id": 477,
+          "name": "TitasWave"
+        },
+        "glove": {
+          "guide_name": "HellWing",
+          "id": 457,
+          "name": "HellWing"
+        },
+        "sword": {
+          "guide_name": "GriffithScratch",
+          "id": 445,
+          "name": "GriffithScratch"
+        }
+      },
+      "name": "Griffin",
+      "normal": {
+        "int": 25,
+        "psy": 25,
+        "qui": 25,
+        "str": 25,
+        "vit": 25,
+        "wil": 25
+      },
+      "variants": {}
+    },
+    "0x4A": {
+      "arts": {
+        "boots": {
+          "guide_name": "PowerKick",
+          "id": 466,
+          "name": "PowerKick"
+        },
+        "glove": {
+          "guide_name": "TigerRampage",
+          "id": 462,
+          "name": "TigerRampage"
+        },
+        "sword": {
+          "guide_name": "MagicHeal",
+          "id": 437,
+          "name": "MagicHeal"
+        }
+      },
+      "name": "UnicornJr",
+      "normal": {
+        "cha": 20,
+        "int": 20,
+        "psy": 20,
+        "qui": 20
+      },
+      "variants": {}
+    },
+    "0x4B": {
+      "arts": {
+        "boots": {
+          "guide_name": "TitasWave",
+          "id": 477,
+          "name": "TitasWave"
+        },
+        "glove": {
+          "guide_name": "HellWing",
+          "id": 457,
+          "name": "HellWing"
+        },
+        "sword": {
+          "guide_name": "GriffithScratch",
+          "id": 445,
+          "name": "GriffithScratch"
+        }
+      },
+      "name": "GriffinJr",
+      "normal": {
+        "qui": 30,
+        "str": 30
+      },
+      "variants": {}
+    },
+    "0x4C": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assist",
+          "id": 469,
+          "name": "Assist"
+        },
+        "glove": {
+          "guide_name": "TigerRampage",
+          "id": 462,
+          "name": "TigerRampage"
+        },
+        "sword": {
+          "guide_name": "GriffithScratch",
+          "id": 445,
+          "name": "GriffithScratch"
+        }
+      },
+      "name": "KylinJr",
+      "normal": {
+        "int": 25,
+        "psy": 25,
+        "qui": 25,
+        "str": 25,
+        "vit": 25,
+        "wil": 25
+      },
+      "variants": {}
+    },
+    "0x4D": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assist",
+          "id": 469,
+          "name": "Assist"
+        },
+        "glove": {
+          "guide_name": "GrapeShot",
+          "id": 458,
+          "name": "GrapeShot"
+        },
+        "sword": {
+          "guide_name": "BloodSucker",
+          "id": 435,
+          "name": "BloodSucker"
+        }
+      },
+      "name": "Rabbat",
+      "normal": {
+        "cha": 5,
+        "int": 5,
+        "psy": 5,
+        "qui": 5,
+        "str": 5,
+        "vit": 5,
+        "wil": 5
+      },
+      "variants": {}
+    },
+    "0x4E": {
+      "arts": {
+        "boots": {
+          "guide_name": "Thunderbolt",
+          "id": 475,
+          "name": "ThunderBolt"
+        },
+        "glove": {
+          "guide_name": "HellWing",
+          "id": 457,
+          "name": "HellWing"
+        },
+        "sword": {
+          "guide_name": "FireBreath",
+          "id": 440,
+          "name": "FireBreath"
+        }
+      },
+      "name": "SuzakuJr",
+      "normal": {
+        "int": 20,
+        "psy": 20,
+        "qui": 20,
+        "str": 20,
+        "vit": 20,
+        "wil": 20
+      },
+      "variants": {}
+    },
+    "0x4F": {
+      "arts": {
+        "boots": {
+          "guide_name": "ThunderBall",
+          "id": 467,
+          "name": "ThunderBall"
+        },
+        "glove": {
+          "guide_name": "HellWing",
+          "id": 457,
+          "name": "HellWing"
+        },
+        "sword": {
+          "guide_name": "FireBreath",
+          "id": 440,
+          "name": "FireBreath"
+        }
+      },
+      "name": "Minidragon",
+      "normal": {
+        "qui": 9,
+        "vit": 9,
+        "wil": 9
+      },
+      "variants": {}
+    },
+    "0x50": {
+      "arts": {
+        "boots": {
+          "guide_name": "PowerKick",
+          "id": 466,
+          "name": "PowerKick"
+        },
+        "glove": {
+          "guide_name": "IceSmash",
+          "id": 460,
+          "name": "IceSmash"
+        },
+        "sword": {
+          "guide_name": "HeatSmash",
+          "id": 443,
+          "name": "HeatSmash"
+        }
+      },
+      "name": "PrimaBronza",
+      "normal": {
+        "int": 10,
+        "psy": 10,
+        "qui": 10,
+        "str": 10,
+        "vit": 10,
+        "wil": 10
+      },
+      "variants": {}
+    },
+    "0x51": {
+      "arts": {
+        "boots": {
+          "guide_name": "MysteryTap",
+          "id": 473,
+          "name": "MysteryTap"
+        },
+        "glove": {
+          "guide_name": "IceSmash",
+          "id": 460,
+          "name": "IceSmash"
+        },
+        "sword": {
+          "guide_name": "Hypnotism",
+          "id": 439,
+          "name": "Hypnotism"
+        }
+      },
+      "name": "Rockbaboon",
+      "normal": {
+        "str": 10,
+        "vit": 10
+      },
+      "variants": {}
+    },
+    "0x52": {
+      "arts": {
+        "boots": {
+          "guide_name": "PowerKick",
+          "id": 466,
+          "name": "PowerKick"
+        },
+        "glove": {
+          "guide_name": "IceSmash",
+          "id": 460,
+          "name": "IceSmash"
+        },
+        "sword": {
+          "guide_name": "HeatSmash",
+          "id": 443,
+          "name": "HeatSmash"
+        }
+      },
+      "name": "PrimaMaska",
+      "normal": {
+        "int": 10,
+        "psy": 10,
+        "qui": 10,
+        "str": 10,
+        "vit": 10,
+        "wil": 10
+      },
+      "variants": {}
+    },
+    "0x53": {
+      "arts": {
+        "boots": {
+          "guide_name": "Suffocation",
+          "id": 471,
+          "name": "Suffocation"
+        },
+        "glove": {
+          "guide_name": "Feeler",
+          "id": 454,
+          "name": "Feeler"
+        },
+        "sword": {
+          "guide_name": "GriffithScratch",
+          "id": 445,
+          "name": "GriffithScratch"
+        }
+      },
+      "name": "Ettin",
+      "normal": {
+        "int": 20,
+        "str": 20
+      },
+      "variants": {}
+    },
+    "0x54": {
+      "arts": {
+        "boots": {
+          "guide_name": "Spiders",
+          "id": 470,
+          "name": "Spiders"
+        },
+        "glove": {
+          "guide_name": "Crystalizer",
+          "id": 461,
+          "name": "Crystalizer"
+        },
+        "sword": {
+          "guide_name": "Blade",
+          "id": 436,
+          "name": "Blade"
+        }
+      },
+      "name": "Goatgiant",
+      "normal": {
+        "str": 20,
+        "vit": 20
+      },
+      "variants": {}
+    },
+    "0x55": {
+      "arts": {
+        "boots": {
+          "guide_name": "Tremor",
+          "id": 472,
+          "name": "Tremor"
+        },
+        "glove": {
+          "guide_name": "PoisonusBlow",
+          "id": 453,
+          "name": "PoisonusBlow"
+        },
+        "sword": {
+          "guide_name": "Oscillation",
+          "id": 441,
+          "name": "Oscillation"
+        }
+      },
+      "name": "Golem",
+      "normal": {
+        "vit": 40
+      },
+      "variants": {}
+    },
+    "0x56": {
+      "arts": {
+        "boots": {
+          "guide_name": "TitasWave",
+          "id": 477,
+          "name": "TitasWave"
+        },
+        "glove": {
+          "guide_name": "IceSmash",
+          "id": 460,
+          "name": "IceSmash"
+        },
+        "sword": {
+          "guide_name": "PsyNet",
+          "id": 442,
+          "name": "PsyNet"
+        }
+      },
+      "name": "Cyclops",
+      "normal": {
+        "str": 20,
+        "vit": 20
+      },
+      "variants": {}
+    },
+    "0x57": {
+      "arts": {
+        "boots": {
+          "guide_name": "TitasWave",
+          "id": 477,
+          "name": "TitasWave"
+        },
+        "glove": {
+          "guide_name": "TigerRampage",
+          "id": 462,
+          "name": "TigerRampage"
+        },
+        "sword": {
+          "guide_name": "Lance",
+          "id": 434,
+          "name": "Lance"
+        }
+      },
+      "name": "Chariot",
+      "normal": {
+        "qui": 25,
+        "str": 25,
+        "vit": 25
+      },
+      "variants": {}
+    },
+    "0x58": {
+      "arts": {
+        "boots": {
+          "guide_name": "TitasWave",
+          "id": 477,
+          "name": "TitasWave"
+        },
+        "glove": {
+          "guide_name": "IceSmash",
+          "id": 460,
+          "name": "IceSmash"
+        },
+        "sword": {
+          "guide_name": "Blade",
+          "id": 436,
+          "name": "Blade"
+        }
+      },
+      "name": "Giant",
+      "normal": {
+        "psy": 30,
+        "qui": 30,
+        "str": 30
+      },
+      "variants": {}
+    },
+    "0x59": {
+      "arts": {
+        "boots": {
+          "guide_name": "TitasWave",
+          "id": 477,
+          "name": "TitasWave"
+        },
+        "glove": {
+          "guide_name": "IceSmash",
+          "id": 460,
+          "name": "IceSmash"
+        },
+        "sword": {
+          "guide_name": "GremlinEffect",
+          "id": 438,
+          "name": "GremlinEffect"
+        }
+      },
+      "name": "Jotnar",
+      "normal": {
+        "int": 30,
+        "psy": 30,
+        "wil": 30
+      },
+      "variants": {}
+    },
+    "0x5A": {
+      "arts": {
+        "boots": {
+          "guide_name": "MysteryTap",
+          "id": 473,
+          "name": "MysteryTap"
+        },
+        "glove": {
+          "guide_name": "Da-dum",
+          "id": 449,
+          "name": "Da-dum"
+        },
+        "sword": {
+          "guide_name": "Hypnotism",
+          "id": 439,
+          "name": "Hypnotism"
+        }
+      },
+      "name": "Yeti",
+      "normal": {
+        "str": 15,
+        "vit": 15
+      },
+      "variants": {}
+    },
+    "0x5B": {
+      "arts": {
+        "boots": {
+          "guide_name": "TitasWave",
+          "id": 477,
+          "name": "TitasWave"
+        },
+        "glove": {
+          "guide_name": "PoisonusBlow",
+          "id": 453,
+          "name": "PoisonusBlow"
+        },
+        "sword": {
+          "guide_name": "HeatSmash",
+          "id": 443,
+          "name": "HeatSmash"
+        }
+      },
+      "name": "OgreLord",
+      "normal": {
+        "str": 25,
+        "vit": 25
+      },
+      "variants": {}
+    },
+    "0x5C": {
+      "arts": {},
+      "name": "Berva",
+      "normal": {
+        "int": 20,
+        "psy": 20,
+        "qui": 20,
+        "str": 20,
+        "vit": 20,
+        "wil": 20
+      },
+      "variants": {}
+    },
+    "0x5D": {
+      "arts": {},
+      "name": "MaskedGiant",
+      "normal": {
+        "int": 20,
+        "psy": 20,
+        "qui": 20,
+        "str": 20,
+        "vit": 20,
+        "wil": 20
+      },
+      "variants": {}
+    },
+    "0x5E": {
+      "arts": {},
+      "name": "Berva",
+      "normal": {
+        "int": 20,
+        "psy": 20,
+        "qui": 20,
+        "str": 20,
+        "vit": 20,
+        "wil": 20
+      },
+      "variants": {}
+    },
+    "0x5F": {
+      "arts": {
+        "boots": {
+          "guide_name": "TitasWave",
+          "id": 477,
+          "name": "TitasWave"
+        },
+        "glove": {
+          "guide_name": "PoisonusBlow",
+          "id": 453,
+          "name": "PoisonusBlow"
+        },
+        "sword": {
+          "guide_name": "HeatSmash",
+          "id": 443,
+          "name": "HeatSmash"
+        }
+      },
+      "name": "Ogre",
+      "normal": {
+        "str": 15,
+        "vit": 15
+      },
+      "variants": {}
+    },
+    "0x60": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assist",
+          "id": 469,
+          "name": "Assist"
+        },
+        "glove": {
+          "guide_name": "WaterCannon",
+          "id": 450,
+          "name": "WaterCannon"
+        },
+        "sword": {
+          "guide_name": "BloodSucker",
+          "id": 435,
+          "name": "BloodSucker"
+        }
+      },
+      "name": "Xeno",
+      "normal": {
+        "vit": 5,
+        "wil": 5
+      },
+      "variants": {}
+    },
+    "0x61": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assist",
+          "id": 469,
+          "name": "Assist"
+        },
+        "glove": {
+          "guide_name": "Spoil",
+          "id": 452,
+          "name": "Spoil"
+        },
+        "sword": {
+          "guide_name": "Hypnotism",
+          "id": 439,
+          "name": "Hypnotism"
+        }
+      },
+      "name": "Slime",
+      "normal": {
+        "psy": 12
+      },
+      "variants": {
+        "Zozma initial": {
+          "int": 10,
+          "vit": 10
+        }
+      }
+    },
+    "0x62": {
+      "arts": {
+        "boots": {
+          "guide_name": "Sweep",
+          "id": 465,
+          "name": "Sweep"
+        },
+        "glove": {
+          "guide_name": "Feeler",
+          "id": 454,
+          "name": "Feeler"
+        },
+        "sword": {
+          "guide_name": "MagicHeal",
+          "id": 437,
+          "name": "MagicHeal"
+        }
+      },
+      "name": "WhipJelly",
+      "normal": {
+        "qui": 15
+      },
+      "variants": {}
+    },
+    "0x63": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assist",
+          "id": 469,
+          "name": "Assist"
+        },
+        "glove": {
+          "guide_name": "Crystalizer",
+          "id": 461,
+          "name": "Crystalizer"
+        },
+        "sword": {
+          "guide_name": "Oscillation",
+          "id": 441,
+          "name": "Oscillation"
+        }
+      },
+      "name": "IceCrystal",
+      "normal": {
+        "vit": 20
+      },
+      "variants": {}
+    },
+    "0x64": {
+      "arts": {
+        "boots": {
+          "guide_name": "ThunderBall",
+          "id": 467,
+          "name": "ThunderBall"
+        },
+        "glove": {
+          "guide_name": "SpreadBlaster",
+          "id": 456,
+          "name": "SpreadBlaster"
+        },
+        "sword": {
+          "guide_name": "Flash",
+          "id": 444,
+          "name": "Flash"
+        }
+      },
+      "name": "Unknown",
+      "normal": {
+        "int": 20
+      },
+      "variants": {
+        "Silence initial": {
+          "int": 14,
+          "psy": 14,
+          "str": 14,
+          "wil": 14
+        }
+      }
+    },
+    "0x65": {
+      "arts": {
+        "boots": {
+          "guide_name": "ThunderBall",
+          "id": 467,
+          "name": "ThunderBall"
+        },
+        "glove": {
+          "guide_name": "IceSmash",
+          "id": 460,
+          "name": "IceSmash"
+        },
+        "sword": {
+          "guide_name": "HeatSmash",
+          "id": 443,
+          "name": "HeatSmash"
+        }
+      },
+      "name": "LiquidMetal",
+      "normal": {
+        "str": 18,
+        "vit": 18
+      },
+      "variants": {
+        "Zozma initial": {
+          "int": 15,
+          "str": 15,
+          "vit": 15,
+          "wil": 15
+        }
+      }
+    },
+    "0x66": {
+      "arts": {
+        "boots": {
+          "guide_name": "Suffocation",
+          "id": 471,
+          "name": "Suffocation"
+        },
+        "glove": {
+          "guide_name": "PoisonusBlow",
+          "id": 453,
+          "name": "PoisonusBlow"
+        },
+        "sword": {
+          "guide_name": "PsyNet",
+          "id": 442,
+          "name": "PsyNet"
+        }
+      },
+      "name": "Airfolk",
+      "normal": {
+        "psy": 20,
+        "wil": 20
+      },
+      "variants": {}
+    },
+    "0x67": {
+      "arts": {
+        "boots": {
+          "guide_name": "Thunderbolt",
+          "id": 475,
+          "name": "ThunderBolt"
+        },
+        "glove": {
+          "guide_name": "Feeler",
+          "id": 454,
+          "name": "Feeler"
+        },
+        "sword": {
+          "guide_name": "GremlinEffect",
+          "id": 438,
+          "name": "GremlinEffect"
+        }
+      },
+      "name": "Gelatin",
+      "normal": {
+        "psy": 25,
+        "vit": 25
+      },
+      "variants": {}
+    },
+    "0x68": {
+      "arts": {
+        "boots": {
+          "guide_name": "MysteryTap",
+          "id": 473,
+          "name": "MysteryTap"
+        },
+        "glove": {
+          "guide_name": "IceSmash",
+          "id": 460,
+          "name": "IceSmash"
+        },
+        "sword": {
+          "guide_name": "PsyNet",
+          "id": 442,
+          "name": "PsyNet"
+        }
+      },
+      "name": "Snowfolk",
+      "normal": {
+        "int": 30,
+        "psy": 30,
+        "vit": 30
+      },
+      "variants": {}
+    },
+    "0x69": {
+      "arts": {
+        "boots": {
+          "guide_name": "Sweep",
+          "id": 465,
+          "name": "Sweep"
+        },
+        "glove": {
+          "guide_name": "Da-dum",
+          "id": 449,
+          "name": "Da-dum"
+        },
+        "sword": {
+          "guide_name": "Needle",
+          "id": 433,
+          "name": "Needle"
+        }
+      },
+      "name": "K9Mec",
+      "normal": {
+        "int": 25,
+        "psy": 25,
+        "qui": 25,
+        "str": 25,
+        "vit": 25,
+        "wil": 25
+      },
+      "variants": {}
+    },
+    "0x6A": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assist",
+          "id": 469,
+          "name": "Assist"
+        },
+        "glove": {
+          "guide_name": "Crystalizer",
+          "id": 461,
+          "name": "Crystalizer"
+        },
+        "sword": {
+          "guide_name": "HeatSmash",
+          "id": 443,
+          "name": "HeatSmash"
+        }
+      },
+      "name": "FireCrystal",
+      "normal": {
+        "vit": 20
+      },
+      "variants": {}
+    },
+    "0x6B": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assist",
+          "id": 469,
+          "name": "Assist"
+        },
+        "glove": {
+          "guide_name": "Spoil",
+          "id": 452,
+          "name": "Spoil"
+        },
+        "sword": {
+          "guide_name": "Hypnotism",
+          "id": 439,
+          "name": "Hypnotism"
+        }
+      },
+      "name": "BigSlime",
+      "normal": {
+        "psy": 15
+      },
+      "variants": {}
+    },
+    "0x6C": {
+      "arts": {
+        "boots": {
+          "guide_name": "TitasWave",
+          "id": 477,
+          "name": "TitasWave"
+        },
+        "glove": {
+          "guide_name": "HellWing",
+          "id": 457,
+          "name": "HellWing"
+        },
+        "sword": {
+          "guide_name": "FireBreath",
+          "id": 440,
+          "name": "FireBreath"
+        }
+      },
+      "name": "RedDragon",
+      "normal": {
+        "str": 25,
+        "vit": 25,
+        "wil": 25
+      },
+      "variants": {}
+    },
+    "0x6D": {
+      "arts": {
+        "boots": {
+          "guide_name": "TitasWave",
+          "id": 477,
+          "name": "TitasWave"
+        },
+        "glove": {
+          "guide_name": "Crystalizer",
+          "id": 461,
+          "name": "Crystalizer"
+        },
+        "sword": {
+          "guide_name": "GriffithScratch",
+          "id": 445,
+          "name": "GriffithScratch"
+        }
+      },
+      "name": "BlackDragon",
+      "normal": {
+        "str": 30,
+        "vit": 30,
+        "wil": 30
+      },
+      "variants": {}
+    },
+    "0x6E": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assist",
+          "id": 469,
+          "name": "Assist"
+        },
+        "glove": {
+          "guide_name": "Spoil",
+          "id": 452,
+          "name": "Spoil"
+        },
+        "sword": {
+          "guide_name": "Hypnotism",
+          "id": 439,
+          "name": "Hypnotism"
+        }
+      },
+      "name": "HugeSlime",
+      "normal": {
+        "psy": 20
+      },
+      "variants": {}
+    },
+    "0x6F": {
+      "arts": {},
+      "name": "VitalityRune",
+      "normal": {
+        "int": 5,
+        "psy": 5,
+        "qui": 5,
+        "str": 5,
+        "vit": 5,
+        "wil": 5
+      },
+      "variants": {}
+    },
+    "0x70": {
+      "arts": {
+        "boots": {
+          "guide_name": "Sweep",
+          "id": 465,
+          "name": "Sweep"
+        },
+        "glove": {
+          "guide_name": "Spoil",
+          "id": 452,
+          "name": "Spoil"
+        },
+        "sword": {
+          "guide_name": "Blade",
+          "id": 436,
+          "name": "Blade"
+        }
+      },
+      "name": "LivingAxe",
+      "normal": {
+        "str": 6,
+        "vit": 6
+      },
+      "variants": {}
+    },
+    "0x71": {
+      "arts": {
+        "boots": {
+          "guide_name": "Sweep",
+          "id": 465,
+          "name": "Sweep"
+        },
+        "glove": {
+          "guide_name": "Feeler",
+          "id": 454,
+          "name": "Feeler"
+        },
+        "sword": {
+          "guide_name": "Lance",
+          "id": 434,
+          "name": "Lance"
+        }
+      },
+      "name": "LivingLance",
+      "normal": {
+        "qui": 8,
+        "str": 8,
+        "vit": 8
+      },
+      "variants": {
+        "Ildon initial": {
+          "qui": 8,
+          "str": 8,
+          "vit": 8,
+          "wil": 8
+        }
+      }
+    },
+    "0x72": {
+      "arts": {
+        "boots": {
+          "guide_name": "Spiders",
+          "id": 470,
+          "name": "Spiders"
+        },
+        "glove": {
+          "guide_name": "IceSmash",
+          "id": 460,
+          "name": "IceSmash"
+        },
+        "sword": {
+          "guide_name": "HeatSmash",
+          "id": 443,
+          "name": "HeatSmash"
+        }
+      },
+      "name": "LivingGlove",
+      "normal": {
+        "str": 15
+      },
+      "variants": {}
+    },
+    "0x73": {
+      "arts": {
+        "boots": {
+          "guide_name": "Suffocation",
+          "id": 471,
+          "name": "Suffocation"
+        },
+        "glove": {
+          "guide_name": "SpreadBlaster",
+          "id": 456,
+          "name": "SpreadBlaster"
+        },
+        "sword": {
+          "guide_name": "MagicHeal",
+          "id": 437,
+          "name": "MagicHeal"
+        }
+      },
+      "name": "LivingArmor",
+      "normal": {
+        "vit": 18
+      },
+      "variants": {}
+    },
+    "0x74": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assasinate",
+          "id": 476,
+          "name": "Assasinate"
+        },
+        "glove": {
+          "guide_name": "Spoil",
+          "id": 452,
+          "name": "Spoil"
+        },
+        "sword": {
+          "guide_name": "Blade",
+          "id": 436,
+          "name": "Blade"
+        }
+      },
+      "name": "LivingSword",
+      "normal": {
+        "int": 20,
+        "str": 20
+      },
+      "variants": {
+        "By Possession": {
+          "cha": 15,
+          "psy": 15,
+          "wil": 15
+        }
+      }
+    },
+    "0x75": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assasinate",
+          "id": 476,
+          "name": "Assasinate"
+        },
+        "glove": {
+          "guide_name": "GrapeShot",
+          "id": 458,
+          "name": "GrapeShot"
+        },
+        "sword": {
+          "guide_name": "GremlinEffect",
+          "id": 438,
+          "name": "GremlinEffect"
+        }
+      },
+      "name": "LivingMusket",
+      "normal": {
+        "wil": 25
+      },
+      "variants": {
+        "By Possession": {
+          "cha": 15,
+          "psy": 15,
+          "wil": 15
+        }
+      }
+    },
+    "0x76": {
+      "arts": {
+        "boots": {
+          "guide_name": "ThunderBall",
+          "id": 467,
+          "name": "ThunderBall"
+        },
+        "glove": {
+          "guide_name": "SpreadBlaster",
+          "id": 456,
+          "name": "SpreadBlaster"
+        },
+        "sword": {
+          "guide_name": "Flash",
+          "id": 444,
+          "name": "Flash"
+        }
+      },
+      "name": "LivingMirror",
+      "normal": {
+        "int": 20,
+        "psy": 20
+      },
+      "variants": {}
+    },
+    "0x77": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assasinate",
+          "id": 476,
+          "name": "Assasinate"
+        },
+        "glove": {
+          "guide_name": "Psych-out",
+          "id": 455,
+          "name": "Psych-out"
+        },
+        "sword": {
+          "guide_name": "FireBreath",
+          "id": 440,
+          "name": "FireBreath"
+        }
+      },
+      "name": "Mimic",
+      "normal": {
+        "qui": 25,
+        "wil": 25
+      },
+      "variants": {}
+    },
+    "0x78": {
+      "arts": {
+        "boots": {
+          "guide_name": "TitasWave",
+          "id": 477,
+          "name": "TitasWave"
+        },
+        "glove": {
+          "guide_name": "Crystalizer",
+          "id": 461,
+          "name": "Crystalizer"
+        },
+        "sword": {
+          "guide_name": "HeatSmash",
+          "id": 443,
+          "name": "HeatSmash"
+        }
+      },
+      "name": "RockScout",
+      "normal": {
+        "str": 30,
+        "vit": 30
+      },
+      "variants": {}
+    },
+    "0x79": {
+      "arts": {},
+      "name": "ElectroSheep",
+      "normal": {
+        "int": 25,
+        "psy": 25,
+        "qui": 25,
+        "str": 25,
+        "vit": 25,
+        "wil": 25
+      },
+      "variants": {}
+    },
+    "0x7A": {
+      "arts": {},
+      "name": "BossX",
+      "normal": {
+        "int": 25,
+        "psy": 25,
+        "qui": 25,
+        "str": 25,
+        "vit": 25,
+        "wil": 25
+      },
+      "variants": {}
+    },
+    "0x7B": {
+      "arts": {},
+      "name": "BlackX",
+      "normal": {
+        "int": 25,
+        "psy": 25,
+        "qui": 25,
+        "str": 25,
+        "vit": 25,
+        "wil": 25
+      },
+      "variants": {}
+    },
+    "0x7C": {
+      "arts": {},
+      "name": "MBlack",
+      "normal": {
+        "int": 25,
+        "psy": 25,
+        "qui": 25,
+        "str": 25,
+        "vit": 25,
+        "wil": 25
+      },
+      "variants": {}
+    },
+    "0x7D": {
+      "arts": {},
+      "name": "MBlackII",
+      "normal": {
+        "int": 25,
+        "psy": 25,
+        "qui": 25,
+        "str": 25,
+        "vit": 25,
+        "wil": 25
+      },
+      "variants": {}
+    },
+    "0x7E": {
+      "arts": {},
+      "name": "MBlackIII",
+      "normal": {
+        "int": 25,
+        "psy": 25,
+        "qui": 25,
+        "str": 25,
+        "vit": 25,
+        "wil": 25
+      },
+      "variants": {}
+    },
+    "0x7F": {
+      "arts": {
+        "boots": {
+          "guide_name": "Thunderbolt",
+          "id": 475,
+          "name": "ThunderBolt"
+        },
+        "glove": {
+          "guide_name": "TigerRampage",
+          "id": 462,
+          "name": "TigerRampage"
+        },
+        "sword": {
+          "guide_name": "MagicHeal",
+          "id": 437,
+          "name": "MagicHeal"
+        }
+      },
+      "name": "Mariche",
+      "normal": {
+        "cha": 25,
+        "int": 25,
+        "psy": 25,
+        "qui": 25,
+        "str": 25,
+        "vit": 25,
+        "wil": 25
+      },
+      "variants": {}
+    },
+    "0x80": {
+      "arts": {
+        "boots": {
+          "guide_name": "Sweep",
+          "id": 465,
+          "name": "Sweep"
+        },
+        "glove": {
+          "guide_name": "Spoil",
+          "id": 452,
+          "name": "Spoil"
+        },
+        "sword": {
+          "guide_name": "Blade",
+          "id": 436,
+          "name": "Blade"
+        }
+      },
+      "name": "Skeleton",
+      "normal": {
+        "psy": 6,
+        "str": 6
+      },
+      "variants": {}
+    },
+    "0x81": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assasinate",
+          "id": 476,
+          "name": "Assasinate"
+        },
+        "glove": {
+          "guide_name": "Spoil",
+          "id": 452,
+          "name": "Spoil"
+        },
+        "sword": {
+          "guide_name": "BloodSucker",
+          "id": 435,
+          "name": "BloodSucker"
+        }
+      },
+      "name": "Ghost",
+      "normal": {
+        "int": 8,
+        "psy": 8
+      },
+      "variants": {}
+    },
+    "0x82": {
+      "arts": {
+        "boots": {
+          "guide_name": "Suffocation",
+          "id": 471,
+          "name": "Suffocation"
+        },
+        "glove": {
+          "guide_name": "GrapeShot",
+          "id": 458,
+          "name": "GrapeShot"
+        },
+        "sword": {
+          "guide_name": "BloodSucker",
+          "id": 435,
+          "name": "BloodSucker"
+        }
+      },
+      "name": "Zombie",
+      "normal": {
+        "str": 10,
+        "vit": 10
+      },
+      "variants": {}
+    },
+    "0x83": {
+      "arts": {
+        "boots": {
+          "guide_name": "Tremor",
+          "id": 472,
+          "name": "Tremor"
+        },
+        "glove": {
+          "guide_name": "Spoil",
+          "id": 452,
+          "name": "Spoil"
+        },
+        "sword": {
+          "guide_name": "Oscillation",
+          "id": 441,
+          "name": "Oscillation"
+        }
+      },
+      "name": "Ghostrider",
+      "normal": {
+        "psy": 13,
+        "vit": 13,
+        "wil": 13
+      },
+      "variants": {}
+    },
+    "0x84": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assasinate",
+          "id": 476,
+          "name": "Assasinate"
+        },
+        "glove": {
+          "guide_name": "Spoil",
+          "id": 452,
+          "name": "Spoil"
+        },
+        "sword": {
+          "guide_name": "Blade",
+          "id": 436,
+          "name": "Blade"
+        }
+      },
+      "name": "DeadKnight",
+      "normal": {
+        "qui": 13,
+        "str": 13,
+        "vit": 13
+      },
+      "variants": {}
+    },
+    "0x85": {
+      "arts": {
+        "boots": {
+          "guide_name": "MysteryTap",
+          "id": 473,
+          "name": "MysteryTap"
+        },
+        "glove": {
+          "guide_name": "Feeler",
+          "id": 454,
+          "name": "Feeler"
+        },
+        "sword": {
+          "guide_name": "GriffithScratch",
+          "id": 445,
+          "name": "GriffithScratch"
+        }
+      },
+      "name": "Ankheg",
+      "normal": {
+        "qui": 15,
+        "str": 15
+      },
+      "variants": {}
+    },
+    "0x86": {
+      "arts": {
+        "boots": {
+          "guide_name": "Suffocation",
+          "id": 471,
+          "name": "Suffocation"
+        },
+        "glove": {
+          "guide_name": "DeadlyPowder",
+          "id": 451,
+          "name": "DeadlyPowder"
+        },
+        "sword": {
+          "guide_name": "PsyNet",
+          "id": 442,
+          "name": "PsyNet"
+        }
+      },
+      "name": "Lich",
+      "normal": {
+        "int": 42
+      },
+      "variants": {}
+    },
+    "0x87": {
+      "arts": {
+        "boots": {
+          "guide_name": "ThunderBall",
+          "id": 467,
+          "name": "ThunderBall"
+        },
+        "glove": {
+          "guide_name": "PoisonusBlow",
+          "id": 453,
+          "name": "PoisonusBlow"
+        },
+        "sword": {
+          "guide_name": "BloodSucker",
+          "id": 435,
+          "name": "BloodSucker"
+        }
+      },
+      "name": "Skullasaurus",
+      "normal": {
+        "qui": 20,
+        "str": 20,
+        "vit": 20
+      },
+      "variants": {}
+    },
+    "0x88": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assasinate",
+          "id": 476,
+          "name": "Assasinate"
+        },
+        "glove": {
+          "guide_name": "Crystalizer",
+          "id": 461,
+          "name": "Crystalizer"
+        },
+        "sword": {
+          "guide_name": "GriffithScratch",
+          "id": 445,
+          "name": "GriffithScratch"
+        }
+      },
+      "name": "Dullahan",
+      "normal": {
+        "int": 20,
+        "psy": 20,
+        "qui": 20,
+        "str": 20
+      },
+      "variants": {}
+    },
+    "0x89": {
+      "arts": {
+        "boots": {
+          "guide_name": "Sweep",
+          "id": 465,
+          "name": "Sweep"
+        },
+        "glove": {
+          "guide_name": "Da-dum",
+          "id": 449,
+          "name": "Da-dum"
+        },
+        "sword": {
+          "guide_name": "Needle",
+          "id": 433,
+          "name": "Needle"
+        }
+      },
+      "name": "Bone",
+      "normal": {
+        "int": 13,
+        "psy": 13,
+        "qui": 13,
+        "str": 13,
+        "vit": 13,
+        "wil": 13
+      },
+      "variants": {}
+    },
+    "0x8A": {
+      "arts": {
+        "boots": {
+          "guide_name": "TitasWave",
+          "id": 477,
+          "name": "TitasWave"
+        },
+        "glove": {
+          "guide_name": "Feeler",
+          "id": 454,
+          "name": "Feeler"
+        },
+        "sword": {
+          "guide_name": "GriffithScratch",
+          "id": 445,
+          "name": "GriffithScratch"
+        }
+      },
+      "name": "Bonehead",
+      "normal": {
+        "qui": 13,
+        "str": 13,
+        "vit": 13
+      },
+      "variants": {}
+    },
+    "0x8B": {
+      "arts": {
+        "boots": {
+          "guide_name": "TitasWave",
+          "id": 477,
+          "name": "TitasWave"
+        },
+        "glove": {
+          "guide_name": "Feeler",
+          "id": 454,
+          "name": "Feeler"
+        },
+        "sword": {
+          "guide_name": "GriffithScratch",
+          "id": 445,
+          "name": "GriffithScratch"
+        }
+      },
+      "name": "Nidheg",
+      "normal": {
+        "qui": 13,
+        "str": 13,
+        "vit": 13
+      },
+      "variants": {}
+    },
+    "0x8C": {
+      "arts": {
+        "boots": {
+          "guide_name": "TitasWave",
+          "id": 477,
+          "name": "TitasWave"
+        },
+        "glove": {
+          "guide_name": "Feeler",
+          "id": 454,
+          "name": "Feeler"
+        },
+        "sword": {
+          "guide_name": "GriffithScratch",
+          "id": 445,
+          "name": "GriffithScratch"
+        }
+      },
+      "name": "Nidheg",
+      "normal": {
+        "qui": 13,
+        "str": 13,
+        "vit": 13
+      },
+      "variants": {}
+    },
+    "0x8D": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assasinate",
+          "id": 476,
+          "name": "Assasinate"
+        },
+        "glove": {
+          "guide_name": "IceSmash",
+          "id": 460,
+          "name": "IceSmash"
+        },
+        "sword": {
+          "guide_name": "Blade",
+          "id": 436,
+          "name": "Blade"
+        }
+      },
+      "name": "DeathLord",
+      "normal": {
+        "int": 13,
+        "psy": 13,
+        "str": 13
+      },
+      "variants": {}
+    },
+    "0x8E": {
+      "arts": {
+        "boots": {
+          "guide_name": "Spiders",
+          "id": 470,
+          "name": "Spiders"
+        },
+        "glove": {
+          "guide_name": "Spoil",
+          "id": 452,
+          "name": "Spoil"
+        },
+        "sword": {
+          "guide_name": "FireBreath",
+          "id": 440,
+          "name": "FireBreath"
+        }
+      },
+      "name": "Skulldrake",
+      "normal": {
+        "qui": 13,
+        "str": 13,
+        "vit": 13
+      },
+      "variants": {}
+    },
+    "0x8F": {
+      "arts": {
+        "boots": {
+          "guide_name": "TitasWave",
+          "id": 477,
+          "name": "TitasWave"
+        },
+        "glove": {
+          "guide_name": "IceSmash",
+          "id": 460,
+          "name": "IceSmash"
+        },
+        "sword": {
+          "guide_name": "HeatSmash",
+          "id": 443,
+          "name": "HeatSmash"
+        }
+      },
+      "name": "Durahan",
+      "normal": {
+        "int": 20,
+        "psy": 20,
+        "qui": 20,
+        "str": 20,
+        "vit": 20,
+        "wil": 20
+      },
+      "variants": {}
+    },
+    "0x90": {
+      "arts": {},
+      "name": "Battleaxe",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0x91": {
+      "arts": {},
+      "name": "Swordsman",
+      "normal": {
+        "qui": 7,
+        "str": 7,
+        "vit": 7
+      },
+      "variants": {}
+    },
+    "0x92": {
+      "arts": {},
+      "name": "NomadFighter",
+      "normal": {
+        "psy": 12,
+        "wil": 12
+      },
+      "variants": {}
+    },
+    "0x93": {
+      "arts": {},
+      "name": "Soldier",
+      "normal": {
+        "qui": 12,
+        "vit": 12,
+        "wil": 12
+      },
+      "variants": {}
+    },
+    "0x94": {
+      "arts": {},
+      "name": "Shadow",
+      "normal": {
+        "qui": 13,
+        "str": 13,
+        "wil": 13
+      },
+      "variants": {}
+    },
+    "0x95": {
+      "arts": {},
+      "name": "Gunbird",
+      "normal": {
+        "vit": 18,
+        "wil": 18
+      },
+      "variants": {}
+    },
+    "0x96": {
+      "arts": {},
+      "name": "Ladyblade",
+      "normal": {
+        "qui": 18,
+        "str": 18,
+        "vit": 18
+      },
+      "variants": {}
+    },
+    "0x97": {
+      "arts": {},
+      "name": "Shaman",
+      "normal": {
+        "qui": 20,
+        "str": 20,
+        "vit": 20
+      },
+      "variants": {}
+    },
+    "0x98": {
+      "arts": {},
+      "name": "Grappler",
+      "normal": {
+        "qui": 25,
+        "str": 25,
+        "vit": 25
+      },
+      "variants": {}
+    },
+    "0x99": {
+      "arts": {},
+      "name": "BlackFighter",
+      "normal": {
+        "qui": 25,
+        "str": 25,
+        "vit": 25
+      },
+      "variants": {}
+    },
+    "0x9A": {
+      "arts": {},
+      "name": "RedFighter",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0x9B": {
+      "arts": {},
+      "name": "BlueFighter",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0x9C": {
+      "arts": {},
+      "name": "GreenFighter",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0x9D": {
+      "arts": {},
+      "name": "PinkFighter",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0x9E": {
+      "arts": {},
+      "name": "YellowFighter",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0x9F": {
+      "arts": {},
+      "name": "Blackgarb",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xA0": {
+      "arts": {
+        "boots": {
+          "guide_name": "Sweep",
+          "id": 465,
+          "name": "Sweep"
+        },
+        "glove": {
+          "guide_name": "Da-dum",
+          "id": 449,
+          "name": "Da-dum"
+        },
+        "sword": {
+          "guide_name": "Needle",
+          "id": 433,
+          "name": "Needle"
+        }
+      },
+      "name": "Rouge",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xA1": {
+      "arts": {
+        "boots": {
+          "guide_name": "Sweep",
+          "id": 465,
+          "name": "Sweep"
+        },
+        "glove": {
+          "guide_name": "Da-dum",
+          "id": 449,
+          "name": "Da-dum"
+        },
+        "sword": {
+          "guide_name": "Needle",
+          "id": 433,
+          "name": "Needle"
+        }
+      },
+      "name": "FireSage",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xA2": {
+      "arts": {
+        "boots": {
+          "guide_name": "Sweep",
+          "id": 465,
+          "name": "Sweep"
+        },
+        "glove": {
+          "guide_name": "Da-dum",
+          "id": 449,
+          "name": "Da-dum"
+        },
+        "sword": {
+          "guide_name": "Needle",
+          "id": 433,
+          "name": "Needle"
+        }
+      },
+      "name": "WaterSage",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xA3": {
+      "arts": {
+        "boots": {
+          "guide_name": "Sweep",
+          "id": 465,
+          "name": "Sweep"
+        },
+        "glove": {
+          "guide_name": "Da-dum",
+          "id": 449,
+          "name": "Da-dum"
+        },
+        "sword": {
+          "guide_name": "Needle",
+          "id": 433,
+          "name": "Needle"
+        }
+      },
+      "name": "BatKnight",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xA4": {
+      "arts": {
+        "boots": {
+          "guide_name": "Sweep",
+          "id": 465,
+          "name": "Sweep"
+        },
+        "glove": {
+          "guide_name": "Da-dum",
+          "id": 449,
+          "name": "Da-dum"
+        },
+        "sword": {
+          "guide_name": "Needle",
+          "id": 433,
+          "name": "Needle"
+        }
+      },
+      "name": "BlackKnight",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xA5": {
+      "arts": {
+        "boots": {
+          "guide_name": "Sweep",
+          "id": 465,
+          "name": "Sweep"
+        },
+        "glove": {
+          "guide_name": "Da-dum",
+          "id": 449,
+          "name": "Da-dum"
+        },
+        "sword": {
+          "guide_name": "Needle",
+          "id": 433,
+          "name": "Needle"
+        }
+      },
+      "name": "HunterKnight",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xA6": {
+      "arts": {
+        "boots": {
+          "guide_name": "TitasWave",
+          "id": 477,
+          "name": "TitasWave"
+        },
+        "glove": {
+          "guide_name": "TigerRampage",
+          "id": 462,
+          "name": "TigerRampage"
+        },
+        "sword": {
+          "guide_name": "GriffithScratch",
+          "id": 445,
+          "name": "GriffithScratch"
+        }
+      },
+      "name": "DragonLord",
+      "normal": {
+        "qui": 36,
+        "str": 36,
+        "vit": 36
+      },
+      "variants": {}
+    },
+    "0xA7": {
+      "arts": {
+        "boots": {
+          "guide_name": "MysteryTap",
+          "id": 473,
+          "name": "MysteryTap"
+        },
+        "glove": {
+          "guide_name": "HellWing",
+          "id": 457,
+          "name": "HellWing"
+        },
+        "sword": {
+          "guide_name": "GremlinEffect",
+          "id": 438,
+          "name": "GremlinEffect"
+        }
+      },
+      "name": "Lunatic",
+      "normal": {
+        "cha": 20,
+        "qui": 20,
+        "vit": 20
+      },
+      "variants": {}
+    },
+    "0xA8": {
+      "arts": {
+        "boots": {
+          "guide_name": "Sweep",
+          "id": 465,
+          "name": "Sweep"
+        },
+        "glove": {
+          "guide_name": "Da-dum",
+          "id": 449,
+          "name": "Da-dum"
+        },
+        "sword": {
+          "guide_name": "Needle",
+          "id": 433,
+          "name": "Needle"
+        }
+      },
+      "name": "Ladyhawk",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xA9": {
+      "arts": {
+        "boots": {
+          "guide_name": "Sweep",
+          "id": 465,
+          "name": "Sweep"
+        },
+        "glove": {
+          "guide_name": "Da-dum",
+          "id": 449,
+          "name": "Da-dum"
+        },
+        "sword": {
+          "guide_name": "Needle",
+          "id": 433,
+          "name": "Needle"
+        }
+      },
+      "name": "LionPrincess",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xAA": {
+      "arts": {},
+      "name": "Shade",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xAB": {
+      "arts": {},
+      "name": "Stand",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xAC": {
+      "arts": {},
+      "name": "Stand",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xAD": {
+      "arts": {},
+      "name": "Stand",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xAE": {
+      "arts": {},
+      "name": "Patient",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xAF": {
+      "arts": {},
+      "name": "Patient",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xB0": {
+      "arts": {
+        "sword": {
+          "guide_name": "Hypnotism",
+          "id": 439,
+          "name": "Hypnotism"
+        }
+      },
+      "name": "Wonderdog",
+      "normal": {
+        "int": 5,
+        "psy": 5,
+        "str": 5,
+        "wil": 5
+      },
+      "variants": {}
+    },
+    "0xB1": {
+      "arts": {
+        "glove": {
+          "guide_name": "HellWing",
+          "id": 457,
+          "name": "HellWing"
+        },
+        "sword": {
+          "guide_name": "Needle",
+          "id": 433,
+          "name": "Needle"
+        }
+      },
+      "name": "Gargoyle",
+      "normal": {
+        "int": 7,
+        "qui": 7,
+        "str": 7,
+        "vit": 7
+      },
+      "variants": {}
+    },
+    "0xB2": {
+      "arts": {
+        "boots": {
+          "guide_name": "Spiders",
+          "id": 470,
+          "name": "Spiders"
+        },
+        "glove": {
+          "guide_name": "PoisonusBlow",
+          "id": 453,
+          "name": "PoisonusBlow"
+        }
+      },
+      "name": "Snakeman",
+      "normal": {
+        "int": 12,
+        "wil": 12
+      },
+      "variants": {}
+    },
+    "0xB3": {
+      "arts": {
+        "boots": {
+          "guide_name": "Sweep",
+          "id": 465,
+          "name": "Sweep"
+        },
+        "glove": {
+          "guide_name": "WaterCannon",
+          "id": 450,
+          "name": "WaterCannon"
+        },
+        "sword": {
+          "guide_name": "Lance",
+          "id": 434,
+          "name": "Lance"
+        }
+      },
+      "name": "Fishman",
+      "normal": {
+        "psy": 11,
+        "str": 11,
+        "wil": 11
+      },
+      "variants": {}
+    },
+    "0xB4": {
+      "arts": {
+        "boots": {
+          "guide_name": "ThunderBall",
+          "id": 467,
+          "name": "ThunderBall"
+        },
+        "sword": {
+          "guide_name": "Blade",
+          "id": 436,
+          "name": "Blade"
+        }
+      },
+      "name": "Mystic",
+      "normal": {
+        "cha": 13,
+        "int": 13,
+        "psy": 13,
+        "str": 13
+      },
+      "variants": {}
+    },
+    "0xB5": {
+      "arts": {
+        "glove": {
+          "guide_name": "Spoil",
+          "id": 452,
+          "name": "Spoil"
+        },
+        "sword": {
+          "guide_name": "GremlinEffect",
+          "id": 438,
+          "name": "GremlinEffect"
+        }
+      },
+      "name": "Gremlin",
+      "normal": {
+        "int": 15,
+        "qui": 15,
+        "wil": 15
+      },
+      "variants": {}
+    },
+    "0xB6": {
+      "arts": {
+        "boots": {
+          "guide_name": "Suffocation",
+          "id": 471,
+          "name": "Suffocation"
+        },
+        "glove": {
+          "guide_name": "Da-dum",
+          "id": 449,
+          "name": "Da-dum"
+        },
+        "sword": {
+          "guide_name": "Blade",
+          "id": 436,
+          "name": "Blade"
+        }
+      },
+      "name": "FatDevil",
+      "normal": {
+        "int": 17,
+        "str": 17,
+        "vit": 17,
+        "wil": 17
+      },
+      "variants": {}
+    },
+    "0xB7": {
+      "arts": {
+        "boots": {
+          "guide_name": "Tremor",
+          "id": 472,
+          "name": "Tremor"
+        },
+        "glove": {
+          "guide_name": "IceSmash",
+          "id": 460,
+          "name": "IceSmash"
+        },
+        "sword": {
+          "guide_name": "Lance",
+          "id": 434,
+          "name": "Lance"
+        }
+      },
+      "name": "WereRhino",
+      "normal": {
+        "qui": 19,
+        "str": 19,
+        "vit": 19
+      },
+      "variants": {}
+    },
+    "0xB8": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assasinate",
+          "id": 476,
+          "name": "Assasinate"
+        },
+        "glove": {
+          "guide_name": "HellWing",
+          "id": 457,
+          "name": "HellWing"
+        },
+        "sword": {
+          "guide_name": "Oscillation",
+          "id": 441,
+          "name": "Oscillation"
+        }
+      },
+      "name": "Zyphon",
+      "normal": {
+        "int": 23,
+        "psy": 23,
+        "qui": 23,
+        "wil": 23
+      },
+      "variants": {}
+    },
+    "0xB9": {
+      "arts": {
+        "boots": {
+          "guide_name": "Sweep",
+          "id": 465,
+          "name": "Sweep"
+        },
+        "glove": {
+          "guide_name": "Da-dum",
+          "id": 449,
+          "name": "Da-dum"
+        },
+        "sword": {
+          "guide_name": "Needle",
+          "id": 433,
+          "name": "Needle"
+        }
+      },
+      "name": "Abyssbat",
+      "normal": {
+        "qui": 25,
+        "str": 25,
+        "vit": 25
+      },
+      "variants": {}
+    },
+    "0xBA": {
+      "arts": {},
+      "name": "Minotaur",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xBB": {
+      "arts": {},
+      "name": "Demongoat",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xBC": {
+      "arts": {},
+      "name": "Goblin",
+      "normal": {
+        "qui": 15,
+        "str": 15,
+        "vit": 15
+      },
+      "variants": {}
+    },
+    "0xBD": {
+      "arts": {},
+      "name": "Shuzer",
+      "normal": {
+        "qui": 25,
+        "str": 25,
+        "vit": 25
+      },
+      "variants": {}
+    },
+    "0xBE": {
+      "arts": {
+        "boots": {
+          "guide_name": "Suffocation",
+          "id": 471,
+          "name": "Suffocation"
+        },
+        "glove": {
+          "guide_name": "Da-dum",
+          "id": 449,
+          "name": "Da-dum"
+        },
+        "sword": {
+          "guide_name": "Blade",
+          "id": 436,
+          "name": "Blade"
+        }
+      },
+      "name": "SirDemon",
+      "normal": {
+        "int": 15,
+        "str": 15,
+        "vit": 15,
+        "wil": 15
+      },
+      "variants": {}
+    },
+    "0xBF": {
+      "arts": {},
+      "name": "Furdo",
+      "normal": {
+        "qui": 25,
+        "str": 25,
+        "vit": 25
+      },
+      "variants": {}
+    },
+    "0xC0": {
+      "arts": {
+        "sword": {
+          "guide_name": "MagicHeal",
+          "id": 437,
+          "name": "MagicHeal"
+        }
+      },
+      "name": "Sprite",
+      "normal": {
+        "cha": 5,
+        "psy": 5,
+        "qui": 5
+      },
+      "variants": {}
+    },
+    "0xC1": {
+      "arts": {
+        "glove": {
+          "guide_name": "WaterCannon",
+          "id": 450,
+          "name": "WaterCannon"
+        },
+        "sword": {
+          "guide_name": "MagicHeal",
+          "id": 437,
+          "name": "MagicHeal"
+        }
+      },
+      "name": "Undine",
+      "normal": {
+        "int": 7,
+        "psy": 7,
+        "vit": 7
+      },
+      "variants": {}
+    },
+    "0xC2": {
+      "arts": {
+        "boots": {
+          "guide_name": "PowerKick",
+          "id": 466,
+          "name": "PowerKick"
+        },
+        "glove": {
+          "guide_name": "PoisonusBlow",
+          "id": 453,
+          "name": "PoisonusBlow"
+        }
+      },
+      "name": "KittyClawer",
+      "normal": {
+        "cha": 9,
+        "qui": 9,
+        "str": 9
+      },
+      "variants": {}
+    },
+    "0xC3": {
+      "arts": {
+        "glove": {
+          "guide_name": "ArcticBreath",
+          "id": 459,
+          "name": "ArcticBreath"
+        },
+        "sword": {
+          "guide_name": "Oscillation",
+          "id": 441,
+          "name": "Oscillation"
+        }
+      },
+      "name": "Banshee",
+      "normal": {
+        "cha": 11,
+        "int": 11,
+        "psy": 11
+      },
+      "variants": {}
+    },
+    "0xC4": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assist",
+          "id": 469,
+          "name": "Assist"
+        },
+        "glove": {
+          "guide_name": "WaterCannon",
+          "id": 450,
+          "name": "WaterCannon"
+        }
+      },
+      "name": "Mellow",
+      "normal": {
+        "cha": 11,
+        "int": 11,
+        "psy": 11,
+        "qui": 11,
+        "wil": 11
+      },
+      "variants": {}
+    },
+    "0xC5": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assist",
+          "id": 469,
+          "name": "Assist"
+        },
+        "glove": {
+          "guide_name": "HellWing",
+          "id": 457,
+          "name": "HellWing"
+        },
+        "sword": {
+          "guide_name": "HeatSmash",
+          "id": 443,
+          "name": "HeatSmash"
+        }
+      },
+      "name": "SpearValkyrie",
+      "normal": {
+        "cha": 15,
+        "psy": 15,
+        "str": 15,
+        "vit": 15
+      },
+      "variants": {}
+    },
+    "0xC6": {
+      "arts": {
+        "glove": {
+          "guide_name": "Spoil",
+          "id": 452,
+          "name": "Spoil"
+        },
+        "sword": {
+          "guide_name": "BloodSucker",
+          "id": 435,
+          "name": "BloodSucker"
+        }
+      },
+      "name": "Succubus",
+      "normal": {
+        "cha": 17,
+        "int": 17,
+        "psy": 17,
+        "wil": 17
+      },
+      "variants": {}
+    },
+    "0xC7": {
+      "arts": {
+        "boots": {
+          "guide_name": "TitasWave",
+          "id": 477,
+          "name": "TitasWave"
+        },
+        "glove": {
+          "guide_name": "IceSmash",
+          "id": 460,
+          "name": "IceSmash"
+        },
+        "sword": {
+          "guide_name": "Hypnotism",
+          "id": 439,
+          "name": "Hypnotism"
+        }
+      },
+      "name": "Lamia",
+      "normal": {
+        "cha": 20,
+        "psy": 20,
+        "str": 20
+      },
+      "variants": {}
+    },
+    "0xC8": {
+      "arts": {
+        "boots": {
+          "guide_name": "Thunderbolt",
+          "id": 475,
+          "name": "ThunderBolt"
+        },
+        "glove": {
+          "guide_name": "SpreadBlaster",
+          "id": 456,
+          "name": "SpreadBlaster"
+        },
+        "sword": {
+          "guide_name": "GremlinEffect",
+          "id": 438,
+          "name": "GremlinEffect"
+        }
+      },
+      "name": "Siren",
+      "normal": {
+        "int": 22,
+        "psy": 22,
+        "qui": 22,
+        "wil": 22
+      },
+      "variants": {}
+    },
+    "0xC9": {
+      "arts": {
+        "boots": {
+          "guide_name": "Sweep",
+          "id": 465,
+          "name": "Sweep"
+        },
+        "glove": {
+          "guide_name": "Da-dum",
+          "id": 449,
+          "name": "Da-dum"
+        },
+        "sword": {
+          "guide_name": "Needle",
+          "id": 433,
+          "name": "Needle"
+        }
+      },
+      "name": "Darkfairy",
+      "normal": {
+        "qui": 25,
+        "str": 25,
+        "vit": 25
+      },
+      "variants": {}
+    },
+    "0xCA": {
+      "arts": {},
+      "name": "SwordValkyrie",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xCB": {
+      "arts": {},
+      "name": "Dancer",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xCC": {
+      "arts": {},
+      "name": "Cindy",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xCD": {
+      "arts": {
+        "glove": {
+          "guide_name": "Spoil",
+          "id": 452,
+          "name": "Spoil"
+        },
+        "sword": {
+          "guide_name": "BloodSucker",
+          "id": 435,
+          "name": "BloodSucker"
+        }
+      },
+      "name": "Titania",
+      "normal": {
+        "cha": 15,
+        "int": 15,
+        "psy": 15,
+        "wil": 15
+      },
+      "variants": {}
+    },
+    "0xCE": {
+      "arts": {
+        "boots": {
+          "guide_name": "PowerKick",
+          "id": 466,
+          "name": "PowerKick"
+        },
+        "glove": {
+          "guide_name": "Psych-out",
+          "id": 455,
+          "name": "Psych-out"
+        }
+      },
+      "name": "KittyKicker",
+      "normal": {
+        "cha": 9,
+        "qui": 9,
+        "str": 9
+      },
+      "variants": {}
+    },
+    "0xCF": {
+      "arts": {},
+      "name": "Arachne",
+      "normal": {
+        "qui": 25,
+        "str": 25,
+        "vit": 25
+      },
+      "variants": {}
+    },
+    "0xD0": {
+      "arts": {},
+      "name": "SwordMec",
+      "normal": {
+        "str": 9,
+        "vit": 9
+      },
+      "variants": {}
+    },
+    "0xD1": {
+      "arts": {},
+      "name": "MecDobby",
+      "normal": {
+        "vit": 11,
+        "wil": 11
+      },
+      "variants": {}
+    },
+    "0xD2": {
+      "arts": {},
+      "name": "WaspMec",
+      "normal": {
+        "qui": 13,
+        "vit": 13
+      },
+      "variants": {}
+    },
+    "0xD3": {
+      "arts": {},
+      "name": "CancerMec",
+      "normal": {
+        "vit": 15,
+        "wil": 15
+      },
+      "variants": {}
+    },
+    "0xD4": {
+      "arts": {},
+      "name": "BirdMec",
+      "normal": {
+        "vit": 17,
+        "wil": 17
+      },
+      "variants": {}
+    },
+    "0xD5": {
+      "arts": {},
+      "name": "Hermes",
+      "normal": {
+        "str": 19,
+        "vit": 19
+      },
+      "variants": {}
+    },
+    "0xD6": {
+      "arts": {},
+      "name": "MecDobby100",
+      "normal": {
+        "vit": 21,
+        "wil": 21
+      },
+      "variants": {}
+    },
+    "0xD7": {
+      "arts": {},
+      "name": "Skylab",
+      "normal": {
+        "qui": 24,
+        "vit": 24
+      },
+      "variants": {}
+    },
+    "0xD8": {
+      "arts": {},
+      "name": "R&R",
+      "normal": {
+        "qui": 25,
+        "str": 25,
+        "vit": 25
+      },
+      "variants": {}
+    },
+    "0xD9": {
+      "arts": {},
+      "name": "BigDigger",
+      "normal": {
+        "qui": 25,
+        "str": 25,
+        "vit": 25
+      },
+      "variants": {}
+    },
+    "0xDA": {
+      "arts": {},
+      "name": "D-Tractor",
+      "normal": {
+        "str": 6,
+        "vit": 6
+      },
+      "variants": {}
+    },
+    "0xDB": {
+      "arts": {},
+      "name": "VulcanII",
+      "normal": {
+        "str": 9,
+        "vit": 9,
+        "wil": 9
+      },
+      "variants": {}
+    },
+    "0xDC": {
+      "arts": {},
+      "name": "Vulcan",
+      "normal": {
+        "str": 6,
+        "vit": 6,
+        "wil": 6
+      },
+      "variants": {}
+    },
+    "0xDD": {
+      "arts": {},
+      "name": "Guncart",
+      "normal": {
+        "qui": 4,
+        "vit": 4
+      },
+      "variants": {}
+    },
+    "0xDE": {
+      "arts": {},
+      "name": "FlyMec",
+      "normal": {
+        "vit": 4
+      },
+      "variants": {}
+    },
+    "0xDF": {
+      "arts": {},
+      "name": "A-Tractor",
+      "normal": {
+        "str": 4,
+        "vit": 4
+      },
+      "variants": {}
+    },
+    "0xE0": {
+      "arts": {},
+      "name": "TimeLord",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xE1": {
+      "arts": {},
+      "name": "AutoBuffer",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xE2": {
+      "arts": {},
+      "name": "MaskBuffer",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xE3": {
+      "arts": {},
+      "name": "Tanzer",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xE4": {
+      "arts": {},
+      "name": "Tentacle",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xE5": {
+      "arts": {},
+      "name": "Tentacle",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xE6": {
+      "arts": {},
+      "name": "GreenSage",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xE7": {
+      "arts": {
+        "boots": {
+          "guide_name": "TitasWave",
+          "id": 477,
+          "name": "TitasWave"
+        },
+        "glove": {
+          "guide_name": "GrapeShot",
+          "id": 458,
+          "name": "GrapeShot"
+        },
+        "sword": {
+          "guide_name": "HeatSmash",
+          "id": 443,
+          "name": "HeatSmash"
+        }
+      },
+      "name": "EarthDragon",
+      "normal": {
+        "str": 36,
+        "vit": 36
+      },
+      "variants": {}
+    },
+    "0xE8": {
+      "arts": {},
+      "name": "Quakeworm",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xE9": {
+      "arts": {
+        "boots": {
+          "guide_name": "Assist",
+          "id": 469,
+          "name": "Assist"
+        },
+        "glove": {
+          "guide_name": "DeadlyPowder",
+          "id": 451,
+          "name": "DeadlyPowder"
+        },
+        "sword": {
+          "guide_name": "MagicHeal",
+          "id": 437,
+          "name": "MagicHeal"
+        }
+      },
+      "name": "Wormbrood",
+      "normal": {
+        "vit": 14,
+        "wil": 14
+      },
+      "variants": {}
+    },
+    "0xEA": {
+      "arts": {},
+      "name": "MegaTitan",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xEB": {
+      "arts": {},
+      "name": "CrimeLady",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xEC": {
+      "arts": {},
+      "name": "Mollasite",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xED": {
+      "arts": {},
+      "name": "Bed",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xEE": {
+      "arts": {},
+      "name": "Bed",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xEF": {
+      "arts": {},
+      "name": "Mollasite",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xF0": {
+      "arts": {},
+      "name": "Virgil",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xF1": {
+      "arts": {},
+      "name": "Orlouge",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xF2": {
+      "arts": {},
+      "name": "Diva",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xF3": {
+      "arts": {},
+      "name": "Diva",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xF4": {
+      "arts": {},
+      "name": "DivaAppear",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xF5": {
+      "arts": {},
+      "name": "DivaSkull",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xF6": {
+      "arts": {},
+      "name": "GenocideHeart",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xF7": {
+      "arts": {},
+      "name": "HQcore",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xF8": {
+      "arts": {},
+      "name": "T-Walker",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xF9": {
+      "arts": {},
+      "name": "Spriggan",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xFA": {
+      "arts": {},
+      "name": "Spriggan",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xFB": {
+      "arts": {},
+      "name": "Spriggan",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xFC": {
+      "arts": {},
+      "name": "Spriggan",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xFD": {
+      "arts": {},
+      "name": "Spriggan",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xFE": {
+      "arts": {},
+      "name": "Spriggan",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    },
+    "0xFF": {
+      "arts": {},
+      "name": "NotUse",
+      "normal": {
+        "qui": 5,
+        "str": 5,
+        "vit": 5
+      },
+      "variants": {}
+    }
+  },
+  "meta": {
+    "art_slots": 465,
+    "description": "Mystic absorb names, granted arts and documented boosts",
+    "enemies_with_arts": 160,
+    "generator": "tests/sfr_save_editor/build_mystic_absorbs.py",
+    "id_range": [
+      "0x00",
+      "0xFF"
+    ],
+    "layout": {
+      "basis": "The nine bytes at tribial_work.data[4..12] decode as enemy id, stat mask and boost amount per weapon, and reproduce all 12 documented INIT absorbs for Ildon, Zozma, Rei and Silence, including their variant rows. See runbook 4.18.",
+      "status": "verified"
+    },
+    "name_note": "names and granted arts are the guide's extracted data, not save fields. Art names use the ability_names.json spelling; the guide's spelling differs in case for 13 slots (ThunderBolt, QuickSand).",
+    "null_note": "A stat missing from normal or variants means the guide prints a dash: the absorb gives no boost to that stat. Gunfish is the example: its normal row is empty, while Silence's INIT variant grants STR/QUI/WIL.",
+    "records": 256,
+    "source": "docs/gameinfo/gamefaqs/in-depth_guides/Data_Mechanics_Guide_by_Zaraktheus.txt",
+    "source_section": "[MYSAB02] Mystic Absorbs Data, Full Entries List",
+    "source_sha256": "0ebaa4824ae12aee8db106dbf549f01a65b045b75fdccc24c9b3ee4e66f46549",
+    "stat_labels": [
+      "STR",
+      "QUI",
+      "INT",
+      "WIL",
+      "PSY",
+      "VIT",
+      "CHA"
+    ],
+    "stat_order": [
+      "str",
+      "qui",
+      "int",
+      "wil",
+      "psy",
+      "vit",
+      "cha"
+    ],
+    "status": "documented",
+    "variant_note": "variants are the guide's documented INIT and Possession overrides. The save stores the resulting mask and amount, so the viewer compares the stored values with normal and with each variant instead of guessing which one applied.",
+    "weapon_arts": {
+      "boots": "0x1D0",
+      "glove": "0x1C0",
+      "sword": "0x1B0"
+    },
+    "weapon_order": [
+      "sword",
+      "glove",
+      "boots"
+    ]
+  },
+  "schema": 1
+}

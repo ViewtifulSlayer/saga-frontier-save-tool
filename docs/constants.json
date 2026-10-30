@@ -1,0 +1,1633 @@
+{
+  "meta": {
+    "purpose": "ID to display-name lookup for the SaGa Frontier Remastered save viewer.",
+    "key_format": "Uppercase hexadecimal with 0x prefix, two digits (0x00-0xFF).",
+    "status_legend": {
+      "verified": "Confirmed by both the live save in this workspace and the game name table.",
+      "asset": "Read from the game name table in resources.assets. Authoritative in-game spelling.",
+      "documented": "Community table only; retained for cross-checking, not used by the viewer.",
+      "ambiguous": "Sources disagree. Do not treat as settled.",
+      "unknown": "ID occurs but no reliable name is available.",
+      "placeholder": "Table entry exists but is marked NotUse."
+    },
+    "sentinels": {
+      "character_empty": 255,
+      "item_empty": 255,
+      "equipment_attack_empty": 65535,
+      "equipment_item_empty": 255
+    },
+    "extraction": {
+      "source": "docs/gamedata/SaGa Frontier Remastered/SaGa Frontier Remastered_Data/resources.assets",
+      "format": "Fixed-width padded ASCII tables: items and characters at 16 bytes, areas at 20.",
+      "item_table_offset": 7738252,
+      "character_table_offset": 7783498,
+      "area_table_offset": 7782118,
+      "item_records": 256,
+      "character_records": 64,
+      "area_records": 69,
+      "area_note": "mapwk.map_name and saveItemInfoData.MapNumber are 0-based indexes into this table, not room ids.",
+      "generator": "tests/sfr_save_editor/extract_name_tables.js",
+      "alignment_checks": [
+        "item[7] is Backpack",
+        "item[17] is BroadSword",
+        "item[128] is FiberVest",
+        "item[169] is SilkShirt",
+        "item[192] is LeatherBoots",
+        "character[0] is Emelia",
+        "character[5] is Asellus",
+        "area[5] is Koorong",
+        "area[26] is Chateau Aiguille",
+        "area[68] is the last record",
+        "slot 0 MapNumber 26 is Chateau Aiguille",
+        "mapwk.map_name 26 is Chateau Aiguille",
+        "slot 0 first item is Backpack",
+        "slot 0 leader is Asellus"
+      ]
+    },
+    "counts": {
+      "characters": 64,
+      "items": 256,
+      "areas": 69
+    },
+    "supersedes": [
+      "The community table previously used here had wrong indices: it placed Broad Sword at 0x02 (actual 0x11), Zero Sword at 0x0A (actual 0x25), and Gold Ingot at 0xFA (actual 0xF0). It also listed Katar, which does not exist in the game name table.",
+      "Item 0x33 is Agni CP1 per the community table but AGUNI-CP1 in the game table. The game string wins.",
+      "Item 0xFA is Magi-Water, not the second of two conflicting community names. The earlier ambiguity is resolved.",
+      "Character 0x06 is T260 in the game table, not T260G as previously written."
+    ]
+  },
+  "characters": {
+    "0x00": {
+      "name": "Emelia",
+      "status": "asset"
+    },
+    "0x01": {
+      "name": "Lute",
+      "status": "asset"
+    },
+    "0x02": {
+      "name": "Red",
+      "status": "asset"
+    },
+    "0x03": {
+      "name": "Fuse",
+      "status": "asset"
+    },
+    "0x04": {
+      "name": "Blue",
+      "status": "asset"
+    },
+    "0x05": {
+      "name": "Asellus",
+      "status": "verified",
+      "note": "Confirmed by slot 0 CharacterNumber and the game name table."
+    },
+    "0x06": {
+      "name": "T260",
+      "status": "asset"
+    },
+    "0x07": {
+      "name": "Riki",
+      "status": "asset"
+    },
+    "0x08": {
+      "name": "Rouge",
+      "status": "asset"
+    },
+    "0x09": {
+      "name": "Roufas",
+      "status": "asset"
+    },
+    "0x0A": {
+      "name": "Gen",
+      "status": "asset"
+    },
+    "0x0B": {
+      "name": "Fei-on",
+      "status": "asset"
+    },
+    "0x0C": {
+      "name": "Annie",
+      "status": "asset"
+    },
+    "0x0D": {
+      "name": "Liza",
+      "status": "asset"
+    },
+    "0x0E": {
+      "name": "Capt.Hamilton",
+      "status": "asset"
+    },
+    "0x0F": {
+      "name": "Doll",
+      "status": "asset"
+    },
+    "0x10": {
+      "name": "Mei-ling",
+      "status": "asset"
+    },
+    "0x11": {
+      "name": "Woman",
+      "status": "asset"
+    },
+    "0x12": {
+      "name": "White Rose",
+      "status": "asset"
+    },
+    "0x13": {
+      "name": "Ildon",
+      "status": "asset"
+    },
+    "0x14": {
+      "name": "Mesarthim",
+      "status": "asset"
+    },
+    "0x15": {
+      "name": "Zozma",
+      "status": "asset"
+    },
+    "0x16": {
+      "name": "Rei",
+      "status": "asset"
+    },
+    "0x17": {
+      "name": "Silence",
+      "status": "asset"
+    },
+    "0x18": {
+      "name": "Dr. Nusakan",
+      "status": "asset"
+    },
+    "0x19": {
+      "name": "TimeLord",
+      "status": "asset"
+    },
+    "0x1A": {
+      "name": "Rabbit",
+      "status": "asset"
+    },
+    "0x1B": {
+      "name": "Leonard",
+      "status": "asset"
+    },
+    "0x1C": {
+      "name": "ZEKE",
+      "status": "asset"
+    },
+    "0x1D": {
+      "name": "BJ&K",
+      "status": "asset"
+    },
+    "0x1E": {
+      "name": "PzkwV",
+      "status": "asset"
+    },
+    "0x1F": {
+      "name": "EngineerCar",
+      "status": "asset"
+    },
+    "0x20": {
+      "name": "CommonMec",
+      "status": "asset"
+    },
+    "0x21": {
+      "name": "Thunder",
+      "status": "asset"
+    },
+    "0x22": {
+      "name": "Cotton",
+      "status": "asset"
+    },
+    "0x23": {
+      "name": "Sei",
+      "status": "asset"
+    },
+    "0x24": {
+      "name": "Kylin",
+      "status": "asset"
+    },
+    "0x25": {
+      "name": "Slime",
+      "status": "asset"
+    },
+    "0x26": {
+      "name": "Suzaku",
+      "status": "asset"
+    },
+    "0x27": {
+      "name": "RedTurnip",
+      "status": "asset"
+    },
+    "0x28": {
+      "name": "Alkaiser",
+      "status": "asset"
+    },
+    "0x29": {
+      "name": "Alkarl",
+      "status": "asset"
+    },
+    "0x2A": {
+      "name": "Riki",
+      "status": "asset"
+    },
+    "0x2B": {
+      "name": "Emelia",
+      "status": "asset"
+    },
+    "0x2C": {
+      "name": "PinkTiger",
+      "status": "asset"
+    },
+    "0x2D": {
+      "name": "Emelia",
+      "status": "asset"
+    },
+    "0x2E": {
+      "name": "Emelia",
+      "status": "asset"
+    },
+    "0x2F": {
+      "name": "Emelia",
+      "status": "asset"
+    },
+    "0x30": {
+      "name": "T260-BJ&K",
+      "status": "asset"
+    },
+    "0x31": {
+      "name": "T260-SMCar",
+      "status": "asset"
+    },
+    "0x32": {
+      "name": "T260-Rabbit",
+      "status": "asset"
+    },
+    "0x33": {
+      "name": "T260-pzkw",
+      "status": "asset"
+    },
+    "0x34": {
+      "name": "T260-type0",
+      "status": "asset"
+    },
+    "0x35": {
+      "name": "T260-Omega",
+      "status": "asset"
+    },
+    "0x36": {
+      "name": "Xena",
+      "status": "asset"
+    },
+    "0x37": {
+      "name": "Asellus",
+      "status": "asset"
+    },
+    "0x38": {
+      "name": "T260",
+      "status": "asset"
+    },
+    "0x39": {
+      "name": "Asellus",
+      "status": "asset"
+    },
+    "0x3A": {
+      "name": "Soldier",
+      "status": "asset"
+    },
+    "0x3B": {
+      "name": "Npc59",
+      "status": "asset"
+    },
+    "0x3C": {
+      "name": "Npc60",
+      "status": "asset"
+    },
+    "0x3D": {
+      "name": "Npc61",
+      "status": "asset"
+    },
+    "0x3E": {
+      "name": "Npc62",
+      "status": "asset"
+    },
+    "0x3F": {
+      "name": "Titania",
+      "status": "asset"
+    }
+  },
+  "items": {
+    "0x00": {
+      "name": "Cure",
+      "status": "asset"
+    },
+    "0x01": {
+      "name": "PowerCure",
+      "status": "asset"
+    },
+    "0x02": {
+      "name": "MaxCure",
+      "status": "asset"
+    },
+    "0x03": {
+      "name": "Antistone",
+      "status": "asset"
+    },
+    "0x04": {
+      "name": "SnakeOil",
+      "status": "asset"
+    },
+    "0x05": {
+      "name": "LifeCandy",
+      "status": "asset"
+    },
+    "0x06": {
+      "name": null,
+      "status": "placeholder",
+      "note": "Table entry is NotUse; the ID exists but has no item name."
+    },
+    "0x07": {
+      "name": "Backpack",
+      "status": "verified",
+      "note": "Confirmed by slot 0 item_a[0] and the game name table."
+    },
+    "0x08": {
+      "name": "RepairKit",
+      "status": "asset"
+    },
+    "0x09": {
+      "name": "RottenMeat",
+      "status": "asset"
+    },
+    "0x0A": {
+      "name": "FlashBomb",
+      "status": "asset"
+    },
+    "0x0B": {
+      "name": "MagicStone",
+      "status": "asset"
+    },
+    "0x0C": {
+      "name": "LuckyCoin",
+      "status": "asset"
+    },
+    "0x0D": {
+      "name": "UnluckyCoin",
+      "status": "asset"
+    },
+    "0x0E": {
+      "name": "StunNeedle",
+      "status": "asset"
+    },
+    "0x0F": {
+      "name": null,
+      "status": "placeholder",
+      "note": "Table entry is NotUse; the ID exists but has no item name."
+    },
+    "0x10": {
+      "name": "Knife",
+      "status": "asset"
+    },
+    "0x11": {
+      "name": "BroadSword",
+      "status": "asset"
+    },
+    "0x12": {
+      "name": "KukriBlade",
+      "status": "asset"
+    },
+    "0x13": {
+      "name": "ShadowDagger",
+      "status": "asset"
+    },
+    "0x14": {
+      "name": "FiendRod",
+      "status": "asset"
+    },
+    "0x15": {
+      "name": "LaserKnife",
+      "status": "asset"
+    },
+    "0x16": {
+      "name": "SamuraiSword",
+      "status": "asset"
+    },
+    "0x17": {
+      "name": "CeramicSword",
+      "status": "asset"
+    },
+    "0x18": {
+      "name": "TwinSword",
+      "status": "asset"
+    },
+    "0x19": {
+      "name": "SilverSpread",
+      "status": "asset"
+    },
+    "0x1A": {
+      "name": "Osc-Sword",
+      "status": "asset"
+    },
+    "0x1B": {
+      "name": "Katana",
+      "status": "asset"
+    },
+    "0x1C": {
+      "name": "JackalSword",
+      "status": "asset"
+    },
+    "0x1D": {
+      "name": null,
+      "status": "placeholder",
+      "note": "Table entry is NotUse; the ID exists but has no item name."
+    },
+    "0x1E": {
+      "name": "Glirandly",
+      "status": "asset"
+    },
+    "0x1F": {
+      "name": "RaySword",
+      "status": "asset"
+    },
+    "0x20": {
+      "name": "RuneSword",
+      "status": "asset"
+    },
+    "0x21": {
+      "name": "Twin Dragon",
+      "status": "asset"
+    },
+    "0x22": {
+      "name": "SplashSword",
+      "status": "asset"
+    },
+    "0x23": {
+      "name": "TwiggyRod",
+      "status": "asset"
+    },
+    "0x24": {
+      "name": "CometBlade",
+      "status": "asset"
+    },
+    "0x25": {
+      "name": "ZeroSword",
+      "status": "asset"
+    },
+    "0x26": {
+      "name": "Obsidian",
+      "status": "asset"
+    },
+    "0x27": {
+      "name": "Kusanagi",
+      "status": "asset"
+    },
+    "0x28": {
+      "name": "Murakumo",
+      "status": "asset"
+    },
+    "0x29": {
+      "name": "IronPipe",
+      "status": "asset"
+    },
+    "0x2A": {
+      "name": "DragonSword",
+      "status": "asset"
+    },
+    "0x2B": {
+      "name": "SilverMoon",
+      "status": "asset"
+    },
+    "0x2C": {
+      "name": "Asura",
+      "status": "asset"
+    },
+    "0x2D": {
+      "name": "GoldenLion",
+      "status": "asset"
+    },
+    "0x2E": {
+      "name": "Lordstar",
+      "status": "asset"
+    },
+    "0x2F": {
+      "name": "LightSword",
+      "status": "asset"
+    },
+    "0x30": {
+      "name": "AGUNI-SSP",
+      "status": "asset"
+    },
+    "0x31": {
+      "name": "EasyRifle",
+      "status": "asset"
+    },
+    "0x32": {
+      "name": null,
+      "status": "placeholder",
+      "note": "Table entry is NotUse; the ID exists but has no item name."
+    },
+    "0x33": {
+      "name": "AGUNI-CP1",
+      "status": "asset"
+    },
+    "0x34": {
+      "name": "KillerRifle",
+      "status": "asset"
+    },
+    "0x35": {
+      "name": "TroopRifle",
+      "status": "asset"
+    },
+    "0x36": {
+      "name": "EagleGun",
+      "status": "asset"
+    },
+    "0x37": {
+      "name": "SniperRifle",
+      "status": "asset"
+    },
+    "0x38": {
+      "name": "BehemothRifle",
+      "status": "asset"
+    },
+    "0x39": {
+      "name": "AGUNI-MBX",
+      "status": "asset"
+    },
+    "0x3A": {
+      "name": "DuelGun",
+      "status": "asset"
+    },
+    "0x3B": {
+      "name": "LivingRifle",
+      "status": "asset"
+    },
+    "0x3C": {
+      "name": "ZenGun",
+      "status": "asset"
+    },
+    "0x3D": {
+      "name": "LethalGun",
+      "status": "asset"
+    },
+    "0x3E": {
+      "name": "BrokenRifle",
+      "status": "asset"
+    },
+    "0x3F": {
+      "name": "LightRifle",
+      "status": "asset"
+    },
+    "0x40": {
+      "name": "HandBlaster",
+      "status": "asset"
+    },
+    "0x41": {
+      "name": "LaserCarbine",
+      "status": "asset"
+    },
+    "0x42": {
+      "name": "HyperBlaster",
+      "status": "asset"
+    },
+    "0x43": {
+      "name": "BeamCannon",
+      "status": "asset"
+    },
+    "0x44": {
+      "name": "LightningCannon",
+      "status": "asset"
+    },
+    "0x45": {
+      "name": "SonicCannon",
+      "status": "asset"
+    },
+    "0x46": {
+      "name": "WaterCannon",
+      "status": "asset"
+    },
+    "0x47": {
+      "name": "JunkBazooka",
+      "status": "asset"
+    },
+    "0x48": {
+      "name": "LightVulcan",
+      "status": "asset"
+    },
+    "0x49": {
+      "name": "MachineVulcan",
+      "status": "asset"
+    },
+    "0x4A": {
+      "name": "Thunderbolt",
+      "status": "asset"
+    },
+    "0x4B": {
+      "name": "Flame Thrower",
+      "status": "asset"
+    },
+    "0x4C": {
+      "name": "Bolt Thrower",
+      "status": "asset"
+    },
+    "0x4D": {
+      "name": "IonCannon",
+      "status": "asset"
+    },
+    "0x4E": {
+      "name": "GrainCannon",
+      "status": "asset"
+    },
+    "0x4F": {
+      "name": "HG-Cannon",
+      "status": "asset"
+    },
+    "0x50": {
+      "name": "GhostCannon",
+      "status": "asset"
+    },
+    "0x51": {
+      "name": "LightBazooka",
+      "status": "asset"
+    },
+    "0x52": {
+      "name": "HEAT Bazooka",
+      "status": "asset"
+    },
+    "0x53": {
+      "name": "HyperionBazooka",
+      "status": "asset"
+    },
+    "0x54": {
+      "name": "DOBBY Bazooka",
+      "status": "asset"
+    },
+    "0x55": {
+      "name": "MissilePod",
+      "status": "asset"
+    },
+    "0x56": {
+      "name": "BigMissile",
+      "status": "asset"
+    },
+    "0x57": {
+      "name": "SuperMissile",
+      "status": "asset"
+    },
+    "0x58": {
+      "name": "BeamSword",
+      "status": "asset"
+    },
+    "0x59": {
+      "name": "MegaBeamSword",
+      "status": "asset"
+    },
+    "0x5A": {
+      "name": "Hammer",
+      "status": "asset"
+    },
+    "0x5B": {
+      "name": "LaserCannon",
+      "status": "asset"
+    },
+    "0x5C": {
+      "name": "AT Missile",
+      "status": "asset"
+    },
+    "0x5D": {
+      "name": "AT Missile",
+      "status": "asset"
+    },
+    "0x5E": {
+      "name": "RailCanon",
+      "status": "asset"
+    },
+    "0x5F": {
+      "name": "MicroMissile",
+      "status": "asset"
+    },
+    "0x60": {
+      "name": "RailCannon",
+      "status": "asset"
+    },
+    "0x61": {
+      "name": "RailCannon",
+      "status": "asset"
+    },
+    "0x62": {
+      "name": "MachineVulcan",
+      "status": "asset"
+    },
+    "0x63": {
+      "name": "LaserCannon",
+      "status": "asset"
+    },
+    "0x64": {
+      "name": "MinorLaser",
+      "status": "asset"
+    },
+    "0x65": {
+      "name": "LaserCannon",
+      "status": "asset"
+    },
+    "0x66": {
+      "name": "DragonCannon",
+      "status": "asset"
+    },
+    "0x67": {
+      "name": "JunkVulcan",
+      "status": "asset"
+    },
+    "0x68": {
+      "name": "SatelliteBeam",
+      "status": "asset"
+    },
+    "0x69": {
+      "name": "BitSystem",
+      "status": "asset"
+    },
+    "0x6A": {
+      "name": "MediPack",
+      "status": "asset"
+    },
+    "0x6B": {
+      "name": "RepairPack",
+      "status": "asset"
+    },
+    "0x6C": {
+      "name": "RepairPack",
+      "status": "asset"
+    },
+    "0x6D": {
+      "name": "OctopusBoard",
+      "status": "asset"
+    },
+    "0x6E": {
+      "name": "NakajimaBoard",
+      "status": "asset"
+    },
+    "0x6F": {
+      "name": "NakajimaBoard2",
+      "status": "asset"
+    },
+    "0x70": {
+      "name": "V-Special",
+      "status": "asset"
+    },
+    "0x71": {
+      "name": "V-System",
+      "status": "asset"
+    },
+    "0x72": {
+      "name": "JunkParts",
+      "status": "asset"
+    },
+    "0x73": {
+      "name": "RailCannon",
+      "status": "asset"
+    },
+    "0x74": {
+      "name": "MemoryBoard",
+      "status": "asset"
+    },
+    "0x75": {
+      "name": "SecretBoard",
+      "status": "asset"
+    },
+    "0x76": {
+      "name": "LastRing",
+      "status": "asset"
+    },
+    "0x77": {
+      "name": "TrainingGun",
+      "status": "asset"
+    },
+    "0x78": {
+      "name": "Buckler",
+      "status": "asset"
+    },
+    "0x79": {
+      "name": "ShellShield",
+      "status": "asset"
+    },
+    "0x7A": {
+      "name": "ExcelShield",
+      "status": "asset"
+    },
+    "0x7B": {
+      "name": "GenbuShield",
+      "status": "asset"
+    },
+    "0x7C": {
+      "name": "DragonShield",
+      "status": "asset"
+    },
+    "0x7D": {
+      "name": "Mizukagami",
+      "status": "asset"
+    },
+    "0x7E": {
+      "name": "DurahanShield",
+      "status": "asset"
+    },
+    "0x7F": {
+      "name": "WonderBangle",
+      "status": "asset"
+    },
+    "0x80": {
+      "name": "FiberVest",
+      "status": "asset"
+    },
+    "0x81": {
+      "name": "HardLeather",
+      "status": "asset"
+    },
+    "0x82": {
+      "name": "ArmorVest",
+      "status": "asset"
+    },
+    "0x83": {
+      "name": "ElectroArmor",
+      "status": "asset"
+    },
+    "0x84": {
+      "name": "WarLordArmor",
+      "status": "asset"
+    },
+    "0x85": {
+      "name": "DarkRobe",
+      "status": "asset"
+    },
+    "0x86": {
+      "name": "BlueElf",
+      "status": "asset"
+    },
+    "0x87": {
+      "name": "GlowRobe",
+      "status": "asset"
+    },
+    "0x88": {
+      "name": "MoonlightRobe",
+      "status": "asset"
+    },
+    "0x89": {
+      "name": "StardustRobe",
+      "status": "asset"
+    },
+    "0x8A": {
+      "name": "ShadeRobe",
+      "status": "asset"
+    },
+    "0x8B": {
+      "name": "Accelerator",
+      "status": "asset"
+    },
+    "0x8C": {
+      "name": "Mini Plant",
+      "status": "asset"
+    },
+    "0x8D": {
+      "name": "MecBody",
+      "status": "asset"
+    },
+    "0x8E": {
+      "name": "FortBody",
+      "status": "asset"
+    },
+    "0x8F": {
+      "name": "ECM System",
+      "status": "asset"
+    },
+    "0x90": {
+      "name": "FireLeather",
+      "status": "asset"
+    },
+    "0x91": {
+      "name": "CelestialLeather",
+      "status": "asset"
+    },
+    "0x92": {
+      "name": "HyperScale",
+      "status": "asset"
+    },
+    "0x93": {
+      "name": "AngelArmor",
+      "status": "asset"
+    },
+    "0x94": {
+      "name": "PlutoArmor",
+      "status": "asset"
+    },
+    "0x95": {
+      "name": "BeastLeather",
+      "status": "asset"
+    },
+    "0x96": {
+      "name": "Protector",
+      "status": "asset"
+    },
+    "0x97": {
+      "name": "SlimyArmor",
+      "status": "asset"
+    },
+    "0x98": {
+      "name": "JerryArmor",
+      "status": "asset"
+    },
+    "0x99": {
+      "name": "BoneBreast",
+      "status": "asset"
+    },
+    "0x9A": {
+      "name": "LivingArmor",
+      "status": "asset"
+    },
+    "0x9B": {
+      "name": "HarmoniumArmor",
+      "status": "asset"
+    },
+    "0x9C": {
+      "name": "SkeleMail",
+      "status": "asset"
+    },
+    "0x9D": {
+      "name": "MasterRobe",
+      "status": "asset"
+    },
+    "0x9E": {
+      "name": "GoldenFleece",
+      "status": "asset"
+    },
+    "0x9F": {
+      "name": "MysticMail",
+      "status": "asset"
+    },
+    "0xA0": {
+      "name": "CombatSuit",
+      "status": "asset"
+    },
+    "0xA1": {
+      "name": "JumpSuit",
+      "status": "asset"
+    },
+    "0xA2": {
+      "name": "CyberSuit",
+      "status": "asset"
+    },
+    "0xA3": {
+      "name": "PoweredSuit",
+      "status": "asset"
+    },
+    "0xA4": {
+      "name": "SprigganSuit",
+      "status": "asset"
+    },
+    "0xA5": {
+      "name": "RubberSuit",
+      "status": "asset"
+    },
+    "0xA6": {
+      "name": "GolemSuit",
+      "status": "asset"
+    },
+    "0xA7": {
+      "name": "WhiteDress",
+      "status": "asset"
+    },
+    "0xA8": {
+      "name": "CottonShirt",
+      "status": "asset"
+    },
+    "0xA9": {
+      "name": "SilkShirt",
+      "status": "asset"
+    },
+    "0xAA": {
+      "name": "Magicwear",
+      "status": "asset"
+    },
+    "0xAB": {
+      "name": "Budowear",
+      "status": "asset"
+    },
+    "0xAC": {
+      "name": "Defendwear",
+      "status": "asset"
+    },
+    "0xAD": {
+      "name": "Hyperwear",
+      "status": "asset"
+    },
+    "0xAE": {
+      "name": "PowerBelt",
+      "status": "asset"
+    },
+    "0xAF": {
+      "name": "Mysticwear",
+      "status": "asset"
+    },
+    "0xB0": {
+      "name": "JunkHelm",
+      "status": "asset"
+    },
+    "0xB1": {
+      "name": "Yolk Hat",
+      "status": "asset"
+    },
+    "0xB2": {
+      "name": "FiberHood",
+      "status": "asset"
+    },
+    "0xB3": {
+      "name": "LaserScope",
+      "status": "asset"
+    },
+    "0xB4": {
+      "name": "MirrorGlass",
+      "status": "asset"
+    },
+    "0xB5": {
+      "name": "InfraScope",
+      "status": "asset"
+    },
+    "0xB6": {
+      "name": "Egg Hat",
+      "status": "asset"
+    },
+    "0xB7": {
+      "name": "Magihat",
+      "status": "asset"
+    },
+    "0xB8": {
+      "name": "LeatherGlove",
+      "status": "asset"
+    },
+    "0xB9": {
+      "name": "ShellBracer",
+      "status": "asset"
+    },
+    "0xBA": {
+      "name": "ArmorGlove",
+      "status": "asset"
+    },
+    "0xBB": {
+      "name": "CyberGlove",
+      "status": "asset"
+    },
+    "0xBC": {
+      "name": "OgreGlove",
+      "status": "asset"
+    },
+    "0xBD": {
+      "name": "NornsBangle",
+      "status": "asset"
+    },
+    "0xBE": {
+      "name": "SH-Armlet",
+      "status": "asset"
+    },
+    "0xBF": {
+      "name": "HarmoniumBangle",
+      "status": "asset"
+    },
+    "0xC0": {
+      "name": "LeatherBoots",
+      "status": "asset"
+    },
+    "0xC1": {
+      "name": "RubberShoes",
+      "status": "asset"
+    },
+    "0xC2": {
+      "name": "JetBoots",
+      "status": "asset"
+    },
+    "0xC3": {
+      "name": "FeatherBoots",
+      "status": "asset"
+    },
+    "0xC4": {
+      "name": "Iron Clogs",
+      "status": "asset"
+    },
+    "0xC5": {
+      "name": "Catsocks",
+      "status": "asset"
+    },
+    "0xC6": {
+      "name": "SH-Anklet",
+      "status": "asset"
+    },
+    "0xC7": {
+      "name": "DanceShoes",
+      "status": "asset"
+    },
+    "0xC8": {
+      "name": "FangAmulet",
+      "status": "asset"
+    },
+    "0xC9": {
+      "name": "WingAmulet",
+      "status": "asset"
+    },
+    "0xCA": {
+      "name": "FlowerAmulet",
+      "status": "asset"
+    },
+    "0xCB": {
+      "name": "SteelAmulet",
+      "status": "asset"
+    },
+    "0xCC": {
+      "name": "FireCrystal",
+      "status": "asset"
+    },
+    "0xCD": {
+      "name": "IceCrystal",
+      "status": "asset"
+    },
+    "0xCE": {
+      "name": "BoltCrystal",
+      "status": "asset"
+    },
+    "0xCF": {
+      "name": "BloodChalice",
+      "status": "asset"
+    },
+    "0xD0": {
+      "name": "HarmoniumEarring",
+      "status": "asset"
+    },
+    "0xD1": {
+      "name": "EMES Tag",
+      "status": "asset"
+    },
+    "0xD2": {
+      "name": "WindShell",
+      "status": "asset"
+    },
+    "0xD3": {
+      "name": "FeatherCharm",
+      "status": "asset"
+    },
+    "0xD4": {
+      "name": "SeaStone",
+      "status": "asset"
+    },
+    "0xD5": {
+      "name": "PurpleEye",
+      "status": "asset"
+    },
+    "0xD6": {
+      "name": "MellowRing",
+      "status": "asset"
+    },
+    "0xD7": {
+      "name": "PearlHeart",
+      "status": "asset"
+    },
+    "0xD8": {
+      "name": "KrisKnife",
+      "status": "asset"
+    },
+    "0xD9": {
+      "name": "UnicornTear",
+      "status": "asset"
+    },
+    "0xDA": {
+      "name": "Tao-TiehPattern",
+      "status": "asset"
+    },
+    "0xDB": {
+      "name": "FovosGrail",
+      "status": "asset"
+    },
+    "0xDC": {
+      "name": "SandVessel",
+      "status": "asset"
+    },
+    "0xDD": {
+      "name": "AngelBroach",
+      "status": "asset"
+    },
+    "0xDE": {
+      "name": "CharmNecklace",
+      "status": "asset"
+    },
+    "0xDF": {
+      "name": "RING/Guardian",
+      "status": "asset"
+    },
+    "0xE0": {
+      "name": "RING/Merchant",
+      "status": "asset"
+    },
+    "0xE1": {
+      "name": "RING/Thief",
+      "status": "asset"
+    },
+    "0xE2": {
+      "name": "RING/Schemer",
+      "status": "asset"
+    },
+    "0xE3": {
+      "name": "RING/Hero",
+      "status": "asset"
+    },
+    "0xE4": {
+      "name": "RING/Hermit",
+      "status": "asset"
+    },
+    "0xE5": {
+      "name": "RING/Healer",
+      "status": "asset"
+    },
+    "0xE6": {
+      "name": "RING/Fighter",
+      "status": "asset"
+    },
+    "0xE7": {
+      "name": "RING/Lord",
+      "status": "asset"
+    },
+    "0xE8": {
+      "name": "BrokenBumper",
+      "status": "asset"
+    },
+    "0xE9": {
+      "name": "Junk",
+      "status": "asset"
+    },
+    "0xEA": {
+      "name": "Magatama",
+      "status": "asset"
+    },
+    "0xEB": {
+      "name": "Bumper",
+      "status": "asset"
+    },
+    "0xEC": {
+      "name": "JunkPart",
+      "status": "asset"
+    },
+    "0xED": {
+      "name": "SleetCoin",
+      "status": "asset"
+    },
+    "0xEE": {
+      "name": "SolGrail",
+      "status": "asset"
+    },
+    "0xEF": {
+      "name": "ThunderCharm",
+      "status": "asset"
+    },
+    "0xF0": {
+      "name": "GoldIngot",
+      "status": "asset"
+    },
+    "0xF1": {
+      "name": "VirgilKey",
+      "status": "asset"
+    },
+    "0xF2": {
+      "name": "BlackXKey",
+      "status": "asset"
+    },
+    "0xF3": {
+      "name": "SmallStone",
+      "status": "asset"
+    },
+    "0xF4": {
+      "name": "RuneStone",
+      "status": "asset"
+    },
+    "0xF5": {
+      "name": "Card",
+      "status": "asset"
+    },
+    "0xF6": {
+      "name": "ArcanaTarot",
+      "status": "asset"
+    },
+    "0xF7": {
+      "name": "SandVessel",
+      "status": "asset"
+    },
+    "0xF8": {
+      "name": null,
+      "status": "placeholder",
+      "note": "Table entry is NotUse; the ID exists but has no item name."
+    },
+    "0xF9": {
+      "name": null,
+      "status": "placeholder",
+      "note": "Table entry is NotUse; the ID exists but has no item name."
+    },
+    "0xFA": {
+      "name": "Magi-Water",
+      "status": "asset"
+    },
+    "0xFB": {
+      "name": "XMagi-Drink",
+      "status": "asset"
+    },
+    "0xFC": {
+      "name": "SanctuaryStone",
+      "status": "asset"
+    },
+    "0xFD": {
+      "name": "RegionMap",
+      "status": "asset"
+    },
+    "0xFE": {
+      "name": null,
+      "status": "placeholder",
+      "note": "Table entry is NotUse; the ID exists but has no item name."
+    },
+    "0xFF": {
+      "name": null,
+      "status": "placeholder",
+      "note": "Table entry is NotUse; the ID exists but has no item name."
+    }
+  },
+  "areas": {
+    "0x00": {
+      "name": "Margmel",
+      "status": "asset"
+    },
+    "0x01": {
+      "name": "Tanzer",
+      "status": "asset"
+    },
+    "0x02": {
+      "name": "Junk",
+      "status": "asset"
+    },
+    "0x03": {
+      "name": "Scrap",
+      "status": "asset"
+    },
+    "0x04": {
+      "name": "HQ",
+      "status": "asset"
+    },
+    "0x05": {
+      "name": "Koorong",
+      "status": "asset"
+    },
+    "0x06": {
+      "name": "Despair",
+      "status": "asset"
+    },
+    "0x07": {
+      "name": "NightmareHQ",
+      "status": "asset"
+    },
+    "0x08": {
+      "name": "Luminous",
+      "status": "asset"
+    },
+    "0x09": {
+      "name": "Omble",
+      "status": "asset"
+    },
+    "0x0A": {
+      "name": "Devin",
+      "status": "asset"
+    },
+    "0x0B": {
+      "name": "MagicKingdom",
+      "status": "asset"
+    },
+    "0x0C": {
+      "name": "Hell",
+      "status": "asset"
+    },
+    "0x0D": {
+      "name": "2nd Div.",
+      "status": "asset"
+    },
+    "0x0E": {
+      "name": "Kyo",
+      "status": "asset"
+    },
+    "0x0F": {
+      "name": "Shingrow",
+      "status": "asset"
+    },
+    "0x10": {
+      "name": "Shrike",
+      "status": "asset"
+    },
+    "0x11": {
+      "name": "BlackX Base",
+      "status": "asset"
+    },
+    "0x12": {
+      "name": "Yorkland",
+      "status": "asset"
+    },
+    "0x13": {
+      "name": "Manhattan",
+      "status": "asset"
+    },
+    "0x14": {
+      "name": "Nirvana",
+      "status": "asset"
+    },
+    "0x15": {
+      "name": "Tartaros",
+      "status": "asset"
+    },
+    "0x16": {
+      "name": "Nelson",
+      "status": "asset"
+    },
+    "0x17": {
+      "name": "Wakatu",
+      "status": "asset"
+    },
+    "0x18": {
+      "name": "IRPO",
+      "status": "asset"
+    },
+    "0x19": {
+      "name": "Baccarat",
+      "status": "asset"
+    },
+    "0x1A": {
+      "name": "Chateau Aiguille",
+      "status": "verified",
+      "note": "Confirmed by slot 0 MapNumber and mapwk.map_name (26) plus the reported save location."
+    },
+    "0x1B": {
+      "name": "Dark Labyrinth",
+      "status": "asset"
+    },
+    "0x1C": {
+      "name": "Mosperiburg",
+      "status": "asset"
+    },
+    "0x1D": {
+      "name": "DoomsdayMachine",
+      "status": "asset"
+    },
+    "0x1E": {
+      "name": "Cygnus",
+      "status": "asset"
+    },
+    "0x1F": {
+      "name": "Owmi",
+      "status": "asset"
+    },
+    "0x20": {
+      "name": "Trinity Base",
+      "status": "asset"
+    },
+    "0x21": {
+      "name": "Black Ray",
+      "status": "asset"
+    },
+    "0x22": {
+      "name": "TimeLord's Region",
+      "status": "asset"
+    },
+    "0x23": {
+      "name": "Kyrin Paradise",
+      "status": "asset"
+    },
+    "0x24": {
+      "name": "Crater",
+      "status": "asset"
+    },
+    "0x25": {
+      "name": "Shaft",
+      "status": "asset"
+    },
+    "0x26": {
+      "name": "Fei-on's lair",
+      "status": "asset"
+    },
+    "0x27": {
+      "name": "Nomad's lair",
+      "status": "asset"
+    },
+    "0x28": {
+      "name": "Combat Arena",
+      "status": "asset"
+    },
+    "0x29": {
+      "name": "Lord Manor",
+      "status": "asset"
+    },
+    "0x2A": {
+      "name": "Caballero Factory",
+      "status": "asset"
+    },
+    "0x2B": {
+      "name": "Gnome Cave",
+      "status": "asset"
+    },
+    "0x2C": {
+      "name": "Cellar",
+      "status": "asset"
+    },
+    "0x2D": {
+      "name": "Swamp",
+      "status": "asset"
+    },
+    "0x2E": {
+      "name": "Tree House",
+      "status": "asset"
+    },
+    "0x2F": {
+      "name": "Sei's Tomb",
+      "status": "asset"
+    },
+    "0x30": {
+      "name": "Mu's Tomb",
+      "status": "asset"
+    },
+    "0x31": {
+      "name": "Backstreet",
+      "status": "asset"
+    },
+    "0x32": {
+      "name": "Shuzer Base",
+      "status": "asset"
+    },
+    "0x33": {
+      "name": "Sewer",
+      "status": "asset"
+    },
+    "0x34": {
+      "name": "Natural Cave",
+      "status": "asset"
+    },
+    "0x35": {
+      "name": "Shingrow Palace",
+      "status": "asset"
+    },
+    "0x36": {
+      "name": "Shingrow Ruins",
+      "status": "asset"
+    },
+    "0x37": {
+      "name": "Ancient Ship",
+      "status": "asset"
+    },
+    "0x38": {
+      "name": null,
+      "status": "placeholder",
+      "note": "Blank record in the area table; the id exists but has no name."
+    },
+    "0x39": {
+      "name": "Nakajima Robotics",
+      "status": "asset"
+    },
+    "0x3A": {
+      "name": "Bio Research Lab",
+      "status": "asset"
+    },
+    "0x3B": {
+      "name": "Metal Black Base",
+      "status": "asset"
+    },
+    "0x3C": {
+      "name": "Mondo Base",
+      "status": "asset"
+    },
+    "0x3D": {
+      "name": "Virgil Palace",
+      "status": "asset"
+    },
+    "0x3E": {
+      "name": "Rootville",
+      "status": "asset"
+    },
+    "0x3F": {
+      "name": "C.T.C.Bldg.",
+      "status": "asset"
+    },
+    "0x40": {
+      "name": "Forsaken Chapel",
+      "status": "asset"
+    },
+    "0x41": {
+      "name": "GoldenGate",
+      "status": "asset"
+    },
+    "0x42": {
+      "name": "Furdo's Workspace",
+      "status": "asset"
+    },
+    "0x43": {
+      "name": "Victoria",
+      "status": "asset"
+    },
+    "0x44": {
+      "name": "Facinaturu Floor",
+      "status": "asset"
+    }
+  }
+}

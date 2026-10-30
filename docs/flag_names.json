@@ -1,0 +1,5619 @@
+{
+  "flags": {
+    "0x000": {
+      "entries": [],
+      "label": "\uff08\u6f14\u7b97\u9818\u57df\uff09"
+    },
+    "0x00A": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u96ea\u3060\u308b\u307e\u51fa\u73fe\u5224\u5b9a\u6e08\u307f",
+          "value": 1
+        }
+      ],
+      "label": "\u6731\u96c0\u306e\u5c711"
+    },
+    "0x00B": {
+      "entries": [
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u901a\u884c\u6599\u3092\u8981\u6c42\u3055\u308c\u306a\u3044\u72b6\u614b",
+          "value": 128
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30b9\u30a4\u30c3\u30c13",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u30b9\u30a4\u30c3\u30c16",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30b9\u30a4\u30c3\u30c12",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30b9\u30a4\u30c3\u30c15",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30b9\u30a4\u30c3\u30c14",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30b9\u30a4\u30c3\u30c11",
+          "value": 128
+        },
+        {
+          "form": "minus",
+          "hex": "F0",
+          "kind": "state",
+          "meaning": "\u8a66\u7df4\u958b\u59cb",
+          "value": 240
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u9375\u3092\u4f7f\u3063\u3066\u6249\u3092\u958b\u3051\u305f",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u5c0f\u3055\u304f\u306a\u3063\u305f",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u9375\u3092\u5165\u624b\u3057\u305f",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30b9\u30a4\u30c3\u30c1\u3092\u5165\u308c\u305f",
+          "value": 128
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30b9\u30e9\u30a4\u30e0\u5012\u3057\u305f",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30f4\u30a1\u30eb\u30ad\u30ea\u30fc\u5012\u3057\u305f",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30ac\u30a4\u30a2\u30c8\u30fc\u30c9\u5012\u3057\u305f",
+          "value": 128
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30ed\u30c3\u30af\u89e3\u9664\u3057\u305f",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u96a0\u3057\u901a\u8def\u3078\u306e\u6249\u958b\u3044\u305f",
+          "value": 128
+        },
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30d5\u30eb\u30c9\u306e\u5de5\u623f\u2469\u306b\u5996\u7cbe\u30b7\u30f3\u30dc\u30eb",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u30d5\u30eb\u30c9\u306e\u5de5\u623f\u2462\u306b\u5996\u7cbe\u30b7\u30f3\u30dc\u30eb",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30d5\u30eb\u30c9\u306e\u5de5\u623f\u2467\u306b\u5996\u7cbe\u30b7\u30f3\u30dc\u30eb",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u30d5\u30eb\u30c9\u306e\u5de5\u623f\u2466\u306b\u5996\u7cbe\u30b7\u30f3\u30dc\u30eb",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30d5\u30eb\u30c9\u306e\u5de5\u623f\u2465\u306b\u5996\u7cbe\u30b7\u30f3\u30dc\u30eb",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30d5\u30eb\u30c9\u306e\u5de5\u623f\u2464\u306b\u5996\u7cbe\u30b7\u30f3\u30dc\u30eb",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30d5\u30eb\u30c9\u306e\u5de5\u623f\u2461\u306b\u5996\u7cbe\u30b7\u30f3\u30dc\u30eb",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30d5\u30eb\u30c9\u306e\u5de5\u623f\u2460\u306b\u5996\u7cbe\u30b7\u30f3\u30dc\u30eb",
+          "value": 128
+        }
+      ],
+      "label": "\u88cf\u901a\u308a(\u30af\u30fc\u30ed\u30f3\u2462\u65b9\u9762)"
+    },
+    "0x00C": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30b9\u30a4\u30c3\u30c14\u4ed8\u8fd1\u306e\u4e0d\u6b7b\u7cfb",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u5965\u306e\u968e\u6bb5\u4ed8\u8fd1\u306b\u3044\u308b\u4e0d\u6b7b\u7cfb",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30b9\u30a4\u30c3\u30c14\u4ed8\u8fd1\u306e\u30d2\u30e5\u30fc\u30de\u30f3\u7cfb",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u4e2d\u592e\u901a\u8def\u306e\u30d2\u30e5\u30fc\u30de\u30f3\u7cfb",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u53f3\u901a\u8def\u306e\u30e1\u30ab\u7cfb",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30b9\u30a4\u30c3\u30c15\u4ed8\u8fd1\u306e\u30d2\u30e5\u30fc\u30de\u30f3\u7cfb",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u53f3\u901a\u8def\u5965\u306e\u30e1\u30ab\u7cfb",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30b9\u30a4\u30c3\u30c11\u4ed8\u8fd1\u306e\u30e1\u30ab\u7cfb",
+          "value": 128
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u5360\u661f\u8853\u306e\u5e97\u304a\u3088\u3073\u624b\u76f8\u5360\u3044\u306e\u5e97\u306b\u3044\u308b\u7537\u6027\u30ad\u30e3\u30e9\u306e\u30bb\u30ea\u30d5\u30d1\u30bf\u30fc\u30f3\u5909\u66f4",
+          "value": 128
+        }
+      ],
+      "label": "\u30ab\u30d0\u30ec\u30ed\u30d5\u30a1\u30af\u30c8\u30ea\u30fc2"
+    },
+    "0x00D": {
+      "entries": [
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "2\u968e\u306e\u30d2\u30e5\u30fc\u30de\u30f3(\u53f3)",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "2\u968e\u306e\u30d2\u30e5\u30fc\u30de\u30f3(\u5de6)",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30ab\u30d0\u30ec\u30ed\u4ed8\u8fd1\u306e\u4e0d\u6b7b\u7cfb",
+          "value": 128
+        }
+      ],
+      "label": "\u30ab\u30d0\u30ec\u30ed\u30d5\u30a1\u30af\u30c8\u30ea\u30fc3"
+    },
+    "0x00F": {
+      "entries": [],
+      "label": "\u30e9\u30f3\u30c0\u30e0\u5024"
+    },
+    "0x010": {
+      "entries": [
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30e6\u30ea\u30a2\u6551\u51fa",
+          "value": 32
+        },
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30e0\u30b9\u30da\u30eb\u30cb\u30d6\u30eb",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u30b7\u30e5\u30e9\u30a4\u30af",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30de\u30f3\u30cf\u30c3\u30bf\u30f3",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u30e8\u30fc\u30af\u30e9\u30f3\u30c9",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30bf\u30f3\u30b6\u30fc",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30c7\u30a3\u30b9\u30da\u30a2",
+          "value": 32
+        },
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "2\u968e\u246e\u306b\u5165\u3063\u305f",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "2\u968e\u2462\u306b\u5165\u3063\u305f",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "2\u968e\u2468\u306b\u5165\u3063\u305f",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "2\u968e\u246f\u306b\u5165\u3063\u305f",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "2\u968e\u2461\u306b\u5165\u3063\u305f",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "2\u968e\u2460\u306b\u5165\u3063\u305f",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "1\u968e\u2461\u306b\u5165\u3063\u305f",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "1\u968e\u2460\u306b\u5165\u3063\u305f",
+          "value": 128
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u5149\u306e\u8ff7\u5bae\u2463\u306e\u6708\u767d\u306e\u30b7\u30e7\u30fc\u30eb",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u5149\u306e\u8ff7\u5bae\u2463\u306e\u7d50\u754c\u77f3",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u5149\u306e\u8ff7\u5bae\u2463\u306e400\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 16
+        }
+      ],
+      "label": "\u30ad\u30b0\u30ca\u30b9"
+    },
+    "0x011": {
+      "entries": [
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u6a5f\u68b0\u795e\u30d0\u30ed\u30fc\u30eb\u5012\u3057\u305f",
+          "value": 255
+        },
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "2\u968e\u246d\u306b\u5165\u3063\u305f",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "2\u968e\u2466\u306b\u5165\u3063\u305f",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "2\u968e\u246b\u306b\u5165\u3063\u305f",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "2\u968e\u2464\u306b\u5165\u3063\u305f",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "2\u968e\u246a\u306b\u5165\u3063\u305f",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "2\u968e\u2463\u306b\u5165\u3063\u305f",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "2\u968e\u2469\u306b\u5165\u3063\u305f",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "2\u968e\u2467\u306b\u5165\u3063\u305f",
+          "value": 128
+        }
+      ],
+      "label": "\u6700\u7d42\u5175\u5668"
+    },
+    "0x012": {
+      "entries": [
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "3\u968e\u2461\u306b\u5165\u3063\u305f",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "3\u968e\u2460\u306b\u5165\u3063\u305f",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "2\u968e\u246c\u306b\u5165\u3063\u305f",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "2\u968e\u2465\u306b\u5165\u3063\u305f",
+          "value": 128
+        }
+      ],
+      "label": "\u30d6\u30e9\u30c3\u30af\u30ec\u30a43"
+    },
+    "0x013": {
+      "entries": [],
+      "label": "\u30d6\u30e9\u30c3\u30af\u30ec\u30a44"
+    },
+    "0x020": {
+      "entries": [
+        {
+          "hex": "EE",
+          "kind": "state",
+          "meaning": "\u30ce\u30fc\u30e0\u304c\u30a8\u30ec\u30d9\u30fc\u30bf\u30fc\u306b\u4e57\u3063\u305f\u306e\u3092\u898b\u305f",
+          "value": 238
+        },
+        {
+          "hex": "EF",
+          "kind": "state",
+          "meaning": "\u30b9\u30ed\u30c3\u30c8\u30d5\u30ed\u30a2\u3067\u30ce\u30fc\u30e0\u3092\u898b\u3064\u3051\u305f",
+          "value": 239
+        },
+        {
+          "hex": "F0",
+          "kind": "state",
+          "meaning": "\u30b7\u30ca\u30ea\u30aa\u4e3b\u4eba\u516c",
+          "value": 240
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u30d0\u30ab\u30e9\u30fb\u99d0\u8eca\u5834\u306b\u6765\u305f",
+          "value": 255
+        }
+      ],
+      "label": "\u30a8\u30df\u30ea\u30a2"
+    },
+    "0x021": {
+      "entries": [
+        {
+          "hex": "EF",
+          "kind": "state",
+          "meaning": "\u300c\u8b0e\u304c\u8b0e\u3092\u547c\u3076\u305c\uff5e\u300d\u3068\u6b4c\u3063\u305f",
+          "value": 239
+        },
+        {
+          "hex": "F0",
+          "kind": "state",
+          "meaning": "\u30b7\u30ca\u30ea\u30aa\u4e3b\u4eba\u516c",
+          "value": 240
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u30ea\u30e5\u30fc\u30c8"
+    },
+    "0x022": {
+      "entries": [
+        {
+          "hex": "F0",
+          "kind": "state",
+          "meaning": "\u30b7\u30ca\u30ea\u30aa\u4e3b\u4eba\u516c",
+          "value": 240
+        }
+      ],
+      "label": "\u30ec\u30c3\u30c9"
+    },
+    "0x023": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30de\u30f3\u30cf\u30c3\u30bf\u30f3\u30fb\u30d5\u30a1\u30fc\u30b9\u30c8\u30d5\u30fc\u30c9\u5e97\u3067\u30ec\u30c3\u30c9\u3092\u5f85\u3063\u3066\u3044\u305f",
+          "value": 1
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u30d2\u30e5\u30fc\u30ba"
+    },
+    "0x024": {
+      "entries": [
+        {
+          "hex": "F0",
+          "kind": "state",
+          "meaning": "\u30b7\u30ca\u30ea\u30aa\u4e3b\u4eba\u516c",
+          "value": 240
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u5408\u4f53\u3057\u3066\u30eb\u30fc\u30b8\u30e5\u306b\u306a\u3063\u305f",
+          "value": 255
+        }
+      ],
+      "label": "\u30d6\u30eb\u30fc"
+    },
+    "0x025": {
+      "entries": [
+        {
+          "hex": "F0",
+          "kind": "state",
+          "meaning": "\u30b7\u30ca\u30ea\u30aa\u4e3b\u4eba\u516c",
+          "value": 240
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u30a2\u30bb\u30eb\u30b9"
+    },
+    "0x026": {
+      "entries": [
+        {
+          "hex": "EF",
+          "kind": "state",
+          "meaning": "\u6307\u8f2a\u306b\u3064\u3044\u3066\u89e3\u8aac\u3057\u305f\u3053\u3068\u304c\u3042\u308b",
+          "value": 239
+        },
+        {
+          "hex": "F0",
+          "kind": "state",
+          "meaning": "\u30b7\u30ca\u30ea\u30aa\u4e3b\u4eba\u516c",
+          "value": 240
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\uff34\uff12\uff16\uff10"
+    },
+    "0x027": {
+      "entries": [
+        {
+          "hex": "F0",
+          "kind": "state",
+          "meaning": "\u30b7\u30ca\u30ea\u30aa\u4e3b\u4eba\u516c",
+          "value": 240
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u30af\u30fc\u30f3"
+    },
+    "0x028": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30c9\u30a5\u30f4\u30a1\u30f3\u30fb\u30b7\u30c3\u30d7\u4e57\u308a\u5834\u306b\u3044\u308b\uff0f\u30eb\u30df\u30ca\u30b9\u30fb\u30b7\u30c3\u30d7\u4e57\u308a\u5834\u306b\u3044\u306a\u3044",
+          "value": 1
+        },
+        {
+          "hex": "F0",
+          "kind": "state",
+          "meaning": "\u30b7\u30ca\u30ea\u30aa\u4e3b\u4eba\u516c",
+          "value": 240
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u5408\u4f53\u3057\u3066\u30d6\u30eb\u30fc\u306b\u306a\u3063\u305f",
+          "value": 255
+        }
+      ],
+      "label": "\u30eb\u30fc\u30b8\u30e5"
+    },
+    "0x029": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30ad\u30b0\u30ca\u30b9\u306b\u4e57\u3063\u3066\u3044\u308b",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u30ec\u30c3\u30c9\u306b\u5354\u529b\u3059\u308b\u3053\u3068\u306b\u306a\u3063\u305f",
+          "value": 2
+        },
+        {
+          "hex": "03",
+          "kind": "state",
+          "meaning": "\u30af\u30fc\u30ed\u30f3\u30fb\u30a4\u30bf\u30e1\u30b7\u5c4b\u306b\u73fe\u308c\u306a\u3044",
+          "value": 3
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u30eb\u30fc\u30d5\u30a1\u30b9"
+    },
+    "0x02A": {
+      "entries": [
+        {
+          "hex": "EB",
+          "kind": "state",
+          "meaning": "\u300c\u305d\u3093\u306a\u76ee\u3067\u898b\u308b\u306a\uff01\u300d\u3068\u8a00\u3063\u305f",
+          "value": 235
+        },
+        {
+          "hex": "EC",
+          "kind": "state",
+          "meaning": "\u300c\u4e16\u306e\u4e2d\u3063\u3066\u306e\u306f\u305d\u3046\u3044\u3046\u3082\u3093\u3060\u3002\u300d\u3068\u8a00\u3063\u305f",
+          "value": 236
+        },
+        {
+          "hex": "ED",
+          "kind": "state",
+          "meaning": "\u300c\u3042\u304d\u3089\u3081\u308b\u3093\u3060\u306a\u3002\u300d\u3068\u8a00\u3063\u305f",
+          "value": 237
+        },
+        {
+          "hex": "EE",
+          "kind": "state",
+          "meaning": "\u300c(\u30e1\u30a4\u30ec\u30f3\u306f)\u3082\u3046\u751f\u304d\u3061\u3083\u3044\u307e\u3044\u3002\u300d\u3068\u8a00\u3063\u305f",
+          "value": 238
+        },
+        {
+          "hex": "EF",
+          "kind": "state",
+          "meaning": "\u300c\u4eba\u578b\u306e\u72ac\u304c\u898b\u3048\u308b\u3002\u300d\u3068\u8a00\u3063\u305f",
+          "value": 239
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u30b2\u30f3"
+    },
+    "0x02B": {
+      "entries": [
+        {
+          "hex": "00",
+          "kind": "state",
+          "meaning": "\u30bf\u30f3\u30b6\u30fc\u2463\u3092\u5148\u5c0e\uff0f\u30bf\u30f3\u30b6\u30fc\u2463\uff5e\u30d5\u30a7\u30a4\u30aa\u30f3\u306e\u30a2\u30b8\u30c8\u306b\u3044\u308b\uff0f\u9053\u6848\u5185",
+          "value": 0
+        },
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30bf\u30f3\u30b6\u30fc\u2460\u3092\u5148\u5c0e",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u30bf\u30f3\u30b6\u30fc\u2461\u3092\u5148\u5c0e",
+          "value": 2
+        },
+        {
+          "hex": "03",
+          "kind": "state",
+          "meaning": "\u30bf\u30f3\u30b6\u30fc\u2462\u3092\u5148\u5c0e",
+          "value": 3
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u30d5\u30a7\u30a4\u30aa\u30f3"
+    },
+    "0x02C": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30af\u30fc\u30ed\u30f3\u2462\u306b\u3044\u306a\u3044",
+          "value": 1
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u30a2\u30cb\u30fc"
+    },
+    "0x02D": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30af\u30fc\u30ed\u30f3\u30fb\u30a4\u30bf\u30e1\u30b7\u5c4b\u306b\u3044\u308b",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u30eb\u30fc\u30f3\u306e\u77f3\u306b\u95a2\u3059\u308b\u8a71\u3092\u3057\u305f",
+          "value": 2
+        },
+        {
+          "hex": "03",
+          "kind": "state",
+          "meaning": "\u30b0\u30e9\u30c7\u30a3\u30a6\u30b9\u57fa\u5730\u2460\u306b\u3044\u308b",
+          "value": 3
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u30e9\u30a4\u30b6"
+    },
+    "0x02E": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30d3\u30af\u30c8\u30ea\u30a2\u306b\u3044\u308b\uff0f\u30aa\u30a6\u30df\u30fb\u30ec\u30b9\u30c8\u30e9\u30f3\u306b\u3044\u306a\u3044",
+          "value": 1
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u8266\u9577"
+    },
+    "0x02F": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30b7\u30f3\u30ed\u30a6\u30fb\u30b7\u30c3\u30d7\u4e57\u308a\u5834\u306b\u3044\u308b",
+          "value": 1
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u30c9\u30fc\u30eb"
+    },
+    "0x030": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30b9\u30af\u30e9\u30c3\u30d7\u30fb\u30ab\u30d0\u30ec\u30ed\u306e\u90e8\u5c4b\u306b\u3044\u308b",
+          "value": 1
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u30e1\u30a4\u30ec\u30f3"
+    },
+    "0x032": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u91dd\u306e\u57ce\u30fb\u767d\u8594\u8587\u59eb\u306e\u90e8\u5c4b\u2461\u306b\u3044\u308b",
+          "value": 1
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u95c7\u306e\u8ff7\u5bae\u306b\u6b8b\u3063\u305f",
+          "value": 255
+        }
+      ],
+      "label": "\u767d\u8594\u8587"
+    },
+    "0x033": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u91dd\u306e\u57ce\u30fb\u7df4\u7fd2\u5834\u306b\u3044\u308b",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u91dd\u306e\u57ce\u306b\u3044\u306a\u3044",
+          "value": 2
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        },
+        {
+          "hex": "F2",
+          "kind": "state",
+          "meaning": "\u95c7\u306e\u8ff7\u5bae\u8131\u51fa\u5f8c\u306b\u4ef2\u9593\u304b\u3089\u5916\u308c\u305f(\u4ed6\u30d1\u30fc\u30c6\u30a3\u30ad\u30e3\u30e9\u3082\u540c\u3058\u30d5\u30e9\u30b0\u306b)",
+          "value": 242
+        }
+      ],
+      "label": "\u30a4\u30eb\u30c9\u30a5\u30f3"
+    },
+    "0x034": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30aa\u30a6\u30df\u306b\u82b1\u6587\u5b57\u304c\u6d6e\u304b\u3076",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u9818\u4e3b\u306e\u9928\u30fb\u5ba2\u9593\u306b\u3044\u308b",
+          "value": 2
+        },
+        {
+          "hex": "80",
+          "kind": "state",
+          "meaning": "\u9818\u4e3b\u306e\u9928\u3092\u8131\u51fa\u3057\u305f",
+          "value": 128
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u30e1\u30b5\u30eb\u30c6\u30a3\u30e0"
+    },
+    "0x035": {
+      "entries": [
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        },
+        {
+          "hex": "FE",
+          "kind": "state",
+          "meaning": "\u30e9\u30e0\u30c0\u57fa\u5730\u30fb\u62f7\u554f\u90e8\u5c4b\u2461\u3067\u62f7\u554f\u5b98\u306b\u5316\u3051\u3066\u3044\u308b",
+          "value": 254
+        }
+      ],
+      "label": "\u30be\u30ba\u30de"
+    },
+    "0x036": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u300c\u5acc\u306a\u81ed\u3044\u306e\uff5e\u300d\u3068\u8a00\u3063\u305f",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u30c9\u30a5\u30f4\u30a1\u30f3\u304b\u3089\u53bb\u3063\u305f",
+          "value": 2
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u96f6"
+    },
+    "0x037": {
+      "entries": [
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        },
+        {
+          "hex": "FE",
+          "kind": "state",
+          "meaning": "\u30aa\u30fc\u30f3\u30d6\u30eb\u306b\u3044\u308b\u5f71\u306b\u300c\u624b\u3092\u8cb8\u3057\u3066\u304f\u308c\u300d\u3068\u8a00\u3063\u305f",
+          "value": 254
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u30aa\u30fc\u30f3\u30d6\u30eb\u306b\u3044\u308b\u5f71\u306b\u300c\u7279\u306b\u7528\u306f\u306a\u3044\u300d\u3068\u8a00\u3063\u305f",
+          "value": 255
+        }
+      ],
+      "label": "\u30b5\u30a4\u30ec\u30f3\u30b9"
+    },
+    "0x038": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u300c\u541b\u304c\u60a3\u8005\u304b\uff1f\u300d\u3068\u8a00\u3044\u51fa\u3059",
+          "value": 1
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u30cc\u30b5\u30ab\u30fc\u30f3"
+    },
+    "0x039": {
+      "entries": [
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u5012\u3057\u305f",
+          "value": 255
+        }
+      ],
+      "label": "\u6642\u306e\u541b"
+    },
+    "0x03A": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u4eac\u30fb\u5ead\u5712\u306b\u3044\u308b",
+          "value": 1
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u30e9\u30d3\u30c3\u30c8"
+    },
+    "0x03B": {
+      "entries": [
+        {
+          "hex": "E1",
+          "kind": "state",
+          "meaning": "\u901a\u884c\u8a3c\u3092\u767a\u884c\u3057\u305f",
+          "value": 225
+        },
+        {
+          "hex": "EF",
+          "kind": "state",
+          "meaning": "\u672c\u4eba\u6b7b\u4ea1",
+          "value": 239
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u30ec\u30aa\u30ca\u30eb\u30c9"
+    },
+    "0x03C": {
+      "entries": [
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u30ca\u30ab\u30b8\u30de\u96f6\u5f0f"
+    },
+    "0x03D": {
+      "entries": [
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\uff22\uff2a\uff06\uff2b"
+    },
+    "0x03E": {
+      "entries": [
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\uff50\uff5a\uff4b\uff57\uff36"
+    },
+    "0x03F": {
+      "entries": [
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u7279\u6b8a\u5de5\u4f5c\u8eca"
+    },
+    "0x041": {
+      "entries": [
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u30a6\u30ef\u30fc",
+          "value": 255
+        }
+      ],
+      "label": "\u30b5\u30f3\u30c0\u30fc"
+    },
+    "0x042": {
+      "entries": [
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u30b3\u30c3\u30c8\u30f3"
+    },
+    "0x043": {
+      "entries": [
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        },
+        {
+          "hex": "FE",
+          "kind": "state",
+          "meaning": "\u6226\u95d8\u5f8c\u4e8c\u629e",
+          "value": 254
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u8349\u8599\u306e\u5263\u5165\u624b",
+          "value": 255
+        }
+      ],
+      "label": "\u6e08\u738b"
+    },
+    "0x044": {
+      "entries": [
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u5012\u3057\u305f",
+          "value": 255
+        }
+      ],
+      "label": "\u9e92\u9e9f"
+    },
+    "0x045": {
+      "entries": [
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u30b9\u30e9\u30a4\u30e0"
+    },
+    "0x046": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u6731\u96c0\u306e\u5c71\u30fb\u6731\u96c0\u306e\u9593\u3067\u89e3\u51cd\u6e08\u307f",
+          "value": 1
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u6731\u96c0"
+    },
+    "0x047": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u95c7\u306e\u8ff7\u5bae\u3067\u8a71\u3057\u304b\u3051\u305f",
+          "value": 1
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b",
+          "value": 241
+        }
+      ],
+      "label": "\u8d64\u30ab\u30d6"
+    },
+    "0x050": {
+      "entries": [
+        {
+          "hex": "00",
+          "kind": "state",
+          "meaning": "\u8d77\u52d5",
+          "value": 0
+        },
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u540d\u524d\u78ba\u5b9a",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u306f\u3044\u3001\u30bf\u30a4\u30e0\u968a\u9577",
+          "value": 2
+        },
+        {
+          "hex": "03",
+          "kind": "state",
+          "meaning": "\u3088\u3057\u3001\u4ffa\u304c\u8ced\u3051\u3066\u3084\u308b\u3001\u4e00\u767a\u3084\u3063\u3066\u3053\u3044\uff01",
+          "value": 3
+        },
+        {
+          "hex": "04",
+          "kind": "state",
+          "meaning": "\u30ca\u30a4\u30c8\u30d5\u30a1\u30eb\u30b3\u30f3\u53f7\u6226",
+          "value": 4
+        },
+        {
+          "hex": "05",
+          "kind": "state",
+          "meaning": "\u8cde\u91d1100\u30af\u30ec\u30b8\u30c3\u30c8\uff0f\u307e\u305f\u3084\u308b\u306e\u304b\uff1f",
+          "value": 5
+        },
+        {
+          "hex": "06",
+          "kind": "state",
+          "meaning": "\u30d0\u30b9\u30bf\u30fc\u30de\u30b7\u30f3\u6226",
+          "value": 6
+        },
+        {
+          "hex": "07",
+          "kind": "state",
+          "meaning": "\u8cde\u91d1200\u30af\u30ec\u30b8\u30c3\u30c8\uff0f\u305d\u308d\u305d\u308d\u624b\u3054\u308f\u3044\u305e\uff1f",
+          "value": 7
+        },
+        {
+          "hex": "08",
+          "kind": "state",
+          "meaning": "\u30ac\u30f3\u30d5\u30a1\u30a4\u30bf\u30fc\u6226",
+          "value": 8
+        },
+        {
+          "hex": "09",
+          "kind": "state",
+          "meaning": "\u8cde\u91d1400\u30af\u30ec\u30b8\u30c3\u30c8\uff0f\u4eca\u65e5\u306f\u3082\u3046\u7d42\u308f\u308a\u3060",
+          "value": 9
+        },
+        {
+          "hex": "0A",
+          "kind": "state",
+          "meaning": "\u30f4\u30a1\u30eb\u30ab\u30f3\u8972\u6483",
+          "value": 10
+        },
+        {
+          "hex": "0B",
+          "kind": "state",
+          "meaning": "\u30f4\u30a1\u30eb\u30ab\u30f3\u6226",
+          "value": 11
+        },
+        {
+          "hex": "0C",
+          "kind": "state",
+          "meaning": "\u30bf\u30a4\u30e0\u635c\u7d22\u4e2d",
+          "value": 12
+        },
+        {
+          "hex": "0D",
+          "kind": "state",
+          "meaning": "\u30bf\u30a4\u30e0\u306e\u5e3d\u5b50\u3092\u767a\u898b",
+          "value": 13
+        },
+        {
+          "hex": "00",
+          "kind": "state",
+          "meaning": "\u30dc\u30ed\u3092\u51fa\u767a\u3059\u308b\u8a31\u53ef\u3092\u3082\u3089\u3046",
+          "value": 0
+        },
+        {
+          "hex": "0E",
+          "kind": "state",
+          "meaning": "\u30dc\u30ed\u3092\u51fa\u767a\u3059\u308b",
+          "value": 14
+        },
+        {
+          "hex": "0F",
+          "kind": "state",
+          "meaning": "\u30b9\u30af\u30e9\u30c3\u30d7\u306b\u5230\u7740",
+          "value": 15
+        },
+        {
+          "hex": "10",
+          "kind": "state",
+          "meaning": "\u30b9\u30af\u30e9\u30c3\u30d7\u30fb\u9152\u5834\u306b\u5165\u3063\u305f",
+          "value": 16
+        }
+      ],
+      "label": "\uff34\uff12\uff16\uff10\uff27\u7de8\u30b7\u30ca\u30ea\u30aa"
+    },
+    "0x051": {
+      "entries": [
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u30aa\u30ec\u306b\u58f2\u308c\u3063\u3066\u8a00\u3063\u3066\u3093\u3060\u308d\u3046\u304c\uff01",
+          "value": 2
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u4eca\u671f\u4e2d\u306b\u3001\u3053\u306e\u500d\u306e\u30d1\u30fc\u30c4\u3092\u96c6\u3081\u306a\uff01",
+          "value": 8
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u95d8\u6a5f\u5834\u3067\u30bf\u30a4\u30e0\u306e\u89e3\u8aac",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30b7\u30c3\u30d7\u767a\u7740\u5834\u3067\u30bf\u30a4\u30e0\u306e\u89e3\u8aac",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30af\u30ec\u30fc\u30bf\u30fc\u3067\u30bf\u30a4\u30e0\u306e\u89e3\u8aac",
+          "value": 128
+        }
+      ],
+      "label": "\u30dc\u30ed1"
+    },
+    "0x052": {
+      "entries": [
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30b9\u30af\u30e9\u30c3\u30d7\u30fb\u9152\u5834\u3067\u81ea\u5df1\u7d39\u4ecb\u3057\u305f",
+          "value": 128
+        }
+      ],
+      "label": "\u4e2d\u5cf6\u6b63\u592a\u90ce"
+    },
+    "0x053": {
+      "entries": [
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u30ab\u30d0\u30ec\u30ed\u30d5\u30a1\u30af\u30c8\u30ea\u30fc\u306b\u9003\u3052\u305f",
+          "value": 2
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u30ab\u30d0\u30ec\u30ed\u6483\u9000",
+          "value": 255
+        },
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30ab\u30d0\u30ec\u30ed\u306e\u90e8\u5c4b\u306b\u3044\u308b\uff0f\u30e1\u30a4\u30ec\u30f3\u6551\u51fa\u4f5c\u6226",
+          "value": 1
+        },
+        {
+          "hex": "03",
+          "kind": "state",
+          "meaning": "\u30d5\u30a1\u30af\u30c8\u30ea\u30fc\u5965\u306b\u9003\u3052\u305f",
+          "value": 3
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u30ab\u30d0\u30ec\u30ed\u6483\u9000",
+          "value": 255
+        }
+      ],
+      "label": "\u30ab\u30d0\u30ec\u30ed"
+    },
+    "0x054": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30d1\u30b9\u5165\u624b",
+          "value": 1
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u30ab\u30d0\u30ec\u30ed\u30d5\u30a1\u30af\u30c8\u30ea\u30fc\u2462\u306e400\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30ab\u30d0\u30ec\u30ed\u30d5\u30a1\u30af\u30c8\u30ea\u30fc\u2460\u306e\u5f85\u3061\u4f0f\u305b\u5012\u3059",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30ab\u30d0\u30ec\u30ed\u30d5\u30a1\u30af\u30c8\u30ea\u30fc\u2462\u306e\u5f85\u3061\u4f0f\u305b\u5012\u3059",
+          "value": 32
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u9306\u3073\u305f\u30d1\u30a4\u30d7\u3067\u30ed\u30fc\u30d7\u304c\u5207\u308c\u305f\u7406\u7531\u3092\u30b2\u30f3\u306b\u8cea\u554f\u3057\u305f",
+          "value": 128
+        },
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30d1\u30b9\u5165\u624b",
+          "value": 1
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30ab\u30d0\u30ec\u30ed\u4e8b\u52d9\u6240\u3067\u30ea\u30e5\u30fc\u30c8\u304c\u30e1\u30a4\u30ec\u30f3\u306b\u4e00\u8a00",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u30ab\u30d0\u30ec\u30ed\u30d5\u30a1\u30af\u30c8\u30ea\u30fc\u2462\u306e400\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u9152\u5834\u306b\u5165\u3063\u305f",
+          "value": 16
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30ab\u30d0\u30ec\u30ed\u306e\u90e8\u5c4b\u306e400\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 64
+        }
+      ],
+      "label": "\u30b9\u30af\u30e9\u30c3\u30d7"
+    },
+    "0x055": {
+      "entries": [
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u6c11\u5bb6\u2462\u306e\u50b7\u85ac",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u6c11\u5bb6\u2461\u306e\u30a4\u30f3\u30b9\u30bf\u30f3\u30c8\u30ad\u30c3\u30c8",
+          "value": 8
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30ac\u30f3\u30d5\u30a1\u30a4\u30bf\u30fc\u306b\u52dd\u5229",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30d0\u30b9\u30bf\u30fc\u30de\u30b7\u30f3\u306b\u52dd\u5229",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30ca\u30a4\u30c8\u30d5\u30a1\u30eb\u30b3\u30f3\u53f7\u306b\u52dd\u5229",
+          "value": 128
+        }
+      ],
+      "label": "\u30dc\u30ed2"
+    },
+    "0x056": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u5c0f\u77f3\u3092\u5165\u624b\u3057\u305f",
+          "value": 1
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u89e3\u653e\u306e\u30eb\u30fc\u30f3",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u4fdd\u8b77\u306e\u30eb\u30fc\u30f3",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u6d3b\u529b\u306e\u30eb\u30fc\u30f3",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u52dd\u5229\u306e\u30eb\u30fc\u30f3",
+          "value": 128
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u5370\u8853\u306e\u8cc7\u8cea\u3092\u5f97\u305f",
+          "value": 255
+        }
+      ],
+      "label": "\u5370\u8853\u306e\u8cc7\u8cea"
+    },
+    "0x057": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30ab\u30fc\u30c9\u3092\u5165\u624b\u3057\u305f",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u30d2\u30e5\u30fc\u30ba\u306e\u4f9d\u983c\u53d7\u3051\u305f",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30af\u30fc\u30ed\u30f3\u3067\u30b2\u30f3\u306e\u60c5\u5831\u3092\u805e\u3044\u305f",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u30ce\u30fc\u30e0\u306b\u91d1\u3092\u8981\u6c42\u3055\u308c\u305f",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u5263\u306e\u30ab\u30fc\u30c9\u624b\u306b\u5165\u308c\u305f",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u676f\u306e\u30ab\u30fc\u30c9\u624b\u306b\u5165\u308c\u305f",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u91d1\u306e\u30ab\u30fc\u30c9\u624b\u306b\u5165\u308c\u305f",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u76fe\u306e\u30ab\u30fc\u30c9\u624b\u306b\u5165\u308c\u305f",
+          "value": 128
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u79d8\u8853\u306e\u8cc7\u8cea\u3092\u5f97\u305f",
+          "value": 255
+        }
+      ],
+      "label": "\u79d8\u8853\u306e\u8cc7\u8cea"
+    },
+    "0x058": {
+      "entries": [
+        {
+          "hex": "80",
+          "kind": "state",
+          "meaning": "\u4e00\u676f\u76ee",
+          "value": 128
+        },
+        {
+          "hex": "90",
+          "kind": "state",
+          "meaning": "\u4e8c\u676f\u76ee",
+          "value": 144
+        },
+        {
+          "hex": "B0",
+          "kind": "state",
+          "meaning": "\u4e09\u676f\u76ee",
+          "value": 176
+        },
+        {
+          "hex": "B8",
+          "kind": "state",
+          "meaning": "\u56db\u676f\u76ee",
+          "value": 184
+        },
+        {
+          "hex": "F8",
+          "kind": "state",
+          "meaning": "\u4e94\u676f\u76ee",
+          "value": 248
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u676f\u306e\u30ab\u30fc\u30c9\u624b\u306b\u5165\u308c\u305f",
+          "value": 255
+        }
+      ],
+      "label": "\u30e8\u30fc\u30af\u30e9\u30f3\u30c9(\u676f\u306e\u30ab\u30fc\u30c9)"
+    },
+    "0x059": {
+      "entries": [
+        {
+          "hex": "64",
+          "kind": "state",
+          "meaning": "\u5168\u30b7\u30ca\u30ea\u30aa",
+          "value": 100
+        }
+      ],
+      "label": "\uff1f"
+    },
+    "0x05A": {
+      "entries": [
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u5149\u306e\u8ff7\u5bae\u30af\u30ea\u30a2\uff0f\u967d\u8853\u306e\u8cc7\u8cea\u3092\u5f97\u305f",
+          "value": 8
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30aa\u30fc\u30f3\u30d6\u30eb\u3067\u81ea\u5206\u306e\u5f71\u3092\u898b\u3064\u3051\u305f",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30aa\u30fc\u30f3\u30d6\u30eb\u30af\u30ea\u30a2\uff0f\u9670\u8853\u306e\u8cc7\u8cea\u3092\u5f97\u305f",
+          "value": 128
+        }
+      ],
+      "label": "\u967d\u8853\u3068\u9670\u8853\u306e\u8cc7\u8cea"
+    },
+    "0x05B": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u8a66\u7df4\u958b\u59cb\u6642\u306e\u30e1\u30c3\u30bb\u30fc\u30b8\u805e\u3044\u305f\uff0f\u9e92\u9e9f\u306e\u8a66\u7df4\u30af\u30ea\u30a2\u3057\u305f",
+          "value": 1
+        },
+        {
+          "hex": "F0",
+          "kind": "state",
+          "meaning": "\u4ef2\u9593\u306b\u8a98\u308f\u306a\u304b\u3063\u305f\uff0f\u7a7a\u8853\u5c4b",
+          "value": 240
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u7a7a\u8853\u306e\u8cc7\u8cea\u3092\u53d7\u3051\u7d99\u3044\u3060",
+          "value": 255
+        }
+      ],
+      "label": "\u7a7a\u8853\u306e\u8cc7\u8cea"
+    },
+    "0x05C": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u6642\u306e\u7802\u3092\u8abf\u3079\u305f",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u30d5\u30a1\u30b7\u30ca\u30c8\u30a5\u30fc\u30eb\u306b\u98db\u3070\u3057\u3066\u3082\u3089\u3063\u305f",
+          "value": 2
+        },
+        {
+          "hex": "03",
+          "kind": "state",
+          "meaning": "\u7802\u306e\u5668\u306b\u6642\u306e\u7802\u3092\u96c6\u3081\u305f",
+          "value": 3
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u6642\u3092\u52d5\u304b\u3057\u305f",
+          "value": 16
+        },
+        {
+          "hex": "FE",
+          "kind": "state",
+          "meaning": "\u6642\u8853\u3092\u6559\u308f\u308b\uff0f\u6642\u8853\u5c4b",
+          "value": 254
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u6642\u8853\u306e\u8cc7\u8cea\u3092\u53d7\u3051\u7d99\u3044\u3060",
+          "value": 255
+        }
+      ],
+      "label": "\u6642\u8853\u306e\u8cc7\u8cea"
+    },
+    "0x05D": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30e1\u30a4\u30ec\u30f3\u8d70\u308a\u53bb\u3063\u3066\u30bf\u30f3\u30b6\u30fc\u2461\u306b",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u30bf\u30f3\u30b6\u30fc\u2461\u3067\u30e1\u30a4\u30ec\u30f3\u3092\u6c17\u9063\u3063\u305f",
+          "value": 2
+        },
+        {
+          "hex": "03",
+          "kind": "state",
+          "meaning": "\u30d5\u30a7\u30a4\u30aa\u30f3\u306e\u6848\u5185\u3067\u30ce\u30fc\u30de\u30c3\u30c9\u306e\u30a2\u30b8\u30c8\u307e\u3067\u884c\u304f\u3053\u3068\u306b\u306a\u3063\u305f",
+          "value": 3
+        },
+        {
+          "hex": "07",
+          "kind": "state",
+          "meaning": "\u30bf\u30f3\u30b6\u30fc\u2467\u4e2d\u592e\uff5e\u30bf\u30f3\u30b6\u30fc\u2469\u306b\u30d5\u30a7\u30a4\u30aa\u30f3\u304c\u3044\u308b",
+          "value": 7
+        },
+        {
+          "hex": "08",
+          "kind": "state",
+          "meaning": "\u30ce\u30fc\u30de\u30c3\u30c9\u306e\u8105\u3057\u3092\u4e00\u8e74\u3057\u305f",
+          "value": 8
+        },
+        {
+          "hex": "09",
+          "kind": "state",
+          "meaning": "\u30ce\u30fc\u30de\u30c3\u30c9\u306e\u90e8\u5c4b\u304b\u3089\u30ce\u30fc\u30de\u30c3\u30c9\u9003\u3052\u305f",
+          "value": 9
+        },
+        {
+          "hex": "0A",
+          "kind": "state",
+          "meaning": "\u30ce\u30fc\u30de\u30c3\u30c9\u306e\u90e8\u5c4b\u3067\u30d5\u30a7\u30a4\u30aa\u30f3\u306b\u547c\u3073\u6b62\u3081\u3089\u308c\u305f",
+          "value": 10
+        },
+        {
+          "hex": "0B",
+          "kind": "state",
+          "meaning": "\u30bf\u30f3\u30b6\u30fc\u6226",
+          "value": 11
+        }
+      ],
+      "label": "\u30bf\u30f3\u30b6\u30fc(\u76d7\u8cca\u306e\u6307\u8f2a)"
+    },
+    "0x05E": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u58f2\u308a\u5207\u308c\u305f\u7b56\u58eb\u306e\u6307\u8f2a\u306b\u30ab\u30fc\u30bd\u30eb\u3092\u5408\u308f\u305b\u305f",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u30cb\u30bb\u9818\u4e3b\u767b\u5834",
+          "value": 2
+        },
+        {
+          "hex": "03",
+          "kind": "state",
+          "meaning": "\u30c9\u30ad\u30c9\u30ad\u3057\u3061\u3083\u3063\u305f",
+          "value": 3
+        },
+        {
+          "hex": "04",
+          "kind": "state",
+          "meaning": "\u8131\u51fa\u958b\u59cb",
+          "value": 4
+        },
+        {
+          "hex": "05",
+          "kind": "state",
+          "meaning": "\u30c7\u30d3\u30eb\u30c6\u30f3\u30bf\u30af\u30e9\u30fc\u3092\u5012\u3057\u305f",
+          "value": 5
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u6307\u8f2a\u3092\u5165\u624b\u3057\u305f",
+          "value": 255
+        }
+      ],
+      "label": "\u9818\u4e3b\u306e\u9928(\u7b56\u58eb\u306e\u6307\u8f2a)"
+    },
+    "0x05F": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u6307\u8f2a\u58f2\u3063\u3066\u304f\u308c\u308b\u3053\u3068\u306b\u306a\u3063\u305f",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u30cd\u30ba\u30df\u8ffd\u8de1\u958b\u59cb",
+          "value": 2
+        },
+        {
+          "hex": "10",
+          "kind": "state",
+          "meaning": "\u30db\u30c6\u30eb\u30d5\u30ed\u30a2\u304b\u3089\u30ab\u30fc\u30c9\u30d5\u30ed\u30a2\u3078",
+          "value": 16
+        },
+        {
+          "hex": "11",
+          "kind": "state",
+          "meaning": "\u5bcc\u8c6a\u306e\u5965\u69d8\u9003\u3052\u56de\u308b",
+          "value": 17
+        },
+        {
+          "hex": "20",
+          "kind": "state",
+          "meaning": "\u30ab\u30fc\u30c9\u30d5\u30ed\u30a2\u304b\u3089\u30b9\u30ed\u30c3\u30c8\u30d5\u30ed\u30a2\u3078",
+          "value": 32
+        },
+        {
+          "hex": "21",
+          "kind": "state",
+          "meaning": "\u5de8\u5927\u30b9\u30ed\u30c3\u30c8\u30de\u30b7\u30f3\u524d\u306b\u9003\u3052\u305f",
+          "value": 33
+        },
+        {
+          "hex": "30",
+          "kind": "state",
+          "meaning": "\u5de8\u5927\u30b9\u30ed\u30c3\u30c8\u30de\u30b7\u30f3\u304b\u3089\u51fa\u3066\u304d\u3066\u5de6\u5074\u306e\u30b9\u30ed\u30c3\u30c8\u53f0\u4e0a\u306b",
+          "value": 48
+        },
+        {
+          "hex": "31",
+          "kind": "state",
+          "meaning": "\u30cd\u30ba\u30df\u6b21\u306e\u5730\u70b9\u306b",
+          "value": 49
+        },
+        {
+          "hex": "32",
+          "kind": "state",
+          "meaning": "\u3055\u3089\u306b\u6b21\u306e\u5730\u70b9\u306b",
+          "value": 50
+        },
+        {
+          "hex": "33",
+          "kind": "state",
+          "meaning": "\u30b9\u30ed\u30c3\u30c8\u53f0\u304b\u3089\u98db\u3073\u964d\u308a\u305f",
+          "value": 51
+        },
+        {
+          "hex": "40",
+          "kind": "state",
+          "meaning": "\u30b9\u30ed\u30c3\u30c8\u30d5\u30ed\u30a2\u304b\u3089\u30eb\u30fc\u30ec\u30c3\u30c8\u30d5\u30ed\u30a2\u3078",
+          "value": 64
+        },
+        {
+          "hex": "50",
+          "kind": "state",
+          "meaning": "\u5de8\u5927\u30eb\u30fc\u30ec\u30c3\u30c8\u306b\u98db\u3073\u8fbc\u3093\u3060",
+          "value": 80
+        },
+        {
+          "hex": "60",
+          "kind": "state",
+          "meaning": "\u30eb\u30fc\u30ec\u30c3\u30c8\u30d5\u30ed\u30a2\u304b\u3089\u30d0\u30fc\u30d5\u30ed\u30a2\u3078",
+          "value": 96
+        },
+        {
+          "hex": "80",
+          "kind": "state",
+          "meaning": "\u30b7\u30e3\u30f3\u30c7\u30ea\u30a2\u3054\u3068\u843d\u4e0b\u3057\u3066\u81ea\u52d5\u8eca\u7834\u58ca\uff0f\u30de\u30f3\u30db\u30fc\u30eb\u958b\u3044\u305f\uff0f\u30cd\u30ba\u30df\u306f\u30ce\u30fc\u30e0\u306e\u6d1e\u7a9f",
+          "value": 128
+        },
+        {
+          "hex": "81",
+          "kind": "state",
+          "meaning": "\u30ce\u30fc\u30e0\u306e\u6d1e\u7a9f\u2460\u306b",
+          "value": 129
+        },
+        {
+          "hex": "82",
+          "kind": "state",
+          "meaning": "\u30ce\u30fc\u30e0\u306e\u6d1e\u7a9f\u2460\u306b",
+          "value": 130
+        },
+        {
+          "hex": "83",
+          "kind": "state",
+          "meaning": "\u30ce\u30fc\u30e0\u306e\u6d1e\u7a9f\u2460\u306b",
+          "value": 131
+        },
+        {
+          "hex": "84",
+          "kind": "state",
+          "meaning": "\u30ce\u30fc\u30e0\u306e\u6d1e\u7a9f\u2461\u306b",
+          "value": 132
+        },
+        {
+          "hex": "85",
+          "kind": "state",
+          "meaning": "\u30ce\u30fc\u30e0\u306e\u6d1e\u7a9f\u2461\u306b",
+          "value": 133
+        },
+        {
+          "hex": "86",
+          "kind": "state",
+          "meaning": "\u30ce\u30fc\u30e0\u306e\u6d1e\u7a9f\u2461\u306b",
+          "value": 134
+        },
+        {
+          "hex": "87",
+          "kind": "state",
+          "meaning": "\u30ce\u30fc\u30e0\u306e\u6d1e\u7a9f\u2464\u306b",
+          "value": 135
+        },
+        {
+          "hex": "88",
+          "kind": "state",
+          "meaning": "\u30ce\u30fc\u30e0\u306e\u6d1e\u7a9f\u2465\u306b\uff0f\u5de8\u7363\u6226",
+          "value": 136
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u6307\u8f2a\u3092\u5165\u624b\u3057\u305f\uff0f\u99d0\u8eca\u5834\u5143\u306b\u623b\u308b",
+          "value": 255
+        }
+      ],
+      "label": "\u30d0\u30ab\u30e9(\u52c7\u6c17\u306e\u6307\u8f2a)"
+    },
+    "0x060": {
+      "entries": [
+        {
+          "hex": "00",
+          "kind": "state",
+          "meaning": "\u30d5\u30a7\u30a4\u30aa\u30f3\u306e\u5148\u5c0e\u3067\u30bf\u30f3\u30b6\u30fc\u2463\u3092\u79fb\u52d5(\u6575\u51fa\u306a\u3044)\uff0f\u30bf\u30f3\u30b6\u30fc\u2463\uff5e\u30a2\u30b8\u30c8\u306b\u79fb\u52d5",
+          "value": 0
+        },
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30d5\u30a7\u30a4\u30aa\u30f3\u306e\u5148\u5c0e\u3067\u30bf\u30f3\u30b6\u30fc\u2460\u3092\u79fb\u52d5\uff0f\u30d5\u30a7\u30a4\u30aa\u30f3\u7121\u8996\u3057\u3066\u5148\u306b\u9032\u3080",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u30d5\u30a7\u30a4\u30aa\u30f3\u306e\u5148\u5c0e\u3067\u30bf\u30f3\u30b6\u30fc\u2461\u3092\u79fb\u52d5(\u6575\u51fa\u306a\u3044)",
+          "value": 2
+        },
+        {
+          "hex": "03",
+          "kind": "state",
+          "meaning": "\u30d5\u30a7\u30a4\u30aa\u30f3\u306e\u5148\u5c0e\u3067\u30bf\u30f3\u30b6\u30fc\u2462\u3092\u79fb\u52d5(\u6575\u51fa\u306a\u3044)\uff0f\u30d5\u30a7\u30a4\u30aa\u30f3\u306b\u5354\u529b\u3057\u306a\u3044",
+          "value": 3
+        },
+        {
+          "hex": "04",
+          "kind": "state",
+          "meaning": "\u30d5\u30a7\u30a4\u30aa\u30f3\u306b\u9053\u6848\u5185(\u30b9\u30e9\u30a4\u30e0\u30d7\u30fc\u30eb\uff0f\u30ce\u30fc\u30de\u30c3\u30c9\u306e\u30a2\u30b8\u30c8)\u983c\u3093\u3067\u51fa\u767a",
+          "value": 4
+        },
+        {
+          "hex": "05",
+          "kind": "state",
+          "meaning": "\u30d5\u30a7\u30a4\u30aa\u30f3\u304c\u30a2\u30b8\u30c8\u51fa\u5165\u308a\u53e3\u304b\u3089\u30bf\u30f3\u30b6\u30fc\u2463\u4e0a\u90e8\u306b\u79fb\u52d5",
+          "value": 5
+        },
+        {
+          "hex": "06",
+          "kind": "state",
+          "meaning": "\u30d5\u30a7\u30a4\u30aa\u30f3\u304c\u30bf\u30f3\u30b6\u30fc\u2463\u4e0a\u90e8\u304b\u3089\u30bf\u30f3\u30b6\u30fc\u2466\u4e0a\u90e8\u306b\u79fb\u52d5",
+          "value": 6
+        },
+        {
+          "hex": "07",
+          "kind": "state",
+          "meaning": "\u30d5\u30a7\u30a4\u30aa\u30f3\u304c\u30bf\u30f3\u30b6\u30fc\u2466\u4e0a\u90e8\u304b\u3089\u30bf\u30f3\u30b6\u30fc\u2467\u53f3\u4e0b\u306b\u79fb\u52d5",
+          "value": 7
+        },
+        {
+          "hex": "08",
+          "kind": "state",
+          "meaning": "\u30ce\u30fc\u30de\u30c3\u30c9\u306e\u30a2\u30b8\u30c8\u3067\u30d5\u30a7\u30a4\u30aa\u30f3\u306f\u30d0\u30c8\u30eb\u4e2d",
+          "value": 8
+        },
+        {
+          "hex": "80",
+          "kind": "state",
+          "meaning": "\u30bf\u30f3\u30b6\u30fc\u6226\u7d42\u4e86",
+          "value": 128
+        },
+        {
+          "hex": "81",
+          "kind": "state",
+          "meaning": "\u30e1\u30a4\u30ec\u30f3\u300c\u5c11\u3057\u5f85\u3063\u3066\u300d",
+          "value": 129
+        },
+        {
+          "hex": "82",
+          "kind": "state",
+          "meaning": "\u30e1\u30a4\u30ec\u30f3\u300c\u3082\u3046\u5c11\u3057\u3060\u3051\u5f85\u3063\u3066\u300d",
+          "value": 130
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u30b9\u30e9\u30a4\u30e0\u30d7\u30fc\u30eb\u304b\u3089\u30d6\u30eb\u30fc\u6d88\u3048\u308b",
+          "value": 255
+        }
+      ],
+      "label": "\u30bf\u30f3\u30b6\u30fc"
+    },
+    "0x061": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u75c5\u9b54\u30e2\u30fc\u30eb\u6226(\u4e00\u56de\u6226)",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u75c5\u9b54\u30e2\u30fc\u30eb\u6226(\u4e8c\u56de\u6226)",
+          "value": 2
+        },
+        {
+          "hex": "03",
+          "kind": "state",
+          "meaning": "\u75c5\u9b54\u30e2\u30fc\u30eb\u6226(\u4e09\u56de\u6226\u4ee5\u964d)",
+          "value": 3
+        },
+        {
+          "hex": "F8",
+          "kind": "state",
+          "meaning": "\u75c5\u9b54\u30e2\u30fc\u30eb\u9000\u6cbb\u3057\u305f(\u4e00\u56de\u6226)",
+          "value": 248
+        },
+        {
+          "hex": "F9",
+          "kind": "state",
+          "meaning": "\u75c5\u9b54\u30e2\u30fc\u30eb\u9000\u6cbb\u3057\u305f(\u4e8c\u56de\u6226)\uff0f\u8b1d\u793c",
+          "value": 249
+        },
+        {
+          "hex": "FA",
+          "kind": "state",
+          "meaning": "\u75c5\u9b54\u30e2\u30fc\u30eb\u9000\u6cbb\u3057\u305f(\u4e09\u56de\u6226\u4ee5\u964d)\uff0f\u8b1d\u793c",
+          "value": 250
+        },
+        {
+          "hex": "FB",
+          "kind": "state",
+          "meaning": "\u8b1d\u793c",
+          "value": 251
+        },
+        {
+          "hex": "FC",
+          "kind": "state",
+          "meaning": "\u8b1d\u793c",
+          "value": 252
+        },
+        {
+          "hex": "FD",
+          "kind": "state",
+          "meaning": "\u8b1d\u793c",
+          "value": 253
+        },
+        {
+          "hex": "FE",
+          "kind": "state",
+          "meaning": "\u8b1d\u793c",
+          "value": 254
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u8b1d\u793c\uff0f\u591c\u9003\u3052\u3057\u305f",
+          "value": 255
+        }
+      ],
+      "label": "\u30e8\u30fc\u30af\u30e9\u30f3\u30c9\u5bcc\u8c6a"
+    },
+    "0x062": {
+      "entries": [
+        {
+          "hex": "00",
+          "kind": "state",
+          "meaning": "\u4e2d\u5cf6\u6b63\u592a\u90ce\u30b9\u30af\u30e9\u30c3\u30d7\u3067\u307b\u3068\u307c\u308a\u3092\u51b7\u307e\u3057\u3066\u3044\u308b",
+          "value": 0
+        },
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30e1\u30ab\u30de\u30a6\u30b9\u635c\u7d22",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u30e1\u30ab\u30de\u30a6\u30b9\u56de\u53ce",
+          "value": 2
+        },
+        {
+          "hex": "03",
+          "kind": "state",
+          "meaning": "\u30c7\u30fc\u30bf\u53d6\u308a\u51fa\u3057\uff5e\u30ca\u30ab\u30b8\u30de\u96f6\u5f0f\u6a5f\u52d5",
+          "value": 3
+        },
+        {
+          "hex": "04",
+          "kind": "state",
+          "meaning": "\u30ca\u30ab\u30b8\u30de\u96f6\u5f0f\u6a5f\u52d5\u6e08\u307f",
+          "value": 4
+        },
+        {
+          "hex": "05",
+          "kind": "state",
+          "meaning": "\u30dc\u30c7\u30a3\u30bf\u30a4\u30d7\u5909\u66f4\u53ef\u80fd",
+          "value": 5
+        }
+      ],
+      "label": "\u682a\u5f0f\u4f1a\u793e\u4e2d\u5cf6\u88fd\u4f5c\u6240"
+    },
+    "0x063": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u53e4\u4ee3\u306e\u30b7\u30c3\u30d7\u2461\u3067\u306e\u30b2\u30f3\u3068\u306e\u4f1a\u8a71",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u60c5\u5831\u7aef\u672b\u306e\u90e8\u5c4b\u306b\u6765\u305f",
+          "value": 2
+        },
+        {
+          "hex": "03",
+          "kind": "state",
+          "meaning": "\u65e5\u8a8c\u3092\u95b2\u89a7\u3057\u305f",
+          "value": 3
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\u5f8c\u96fb\u6e90\u304c\u6b7b\u3093\u3060",
+          "value": 255
+        }
+      ],
+      "label": "\u53e4\u4ee3\u306e\u30b7\u30c3\u30d72"
+    },
+    "0x064": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u6226\u58eb\u306e\u9593",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u751f\u547d\u306e\u9593",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u96a0\u8005\u306e\u9593",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u52c7\u6c17\u306e\u9593",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u7b56\u58eb\u306e\u9593",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u76d7\u8cca\u306e\u9593",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u5546\u4eba\u306e\u9593",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u8b77\u308a\u306e\u9593",
+          "value": 128
+        }
+      ],
+      "label": "\u30f4\u30a1\u30b8\u30e5\u30a4\u30fc\u30eb\u306e\u9375"
+    },
+    "0x065": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30f4\u30a1\u30b8\u30e5\u30a4\u30fc\u30eb\u306e\u9593\u3078\u306e\u6249\u9589\u3056\u3055\u308c\u308b",
+          "value": 1
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u795e\u79d8\u306e\u6307\u8f2a\u5165\u624b\uff0f\u30de\u30fc\u30b0\u30e1\u30eb\u306b\u98db\u3070\u3057\u3066\u3082\u3089\u3063\u305f",
+          "value": 255
+        }
+      ],
+      "label": "\u30f4\u30a1\u30b8\u30e5\u30a4\u30fc\u30eb"
+    },
+    "0x066": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u9818\u4e3b\u306b\u5ba2\u9593\u3078\u6848\u5185\u3055\u308c\u305f",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u51fa\u5165\u308a\u53e3\u306b\u9375\u304c\u304b\u304b\u308b",
+          "value": 2
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u9818\u4e3b\u306e\u9928\u30fb\u5730\u4e0b\u2460\u3067\u300c\u3053\u306e\u5148\u3078\u884c\u3063\u3066\u307f\u3088\u3046\u3002\u300d\u3068\u8a00\u3063\u305f",
+          "value": 128
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u30a4\u30d9\u30f3\u30c8\u7d42\u4e86\uff0f5E \u9818\u4e3b\u306e\u9928(\u7b56\u58eb\u306e\u6307\u8f2a)\u958b\u59cb\u6642",
+          "value": 255
+        }
+      ],
+      "label": "\u9818\u4e3b\u306e\u9928"
+    },
+    "0x067": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u5de8\u4eba\u7cfb\u306e\u5f71\u304c\u79fb\u52d5",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u9ce5\u985e\u7cfb\u306e\u5f71\u304c\u79fb\u52d5",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u5996\u9b54\u7cfb\u30fb\u5973\u306e\u5f71\u304c\u79fb\u52d5",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u9b54\u751f\u547d\u7cfb\u306e\u5f71\u304c\u79fb\u52d5",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u4e0d\u6b7b\u65cf\u7cfb\u306e\u5f71\u304c\u79fb\u52d5",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u5996\u9b54\u7cfb\u30fb\u7537\u306e\u5f71\u304c\u79fb\u52d5",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u81ea\u5206\u306e\u5f71\u304c\u79fb\u52d5",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30d2\u30e5\u30fc\u30de\u30f3\u7cfb\u306e\u5f71\u304c\u79fb\u52d5",
+          "value": 128
+        }
+      ],
+      "label": "\u30aa\u30fc\u30f3\u30d6\u30eb"
+    },
+    "0x068": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u6226\u58eb\u306e\u6307\u8f2a",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u751f\u547d\u306e\u6307\u8f2a",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u96a0\u8005\u306e\u6307\u8f2a",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u52c7\u6c17\u306e\u6307\u8f2a",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u7b56\u58eb\u306e\u6307\u8f2a",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u76d7\u8cca\u306e\u6307\u8f2a",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u5546\u4eba\u306e\u6307\u8f2a",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u8b77\u308a\u306e\u6307\u8f2a",
+          "value": 128
+        }
+      ],
+      "label": "\u6307\u8f2a"
+    },
+    "0x069": {
+      "entries": [
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30ec\u30aa\u30ca\u30eb\u30c9\u306e\u60c5\u5831\u3092\u5165\u624b",
+          "value": 128
+        }
+      ],
+      "label": "\u30af\u30fc\u30ed\u30f3\u60c5\u5831\u7aef\u672b"
+    },
+    "0x06A": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30a2\u30bb\u30eb\u30b9\u306e\u90e8\u5c4b\u2460\u3067\u68fa\u6876\u898b\u305f",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u30bb\u30a2\u30c8\u306b\u523a\u3055\u308c\u305f",
+          "value": 2
+        },
+        {
+          "hex": "03",
+          "kind": "state",
+          "meaning": "\u30aa\u30eb\u30ed\u30ef\u30fc\u30b8\u30e5\u3068\u5bfe\u9762\u3057\u305f",
+          "value": 3
+        },
+        {
+          "hex": "04",
+          "kind": "state",
+          "meaning": "\u4ed5\u7acb\u5c4b\u3067\u7740\u66ff\u3048\u305f",
+          "value": 4
+        },
+        {
+          "hex": "05",
+          "kind": "state",
+          "meaning": "\u767d\u8594\u8587\u59eb\u76ee\u899a\u3081\u305f",
+          "value": 5
+        },
+        {
+          "hex": "06",
+          "kind": "state",
+          "meaning": "\u30aa\u30a6\u30df\u306e\u98db\u3070\u3057\u5c4b\u306e\u6e96\u5099\u6574\u3063\u305f",
+          "value": 6
+        },
+        {
+          "hex": "07",
+          "kind": "state",
+          "meaning": "\u708e\u306e\u5f93\u9a0e\u58eb\u5012\u3057\u305f",
+          "value": 7
+        },
+        {
+          "hex": "08",
+          "kind": "state",
+          "meaning": "\u6c34\u306e\u5f93\u9a0e\u58eb\u5012\u3057\u305f",
+          "value": 8
+        },
+        {
+          "hex": "09",
+          "kind": "state",
+          "meaning": "\u68ee\u306e\u5f93\u9a0e\u58eb\u5012\u3057\u305f",
+          "value": 9
+        },
+        {
+          "hex": "0A",
+          "kind": "state",
+          "meaning": "\u91d1\u7345\u5b50\u59eb\u5012\u3057\u305f",
+          "value": 10
+        },
+        {
+          "hex": "0B",
+          "kind": "state",
+          "meaning": "\u30a4\u30eb\u30c9\u30a5\u30f3\u304c\u4ef2\u9593\u306b\u52a0\u308f\u3063\u305f",
+          "value": 11
+        },
+        {
+          "hex": "0C",
+          "kind": "state",
+          "meaning": "\u731f\u9a0e\u58eb\u5012\u3057\u305f",
+          "value": 12
+        },
+        {
+          "hex": "0D",
+          "kind": "state",
+          "meaning": "\u95c7\u306e\u8ff7\u5bae\u8131\u51fa\u5f8c\u306e\u30d1\u30fc\u30c6\u30a3\u89e3\u6563\u30fb\u518d\u7d50\u6210",
+          "value": 13
+        },
+        {
+          "hex": "0E",
+          "kind": "state",
+          "meaning": "\u30aa\u30a6\u30df\u306b\u98db\u3070\u3057\u5c4b\u518d\u51fa\u73fe",
+          "value": 14
+        },
+        {
+          "hex": "80",
+          "kind": "state",
+          "meaning": "\u30d5\u30a1\u30b7\u30ca\u30c8\u30a5\u30fc\u30eb\u3078\u623b\u3063\u305f",
+          "value": 128
+        },
+        {
+          "hex": "81",
+          "kind": "state",
+          "meaning": "\u4ed5\u7acb\u5c4b\u306b\u30b8\u30fc\u30ca\u306e\u8a71\u3092\u805e\u3044\u305f",
+          "value": 129
+        },
+        {
+          "hex": "82",
+          "kind": "state",
+          "meaning": "\u540d\u4e57\u3063\u3066\u91dd\u306e\u57ce\u306e\u9580\u3092\u958b\u3051\u305f",
+          "value": 130
+        },
+        {
+          "hex": "83",
+          "kind": "state",
+          "meaning": "\u300c\u30fb\u30fb\u30fb\u30fb\u767d\u8594\u8587\u30fb\u30fb\u307e\u3060\u95c7\u306e\u8ff7\u5bae\u306b\u3044\u308b\u3093\u3060\u306d\u30fb\u30fb\u300d\u3068\u8a00\u3063\u305f",
+          "value": 131
+        },
+        {
+          "hex": "90",
+          "kind": "state",
+          "meaning": "\u5f71\u9a0e\u58eb\u5012\u3057\u305f",
+          "value": 144
+        },
+        {
+          "hex": "91",
+          "kind": "state",
+          "meaning": "\u91d1\u7345\u5b50\u59eb\u518d\u3073\u5012\u3057\u305f\uff0f\u91d1\u7345\u5b50\u306e\u5263\u5165\u624b",
+          "value": 145
+        },
+        {
+          "hex": "A0",
+          "kind": "state",
+          "meaning": "\u300c\u79c1\u306b\u305d\u306e\u529b\u304c\u3042\u308b\u304b\u306a\uff1f\u300d\u3068\u30e9\u30b9\u30bf\u30d0\u30f3\u306b\u8a00\u3063\u305f\uff0f\u51a5\u5e1d\u306e\u93a7\u5165\u624b",
+          "value": 160
+        },
+        {
+          "hex": "A1",
+          "kind": "state",
+          "meaning": "\u300c\u79c1\u304c\u3053\u306e\u57ce\u306e\u4e3b\uff1f\u300d\u3068\u30e9\u30b9\u30bf\u30d0\u30f3\u306b\u8a00\u3063\u305f\uff0f\u51a5\u5e1d\u306e\u93a7\u5165\u624b",
+          "value": 161
+        },
+        {
+          "hex": "A2",
+          "kind": "state",
+          "meaning": "\u300c\u3042\u306a\u305f\u306e\u4f01\u307f\u306f\uff5e\u300d\u3068\u30e9\u30b9\u30bf\u30d0\u30f3\u306b\u8a00\u3063\u3066\u6226\u95d8\u306b\u306a\u3063\u305f\uff0f\u51a5\u5e1d\u306e\u93a7\u5165\u624b",
+          "value": 162
+        },
+        {
+          "hex": "F0",
+          "kind": "state",
+          "meaning": "\u300c\u79c1\u306f\u3082\u3046\u4eba\u9593\u3068\u3057\u3066\u306f\u751f\u304d\u3089\u308c\u306a\u3044\u3002\u300d\u3068\u30aa\u30eb\u30ed\u30ef\u30fc\u30b8\u30e5\u306b\u8a00\u3063\u305f",
+          "value": 240
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u300c\u79c1\u306f\u79c1\u3002\u300d\u3068\u30aa\u30eb\u30ed\u30ef\u30fc\u30b8\u30e5\u306b\u8a00\u3063\u305f",
+          "value": 241
+        },
+        {
+          "hex": "F2",
+          "kind": "state",
+          "meaning": "\u300c(\u5996\u9b54\u306e\u8840\u3092)\u6d44\u5316\u3059\u308b\u306b\u306f\u3042\u306a\u305f\u3092\u5012\u3059\u3057\u304b\u306a\u3044\u3002\u300d\u3068\u30aa\u30eb\u30ed\u30ef\u30fc\u30b8\u30e5\u306b\u8a00\u3063\u305f",
+          "value": 242
+        }
+      ],
+      "label": "\u30a2\u30bb\u30eb\u30b9\u7de8\u30b7\u30ca\u30ea\u30aa"
+    },
+    "0x06B": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u6b66\u95d8\u4f1a\u958b\u50ac\u4e2d",
+          "value": 1
+        },
+        {
+          "hex": "03",
+          "kind": "state",
+          "meaning": "\u30d4\u30f3\u30af\u30bf\u30a4\u30ac\u30fc\u306b\u5909\u8eab\u3057\u3066\u51fa\u5834",
+          "value": 3
+        },
+        {
+          "hex": "81",
+          "kind": "state",
+          "meaning": "\u30b8\u30e7\u30fc\u30ab\u30fc\u8ffd\u8de1\u958b\u59cb",
+          "value": 129
+        },
+        {
+          "hex": "82",
+          "kind": "state",
+          "meaning": "\u30b0\u30e9\u30c7\u30a3\u30a6\u30b9\u5408\u6d41",
+          "value": 130
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u30b8\u30e7\u30fc\u30ab\u30fc\u53d6\u308a\u9003\u304c\u3059",
+          "value": 255
+        },
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u6b66\u95d8\u4f1a\u958b\u50ac\u4e2d",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u30a2\u30eb\u30ab\u30a4\u30b6\u30fc\u306b\u5909\u8eab\u3057\u3066\u51fa\u5834",
+          "value": 2
+        },
+        {
+          "hex": "80",
+          "kind": "state",
+          "meaning": "Dr.\u30af\u30e9\u30a4\u30f3\u8ffd\u8de1\u958b\u59cb",
+          "value": 128
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u30ad\u30b0\u30ca\u30b9\u304b\u3089\u306e\u547c\u3073\u51fa\u3057",
+          "value": 255
+        }
+      ],
+      "label": "\u30b7\u30f3\u30ed\u30a6\u4eee\u9762\u6b66\u95d8\u4f1a"
+    },
+    "0x06C": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30af\u30fc\u30ed\u30f3\u3067\u60c5\u5831\u53ce\u96c6\u4e2d",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u8ffd\u8de1\u958b\u59cb",
+          "value": 2
+        },
+        {
+          "hex": "03",
+          "kind": "state",
+          "meaning": "\u5bc6\u58f2\u4eba\u30de\u30f3\u30db\u30fc\u30eb\u3078",
+          "value": 3
+        },
+        {
+          "hex": "04",
+          "kind": "state",
+          "meaning": "\u5bc6\u58f2\u4eba\u30c8\u30f3\u30cd\u30eb\u2461\u304b\u3089\u79fb\u52d5",
+          "value": 4
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u5bc6\u58f2\u4eba\u306b\u9003\u3052\u3089\u308c\u305f",
+          "value": 255
+        }
+      ],
+      "label": "\u5bc6\u58f2\u4eba\u8ffd\u8de1"
+    },
+    "0x06D": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30ad\u30b0\u30ca\u30b9\u8239\u5009\u3067\u6b66\u5668\u767a\u898b",
+          "value": 1
+        },
+        {
+          "hex": "80",
+          "kind": "state",
+          "meaning": "\u56db\u5929\u738b\u7de8\u958b\u59cb",
+          "value": 128
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u30a2\u30e9\u30af\u30fc\u30cd\u5012\u3057\u305f",
+          "value": 255
+        }
+      ],
+      "label": "\u30a2\u30e9\u30af\u30fc\u30cd"
+    },
+    "0x06E": {
+      "entries": [],
+      "label": "\u30e6\u30ea\u30a2\u597d\u611f\u5ea6"
+    },
+    "0x06F": {
+      "entries": [
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30d5\u30eb\u30c9\u3092\u5012\u3057\u305f",
+          "value": 16
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30c7\u30d3\u30eb\u30c6\u30f3\u30bf\u30af\u30e9\u30fc\u3092\u5012\u3057\u305f\u3053\u3068\u304c\u3042\u308b",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30b7\u30e5\u30a6\u30b6\u30fc\u57fa\u5730\u306e\u30b5\u30a4\u30af\u30ed\u30d7\u30b9\u5012\u3057\u305f",
+          "value": 128
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30ad\u30e3\u30f3\u30d9\u30eb\u8cbf\u6613\u30d3\u30eb\u30fb\u968e\u6bb5\u2464\u306e\u30a8\u30ec\u30d9\u30fc\u30bf\u30fc\u30ac\u30fc\u30eb\u3068\u8a71\u3092\u3057\u305f",
+          "value": 32
+        }
+      ],
+      "label": "\u4e2d\u30dc\u30b9\u4ed6"
+    },
+    "0x070": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u98db\u3070\u3057\u5c4b\u304b\u3089\u9375\u3092\u3082\u3089\u3063\u305f",
+          "value": 1
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u7802\u306e\u5668\u3092\u8cb7\u3063\u305f",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u6728\u9670\u306e\u30ed\u30fc\u30d6\u3092\u8cb7\u3063\u305f",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30c8\u30a6\u30c6\u30c4\u30d1\u30bf\u30fc\u30f3\u3092\u8cb7\u3063\u305f",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u5e7b\u9b54\u3092\u8cb7\u3063\u305f",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u9b45\u60d1\u306e\u30cd\u30c3\u30af\u30ec\u30b9\u3092\u3082\u3089\u3063\u305f",
+          "value": 128
+        }
+      ],
+      "label": "\u30d5\u30a1\u30b7\u30ca\u30c8\u30a5\u30fc\u30eb1"
+    },
+    "0x071": {
+      "entries": [
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u7d05\u3068\u8a71\u3092\u3057\u305f",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u30a2\u30bb\u30eb\u30b9\u306e\u90e8\u5c4b\u3067\u30be\u30ba\u30de\u3068\u8a71\u3092\u3057\u305f",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u91dd\u306e\u57ce\u2463\u3067\u30be\u30ba\u30de\u3068\u8a71\u3092\u3057\u305f",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30bb\u30a2\u30c8\u304b\u3089\u30d5\u30a1\u30b7\u30ca\u30c8\u30a5\u30fc\u30eb\u3092\u51fa\u308b\u60c5\u5831\u3092\u5165\u624b\u3057\u305f",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30e9\u30b9\u30bf\u30d0\u30f3\u3068\u8a71\u3092\u3057\u305f",
+          "value": 64
+        }
+      ],
+      "label": "\u30d5\u30a1\u30b7\u30ca\u30c8\u30a5\u30fc\u30eb2"
+    },
+    "0x072": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u56db\u5929\u738b\u7de8\u958b\u59cb",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u30a2\u30cb\u30fc\u3068\u4ea4\u6e09\u6210\u7acb",
+          "value": 2
+        },
+        {
+          "hex": "03",
+          "kind": "state",
+          "meaning": "\u6e96\u5099OK\uff01",
+          "value": 3
+        },
+        {
+          "hex": "04",
+          "kind": "state",
+          "meaning": "\u30c8\u30f3\u30cd\u30eb\u2461\u3067\u30a2\u30cb\u30fc\u306e\u6848\u5185",
+          "value": 4
+        },
+        {
+          "hex": "05",
+          "kind": "state",
+          "meaning": "\u4e0b\u6c34\u9053\u2461\u306e\u9244\u9aa8\u3092\u6e21\u308a\u5207\u3063\u305f\uff0f\u30a2\u30cb\u30fc\u96e2\u8131",
+          "value": 5
+        },
+        {
+          "hex": "06",
+          "kind": "state",
+          "meaning": "\u30a2\u30cb\u30fc\u306b\u60c5\u5831\u6599\u6e21\u3057\u305f\uff0f\u30a2\u30cb\u30fc\u518d\u52a0\u5165",
+          "value": 6
+        },
+        {
+          "hex": "07",
+          "kind": "state",
+          "meaning": "\u30b7\u30e5\u30a6\u30b6\u30fc\u57fa\u5730\u5230\u7740",
+          "value": 7
+        },
+        {
+          "hex": "08",
+          "kind": "state",
+          "meaning": "\u30b7\u30e5\u30a6\u30b6\u30fc\u57fa\u5730\u2469\u3067\u30b7\u30e5\u30a6\u30b6\u30fc\u306e\u59ff\u898b\u305f",
+          "value": 8
+        },
+        {
+          "hex": "09",
+          "kind": "state",
+          "meaning": "\u6642\u9593\u5207\u308c\u3067\u30b7\u30e5\u30a6\u30b6\u30fc\u9003\u8d70",
+          "value": 9
+        },
+        {
+          "hex": "0A",
+          "kind": "state",
+          "meaning": "\u30c0\u30e1\u30fc\u30b8\u53d7\u3051\u3066\u30b7\u30e5\u30a6\u30b6\u30fc\u9003\u8d70",
+          "value": 10
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u30b7\u30e5\u30a6\u30b6\u30fc\u5012\u3057\u305f",
+          "value": 255
+        }
+      ],
+      "label": "\u30b7\u30e5\u30a6\u30b6\u30fc"
+    },
+    "0x073": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u56db\u5929\u738b\u7de8\u958b\u59cb",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u30c9\u30fc\u30eb\u3092\u4ef2\u9593\u306b\u3057\u305f",
+          "value": 2
+        },
+        {
+          "hex": "31",
+          "kind": "state",
+          "meaning": "\u907a\u8de1\u2463\u3067\u6355\u307e\u308b",
+          "value": 49
+        },
+        {
+          "hex": "32",
+          "kind": "state",
+          "meaning": "\u907a\u8de1\u2468\u3067\u6355\u307e\u308b",
+          "value": 50
+        },
+        {
+          "hex": "33",
+          "kind": "state",
+          "meaning": "\u907a\u8de1\u246d\u3067\u6355\u307e\u308b",
+          "value": 51
+        },
+        {
+          "hex": "3F",
+          "kind": "state",
+          "meaning": "\u907a\u8de1\u2470\u3067\u6355\u307e\u308b",
+          "value": 63
+        },
+        {
+          "hex": "41",
+          "kind": "state",
+          "meaning": "\u907a\u8de1\u2463\u3067\u6355\u307e\u3063\u305f\u4ef2\u9593\u6551\u51fa\uff0f\u30c9\u30fc\u30eb\u52a0\u5165",
+          "value": 65
+        },
+        {
+          "hex": "42",
+          "kind": "state",
+          "meaning": "\u907a\u8de1\u2468\u3067\u6355\u307e\u3063\u305f\u4ef2\u9593\u6551\u51fa\uff0f\u30c9\u30fc\u30eb\u52a0\u5165",
+          "value": 66
+        },
+        {
+          "hex": "43",
+          "kind": "state",
+          "meaning": "\u907a\u8de1\u246d\u3067\u6355\u307e\u3063\u305f\u4ef2\u9593\u6551\u51fa\uff0f\u30c9\u30fc\u30eb\u52a0\u5165",
+          "value": 67
+        },
+        {
+          "hex": "4F",
+          "kind": "state",
+          "meaning": "\u907a\u8de1\u2470\u3067\u6355\u307e\u3063\u305f\u4ef2\u9593\u6551\u51fa\uff0f\u30c9\u30fc\u30eb\u52a0\u5165",
+          "value": 79
+        },
+        {
+          "hex": "80",
+          "kind": "state",
+          "meaning": "\u30d9\u30eb\u30f4\u30a1\u8ffd\u8de1",
+          "value": 128
+        },
+        {
+          "hex": "81",
+          "kind": "state",
+          "meaning": "\u30d9\u30eb\u30f4\u30a1\u738b\u5bae\u306b\u9003\u3052\u8fbc\u3080",
+          "value": 129
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u30d9\u30eb\u30f4\u30a1\u5012\u3057\u305f\uff0f\u738b\u5bae\u5d29\u58ca",
+          "value": 255
+        }
+      ],
+      "label": "\u30d9\u30eb\u30f4\u30a1"
+    },
+    "0x074": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30ad\u30b0\u30ca\u30b9\u3067\u7d66\u6599\u53d7\u3051\u53d6\u3063\u305f",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u56db\u5929\u738b\u5168\u3066\u5012\u3057\u305f",
+          "value": 2
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30d9\u30eb\u30f4\u30a1\uff0f\u4eee\u9762\u306e\u5de8\u4eba\u3068\u6226\u95d8\u3057\u305f\u3053\u3068\u304c\u3042\u308b",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30e9\u30a4\u30b6\u304b\u3089\u30c7\u30a3\u30b9\u30da\u30a2\u306b\u8a73\u3057\u3044\u5973\u306e\u60c5\u5831\u3092\u5f97\u305f",
+          "value": 64
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u5fc3\u8853\u306e\u4fee\u884c\u3057\u305f",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u7b56\u58eb\u306e\u6307\u8f2a\u58f2\u308a\u5207\u308c",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u99d0\u8eca\u5834\u306e\u30de\u30f3\u30db\u30fc\u30eb\u958b\u3044\u3066\u3044\u308b",
+          "value": 16
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u9818\u4e3b\u306e\u9928\u30fb\u5730\u4e0b\u6c34\u8108\u306e\u3042\u308b\u90e8\u5c4b\u306b\u30e1\u30b5\u30eb\u30c6\u30a3\u30e0\u304c\u51fa\u3066\u3053\u306a\u3044",
+          "value": 128
+        }
+      ],
+      "label": "\u7d66\u6599\u4ed6"
+    },
+    "0x075": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30d0\u30ab\u30e9\u5230\u7740",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u6226\u95d8\u54e1\u30ab\u30b8\u30ce\u304b\u3089\u98db\u3073\u51fa\u3059",
+          "value": 2
+        },
+        {
+          "hex": "03",
+          "kind": "state",
+          "meaning": "\u30a2\u30fc\u30e0\u30a6\u30a9\u30fc\u30ab\u30fc\u5012\u3057\u305f",
+          "value": 3
+        },
+        {
+          "hex": "04",
+          "kind": "state",
+          "meaning": "\u30b7\u30e5\u30e9\u30a4\u30af\u516c\u5712\u306e\u30a2\u30c3\u30b3\u3061\u3083\u3093\u3068\u8a71\u3057\u305f",
+          "value": 4
+        },
+        {
+          "hex": "05",
+          "kind": "state",
+          "meaning": "\u30b9\u30d5\u30a3\u30f3\u30af\u30b9\u5012\u3057\u305f",
+          "value": 5
+        },
+        {
+          "hex": "06",
+          "kind": "state",
+          "meaning": "\u30de\u30f3\u30cf\u30c3\u30bf\u30f3\u5230\u7740",
+          "value": 6
+        },
+        {
+          "hex": "07",
+          "kind": "state",
+          "meaning": "\u30ad\u30b0\u30ca\u30b9\u8972\u6483",
+          "value": 7
+        },
+        {
+          "hex": "08",
+          "kind": "state",
+          "meaning": "\u30ad\u30b0\u30ca\u30b9\u596a\u9084\u4f5c\u6226",
+          "value": 8
+        },
+        {
+          "hex": "09",
+          "kind": "state",
+          "meaning": "\u6a5f\u95a2\u5ba4\u304b\u3089\u30ec\u30b9\u30c8\u30e9\u30f3\u306b\u9019\u3044\u4e0a\u304c\u3063\u305f",
+          "value": 9
+        },
+        {
+          "hex": "80",
+          "kind": "state",
+          "meaning": "\u30ce\u30fc\u30de\u30c3\u30c9\u306b\u9003\u3052\u3089\u308c\u305f",
+          "value": 128
+        },
+        {
+          "hex": "81",
+          "kind": "state",
+          "meaning": "\u4eac\u3078\u306e\u30c9\u30e9\u30a4\u30d6",
+          "value": 129
+        },
+        {
+          "hex": "82",
+          "kind": "state",
+          "meaning": "\u30b7\u30f3\u30ed\u30a6\u3078\u306e\u30c9\u30e9\u30a4\u30d6",
+          "value": 130
+        },
+        {
+          "hex": "83",
+          "kind": "state",
+          "meaning": "\u30ea\u30fc\u30b8\u30e7\u30f3\u30c9\u30e9\u30a4\u30d6\u4e2d",
+          "value": 131
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u30ad\u30b0\u30ca\u30b9\u3092\u964d\u308a\u305f",
+          "value": 255
+        }
+      ],
+      "label": "\u30ec\u30c3\u30c9\u7de8\u30b7\u30ca\u30ea\u30aa"
+    },
+    "0x076": {
+      "entries": [
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u958b\u59cb\u6642",
+          "value": 255
+        },
+        {
+          "form": "minus",
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30ad\u30b0\u30ca\u30b92\u968e\u2460\u306e\u30c0\u30ac\u30fc\u30b0\u30e9\u30d6\u5012\u3057\u305f",
+          "value": 1
+        },
+        {
+          "form": "minus",
+          "hex": "08",
+          "kind": "state",
+          "meaning": "\u30ad\u30b0\u30ca\u30b92\u968e\u2460\u306e\u30ed\u30c3\u30af\u30d0\u30d6\u30fc\u30f3\u5012\u3057\u305f",
+          "value": 8
+        },
+        {
+          "form": "minus",
+          "hex": "10",
+          "kind": "state",
+          "meaning": "\u30ad\u30b0\u30ca\u30b92\u968e\u2460\u306e\u30bd\u30eb\u30b8\u30e3\u30fc\u30d3\u30eb\u5012\u3057\u305f",
+          "value": 16
+        },
+        {
+          "form": "minus",
+          "hex": "20",
+          "kind": "state",
+          "meaning": "\u30ad\u30b0\u30ca\u30b92\u968e\u2460\u306e\u30c9\u30e9\u30b4\u30f3\u30df\u30cb\u30fc\u5012\u3057\u305f",
+          "value": 32
+        },
+        {
+          "form": "minus",
+          "hex": "80",
+          "kind": "state",
+          "meaning": "\u30ad\u30b0\u30ca\u30b91\u968e\u2463\u306e\u5996\u9b54\u7cfb\u30fb\u7537\uff06\u30d2\u30e5\u30fc\u30de\u30f3\u7cfb\u3092\u631f\u307f\u6483\u3061\u3067\u6483\u9000\uff0f\u90e8\u5c4b\u3078\u5165\u3063\u305f",
+          "value": 128
+        },
+        {
+          "hex": "00",
+          "kind": "state",
+          "meaning": "\u7d42\u4e86\u6642",
+          "value": 0
+        }
+      ],
+      "label": "\u30ad\u30b0\u30ca\u30b9\u596a\u9084\u4f5c\u6226"
+    },
+    "0x077": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u56db\u5929\u738b\u7de8\u958b\u59cb",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u57fa\u5730\u3092\u767a\u898b",
+          "value": 2
+        },
+        {
+          "hex": "F0",
+          "kind": "state",
+          "meaning": "\u7206\u7834\u6e96\u5099\u5b8c\u4e86",
+          "value": 240
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u30e1\u30bf\u30eb\u30d6\u30e9\u30c3\u30af\u5012\u3057\u305f",
+          "value": 255
+        }
+      ],
+      "label": "\u30e1\u30bf\u30eb\u30d6\u30e9\u30c3\u30af"
+    },
+    "0x078": {
+      "entries": [
+        {
+          "hex": "F0",
+          "kind": "state",
+          "meaning": "\u30d6\u30e9\u30c3\u30af\u30ec\u30a43\u968e\u2461\u3067\u30e1\u30bf\u30eb\u30d6\u30e9\u30c3\u30af\u6539\u306e\u59ff\u3092\u898b\u305f",
+          "value": 240
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u30d6\u30e9\u30c3\u30af\u30af\u30ed\u30b9\u672c\u90e8\u30fb\u6539\u9020\u624b\u8853\u5ba4\u3067\u6bcd\u30fb\u59b9\u767a\u898b",
+          "value": 241
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u30d6\u30e9\u30c3\u30af\u30af\u30ed\u30b9\u306e\u9375\u5165\u624b\uff0f\u56de\u5fa9\u3057\u3066\u304f\u308c\u308b",
+          "value": 255
+        }
+      ],
+      "label": "\u30d6\u30e9\u30c3\u30af\u30ec\u30a4\uff5e\u30d6\u30e9\u30c3\u30af\u30af\u30ed\u30b9\u672c\u90e8"
+    },
+    "0x079": {
+      "entries": [
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30c7\u30a3\u30b9\u30da\u30a224\u3067\u300c\u30b3\u30fc\u30c9\u304c\u304b\u308f\u3063\u3066\u308b\u30fb\u30fb\u300d",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u30c7\u30a3\u30b9\u30da\u30a2\u246d\u3067\u30a2\u30cb\u30fc\u306e\u6848\u5185(\u4e0b)",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30ed\u30c3\u30ab\u30fc\u30eb\u30fc\u30e0\u306e\u30cf\u30f3\u30c9\u30d0\u30ba\u30fc\u30ab\u5165\u624b\u5f8c\u306b\u8b66\u5099\u54e1\u304c\u51fa\u305f",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30c7\u30a3\u30b9\u30da\u30a2\u246d\u3067\u30a2\u30cb\u30fc\u306e\u6848\u5185(\u4e0a)",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30c7\u30a3\u30b9\u30da\u30a2\u2462\u3067\u30a2\u30cb\u30fc\u306e\u6848\u5185",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30c7\u30a3\u30b9\u30da\u30a223\u306e\u6249\u3092\u958b\u3051\u308b\u3053\u3068\u304c\u53ef\u80fd\u306b\u306a\u308b",
+          "value": 128
+        }
+      ],
+      "label": "\u30c7\u30a3\u30b9\u30da\u30a2"
+    },
+    "0x07A": {
+      "entries": [
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u5de8\u7363\u6226\u5f8c\u30d1\u30fc\u30d7\u30eb\u30a2\u30a4\u5165\u624b",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\uff50\uff5a\uff4b\uff57\uff36\u52a0\u5165\uff0f\u5bfe\u88c5\u7532\u30ed\u30b1\u30c3\u30c8\u5165\u624b",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\uff50\uff5a\uff4b\uff57\uff36\u52a0\u5165\u62d2\u5426",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u52c7\u6c17\u306e\u9593\u53f3\u306e400\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u52c7\u6c17\u306e\u9593\u5de6\u306e400\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 128
+        }
+      ],
+      "label": "\u30ce\u30fc\u30e0\u306e\u6d1e\u7a9f\u4ed6"
+    },
+    "0x07B": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u5408\u4f53\u3057\u3066\u30eb\u30fc\u30b8\u30e5\u306b\u306a\u3063\u305f",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u53cc\u5b50\u5bfe\u6c7a\u7d42\u4e86",
+          "value": 2
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u5d29\u58ca\u5f8c\u30de\u30b8\u30c3\u30af\u30ad\u30f3\u30b0\u30c0\u30e0\u2462\u53f3\u306e\u5149\u306b\u89e6\u308c\u305f",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u5d29\u58ca\u5f8c\u30de\u30b8\u30c3\u30af\u30ad\u30f3\u30b0\u30c0\u30e0\u2462\u4e2d\u592e\u306e\u5149\u306b\u89e6\u308c\u305f",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u5d29\u58ca\u5f8c\u30de\u30b8\u30c3\u30af\u30ad\u30f3\u30b0\u30c0\u30e0\u2462\u5de6\u306e\u5149\u306b\u89e6\u308c\u305f",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u5d29\u58ca\u5f8c\u30de\u30b8\u30c3\u30af\u30ad\u30f3\u30b0\u30c0\u30e0\u2460\u306e\u8853\u58eb\u7d76\u547d",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u5168\u666f\u3067\u306e\u6226\u95d8\u5f8c\u306b\u9a5a\u304d\u306e\u58f0\u3092\u4e0a\u3052\u305f",
+          "value": 128
+        }
+      ],
+      "label": "\u5d29\u58ca\u5f8c\u30de\u30b8\u30c3\u30af\u30ad\u30f3\u30b0\u30c0\u30e01"
+    },
+    "0x07C": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u4e09\u5973\u795e\u306e\u8155\u8f2a\u5165\u624b\u3057\u305f",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u65b0\u751f\u5150\u51e6\u7406\u65bd\u8a2d\u3067\u5de6\u306e\u8853\u58eb\u304c\u5148\u306b\u7d76\u547d",
+          "value": 2
+        },
+        {
+          "hex": "03",
+          "kind": "state",
+          "meaning": "\u65b0\u751f\u5150\u51e6\u7406\u65bd\u8a2d\u3067\u53f3\u306e\u8853\u58eb\u304c\u5148\u306b\u7d76\u547d",
+          "value": 3
+        },
+        {
+          "hex": "04",
+          "kind": "state",
+          "meaning": "\u8853\u58eb\u4e8c\u4eba\u3068\u3082\u7d76\u547d",
+          "value": 4
+        },
+        {
+          "hex": "05",
+          "kind": "state",
+          "meaning": "\u5d29\u58ca\u5f8c\u30de\u30b8\u30c3\u30af\u30ad\u30f3\u30b0\u30c0\u30e0\u2464\u306b\u3044\u308b\u8853\u58eb\u306b\u300c\u51fa\u767a\u3059\u308b\u300d\u3068\u7b54\u3048\u305f",
+          "value": 5
+        }
+      ],
+      "label": "\u5d29\u58ca\u5f8c\u30de\u30b8\u30c3\u30af\u30ad\u30f3\u30b0\u30c0\u30e02"
+    },
+    "0x07D": {
+      "entries": [
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u30ec\u30aa\u30ca\u30eb\u30c9\u306e\u7814\u7a76\u5ba4\u306b\u30e1\u30ab\u30ec\u30aa\u30ca\u30eb\u30c9\u767b\u5834",
+          "value": 2
+        },
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30bf\u30eb\u30bf\u30ed\u30b9\u2463\u306e\u30b9\u30a4\u30c3\u30c1\u30aa\u30f3",
+          "value": 1
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30bf\u30eb\u30bf\u30ed\u30b9\u2464\u306e\u30b9\u30a4\u30c3\u30c1\u30aa\u30f3",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30bf\u30eb\u30bf\u30ed\u30b9\u2469\u306e\u30b9\u30a4\u30c3\u30c1\u30aa\u30f3",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30bf\u30eb\u30bf\u30ed\u30b9\u2468\u306e\u30b9\u30a4\u30c3\u30c1\u30aa\u30f3",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30bf\u30eb\u30bf\u30ed\u30b9\u2466\u306e\u30b9\u30a4\u30c3\u30c1\u30aa\u30f3",
+          "value": 128
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30aa\u30e1\u30ac\u30dc\u30c7\u30a3\u56de\u53ce",
+          "value": 4
+        }
+      ],
+      "label": "\u30bf\u30eb\u30bf\u30ed\u30b9\u4ed6"
+    },
+    "0x07E": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30de\u30f3\u30cf\u30c3\u30bf\u30f3\u306e\u30b7\u30c3\u30d7\u767a\u7740\u5834\u304b\u3089\uff28\uff31\u3078\u3068\u79fb\u52d5\u53ef\u80fd",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\uff28\uff31\u30b7\u30b9\u30c6\u30e0\u5185\u90e8\u3078\u30c0\u30a4\u30d6",
+          "value": 2
+        },
+        {
+          "hex": "03",
+          "kind": "state",
+          "meaning": "\uff28\uff31\u30e1\u30a4\u30f3\u30d5\u30ec\u30fc\u30e0\u306b\u30b3\u30f3\u30bf\u30af\u30c8",
+          "value": 3
+        },
+        {
+          "hex": "F0",
+          "kind": "state",
+          "meaning": "\u30b7\u30b9\u30c6\u30e0\u4e2d\u67a2\u306b\u30c7\u30fc\u30bf\u3092\u4fee\u5fa9\u3057\u3066\u3082\u3089\u3063\u305f",
+          "value": 240
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\uff28\uff31\u246c\u3067\u30b2\u30f3\u306b\u89e3\u8aac",
+          "value": 241
+        },
+        {
+          "hex": "F2",
+          "kind": "state",
+          "meaning": "\uff28\uff31\u246a\u3067\u30b2\u30f3\u306b\u89e3\u8aac",
+          "value": 242
+        },
+        {
+          "hex": "F3",
+          "kind": "state",
+          "meaning": "\uff28\uff31\u2468\u3067\u30b2\u30f3\u306b\u89e3\u8aac",
+          "value": 243
+        },
+        {
+          "hex": "F4",
+          "kind": "state",
+          "meaning": "\uff28\uff31\u2465\u3067\u30b2\u30f3\u306b\u89e3\u8aac",
+          "value": 244
+        }
+      ],
+      "label": "\uff28\uff31"
+    },
+    "0x07F": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\uff28\uff31\u30b7\u30b9\u30c6\u30e0\u5185\u90e8\u2465\u53f3\u5074\u4e0b\u306e\u30a6\u30a3\u30eb\u30b9\u9664\u53bb",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\uff28\uff31\u30b7\u30b9\u30c6\u30e0\u5185\u90e8\u2465\u53f3\u5074\u4e0a\u306e\u30a6\u30a3\u30eb\u30b9\u9664\u53bb",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\uff28\uff31\u30b7\u30b9\u30c6\u30e0\u5185\u90e8\u2465\u4e2d\u592e\u4e0a\u306e\u30a6\u30a3\u30eb\u30b9\u9664\u53bb",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\uff28\uff31\u30b7\u30b9\u30c6\u30e0\u5185\u90e8\u2465\u4e2d\u592e\u4e0b\u306e\u30a6\u30a3\u30eb\u30b9\u9664\u53bb",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\uff28\uff31\u30b7\u30b9\u30c6\u30e0\u5185\u90e8\u2465\u5de6\u306e\u30a6\u30a3\u30eb\u30b9\u9664\u53bb",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\uff28\uff31\u30b7\u30b9\u30c6\u30e0\u5185\u90e8\u2463\u53f3\u306e\u30a6\u30a3\u30eb\u30b9\u9664\u53bb",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\uff28\uff31\u30b7\u30b9\u30c6\u30e0\u5185\u90e8\u2463\u5de6\u306e\u30a6\u30a3\u30eb\u30b9\u9664\u53bb",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\uff28\uff31\u30b7\u30b9\u30c6\u30e0\u5185\u90e8\u2460\u306e\u30a6\u30a3\u30eb\u30b9\u9664\u53bb",
+          "value": 128
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u30b3\u30f3\u30bf\u30af\u30c8\u5f8c",
+          "value": 255
+        }
+      ],
+      "label": "\uff28\uff31\u30b7\u30b9\u30c6\u30e0\u5185\u90e81"
+    },
+    "0x080": {
+      "entries": [
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\uff28\uff31\u30b7\u30b9\u30c6\u30e0\u5185\u90e8\u246a\u53f3\u306e\u30a6\u30a3\u30eb\u30b9\u9664\u53bb",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\uff28\uff31\u30b7\u30b9\u30c6\u30e0\u5185\u90e8\u246a\u5de6\u5074\u4e0b\u306e\u30a6\u30a3\u30eb\u30b9\u9664\u53bb",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\uff28\uff31\u30b7\u30b9\u30c6\u30e0\u5185\u90e8\u246a\u5de6\u5074\u4e0a\u306e\u30a6\u30a3\u30eb\u30b9\u9664\u53bb",
+          "value": 128
+        },
+        {
+          "hex": "FF",
+          "kind": "state",
+          "meaning": "\u30b3\u30f3\u30bf\u30af\u30c8\u5f8c",
+          "value": 255
+        }
+      ],
+      "label": "\uff28\uff31\u30b7\u30b9\u30c6\u30e0\u5185\u90e82"
+    },
+    "0x081": {
+      "entries": [
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u6700\u7d42\u5175\u5668\u2466\u5de6\u5074\u4e0b\u306e\u30b9\u30a4\u30c3\u30c1\u30aa\u30f3",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u6700\u7d42\u5175\u5668\u2466\u5de6\u5074\u4e0a\u306e\u30b9\u30a4\u30c3\u30c1\u30aa\u30f3",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u6700\u7d42\u5175\u5668\u2466\u53f3\u5074\u4e0b\u306e\u30b9\u30a4\u30c3\u30c1\u30aa\u30f3",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u6700\u7d42\u5175\u5668\u2466\u53f3\u5074\u4e0a\u306e\u30b9\u30a4\u30c3\u30c1\u30aa\u30f3",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u6700\u7d42\u5175\u5668\u2461\u306e\u30ec\u30fc\u30b6\u30fc\u505c\u6b62",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u6700\u7d42\u5175\u5668\u2465\u30b9\u30a4\u30c3\u30c1\u30aa\u30f3",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u6700\u7d42\u5175\u5668\u2463\u30b9\u30a4\u30c3\u30c1\u30aa\u30f3",
+          "value": 128
+        }
+      ],
+      "label": "\u6700\u7d42\u5175\u5668"
+    },
+    "0x082": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u8ecd\u8cc7\u91d1\u5165\u624b",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u30eb\u30fc\u30d5\u30a1\u30b9\u306b\u30eb\u30fc\u30f3\u306e\u77f3\u3092\u96c6\u3081\u305f\u3089\u3069\u3046\u304b\u3068\u63d0\u6848\u3055\u308c\u305f",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30b0\u30e9\u30c7\u30a3\u30a6\u30b9\u57fa\u5730\u2460\u306e\u30e9\u30a4\u30b6\u304b\u3089\u300c\u3069\u3046\u3059\u308b\u306e\uff1f\u300d\u3068\u5c0b\u306d\u3089\u308c\u305f",
+          "value": 4
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30c8\u30ec\u30fc\u30cb\u30f3\u30b0\u30fb\u30bf\u30a4\u30e0\u7d42\u4e86\u5f8c\u30a2\u30cb\u30fc\u304b\u3089\u300c\u304a\u75b2\u308c\u3055\u3093\u300d\u3068\u3044\u308f\u308c\u305f",
+          "value": 16
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30a2\u30cb\u30fc\u79c1\u3092\u9a19\u3057\u3066\u305f\u306e\u306d",
+          "value": 128
+        }
+      ],
+      "label": "\u30b0\u30e9\u30c7\u30a3\u30a6\u30b9"
+    },
+    "0x083": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30b0\u30e9\u30c7\u30a3\u30a6\u30b9\u52a0\u5165\u62d2\u5426",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u30b0\u30e9\u30c7\u30a3\u30a6\u30b9\u52a0\u5165",
+          "value": 2
+        },
+        {
+          "hex": "03",
+          "kind": "state",
+          "meaning": "\u30c8\u30ec\u30fc\u30cb\u30f3\u30b0\u30fb\u30bf\u30a4\u30e0\u7d42\u4e86\uff5e\u81ea\u7531\u884c\u52d5",
+          "value": 3
+        },
+        {
+          "hex": "04",
+          "kind": "state",
+          "meaning": "\u738b\u5bae\u3067\u30b9\u30c6\u30ad\u306a\u51fa\u4f1a\u3044\u3092",
+          "value": 4
+        },
+        {
+          "hex": "05",
+          "kind": "state",
+          "meaning": "\u81ea\u7531\u884c\u52d5",
+          "value": 5
+        },
+        {
+          "hex": "06",
+          "kind": "state",
+          "meaning": "\u30b8\u30e7\u30fc\u30ab\u30fc\u7591\u60d1",
+          "value": 6
+        },
+        {
+          "hex": "07",
+          "kind": "state",
+          "meaning": "\u30eb\u30fc\u30ec\u30c3\u30c8\u30d5\u30ed\u30a2\u3067\u30b8\u30e7\u30fc\u30ab\u30fc\u767a\u898b",
+          "value": 7
+        },
+        {
+          "hex": "08",
+          "kind": "state",
+          "meaning": "\u30d0\u30fc\u30d5\u30ed\u30a2\u3067\u30b8\u30e7\u30fc\u30ab\u30fc\u767a\u898b",
+          "value": 8
+        },
+        {
+          "hex": "09",
+          "kind": "state",
+          "meaning": "\u99d0\u8eca\u5834\u3067\u30a2\u30cb\u30fc\u30fb\u30e9\u30a4\u30b6\u3068\u5408\u6d41",
+          "value": 9
+        },
+        {
+          "hex": "0A",
+          "kind": "state",
+          "meaning": "\u30ce\u30fc\u30e0\u306e\u6d1e\u7a9f\u2463\u304b\u3089\u30b8\u30e7\u30fc\u30ab\u30fc\u7acb\u3061\u53bb\u308b",
+          "value": 10
+        },
+        {
+          "hex": "0B",
+          "kind": "state",
+          "meaning": "\u81ea\u7531\u884c\u52d5",
+          "value": 11
+        },
+        {
+          "hex": "0C",
+          "kind": "state",
+          "meaning": "\u6700\u4f4e\u306e\u4f5c\u6226",
+          "value": 12
+        },
+        {
+          "hex": "0D",
+          "kind": "state",
+          "meaning": "\u81ea\u7531\u884c\u52d5",
+          "value": 13
+        },
+        {
+          "hex": "0E",
+          "kind": "state",
+          "meaning": "\u91ce\u5fc3\u5bb6\u306f\u554f\u7b54\u7121\u7528\uff1f",
+          "value": 14
+        },
+        {
+          "hex": "0F",
+          "kind": "state",
+          "meaning": "\u7d50\u672b\u306f\u30c1\u30e3\u30da\u30eb\u306e\u4e0b\u3067",
+          "value": 15
+        },
+        {
+          "hex": "10",
+          "kind": "state",
+          "meaning": "\u8056\u5802\u3078\u306e\u9053\u2466\u3067\u8003\u3048\u3054\u3068",
+          "value": 16
+        }
+      ],
+      "label": "\u30a8\u30df\u30ea\u30a2\u7de8\u30b7\u30ca\u30ea\u30aa"
+    },
+    "0x084": {
+      "entries": [],
+      "label": "\u30df\u30c3\u30b7\u30e7\u30f3\u958b\u59cb\u5224\u5b9a\u7528\u6226\u95d8\u56de\u6570\u8a18\u9332"
+    },
+    "0x085": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30cf\u30fc\u30ec\u30e0\u7a7a\u3063\u307d",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u30e9\u30e0\u30c0\u57fa\u5730\u2460\u306b\u30a2\u30bb\u30eb\u30b9\u3068\u767d\u8594\u8587\u304c\u3044\u306a\u3044",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u57f7\u653f\u5ba4\u524d\u306b\u6575\u304c\u3044\u308b",
+          "value": 4
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u5175\u968a\u30b7\u30f3\u30dc\u30eb:\u512a\u5148\u9806\u4f4d3",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30e1\u30ab\u7cfb\u30b7\u30f3\u30dc\u30eb:\u512a\u5148\u9806\u4f4d2",
+          "value": 128
+        },
+        {
+          "hex": "C0",
+          "kind": "bit",
+          "meaning": "\u7363\u7cfb\u30fb\u690d\u7269\u7cfb\u30fb\u6c34\u68f2\u7cfb\u30fb\u5996\u9b54\u7cfb(\u7537)\u30b7\u30f3\u30dc\u30eb:\u512a\u5148\u9806\u4f4d1",
+          "value": 192
+        }
+      ],
+      "label": "\u30e9\u30e0\u30c0\u57fa\u5730"
+    },
+    "0x086": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u8131\u51fa\u7528\u306e\u91d1\u3092\u6e21\u3057\u3066\u540c\u884c\u3057\u305f",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u30aa\u30eb\u30ed\u30ef\u30fc\u30b8\u30e5\u3068\u306e\u95a2\u4fc2\u3092\u8a71\u3057\u305f",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u767d\u8594\u8587\u59eb\u306e\u90e8\u5c4b\u2460\u3067\u300c\u3053\u306e\u68fa\u30fb\u30fb\u300d\u306e\u4f1a\u8a71\u3057\u305f",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u96f6\u59eb\u304c\u3069\u306e\u3088\u3046\u306b\u3057\u3066\u8131\u51fa\u3067\u304d\u305f\u306e\u304b\u3092\u8a71\u3057\u305f",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u7345\u5b50\u59eb\u306e\u8a71\u3092\u3057\u305f",
+          "value": 16
+        }
+      ],
+      "label": "\u767d\u8594\u8587\u4f1a\u8a71"
+    },
+    "0x087": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u4ed5\u7acb\u5c4b3\u968e\u306b\u3044\u308b",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u304a\u304b\u3057\u306a\u4eba\u306a\u3093\u3066\u8a00\u3063\u3066\u3001\u30b4\u30e1\u30f3\u3002",
+          "value": 2
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u91dd\u306e\u57ce\u30fb\u96a0\u3057\u90e8\u5c4b\u306b\u3044\u308b",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30b8\u30fc\u30ca\u6551\u51fa",
+          "value": 32
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u7345\u5b50\u59eb\u306e\u90e8\u5c4b\u2461\u3067\u30be\u30ba\u30de\u7345\u5b50\u59eb\u306b\u3064\u3044\u3066\u8a9e\u308b",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u96f6\u59eb\u306e\u90e8\u5c4b\u2461\u3067\u96f6\u59eb\u30aa\u30eb\u30ed\u30ef\u30fc\u30b8\u30e5\u306b\u3064\u3044\u3066\u8a9e\u308b",
+          "value": 8
+        }
+      ],
+      "label": "\u30b8\u30fc\u30ca\u4ed6"
+    },
+    "0x088": {
+      "entries": [
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30aa\u30a6\u30df\u304b\u3089\u3044\u306a\u304f\u306a\u308b",
+          "value": 128
+        }
+      ],
+      "label": "\u98db\u3070\u3057\u5c4b"
+    },
+    "0x089": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30b7\u30f3\u30ed\u30a6\u907a\u8de1\u3067\u767a\u751f\u6e08\u307f",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u9818\u4e3b\u306e\u9928\u30fb\u5730\u4e0b\u3067\u767a\u751f\u6e08\u307f",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30ce\u30fc\u30e0\u306e\u6d1e\u7a9f\u3067\u767a\u751f\u6e08\u307f",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u99d0\u8eca\u5834\u3067\u767a\u751f\u6e08\u307f",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u6cbc\u5730\u3067\u767a\u751f\u6e08\u307f",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u88cf\u901a\u308a\u3067\u767a\u751f\u6e08\u307f",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u6e08\u738b\u306e\u53e4\u58b3\u3067\u767a\u751f\u6e08\u307f",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u6b66\u738b\u306e\u53e4\u58b3\u3067\u767a\u751f\u6e08\u307f",
+          "value": 128
+        }
+      ],
+      "label": "\u30a4\u30d9\u30f3\u30c8\u767a\u751f\u30dd\u30a4\u30f3\u30c81"
+    },
+    "0x08A": {
+      "entries": [
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30c9\u30a5\u30f4\u30a1\u30f3\u3067\u767a\u751f\u6e08\u307f",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30eb\u30df\u30ca\u30b9\u3067\u767a\u751f\u6e08\u307f",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30ef\u30ab\u30c4\u3067\u767a\u751f\u6e08\u307f",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u4eac\u3067\u767a\u751f\u6e08\u307f",
+          "value": 128
+        },
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30a4\u30d9\u30f3\u30c8\u306f\u767a\u751f\u3057\u306a\u3044",
+          "value": 1
+        }
+      ],
+      "label": "\u30a4\u30d9\u30f3\u30c8\u767a\u751f\u30dd\u30a4\u30f3\u30c82"
+    },
+    "0x08B": {
+      "entries": [],
+      "label": "\u30a4\u30d9\u30f3\u30c8\u767a\u751f\u5224\u5b9a\u7528\u6226\u95d8\u56de\u6570\u8a18\u9332"
+    },
+    "0x08C": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u30e8\u30fc\u30af\u30e9\u30f3\u30c9\u306b\u30c8\u30ea\u30cb\u30c6\u30a3\u8cb8\u3057\u5207\u308a\u30b7\u30c3\u30d7\u505c\u6cca\u4e2d",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u30e2\u30f3\u30c9\u306b\u30de\u30f3\u30cf\u30c3\u30bf\u30f3\u307e\u3067\u9001\u3063\u3066\u3082\u3089\u3063\u305f",
+          "value": 2
+        },
+        {
+          "hex": "F0",
+          "kind": "state",
+          "meaning": "\u30e2\u30f3\u30c9\u57fa\u5730\u3078\u7a81\u5165",
+          "value": 240
+        },
+        {
+          "hex": "F1",
+          "kind": "state",
+          "meaning": "\u30e2\u30f3\u30c9\u57fa\u5730\u2463\u306e\u30ad\u30fc\u30dc\u30c3\u30af\u30b9\u56de\u53ce",
+          "value": 241
+        },
+        {
+          "hex": "F2",
+          "kind": "state",
+          "meaning": "\u30e2\u30f3\u30c9\u57fa\u5730\u2465\u306e\u30ad\u30fc\u30dc\u30c3\u30af\u30b9\u56de\u53ce",
+          "value": 242
+        }
+      ],
+      "label": "\u30ea\u30e5\u30fc\u30c8\u7de8\u30b7\u30ca\u30ea\u30aa"
+    },
+    "0x08D": {
+      "entries": [
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30ec\u30aa\u30ca\u30eb\u30c9\u3068\u30de\u30f3\u30cf\u30c3\u30bf\u30f3\u30fb\u30d5\u30a1\u30fc\u30b9\u30c8\u30d5\u30fc\u30c9\u5e97\u3067\u4f1a\u8a71\u3057\u305f",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30d2\u30e5\u30fc\u30ba\u3068\u30de\u30f3\u30cf\u30c3\u30bf\u30f3\u30fb\u30d5\u30a1\u30fc\u30b9\u30c8\u30d5\u30fc\u30c9\u5e97\u3067\u4f1a\u8a71\u3057\u305f",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u8266\u9577\u3068\u30d3\u30af\u30c8\u30ea\u30a2\u3067\u4f1a\u8a71\u3057\u305f",
+          "value": 128
+        }
+      ],
+      "label": "\u30ea\u30e5\u30fc\u30c8\u4f1a\u8a71"
+    },
+    "0x0C6": {
+      "entries": [],
+      "label": "\u30d1\u30fc\u30c6\u30a3\u60c5\u5831\u8a18\u9332\u9818\u57df\uff08\u5149\u306e\u8ff7\u5bae\u7a81\u5165\u6642\u306a\u3069\uff09"
+    },
+    "0x0C7": {
+      "entries": [],
+      "label": "\u2193"
+    },
+    "0x0D4": {
+      "entries": [],
+      "label": "\u2191"
+    },
+    "0x0D5": {
+      "entries": [],
+      "label": "\u30d1\u30fc\u30c6\u30a3\u60c5\u5831\u8a18\u9332\u9818\u57df\uff08\u5149\u306e\u8ff7\u5bae\u7a81\u5165\u6642\u306a\u3069\uff09"
+    },
+    "0x0D6": {
+      "entries": [],
+      "label": "\u30a8\u30df\u30ea\u30a2 \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0D7": {
+      "entries": [],
+      "label": "\u30ea\u30e5\u30fc\u30c8 \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0D8": {
+      "entries": [],
+      "label": "\u30ec\u30c3\u30c9 \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0D9": {
+      "entries": [],
+      "label": "\u30d2\u30e5\u30fc\u30ba \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0DA": {
+      "entries": [],
+      "label": "\u30d6\u30eb\u30fc \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0DB": {
+      "entries": [],
+      "label": "\u30a2\u30bb\u30eb\u30b9 \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0DC": {
+      "entries": [],
+      "label": "\uff34\uff12\uff16\uff10 \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0DD": {
+      "entries": [],
+      "label": "\u30af\u30fc\u30f3 \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0DE": {
+      "entries": [],
+      "label": "\u30eb\u30fc\u30b8\u30e5 \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0DF": {
+      "entries": [],
+      "label": "\u30eb\u30fc\u30d5\u30a1\u30b9 \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0E0": {
+      "entries": [],
+      "label": "\u30b2\u30f3 \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0E1": {
+      "entries": [],
+      "label": "\u30d5\u30a7\u30a4\u30aa\u30f3 \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0E2": {
+      "entries": [],
+      "label": "\u30a2\u30cb\u30fc \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0E3": {
+      "entries": [],
+      "label": "\u30e9\u30a4\u30b6 \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0E4": {
+      "entries": [],
+      "label": "\u8266\u9577 \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0E5": {
+      "entries": [],
+      "label": "\u30c9\u30fc\u30eb \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0E6": {
+      "entries": [],
+      "label": "\u30e1\u30a4\u30ec\u30f3 \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0E7": {
+      "entries": [],
+      "label": "\u5973 \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0E8": {
+      "entries": [],
+      "label": "\u767d\u8594\u8587 \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0E9": {
+      "entries": [],
+      "label": "\u30a4\u30eb\u30c9\u30a5\u30f3 \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0EA": {
+      "entries": [],
+      "label": "\u30e1\u30b5\u30eb\u30c6\u30a3\u30e0 \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0EB": {
+      "entries": [],
+      "label": "\u30be\u30ba\u30de \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0EC": {
+      "entries": [],
+      "label": "\u96f6 \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0ED": {
+      "entries": [],
+      "label": "\u30b5\u30a4\u30ec\u30f3\u30b9 \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0EE": {
+      "entries": [],
+      "label": "\u30cc\u30b5\u30ab\u30fc\u30f3 \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0EF": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u5263\u306e\u30ab\u30fc\u30c9",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u676f\u306e\u30ab\u30fc\u30c9",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u91d1\u306e\u30ab\u30fc\u30c9",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u76fe\u306e\u30ab\u30fc\u30c9",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u89e3\u653e\u306e\u30eb\u30fc\u30f3",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u4fdd\u8b77\u306e\u30eb\u30fc\u30f3",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u751f\u547d\u306e\u30eb\u30fc\u30f3",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u52dd\u5229\u306e\u30eb\u30fc\u30f3",
+          "value": 128
+        }
+      ],
+      "label": "\u6642\u306e\u541b \u5370\u8853\u30fb\u79d8\u8853\u8cc7\u8cea\u7d4c\u9a13"
+    },
+    "0x0F0": {
+      "entries": [
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30b7\u30f3\u30ed\u30a6\u79fb\u52d5\u4e0d\u53ef\u72b6\u614b",
+          "value": 128
+        }
+      ],
+      "label": "\u30ea\u30fc\u30b8\u30e7\u30f3\u79fb\u52d51"
+    },
+    "0x0F1": {
+      "entries": [
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\uff29\uff32\uff30\uff2f\u79fb\u52d5\u4e0d\u53ef\u72b6\u614b",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30ef\u30ab\u30c4\u79fb\u52d5\u4e0d\u53ef\u72b6\u614b",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u30eb\u30df\u30ca\u30b9\u79fb\u52d5\u4e0d\u53ef\u72b6\u614b",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30de\u30f3\u30cf\u30c3\u30bf\u30f3\u79fb\u52d5\u4e0d\u53ef\u72b6\u614b",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30d0\u30ab\u30e9\u79fb\u52d5\u4e0d\u53ef\u72b6\u614b",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30d5\u30a1\u30b7\u30ca\u30c8\u30a5\u30fc\u30eb\u79fb\u52d5\u4e0d\u53ef\u72b6\u614b",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30af\u30fc\u30ed\u30f3\u79fb\u52d5\u4e0d\u53ef\u72b6\u614b",
+          "value": 128
+        }
+      ],
+      "label": "\u30ea\u30fc\u30b8\u30e7\u30f3\u79fb\u52d52"
+    },
+    "0x0F2": {
+      "entries": [
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u4eac\u79fb\u52d5\u4e0d\u53ef\u72b6\u614b",
+          "value": 2
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u30aa\u30a6\u30df\u79fb\u52d5\u4e0d\u53ef\u72b6\u614b",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30de\u30b8\u30c3\u30af\u30ad\u30f3\u30b0\u30c0\u30e0\u79fb\u52d5\u4e0d\u53ef\u72b6\u614b",
+          "value": 16
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30c9\u30a5\u30f4\u30a1\u30f3\u79fb\u52d5\u4e0d\u53ef\u72b6\u614b",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30e0\u30b9\u30da\u30eb\u30cb\u30d6\u30eb\u79fb\u52d5\u4e0d\u53ef\u72b6\u614b",
+          "value": 128
+        }
+      ],
+      "label": "\u30ea\u30fc\u30b8\u30e7\u30f3\u79fb\u52d53"
+    },
+    "0x0F3": {
+      "entries": [
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30b9\u30af\u30e9\u30c3\u30d7\u79fb\u52d5\u4e0d\u53ef\u72b6\u614b",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u30e8\u30fc\u30af\u30e9\u30f3\u30c9\u79fb\u52d5\u4e0d\u53ef\u72b6\u614b",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30cd\u30eb\u30bd\u30f3\u79fb\u52d5\u4e0d\u53ef\u72b6\u614b",
+          "value": 16
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30b7\u30e5\u30e9\u30a4\u30af\u79fb\u52d5\u4e0d\u53ef\u72b6\u614b",
+          "value": 128
+        }
+      ],
+      "label": "\u30ea\u30fc\u30b8\u30e7\u30f3\u79fb\u52d54"
+    },
+    "0x0F5": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30bb\u30fc\u30d6\u9078\u629e\u4e0d\u53ef\uff0f\u30af\u30a4\u30c3\u30af\u30bb\u30fc\u30d6\u4e0d\u53ef",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u30b3\u30f3\u30d5\u30a3\u30f3\u30b0\u9078\u629e\u4e0d\u53ef",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u88c5\u5099\u6280\u8853\u9078\u629e\u4e0d\u53ef",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u88c5\u5099\u6b66\u5668\u9078\u629e\u4e0d\u53ef",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u5165\u308c\u66ff\u3048\u9078\u629e\u4e0d\u53ef",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u6280\u8853\u9023\u643a\u9078\u629e\u4e0d\u53ef",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30a2\u30a4\u30c6\u30e0\u9078\u629e\u4e0d\u53ef",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30b9\u30c6\u30fc\u30bf\u30b9\u9078\u629e\u4e0d\u53ef",
+          "value": 128
+        }
+      ],
+      "label": "\u30e1\u30cb\u30e5\u30fc\u30ed\u30c3\u30af"
+    },
+    "0x0F6": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30aa\u30e1\u30ac\u30dc\u30c7\u30a3\u306b\u30a8\u30cd\u30eb\u30ae\u30fc\u6ce8\u5165\uff0f\u30dc\u30c7\u30a3\u30bf\u30a4\u30d78",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u30dc\u30c7\u30a3\u30bf\u30a4\u30d77",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30dc\u30c7\u30a3\u30bf\u30a4\u30d76",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u30dc\u30c7\u30a3\u30bf\u30a4\u30d75",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30dc\u30c7\u30a3\u30bf\u30a4\u30d74",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30dc\u30c7\u30a3\u30bf\u30a4\u30d73",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30dc\u30c7\u30a3\u30bf\u30a4\u30d72",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30dc\u30c7\u30a3\u30bf\u30a4\u30d71",
+          "value": 128
+        }
+      ],
+      "label": "\u5909\u66f4\u53ef\u80fd\u30dc\u30c7\u30a3\u30bf\u30a4\u30d7"
+    },
+    "0x0F7": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30dc\u30c7\u30a3\u30bf\u30a4\u30d78",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u30dc\u30c7\u30a3\u30bf\u30a4\u30d77",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30dc\u30c7\u30a3\u30bf\u30a4\u30d76",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u30dc\u30c7\u30a3\u30bf\u30a4\u30d75",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30dc\u30c7\u30a3\u30bf\u30a4\u30d74",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30dc\u30c7\u30a3\u30bf\u30a4\u30d73",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30dc\u30c7\u30a3\u30bf\u30a4\u30d72",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30dc\u30c7\u30a3\u30bf\u30a4\u30d71",
+          "value": 128
+        }
+      ],
+      "label": "\u30dc\u30c7\u30a3\u30bf\u30a4\u30d7\u5909\u66f4\u5c65\u6b74"
+    },
+    "0x0F8": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "state",
+          "meaning": "\u91dd\u306e\u57ce\u30fb\u5b9d\u7269\u5eab(\u521d\u56de)\u306e\u53d6\u308c\u306a\u3044\u30a2\u30a4\u30c6\u30e0",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "state",
+          "meaning": "\u30ad\u30b0\u30ca\u30b91\u968e\u2463\u631f\u307f\u6483\u3061",
+          "value": 2
+        }
+      ],
+      "label": "\u30a4\u30d9\u30f3\u30c8\u30b9\u30a4\u30c3\u30c1\uff1f"
+    },
+    "0x100": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u5929\u53e2\u96f2\u5263\u3092\u5165\u624b\u3057\u305f",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u93ae\u9b42\u306e\u52fe\u7389\u3092\u5165\u624b\u3057\u305f",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u6c34\u93e1\u306e\u76fe\u3092\u5165\u624b\u3057\u305f",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u5929\u53e2\u96f2\u5263\u3092\u6367\u3052\u305f",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u93ae\u9b42\u306e\u52fe\u7389\u3092\u6367\u3052\u305f",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u6c34\u93e1\u306e\u76fe\u3092\u6367\u3052\u305f",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u7384\u5ba4\u3078\u306e\u6249\u304c\u958b\u3044\u305f",
+          "value": 64
+        }
+      ],
+      "label": "\u6e08\u738b\u306e\u53e4\u58b3"
+    },
+    "0x102": {
+      "entries": [
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u91dd\u306e\u57ce\u30fb\u4e0a\u5c64\u90e8\u2465\u5de8\u4eba\u306e\u5f8c\u308d\u306e\u6249\u3092\u958b\u3051\u305f",
+          "value": 128
+        }
+      ],
+      "label": "\u5de8\u4eba\u306e\u6249\u4ed6"
+    },
+    "0x103": {
+      "entries": [
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u5730\u7adc\u5012\u3057\u305f",
+          "value": 128
+        }
+      ],
+      "label": "\u751f\u547d\u79d1\u5b66\u7814\u7a76\u62402"
+    },
+    "0x1EE": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30bf\u30eb\u30bf\u30ed\u30b9\u2466\uff1a\u30d1\u30ef\u30fc\u30c9\u30b9\u30fc\u30c4",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u30bf\u30eb\u30bf\u30ed\u30b9\u2468\uff1a\u30cf\u30a4\u30da\u30ea\u30aa\u30f3",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30bf\u30eb\u30bf\u30ed\u30b9\u2469\uff1a\u30aa\u30af\u30c8\u30d1\u30b9\u30dc\u30fc\u30c9",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u9818\u4e3b\u306e\u9928\u30fb\u90e8\u5c4b\u2462\uff1a\u6700\u9ad8\u50b7\u85ac",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u9818\u4e3b\u306e\u9928\u30fb\u90e8\u5c4b\u2462\uff1a\u30e9\u30d0\u30fc\u30b9\u30fc\u30c4",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u9818\u4e3b\u306e\u9928\u30fb\u90e8\u5c4b\u2461\uff1a\u30b4\u30fc\u30b9\u30c8\u30ad\u30e3\u30ce\u30f3",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u9818\u4e3b\u306e\u9928\u30fb\u90e8\u5c4b\u2461\uff1a\u30af\u30ea\u30b9\u30ca\u30a4\u30d5",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u751f\u547d\u79d1\u5b66\u7814\u7a76\u6240\u30fb\u5730\u4e0b\u2464\uff1a\u7adc\u9c57\u306e\u76fe",
+          "value": 128
+        }
+      ],
+      "label": "\u5b9d\u7bb1\u30d5\u30e9\u30b01"
+    },
+    "0x1EF": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u88cf\u901a\u308a\uff1a\u88cf\u30e1\u30e2\u30ea\u30dc\u30fc\u30c9(\u8cfc\u5165)",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u30b7\u30f3\u30ed\u30a6\u907a\u8de1\u246f\uff1a\u30a8\u30af\u30bb\u30eb\u30ac\u30fc\u30c9",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u91dd\u306e\u57ce\u30fb\u5b9d\u7269\u5eab(\u518d\u8a2a)\uff1a\u7cbe\u970a\u9280\u306e\u93a7",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u91dd\u306e\u57ce\u30fb\u5b9d\u7269\u5eab(\u518d\u8a2a)\uff1a\u7cbe\u970a\u9280\u306e\u30d4\u30a2\u30b9",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u91dd\u306e\u57ce\u30fb\u5b9d\u7269\u5eab(\u518d\u8a2a)\uff1a\u529b\u5e2f",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u91dd\u306e\u57ce\u30fb\u5b9d\u7269\u5eab(\u518d\u8a2a)\uff1a\u6708\u4e0b\u7f8e\u4eba",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u91dd\u306e\u57ce\u30fb\u5b9d\u7269\u5eab(\u518d\u8a2a)\uff1a\u30d6\u30ea\u30e5\u30fc\u30ca\u30af",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30bf\u30eb\u30bf\u30ed\u30b9\u246a\uff1a\u7985\u9283",
+          "value": 128
+        }
+      ],
+      "label": "\u5b9d\u7bb1\u30d5\u30e9\u30b02"
+    },
+    "0x1F0": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u6731\u96c0\u306e\u5c71\u2462\uff1a\u7d50\u754c\u77f3",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u6731\u96c0\u306e\u5c71\u2462\uff1a1000\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30e9\u30e0\u30c0\u57fa\u5730\u30fb\u5009\u5eab\uff1a\u30a8\u30e1\u30b9\u30fb\u30bf\u30b0",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u30e9\u30e0\u30c0\u57fa\u5730\u30fb\u5009\u5eab\uff1a\u7d50\u754c\u77f3",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30b7\u30f3\u30ed\u30a6\u738b\u5bae\u2461\uff1a\u30bb\u30e9\u30df\u30c3\u30af\u30b5\u30fc\u30d9\u30eb",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30b7\u30f3\u30ed\u30a6\u738b\u5bae\u2465\uff1a\u7d50\u754c\u77f3",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30b7\u30f3\u30ed\u30a6\u907a\u8de1\u2468\uff1a\u7cbe\u970a\u77f3",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30b7\u30f3\u30ed\u30a6\u907a\u8de1\u246a\uff1a\u7cbe\u970a\u9280\u306e\u30d4\u30a2\u30b9",
+          "value": 128
+        }
+      ],
+      "label": "\u5b9d\u7bb1\u30d5\u30e9\u30b03"
+    },
+    "0x1F1": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30bf\u30eb\u30bf\u30ed\u30b9\u2463\uff1a\u30ec\u30fc\u30b6\u30fc\u30ab\u30fc\u30d3\u30f3",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u30bf\u30eb\u30bf\u30ed\u30b9\u2463\uff1a\u9ad8\u5468\u6ce2\u30d6\u30ec\u30fc\u30c9",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30bf\u30eb\u30bf\u30ed\u30b9\u2464\uff1a\u7d50\u754c\u77f3",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u30bf\u30eb\u30bf\u30ed\u30b9\u2467\uff1a\u88cf\u30e1\u30e2\u30ea\u30dc\u30fc\u30c9",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u6731\u96c0\u306e\u5c71\u2462\uff1a\u30af\u30ea\u30b9\u30ca\u30a4\u30d5",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u6731\u96c0\u306e\u5c71\u2462\uff1a\u30aa\u30af\u30c8\u30d1\u30b9\u30dc\u30fc\u30c9",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u6731\u96c0\u306e\u5c71\u2462\uff1a\u30b4\u30fc\u30eb\u30c7\u30f3\u30d5\u30ea\u30fc\u30b9",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u6731\u96c0\u306e\u5c71\u2462\uff1a\u30ed\u30fc\u30c9\u30b9\u30bf\u30fc",
+          "value": 128
+        }
+      ],
+      "label": "\u5b9d\u7bb1\u30d5\u30e9\u30b04"
+    },
+    "0x1F2": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\uff28\uff31\u2462\uff1a\u30d9\u30d2\u30fc\u30e2\u30b9",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\uff28\uff31\u2464\uff1a\u30ec\u30fc\u30b6\u30fc\u30b9\u30b3\u30fc\u30d7",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\uff28\uff31\u2466\uff1a\u7cbe\u970a\u9280\u306e\u93a7",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\uff28\uff31\u2467\uff1a\u706b\u708e\u653e\u5c04\u5668",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\uff28\uff31\u2469\uff1a\u30b8\u30a7\u30c3\u30c8\u30d6\u30fc\u30c4",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\uff28\uff31\u246b\uff1a\u7834\u58ca\u5149\u7dda\u9283",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\uff28\uff31\u246d\uff1a\u30a8\u30af\u30bb\u30eb\u30ac\u30fc\u30c9",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\uff28\uff31\u246e\uff1a\u5bfe\u88c5\u7532\u30ed\u30b1\u30c3\u30c8",
+          "value": 128
+        }
+      ],
+      "label": "\u5b9d\u7bb1\u30d5\u30e9\u30b05"
+    },
+    "0x1F3": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30ef\u30ab\u30c4\u2464\uff1a\u9244\u4e0b\u99c4",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u30ef\u30ab\u30c4\u2466\uff1a\u53cc\u9f8d\u5200",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30c7\u30a3\u30b9\u30da\u30a2\u2470\uff1a\u30b7\u30a7\u30eb\u30ac\u30fc\u30c9",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u30c7\u30a3\u30b9\u30da\u30a2\u30fb\u30ed\u30c3\u30ab\u30fc\u30eb\u30fc\u30e0\uff1a\u30cf\u30f3\u30c9\u30d0\u30ba\u30fc\u30ab",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30d5\u30eb\u30c9\u306e\u5de5\u623f\u2460\uff1a\u30e6\u30cb\u30b3\u30fc\u30f3\u306e\u6d99",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30d5\u30eb\u30c9\u306e\u5de5\u623f\u2460\uff1a\u30d1\u30fc\u30eb\u30cf\u30fc\u30c8",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30d5\u30eb\u30c9\u306e\u5de5\u623f\u2462\uff1a\u967d\u708e\u306e\u30b1\u30fc\u30d7",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\uff28\uff31\u2461\uff1a\u8ffd\u52a0\u30e1\u30e2\u30ea\u30dc\u30fc\u30c9",
+          "value": 128
+        }
+      ],
+      "label": "\u5b9d\u7bb1\u30d5\u30e9\u30b06"
+    },
+    "0x1F4": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u53e4\u4ee3\u306e\u30b7\u30c3\u30d7\u2468\uff1a\u8ffd\u52a0\u30e1\u30e2\u30ea\u30dc\u30fc\u30c9",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u53e4\u4ee3\u306e\u30b7\u30c3\u30d7\u2468\uff1a200\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u53e4\u4ee3\u306e\u30b7\u30c3\u30d7\u2469\uff1a\u30b8\u30e3\u30f3\u30d7\u30b9\u30fc\u30c4",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u53e4\u4ee3\u306e\u30b7\u30c3\u30d7\u2469\uff1a200\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u53e4\u4ee3\u306e\u30b7\u30c3\u30d7\u246c\uff1a\u30c7\u30e5\u30a8\u30eb\u30ac\u30f3",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u53e4\u4ee3\u306e\u30b7\u30c3\u30d7\u246c\uff1a300\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u53e4\u4ee3\u306e\u30b7\u30c3\u30d7\u246d\uff1a\u5f37\u5316\u88c5\u7532",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u53e4\u4ee3\u306e\u30b7\u30c3\u30d7\u30fb\u60c5\u5831\u7aef\u672b\u306e\u90e8\u5c4b\uff1a500\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 128
+        }
+      ],
+      "label": "\u5b9d\u7bb1\u30d5\u30e9\u30b07"
+    },
+    "0x1F5": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30aa\u30fc\u30f3\u30d6\u30eb\u2462\uff1a\u8853\u9152",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u5730\u7344\u2463\uff1a\u7d50\u754c\u77f3",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u5730\u7344\u2464\uff1a\u6700\u9ad8\u50b7\u85ac",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u5730\u7344\u2464\uff1a\u30a6\u30a4\u30f3\u30c9\u30b7\u30a7\u30eb",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u5730\u7344\u2467\uff1a\u30d6\u30e9\u30c3\u30c9\u30c1\u30e3\u30ea\u30b9",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u53e4\u4ee3\u306e\u30b7\u30c3\u30d7\u2463\uff1a\u304c\u3089\u304f\u305f",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u53e4\u4ee3\u306e\u30b7\u30c3\u30d7\u2464\uff1a\u8150\u3063\u305f\u8089",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u53e4\u4ee3\u306e\u30b7\u30c3\u30d7\u2464\uff1a\u96fb\u675f\u653e\u5c04\u5668",
+          "value": 128
+        }
+      ],
+      "label": "\u5b9d\u7bb1\u30d5\u30e9\u30b08"
+    },
+    "0x1F6": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u6b66\u738b\u306e\u53e4\u58b3\u2464\uff1a\u30e9\u30f3\u30c0\u30e0\u5c0f",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u6b66\u738b\u306e\u53e4\u58b3\u2464\uff1a\u30e9\u30f3\u30c0\u30e0\u5927",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u672a\u4f7f\u7528\uff1f",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u6b66\u738b\u306e\u53e4\u58b3\u246b\uff1a\u30d6\u30e9\u30c3\u30c9\u30c1\u30e3\u30ea\u30b9",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u6b66\u738b\u306e\u53e4\u58b3\u246b\uff1a500\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u6b66\u738b\u306e\u53e4\u58b3\u2468\uff1a\u5200",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u6b66\u738b\u306e\u53e4\u58b3\u2469\uff1a200\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30aa\u30fc\u30f3\u30d6\u30eb\u2461\uff1a200\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 128
+        }
+      ],
+      "label": "\u5b9d\u7bb1\u30d5\u30e9\u30b09"
+    },
+    "0x1F7": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30d6\u30e9\u30c3\u30af\u30af\u30ed\u30b9\u672c\u90e8\u2464\uff1a\u529b\u5e2f",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u81ea\u7136\u6d1e\u7a9f\u2461\uff1a\u8853\u9152",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u81ea\u7136\u6d1e\u7a9f\u2462\uff1a500\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u81ea\u7136\u6d1e\u7a9f\u2464\uff1a\u98db\u5929\u306e\u93a7",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u81ea\u7136\u6d1e\u7a9f\u2465\uff1a300\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u81ea\u7136\u6d1e\u7a9f\u2460\uff1a\u661f\u5c51\u306e\u30de\u30f3\u30c8",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u81ea\u7136\u6d1e\u7a9f\u2460\uff1a200\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u6b66\u738b\u306e\u53e4\u58b3\u2466\uff1a\u30b7\u30e3\u30c9\u30a6\u30c0\u30ac\u30fc",
+          "value": 128
+        }
+      ],
+      "label": "\u5b9d\u7bb1\u30d5\u30e9\u30b010"
+    },
+    "0x1F8": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30d6\u30e9\u30c3\u30af\u30af\u30ed\u30b9\u672c\u90e8\u2460\uff1a\u7d50\u754c\u77f3",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u30d6\u30e9\u30c3\u30af\u30af\u30ed\u30b9\u672c\u90e8\u2461\uff1a\u7c92\u5b50\u52a0\u901f\u7832",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30d6\u30e9\u30c3\u30af\u30af\u30ed\u30b9\u672c\u90e8\u2461\uff1a\u8853\u9152",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u30d6\u30e9\u30c3\u30af\u30af\u30ed\u30b9\u672c\u90e8\u2461\uff1a\u6700\u9ad8\u50b7\u85ac",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30d6\u30e9\u30c3\u30af\u30af\u30ed\u30b9\u672c\u90e8\u2463\uff1a\u30ea\u30fc\u30b5\u30eb\u30c9\u30e9\u30b0\u30fc\u30f3",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30d6\u30e9\u30c3\u30af\u30af\u30ed\u30b9\u672c\u90e8\u2463\u5de6\uff1a\u6700\u9ad8\u50b7\u85ac",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30d6\u30e9\u30c3\u30af\u30af\u30ed\u30b9\u672c\u90e8\u2463\u53f3\uff1a\u6700\u9ad8\u50b7\u85ac",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30d6\u30e9\u30c3\u30af\u30af\u30ed\u30b9\u672c\u90e8\u2464\uff1a\u30cf\u30a4\u30da\u30ea\u30aa\u30f3",
+          "value": 128
+        }
+      ],
+      "label": "\u5b9d\u7bb1\u30d5\u30e9\u30b011"
+    },
+    "0x1F9": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30d6\u30e9\u30c3\u30af\u30ec\u30a42\u968e\u246f\uff1a\u6708\u4e0b\u7f8e\u4eba",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u30d6\u30e9\u30c3\u30af\u30ec\u30a42\u968e\u2462\uff1a\u6b66\u795e\u306e\u93a7",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30d6\u30e9\u30c3\u30af\u30ec\u30a42\u968e\u246e\uff1a\u9244\u4e0b\u99c4",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u30d6\u30e9\u30c3\u30af\u30ec\u30a42\u968e\u2465\uff1a\u30b9\u30d7\u30ea\u30ac\u30f3\u30b9\u30fc\u30c4",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30d6\u30e9\u30c3\u30af\u30ec\u30a42\u968e\u246c\uff1a\u30aa\u30af\u30c8\u30d1\u30b9\u30dc\u30fc\u30c9",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30b7\u30f3\u30ed\u30a6\u907a\u8de1\u246b\uff1a250\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30b7\u30f3\u30ed\u30a6\u907a\u8de1\u246c\uff1a\u7d50\u754c\u77f3",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30b7\u30f3\u30ed\u30a6\u907a\u8de1\u2469\uff1a\u7cbe\u970a\u9280\u306e\u93a7",
+          "value": 128
+        }
+      ],
+      "label": "\u5b9d\u7bb1\u30d5\u30e9\u30b012"
+    },
+    "0x1FA": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30ad\u30e3\u30f3\u30d9\u30eb\u8cbf\u6613\u30d3\u30eb30\u968e\u2462\uff1a400\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u30ad\u30e3\u30f3\u30d9\u30eb\u8cbf\u6613\u30d3\u30eb30\u968e\u2462\uff1a\u6c34\u6483\u9283",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30ad\u30e3\u30f3\u30d9\u30eb\u8cbf\u6613\u30d3\u30eb30\u968e\u2465\uff1a\u30cf\u30f3\u30c9\u30d0\u30ba\u30fc\u30ab",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u30ad\u30e3\u30f3\u30d9\u30eb\u8cbf\u6613\u30d3\u30eb30\u968e\u2461\uff1a\u30df\u30b5\u30a4\u30eb\u30dd\u30c3\u30c9",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30ad\u30e3\u30f3\u30d9\u30eb\u8cbf\u6613\u30d3\u30eb\u30fb\u968e\u6bb5\u2460\uff1a\u8853\u9152",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30ad\u30e3\u30f3\u30d9\u30eb\u8cbf\u6613\u30d3\u30eb\u30fb\u968e\u6bb5\u2461\uff1a\u30d6\u30e9\u30c3\u30af\u30a4\u30fc\u30b0\u30eb",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30ad\u30e3\u30f3\u30d9\u30eb\u8cbf\u6613\u30d3\u30eb\u30fb\u968e\u6bb5\u2462\uff1a\u6700\u9ad8\u50b7\u85ac",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30ad\u30e3\u30f3\u30d9\u30eb\u8cbf\u6613\u30d3\u30eb\u30fb\u968e\u6bb5\u2463\uff1a\u30d7\u30ed\u30c6\u30af\u30bf\u30fc",
+          "value": 128
+        }
+      ],
+      "label": "\u5b9d\u7bb1\u30d5\u30e9\u30b013"
+    },
+    "0x1FB": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30d9\u30eb\u30f4\u30a1\u57fa\u5730\u2466\uff1a\u88cf\u30e1\u30e2\u30ea\u30dc\u30fc\u30c9",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u672a\u4f7f\u7528\uff1f",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30e1\u30bf\u30eb\u30d6\u30e9\u30c3\u30af\u57fa\u5730\u2460\uff1a300\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u30e1\u30bf\u30eb\u30d6\u30e9\u30c3\u30af\u57fa\u5730\u2463\uff1a\u30b5\u30e0\u30e9\u30a4\u30bd\u30fc\u30c9",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30e1\u30bf\u30eb\u30d6\u30e9\u30c3\u30af\u57fa\u5730\u2465\uff1a\u6700\u9ad8\u50b7\u85ac",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30e1\u30bf\u30eb\u30d6\u30e9\u30c3\u30af\u57fa\u5730\u2465\uff1a\u8853\u9152",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30e1\u30bf\u30eb\u30d6\u30e9\u30c3\u30af\u57fa\u5730\u2462\uff1a300\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30e1\u30bf\u30eb\u30d6\u30e9\u30c3\u30af\u57fa\u5730\u2467\uff1a\u88cf\u30e1\u30e2\u30ea\u30dc\u30fc\u30c9",
+          "value": 128
+        }
+      ],
+      "label": "\u5b9d\u7bb1\u30d5\u30e9\u30b014"
+    },
+    "0x1FC": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u4e0b\u6c34\u9053\u2461\uff1a\u8ffd\u52a0\u30e1\u30e2\u30ea\u30dc\u30fc\u30c9",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u4e0b\u6c34\u9053\u2460\uff1a\u9280\u6c37\u77f3",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u4e0b\u6c34\u9053\u2461\uff1a\u7d05\u708e\u77f3",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u4e0b\u6c34\u9053\u2461\uff1a200\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30d9\u30eb\u30f4\u30a1\u57fa\u5730\u2461\uff1a500\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30d9\u30eb\u30f4\u30a1\u57fa\u5730\u2461\uff1a\u96fb\u675f\u653e\u5c04\u5668",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u672a\u4f7f\u7528\uff1f",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30d9\u30eb\u30f4\u30a1\u57fa\u5730\u2466\uff1a\u8150\u3063\u305f\u8089",
+          "value": 128
+        }
+      ],
+      "label": "\u5b9d\u7bb1\u30d5\u30e9\u30b015"
+    },
+    "0x1FD": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u9818\u4e3b\u306e\u9928\u30fb\u5730\u4e0b\u2466\uff1a\u30e9\u30d0\u30fc\u30bd\u30a6\u30eb",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u9818\u4e3b\u306e\u9928\u30fb\u5730\u4e0b\u2466\uff1a\u6700\u9ad8\u50b7\u85ac",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u672a\u4f7f\u7528\uff1f",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u9818\u4e3b\u306e\u9928\u30fb\u5730\u4e0b\u2463\uff1a\u30b8\u30a7\u30c3\u30c8\u30d6\u30fc\u30c4",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u9818\u4e3b\u306e\u9928\u30fb\u5730\u4e0b\u2463\uff1a\u8150\u3063\u305f\u8089",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u9818\u4e3b\u306e\u9928\u30fb\u5730\u4e0b\u2462\uff1a\u8853\u9152",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u9818\u4e3b\u306e\u9928\u30fb\u5730\u4e0b\u2462\uff1a\u7d50\u754c\u77f3",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u4e0b\u6c34\u9053\u2460\uff1a200\u30af\u30ec\u30b8\u30c3\u30c8",
+          "value": 128
+        }
+      ],
+      "label": "\u5b9d\u7bb1\u30d5\u30e9\u30b016"
+    },
+    "0x1FE": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30ab\u30d0\u30ec\u30ed\u30d5\u30a1\u30af\u30c8\u30ea\u30fc\u2461\uff1a\u30af\u30c3\u30af\u30ea\u5200",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u30bf\u30f3\u30b6\u30fc\u30fb\u30ce\u30fc\u30de\u30c3\u30c9\u306e\u90e8\u5c4b\uff1a\u7d50\u754c\u77f3",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u9818\u4e3b\u306e\u9928\u30fb\u5730\u4e0b\u2467\uff1a\u30d1\u30fc\u30eb\u30cf\u30fc\u30c8",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u9818\u4e3b\u306e\u9928\u30fb\u5730\u4e0b\u2467\uff1a\u30ec\u30b6\u30fc\u30d6\u30fc\u30c4",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u9818\u4e3b\u306e\u9928\u30fb\u5730\u4e0b\u2465\uff1a\u30b8\u30e3\u30c3\u30ab\u30eb\u30d6\u30ec\u30fc\u30c9",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u9818\u4e3b\u306e\u9928\u30fb\u5730\u4e0b\u2465\uff1a\u30b7\u30a7\u30eb\u30d6\u30ec\u30fc\u30b5\u30fc",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u9818\u4e3b\u306e\u9928\u30fb\u5730\u4e0b\u2465\uff1a\u30a2\u30fc\u30de\u30fc\u30b0\u30e9\u30d6",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u9818\u4e3b\u306e\u9928\u30fb\u5730\u4e0b\u2465\uff1a\u6700\u9ad8\u50b7\u85ac",
+          "value": 128
+        }
+      ],
+      "label": "\u5b9d\u7bb1\u30d5\u30e9\u30b017"
+    },
+    "0x1FF": {
+      "entries": [
+        {
+          "hex": "01",
+          "kind": "bit",
+          "meaning": "\u30af\u30ec\u30fc\u30bf\u30fc\u2464\uff1a\u30d5\u30a1\u30a4\u30d0\u30fc\u30d9\u30b9\u30c8",
+          "value": 1
+        },
+        {
+          "hex": "02",
+          "kind": "bit",
+          "meaning": "\u30af\u30ec\u30fc\u30bf\u30fc\u2466\uff1a\u7d50\u754c\u77f3",
+          "value": 2
+        },
+        {
+          "hex": "04",
+          "kind": "bit",
+          "meaning": "\u30ab\u30d0\u30ec\u30ed\u30d5\u30a1\u30af\u30c8\u30ea\u30fc\u2463\uff1a\u5f37\u529b\u50b7\u85ac",
+          "value": 4
+        },
+        {
+          "hex": "08",
+          "kind": "bit",
+          "meaning": "\u30ab\u30d0\u30ec\u30ed\u30d5\u30a1\u30af\u30c8\u30ea\u30fc\u2463\uff1a\u92fc\u306e\u304a\u5b88\u308a",
+          "value": 8
+        },
+        {
+          "hex": "10",
+          "kind": "bit",
+          "meaning": "\u30b7\u30f3\u30ed\u30a6\u907a\u8de1\u2463\uff1a\u30c4\u30a4\u30f3\u30bd\u30fc\u30c9",
+          "value": 16
+        },
+        {
+          "hex": "20",
+          "kind": "bit",
+          "meaning": "\u30b7\u30e5\u30a6\u30b6\u30fc\u57fa\u5730\u2463\uff1a\u96fb\u78c1\u6d3b\u6027\u93a7",
+          "value": 32
+        },
+        {
+          "hex": "40",
+          "kind": "bit",
+          "meaning": "\u30bf\u30f3\u30b6\u30fc\u30fb\u30ce\u30fc\u30de\u30c3\u30c9\u306e\u30a2\u30b8\u30c8\u2462\uff1a\u8853\u9152",
+          "value": 64
+        },
+        {
+          "hex": "80",
+          "kind": "bit",
+          "meaning": "\u30bf\u30f3\u30b6\u30fc\u30fb\u30ce\u30fc\u30de\u30c3\u30c9\u306e\u30a2\u30b8\u30c8\u2463\uff1a\u30df\u30b5\u30a4\u30eb\u30dd\u30c3\u30c9",
+          "value": 128
+        }
+      ],
+      "label": "\u5b9d\u7bb1\u30d5\u30e9\u30b018"
+    }
+  },
+  "meta": {
+    "bit_entries": 440,
+    "count": 169,
+    "crosschecks": [
+      {
+        "expected": "scenario protagonist",
+        "fixture": "SaveData.bin.json",
+        "index": 37,
+        "label": "\u30a2\u30bb\u30eb\u30b9",
+        "matched": 1,
+        "meanings": [
+          "\u30b7\u30ca\u30ea\u30aa\u4e3b\u4eba\u516c"
+        ],
+        "value": 240
+      },
+      {
+        "expected": "saw the coffin in Asellus's room 1",
+        "fixture": "SaveData.bin.json",
+        "index": 106,
+        "label": "\u30a2\u30bb\u30eb\u30b9\u7de8\u30b7\u30ca\u30ea\u30aa",
+        "matched": 1,
+        "meanings": [
+          "\u30a2\u30bb\u30eb\u30b9\u306e\u90e8\u5c4b\u2460\u3067\u68fa\u6876\u898b\u305f"
+        ],
+        "value": 1
+      },
+      {
+        "expected": "scenario protagonist",
+        "fixture": "SaveData.t260g.bin.json",
+        "index": 38,
+        "label": "\uff34\uff12\uff16\uff10",
+        "matched": 1,
+        "meanings": [
+          "\u30b7\u30ca\u30ea\u30aa\u4e3b\u4eba\u516c"
+        ],
+        "value": 240
+      },
+      {
+        "expected": "has joined",
+        "fixture": "SaveData.t260g.bin.json",
+        "index": 42,
+        "label": "\u30b2\u30f3",
+        "matched": 1,
+        "meanings": [
+          "\u4ef2\u9593\u306b\u306a\u3063\u3066\u3044\u308b"
+        ],
+        "value": 241
+      },
+      {
+        "expected": "arrived at Scrap",
+        "fixture": "SaveData.t260g.bin.json",
+        "index": 80,
+        "label": "\uff34\uff12\uff16\uff10\uff27\u7de8\u30b7\u30ca\u30ea\u30aa",
+        "matched": 1,
+        "meanings": [
+          "\u30b9\u30af\u30e9\u30c3\u30d7\u306b\u5230\u7740"
+        ],
+        "value": 15
+      },
+      {
+        "expected": "five early wins and pickups",
+        "fixture": "SaveData.t260g.bin.json",
+        "index": 85,
+        "label": "\u30dc\u30ed2",
+        "matched": 5,
+        "meanings": [
+          "\u6c11\u5bb6\u2462\u306e\u50b7\u85ac",
+          "\u6c11\u5bb6\u2461\u306e\u30a4\u30f3\u30b9\u30bf\u30f3\u30c8\u30ad\u30c3\u30c8",
+          "\u30ac\u30f3\u30d5\u30a1\u30a4\u30bf\u30fc\u306b\u52dd\u5229",
+          "\u30d0\u30b9\u30bf\u30fc\u30de\u30b7\u30f3\u306b\u52dd\u5229",
+          "\u30ca\u30a4\u30c8\u30d5\u30a1\u30eb\u30b3\u30f3\u53f7\u306b\u52dd\u5229"
+        ],
+        "value": 236
+      }
+    ],
+    "description": "Scenario flag (pty.snroFlg) byte dictionary for the save viewer",
+    "entry_count": 785,
+    "generator": "tests/sfr_save_editor/build_flags.py",
+    "match_rule": "An exact state value wins; otherwise every single-bit entry whose bit is set; otherwise the byte is shown raw.",
+    "range": [
+      0,
+      511
+    ],
+    "source": "docs/gameinfo/discord/bf386d29fa5f29d5.txt",
+    "source_encoding": "CP932",
+    "source_sha256": "c6d1023643ea7550f6b26e8fee41c2e7b83046b4aeb467c61eef092e4bdf03c1",
+    "state_entries": 345,
+    "status_note": "Meanings are community research, translated from the Japanese source verbatim. They are not extracted from the game's assets."
+  }
+}

@@ -1,0 +1,4539 @@
+{
+  "abilities": {
+    "0x0000": {
+      "elements": [
+        "S"
+      ],
+      "name": "Slash",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0001": {
+      "elements": [
+        "S"
+      ],
+      "name": "StunSlash",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0002": {
+      "elements": [
+        "S"
+      ],
+      "name": "DoubleSlash",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0003": {
+      "elements": [
+        "S",
+        "B"
+      ],
+      "name": "HardSlash",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0004": {
+      "elements": [
+        "S",
+        "P"
+      ],
+      "name": "Thrust",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0005": {
+      "elements": [
+        "S"
+      ],
+      "name": "CrossSlash",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0006": {
+      "elements": [
+        "S",
+        "B"
+      ],
+      "name": "Smash",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0007": {
+      "elements": [
+        "S",
+        "AA"
+      ],
+      "name": "SwallowSwing",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0008": {
+      "elements": [
+        "S",
+        "P",
+        "E"
+      ],
+      "name": "ThunderThrust",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0009": {
+      "elements": [
+        "S"
+      ],
+      "name": "Heaven/Hell",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x000A": {
+      "elements": [
+        "S"
+      ],
+      "name": "WheelSlash",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x000B": {
+      "elements": [
+        "S",
+        "P"
+      ],
+      "name": "WillowBranch",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x000C": {
+      "name": "Deflect",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x000D": {
+      "elements": [
+        "S",
+        "B"
+      ],
+      "name": "BearCrush",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x000E": {
+      "elements": [
+        "S",
+        "P"
+      ],
+      "name": "DeadEnd",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x000F": {
+      "elements": [
+        "S"
+      ],
+      "name": "HeadWind",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0010": {
+      "elements": [
+        "S",
+        "P"
+      ],
+      "name": "TripleThrust",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0011": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F"
+      ],
+      "name": "Kasumi",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0012": {
+      "elements": [
+        "S",
+        "B"
+      ],
+      "name": "NoMoment",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0013": {
+      "elements": [
+        "S",
+        "P",
+        "AA"
+      ],
+      "name": "GaleSlash",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0014": {
+      "elements": [
+        "S",
+        "P",
+        "AA"
+      ],
+      "name": "2GaleSlash",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0015": {
+      "elements": [
+        "S"
+      ],
+      "name": "Still Stream",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0016": {
+      "elements": [
+        "S"
+      ],
+      "name": "TurbidCurrent",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0017": {
+      "name": "CrossDeflect",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0018": {
+      "elements": [
+        "S",
+        "H"
+      ],
+      "name": "RisingNova",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0019": {
+      "elements": [
+        "S",
+        "P"
+      ],
+      "name": "RosarioImpale",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x001A": {
+      "elements": [
+        "S"
+      ],
+      "name": "TwinSword",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x001B": {
+      "elements": [
+        "S"
+      ],
+      "name": "Haze-to-Wheel",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x001C": {
+      "elements": [
+        "S"
+      ],
+      "name": "LifeSprinkler",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x001D": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F"
+      ],
+      "name": "Godless",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x001E": {
+      "elements": [
+        "S"
+      ],
+      "name": "Asura",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x001F": {
+      "elements": [
+        "S",
+        "F"
+      ],
+      "name": "AsuraRevenge",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0020": {
+      "elements": [
+        "S"
+      ],
+      "name": "MoonlightCut",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0021": {
+      "elements": [
+        "S"
+      ],
+      "name": "ShadowCounter",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0022": {
+      "elements": [
+        "S",
+        "C"
+      ],
+      "name": "Blizzard",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0023": {
+      "elements": [
+        "S"
+      ],
+      "name": "Tres Flores",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0024": {
+      "elements": [
+        "S"
+      ],
+      "name": "Katana",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0025": {
+      "elements": [
+        "S",
+        "F"
+      ],
+      "name": "RaySword",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0026": {
+      "elements": [
+        "S",
+        "P"
+      ],
+      "name": "KaiserWing",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0027": {
+      "elements": [
+        "S",
+        "B"
+      ],
+      "name": "KaiserSmash",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0028": {
+      "elements": [
+        "E",
+        "F"
+      ],
+      "name": "DestructionBeam",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0029": {
+      "elements": [
+        "S",
+        "B"
+      ],
+      "name": "MaginRampage",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x002A": {
+      "elements": [
+        "X"
+      ],
+      "name": "ClawBit",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x002B": {
+      "elements": [
+        "X"
+      ],
+      "name": "ClawBit",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x002C": {
+      "elements": [
+        "X"
+      ],
+      "name": "ClawBit",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x002D": {
+      "elements": [
+        "X"
+      ],
+      "name": "ClawBit",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x002E": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F",
+        "X"
+      ],
+      "name": "Counter",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x002F": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F",
+        "X"
+      ],
+      "name": "CounterChop",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0030": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F",
+        "X"
+      ],
+      "name": "CounterFist",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0031": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F",
+        "X"
+      ],
+      "name": "CounterBckFist",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0032": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F",
+        "X"
+      ],
+      "name": "CounterThrust",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0033": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F",
+        "X"
+      ],
+      "name": "CounterSlice",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0034": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F",
+        "X"
+      ],
+      "name": "KO Punch",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0035": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F",
+        "X"
+      ],
+      "name": "KO Kick",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0036": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F",
+        "X"
+      ],
+      "name": "KO Fist",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0037": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F",
+        "X"
+      ],
+      "name": "KO Kick",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0038": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F",
+        "X"
+      ],
+      "name": "KO Swing",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0039": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F",
+        "X"
+      ],
+      "name": "KO Run",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x003A": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F",
+        "X"
+      ],
+      "name": "DragonBeat",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x003B": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F",
+        "X"
+      ],
+      "name": "DragonFist",
+      "note": "skills.txt and vimes ability_data.txt disagree",
+      "section": "sword",
+      "status": "ambiguous"
+    },
+    "0x003C": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F",
+        "X"
+      ],
+      "name": "DragonSlide",
+      "note": "skills.txt and vimes ability_data.txt disagree",
+      "section": "sword",
+      "status": "ambiguous"
+    },
+    "0x003D": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F",
+        "X"
+      ],
+      "name": "DragonBckFist",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x003E": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F",
+        "X"
+      ],
+      "name": "DragonSuplex",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x003F": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F",
+        "X"
+      ],
+      "name": "DragonSwing",
+      "section": "sword",
+      "status": "documented"
+    },
+    "0x0040": {
+      "elements": [
+        "P"
+      ],
+      "name": "Shot",
+      "section": "gun",
+      "status": "documented"
+    },
+    "0x0041": {
+      "elements": [
+        "P"
+      ],
+      "name": "SharpShot",
+      "section": "gun",
+      "status": "documented"
+    },
+    "0x0042": {
+      "elements": [
+        "P"
+      ],
+      "name": "FocusShot",
+      "section": "gun",
+      "status": "documented"
+    },
+    "0x0043": {
+      "elements": [
+        "P"
+      ],
+      "name": "TotalShot",
+      "section": "gun",
+      "status": "documented"
+    },
+    "0x0044": {
+      "elements": [
+        "P"
+      ],
+      "name": "TrickShot",
+      "section": "gun",
+      "status": "documented"
+    },
+    "0x0045": {
+      "elements": [
+        "P"
+      ],
+      "name": "ReactionShot",
+      "section": "gun",
+      "status": "documented"
+    },
+    "0x0046": {
+      "elements": [
+        "P"
+      ],
+      "name": "CrossShot",
+      "note": "skills.txt and vimes ability_data.txt disagree",
+      "section": "gun",
+      "status": "ambiguous"
+    },
+    "0x0047": {
+      "elements": [
+        "P",
+        "Gr"
+      ],
+      "name": "StunShot",
+      "note": "skills.txt and vimes ability_data.txt disagree",
+      "section": "gun",
+      "status": "ambiguous"
+    },
+    "0x0048": {
+      "elements": [
+        "P"
+      ],
+      "name": "BoundShot",
+      "section": "gun",
+      "status": "documented"
+    },
+    "0x0049": {
+      "elements": [
+        "P"
+      ],
+      "name": "QuickDraw",
+      "section": "gun",
+      "status": "documented"
+    },
+    "0x004A": {
+      "elements": [
+        "P"
+      ],
+      "name": "TwoGun",
+      "section": "gun",
+      "status": "documented"
+    },
+    "0x004B": {
+      "elements": [
+        "P"
+      ],
+      "name": "TestShot",
+      "section": "gun",
+      "status": "documented"
+    },
+    "0x004C": {
+      "elements": [
+        "P",
+        "B"
+      ],
+      "name": "IronclogShot",
+      "section": "gun",
+      "status": "documented"
+    },
+    "0x004D": {
+      "elements": [
+        "X",
+        "Gz"
+      ],
+      "name": "HyperGaze",
+      "section": "gun",
+      "status": "documented"
+    },
+    "0x004E": {
+      "elements": [
+        "H",
+        "C",
+        "E"
+      ],
+      "name": "JudgementX",
+      "section": "gun",
+      "status": "documented"
+    },
+    "0x004F": {
+      "elements": [
+        "P",
+        "B",
+        "H"
+      ],
+      "name": "ProtonRocket",
+      "section": "gun",
+      "status": "documented"
+    },
+    "0x0050": {
+      "name": "MysticalChange",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0051": {
+      "name": "AlkaiserChange",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0052": {
+      "elements": [
+        "X"
+      ],
+      "name": "MagmaTouch",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0053": {
+      "elements": [
+        "H",
+        "C",
+        "E"
+      ],
+      "name": "MagicStone",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0054": {
+      "elements": [
+        "F"
+      ],
+      "name": "SonicWave",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0055": {
+      "elements": [
+        "B",
+        "F"
+      ],
+      "name": "BrightFist",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0056": {
+      "elements": [
+        "B",
+        "F"
+      ],
+      "name": "SparklingRoll",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0057": {
+      "elements": [
+        "B",
+        "F"
+      ],
+      "name": "FlashTurn",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0058": {
+      "elements": [
+        "P",
+        "B"
+      ],
+      "name": "Al-Blaster",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0059": {
+      "elements": [
+        "P",
+        "F"
+      ],
+      "name": "Al-Phoenix",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x005A": {
+      "elements": [
+        "P",
+        "F"
+      ],
+      "name": "Re-Al-Phoenix",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x005B": {
+      "elements": [
+        "B",
+        "F"
+      ],
+      "name": "ShiningKick",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x005C": {
+      "elements": [
+        "P"
+      ],
+      "name": "DeflectLance",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x005D": {
+      "elements": [
+        "X"
+      ],
+      "name": "FinalCrusade",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x005E": {
+      "elements": [
+        "P",
+        "F"
+      ],
+      "name": "Dark Phoenix",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x005F": {
+      "elements": [
+        "E"
+      ],
+      "name": "LightningWeb",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0060": {
+      "elements": [
+        "B"
+      ],
+      "name": "Punch",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0061": {
+      "elements": [
+        "B"
+      ],
+      "name": "Kick",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0062": {
+      "elements": [
+        "B",
+        "Th"
+      ],
+      "name": "AirThrow",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0063": {
+      "elements": [
+        "P",
+        "B"
+      ],
+      "name": "Chop",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0064": {
+      "elements": [
+        "B",
+        "Gr"
+      ],
+      "name": "Sliding",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0065": {
+      "elements": [
+        "B",
+        "Th"
+      ],
+      "name": "RollingCradle",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0066": {
+      "name": "SwayBack",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0067": {
+      "elements": [
+        "P",
+        "B",
+        "F"
+      ],
+      "name": "Fist",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0068": {
+      "elements": [
+        "B"
+      ],
+      "name": "BackFist",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0069": {
+      "elements": [
+        "B"
+      ],
+      "name": "CrushBeat",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x006A": {
+      "elements": [
+        "B"
+      ],
+      "name": "RotationKick",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x006B": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F"
+      ],
+      "name": "KO Throw",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x006C": {
+      "elements": [
+        "B",
+        "Th"
+      ],
+      "name": "Suplex",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x006D": {
+      "elements": [
+        "B",
+        "Th"
+      ],
+      "name": "GiantSwing",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x006E": {
+      "elements": [
+        "B",
+        "F"
+      ],
+      "name": "GoldHand",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x006F": {
+      "elements": [
+        "B",
+        "Th"
+      ],
+      "name": "BabelCrumble",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0070": {
+      "elements": [
+        "P",
+        "B",
+        "F"
+      ],
+      "name": "TriangleKick",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0071": {
+      "elements": [
+        "B",
+        "Gr"
+      ],
+      "name": "OgreRun",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0072": {
+      "elements": [
+        "B"
+      ],
+      "name": "Scuffle",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0073": {
+      "elements": [
+        "B",
+        "Th"
+      ],
+      "name": "LocomotionG",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0074": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F"
+      ],
+      "name": "DragonTurn",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0075": {
+      "elements": [
+        "B"
+      ],
+      "name": "Lastshot",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0076": {
+      "elements": [
+        "B"
+      ],
+      "name": "Corkscrew",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0077": {
+      "elements": [
+        "B",
+        "F"
+      ],
+      "name": "SkyTwister",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0078": {
+      "elements": [
+        "B",
+        "Th"
+      ],
+      "name": "DSC",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0079": {
+      "elements": [
+        "B"
+      ],
+      "name": "Contact",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x007A": {
+      "elements": [
+        "X"
+      ],
+      "name": "Shock",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x007B": {
+      "elements": [
+        "B"
+      ],
+      "name": "Beat",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x007C": {
+      "elements": [
+        "B"
+      ],
+      "name": "Touch",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x007D": {
+      "elements": [
+        "B",
+        "Th"
+      ],
+      "name": "SwingDDT",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x007E": {
+      "elements": [
+        "B",
+        "Th"
+      ],
+      "name": "VandalFlip",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x007F": {
+      "elements": [
+        "B",
+        "Th"
+      ],
+      "name": "PowerBomb",
+      "section": "fighting",
+      "status": "documented"
+    },
+    "0x0080": {
+      "elements": [
+        "S"
+      ],
+      "name": "Fang",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x0081": {
+      "elements": [
+        "S"
+      ],
+      "name": "FangCrush",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x0082": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F"
+      ],
+      "name": "DaggerJaw",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x0083": {
+      "elements": [
+        "S",
+        "P"
+      ],
+      "name": "Beak",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x0084": {
+      "elements": [
+        "S",
+        "P"
+      ],
+      "name": "Horn",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x0085": {
+      "elements": [
+        "X",
+        "Gz"
+      ],
+      "name": "StunGaze",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x0086": {
+      "elements": [
+        "X",
+        "Gz"
+      ],
+      "name": "CharmGaze",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x0087": {
+      "elements": [
+        "X",
+        "Gz"
+      ],
+      "name": "StoneGaze",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x0088": {
+      "elements": [
+        "X",
+        "Gz"
+      ],
+      "name": "DeathGaze",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x0089": {
+      "elements": [
+        "X",
+        "Gz"
+      ],
+      "name": "Hypnotism",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x008A": {
+      "elements": [
+        "F"
+      ],
+      "name": "Bloodsucker",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x008B": {
+      "elements": [
+        "F"
+      ],
+      "name": "Grasp",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x008C": {
+      "elements": [
+        "S",
+        "B"
+      ],
+      "name": "Petrify",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x008D": {
+      "elements": [
+        "S"
+      ],
+      "name": "DoubleAxe",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x008E": {
+      "elements": [
+        "S",
+        "B"
+      ],
+      "name": "BrainCrush",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x008F": {
+      "elements": [
+        "B"
+      ],
+      "name": "Beat",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x0090": {
+      "elements": [
+        "S",
+        "B"
+      ],
+      "name": "Scissors",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x0091": {
+      "elements": [
+        "B"
+      ],
+      "name": "PowerBeat",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x0092": {
+      "elements": [
+        "X"
+      ],
+      "name": "Psychout",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x0093": {
+      "elements": [
+        "P",
+        "B"
+      ],
+      "name": "Chop",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x0094": {
+      "elements": [
+        "B"
+      ],
+      "name": "Feeler",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x0095": {
+      "elements": [
+        "S"
+      ],
+      "name": "Claw",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x0096": {
+      "elements": [
+        "S"
+      ],
+      "name": "DeathGrip",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x0097": {
+      "elements": [
+        "S",
+        "B"
+      ],
+      "name": "PoisonGrip",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x0098": {
+      "elements": [
+        "F"
+      ],
+      "name": "GhostTouch",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x0099": {
+      "elements": [
+        "X"
+      ],
+      "name": "DeathTouch",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x009A": {
+      "elements": [
+        "X"
+      ],
+      "name": "StunTouch",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x009B": {
+      "elements": [
+        "S"
+      ],
+      "name": "Blade",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x009C": {
+      "elements": [
+        "S",
+        "P",
+        "AA"
+      ],
+      "name": "GaleAttack",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x009D": {
+      "elements": [
+        "S",
+        "B"
+      ],
+      "name": "GroundHit",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x009E": {
+      "elements": [
+        "S",
+        "H"
+      ],
+      "name": "HeatSmash",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x009F": {
+      "elements": [
+        "S",
+        "C"
+      ],
+      "name": "IceSmash",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00A0": {
+      "elements": [
+        "S",
+        "B",
+        "So"
+      ],
+      "name": "TitasWave",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00A1": {
+      "elements": [
+        "S",
+        "P"
+      ],
+      "name": "Thrust",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00A2": {
+      "elements": [
+        "B"
+      ],
+      "name": "Kick",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00A3": {
+      "elements": [
+        "B"
+      ],
+      "name": "Trample",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00A4": {
+      "elements": [
+        "S"
+      ],
+      "name": "GriffithScratch",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00A5": {
+      "elements": [
+        "B",
+        "Gr"
+      ],
+      "name": "Tail",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00A6": {
+      "elements": [
+        "B",
+        "Gr"
+      ],
+      "name": "TailHit",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00A7": {
+      "elements": [
+        "X",
+        "Gr"
+      ],
+      "name": "Sweep",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00A8": {
+      "elements": [
+        "B"
+      ],
+      "name": "SpinAttack",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00A9": {
+      "elements": [
+        "P"
+      ],
+      "name": "Stinger",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00AA": {
+      "elements": [
+        "P"
+      ],
+      "name": "PoisonNeedle",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00AB": {
+      "elements": [
+        "X"
+      ],
+      "name": "Feint",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00AC": {
+      "elements": [
+        "B"
+      ],
+      "name": "MinionStrike",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00AD": {
+      "elements": [
+        "X"
+      ],
+      "name": "Heal",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00AE": {
+      "elements": [
+        "B"
+      ],
+      "name": "Coils",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00AF": {
+      "elements": [
+        "B"
+      ],
+      "name": "Tackle",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00B0": {
+      "elements": [
+        "B"
+      ],
+      "name": "Dash",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00B1": {
+      "elements": [
+        "B"
+      ],
+      "name": "Headbutt",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00B2": {
+      "elements": [
+        "B"
+      ],
+      "name": "Stampede",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00B3": {
+      "elements": [
+        "S",
+        "P"
+      ],
+      "name": "Wing",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00B4": {
+      "elements": [
+        "P"
+      ],
+      "name": "GliderSpike",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00B5": {
+      "elements": [
+        "F",
+        "So"
+      ],
+      "name": "Oscillation",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00B6": {
+      "elements": [
+        "B",
+        "F"
+      ],
+      "name": "FireKiss",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00B7": {
+      "elements": [
+        "F"
+      ],
+      "name": "Spore",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00B8": {
+      "elements": [
+        "P"
+      ],
+      "name": "SeedVulcan",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00B9": {
+      "elements": [
+        "F",
+        "Wa"
+      ],
+      "name": "Solvent",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00BA": {
+      "elements": [
+        "P"
+      ],
+      "name": "Needles",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00BB": {
+      "elements": [
+        "H"
+      ],
+      "name": "FireBarrier",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00BC": {
+      "elements": [
+        "C"
+      ],
+      "name": "IceBarrier",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00BD": {
+      "elements": [
+        "E"
+      ],
+      "name": "BoltBarrier",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00BE": {
+      "elements": [
+        "X"
+      ],
+      "name": "CounterFear",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00BF": {
+      "elements": [
+        "X"
+      ],
+      "name": "PsyReflector",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00C0": {
+      "elements": [
+        "S",
+        "E"
+      ],
+      "name": "Kusanagi",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00C1": {
+      "elements": [
+        "H"
+      ],
+      "name": "GasFlame",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00C2": {
+      "elements": [
+        "H"
+      ],
+      "name": "FireBreath",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00C3": {
+      "elements": [
+        "H"
+      ],
+      "name": "FlameBlast",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00C4": {
+      "elements": [
+        "C"
+      ],
+      "name": "ArcticBreath",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00C5": {
+      "elements": [
+        "E"
+      ],
+      "name": "BoltBreath",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00C6": {
+      "elements": [
+        "E"
+      ],
+      "name": "BoltBlast",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00C7": {
+      "elements": [
+        "F",
+        "Wa"
+      ],
+      "name": "Ink",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00C8": {
+      "elements": [
+        "P",
+        "B",
+        "Wa"
+      ],
+      "name": "WaterCannon",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00C9": {
+      "elements": [
+        "F"
+      ],
+      "name": "StinkGas",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00CA": {
+      "elements": [
+        "F"
+      ],
+      "name": "PoisonGas",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00CB": {
+      "elements": [
+        "F"
+      ],
+      "name": "StoneGas",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00CC": {
+      "elements": [
+        "F"
+      ],
+      "name": "SleepGas",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00CD": {
+      "elements": [
+        "F"
+      ],
+      "name": "TripGas",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00CE": {
+      "elements": [
+        "B"
+      ],
+      "name": "MadAttack",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00CF": {
+      "elements": [
+        "F",
+        "Wa"
+      ],
+      "name": "BeetleJuice",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00D0": {
+      "elements": [
+        "F",
+        "Wa"
+      ],
+      "name": "AcidBreath",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00D1": {
+      "elements": [
+        "X"
+      ],
+      "name": "DeadlyMoss",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00D2": {
+      "elements": [
+        "X"
+      ],
+      "name": "SphinxRiddle",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00D3": {
+      "elements": [
+        "So"
+      ],
+      "name": "Kylin'sSong",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00D4": {
+      "elements": [
+        "F"
+      ],
+      "name": "HPDrain",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00D5": {
+      "elements": [
+        "X"
+      ],
+      "name": "Seduction",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00D6": {
+      "elements": [
+        "X"
+      ],
+      "name": "Pheremone",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00D7": {
+      "elements": [
+        "X"
+      ],
+      "name": "Flash",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00D8": {
+      "elements": [
+        "X"
+      ],
+      "name": "SpiderNet",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00D9": {
+      "elements": [
+        "S",
+        "F"
+      ],
+      "name": "BladeNet",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00DA": {
+      "elements": [
+        "X"
+      ],
+      "name": "Ectoplasnet",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00DB": {
+      "elements": [
+        "E"
+      ],
+      "name": "Thunderbolt",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00DC": {
+      "elements": [
+        "F"
+      ],
+      "name": "PainPowder",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00DD": {
+      "elements": [
+        "X"
+      ],
+      "name": "PoisonMist",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00DE": {
+      "elements": [
+        "X"
+      ],
+      "name": "IllStorm",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00DF": {
+      "elements": [
+        "P",
+        "F"
+      ],
+      "name": "Windblast",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00E0": {
+      "elements": [
+        "P",
+        "F"
+      ],
+      "name": "Tornado",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00E1": {
+      "elements": [
+        "F",
+        "So"
+      ],
+      "name": "SacredSong",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00E2": {
+      "elements": [
+        "F"
+      ],
+      "name": "MagicHeal",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00E3": {
+      "elements": [
+        "X"
+      ],
+      "name": "Assist",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00E4": {
+      "elements": [
+        "X"
+      ],
+      "name": "Spoil",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00E5": {
+      "elements": [
+        "B",
+        "F"
+      ],
+      "name": "GremlinTouch",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00E6": {
+      "elements": [
+        "H"
+      ],
+      "name": "HeatWave",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00E7": {
+      "elements": [
+        "B",
+        "Th"
+      ],
+      "name": "MightyCyclone",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00E8": {
+      "elements": [
+        "F",
+        "Wa"
+      ],
+      "name": "Maelstrom",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00E9": {
+      "elements": [
+        "P",
+        "F"
+      ],
+      "name": "ElfShot",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00EA": {
+      "elements": [
+        "F",
+        "So"
+      ],
+      "name": "Supersonic",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00EB": {
+      "elements": [
+        "X",
+        "So"
+      ],
+      "name": "Lullaby",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00EC": {
+      "elements": [
+        "F",
+        "So"
+      ],
+      "name": "Scream",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00ED": {
+      "elements": [
+        "F",
+        "So"
+      ],
+      "name": "Siren",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00EE": {
+      "elements": [
+        "X",
+        "So"
+      ],
+      "name": "Da-dum",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00EF": {
+      "elements": [
+        "F"
+      ],
+      "name": "LightBall",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00F0": {
+      "elements": [
+        "B",
+        "Gr"
+      ],
+      "name": "Tremor",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00F1": {
+      "elements": [
+        "B",
+        "Gr"
+      ],
+      "name": "Quake",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00F2": {
+      "elements": [
+        "F",
+        "Gr"
+      ],
+      "name": "QuickSand",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00F3": {
+      "elements": [
+        "B"
+      ],
+      "name": "Rock",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00F4": {
+      "elements": [
+        "E",
+        "F"
+      ],
+      "name": "MagneticStorm",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00F5": {
+      "elements": [
+        "X",
+        "So"
+      ],
+      "name": "BattleSong",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00F6": {
+      "elements": [
+        "X",
+        "So"
+      ],
+      "name": "SadSong",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00F7": {
+      "elements": [
+        "C",
+        "E"
+      ],
+      "name": "Silf",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00F8": {
+      "elements": [
+        "H"
+      ],
+      "name": "Ignis",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00F9": {
+      "elements": [
+        "X"
+      ],
+      "name": "LifeRain",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00FA": {
+      "elements": [
+        "B"
+      ],
+      "name": "DivingPress",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00FB": {
+      "elements": [
+        "F",
+        "Wa"
+      ],
+      "name": "PoisonGun",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00FC": {
+      "elements": [
+        "B"
+      ],
+      "name": "CentipedeCrush",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00FD": {
+      "elements": [
+        "B"
+      ],
+      "name": "BoomerangHook",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00FE": {
+      "name": "Photosynthesis",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x00FF": {
+      "name": "Deathsynthesis",
+      "section": "monster",
+      "status": "documented"
+    },
+    "0x0100": {
+      "elements": [
+        "H"
+      ],
+      "name": "Sunray",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0101": {
+      "elements": [
+        "X"
+      ],
+      "name": "StarlightHeal",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0102": {
+      "elements": [
+        "H"
+      ],
+      "name": "FlashFire",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0103": {
+      "elements": [
+        "X",
+        "Wa"
+      ],
+      "name": "FlashFlood",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0104": {
+      "elements": [
+        "X"
+      ],
+      "name": "LightSword",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0105": {
+      "elements": [
+        "H",
+        "C",
+        "E"
+      ],
+      "name": "MegaWindblast",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0106": {
+      "elements": [
+        "S"
+      ],
+      "name": "Kyon'sSmile         (Attacks with Sword)",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0107": {
+      "elements": [
+        "H"
+      ],
+      "name": "Salamander",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0108": {
+      "elements": [
+        "F"
+      ],
+      "name": "PowerGrab",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0109": {
+      "elements": [
+        "X"
+      ],
+      "name": "Hidebehind",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x010A": {
+      "elements": [
+        "X"
+      ],
+      "name": "ShadowNet",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x010B": {
+      "elements": [
+        "S"
+      ],
+      "name": "Kyon'sSmile         (Attacks with Sword)",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x010C": {
+      "elements": [
+        "F"
+      ],
+      "name": "DarkSphere",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x010D": {
+      "elements": [
+        "X"
+      ],
+      "name": "ShadowServant",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x010E": {
+      "elements": [
+        "X"
+      ],
+      "name": "FireySpirit         (Takes one LP from user)",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x010F": {
+      "elements": [
+        "X"
+      ],
+      "name": "Macumba",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0110": {
+      "elements": [
+        "P",
+        "AA"
+      ],
+      "name": "VaporBlast",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0111": {
+      "elements": [
+        "X"
+      ],
+      "name": "Vanish",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0112": {
+      "elements": [
+        "B"
+      ],
+      "name": "ReverseGravity",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0113": {
+      "elements": [
+        "X"
+      ],
+      "name": "LightShift",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0114": {
+      "elements": [
+        "X"
+      ],
+      "name": "DarkShift",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0115": {
+      "elements": [
+        "X"
+      ],
+      "name": "Vortex",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0116": {
+      "elements": [
+        "P",
+        "E"
+      ],
+      "name": "SatelliteBeam",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0117": {
+      "elements": [
+        "F"
+      ],
+      "name": "Graviton",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0118": {
+      "elements": [
+        "X"
+      ],
+      "name": "DelayOrder",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0119": {
+      "elements": [
+        "X"
+      ],
+      "name": "TimeLeap",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x011A": {
+      "elements": [
+        "F"
+      ],
+      "name": "ChaosStream",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x011B": {
+      "elements": [
+        "F"
+      ],
+      "name": "TimeEclipse",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x011C": {
+      "name": "TimeTwister",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x011D": {
+      "name": "OverDrive",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x011E": {
+      "elements": [
+        "C",
+        "X"
+      ],
+      "name": "Revolution9         (Raises Stats)",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x011F": {
+      "elements": [
+        "C",
+        "X"
+      ],
+      "name": "Revolution9         (Attacks all enemies)",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0120": {
+      "elements": [
+        "F"
+      ],
+      "name": "EnergyChain",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0121": {
+      "elements": [
+        "H"
+      ],
+      "name": "Implosion",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0122": {
+      "elements": [
+        "X"
+      ],
+      "name": "PsychoArmor",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0123": {
+      "name": "Gate",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0124": {
+      "name": "PsychicPrison",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0125": {
+      "elements": [
+        "P",
+        "F"
+      ],
+      "name": "VermilionSand",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0126": {
+      "name": "Regeneration",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0127": {
+      "elements": [
+        "F"
+      ],
+      "name": "BackFire",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0128": {
+      "elements": [
+        "X"
+      ],
+      "name": "Fascination",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0129": {
+      "elements": [
+        "S",
+        "P"
+      ],
+      "name": "PhantasmShot        (Normal Spell)",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x012A": {
+      "elements": [
+        "X"
+      ],
+      "name": "GlassShield",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x012B": {
+      "elements": [
+        "S",
+        "P"
+      ],
+      "name": "PhantasmShot        (No description)",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x012C": {
+      "name": "MirrorShade",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x012D": {
+      "elements": [
+        "X"
+      ],
+      "name": "Selection",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x012E": {
+      "name": "BrokenGlass         (Just breaks glass)",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x012F": {
+      "name": "BrokenGlass         (Damages target enemy)",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0130": {
+      "elements": [
+        "X"
+      ],
+      "name": "MindHeal",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0131": {
+      "elements": [
+        "X"
+      ],
+      "name": "Spellbound",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0132": {
+      "elements": [
+        "X"
+      ],
+      "name": "Evaporate",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0133": {
+      "elements": [
+        "B"
+      ],
+      "name": "IronPole",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0134": {
+      "elements": [
+        "F",
+        "X"
+      ],
+      "name": "Lifewave",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0135": {
+      "elements": [
+        "X"
+      ],
+      "name": "Awakening",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0136": {
+      "elements": [
+        "X",
+        "So"
+      ],
+      "name": "Yell",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0137": {
+      "name": "Drunk",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0138": {
+      "elements": [
+        "F"
+      ],
+      "name": "RavaShot",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0139": {
+      "name": "PainDoubler",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x013A": {
+      "elements": [
+        "X"
+      ],
+      "name": "DeathCurse",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x013B": {
+      "elements": [
+        "X"
+      ],
+      "name": "SharpPain",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x013C": {
+      "elements": [
+        "C",
+        "X"
+      ],
+      "name": "RavaBarrire         (Full Spell)",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x013D": {
+      "elements": [
+        "F"
+      ],
+      "name": "MagiDefense",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x013E": {
+      "elements": [
+        "C",
+        "X"
+      ],
+      "name": "RavaBarrire         (Just the attack animation)",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x013F": {
+      "elements": [
+        "X"
+      ],
+      "name": "Possession",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0140": {
+      "elements": [
+        "S",
+        "P"
+      ],
+      "name": "Saber",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0141": {
+      "elements": [
+        "X"
+      ],
+      "name": "Shield",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0142": {
+      "elements": [
+        "X"
+      ],
+      "name": "Grail",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0143": {
+      "elements": [
+        "X"
+      ],
+      "name": "Gold",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0144": {
+      "elements": [
+        "X"
+      ],
+      "name": "Magician",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0145": {
+      "elements": [
+        "X"
+      ],
+      "name": "Death",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0146": {
+      "elements": [
+        "E"
+      ],
+      "name": "Tower",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0147": {
+      "name": "Fool",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0148": {
+      "elements": [
+        "X"
+      ],
+      "name": "VictoryRune",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0149": {
+      "elements": [
+        "X"
+      ],
+      "name": "VitalityRune",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x014A": {
+      "elements": [
+        "X"
+      ],
+      "name": "HideRune",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x014B": {
+      "elements": [
+        "X"
+      ],
+      "name": "FreedomRune",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x014C": {
+      "elements": [
+        "X"
+      ],
+      "name": "WallRune",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x014D": {
+      "elements": [
+        "X"
+      ],
+      "name": "DwarfRune",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x014E": {
+      "name": "StasisRune",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x014F": {
+      "name": "SoulRune",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0150": {
+      "elements": [
+        "X"
+      ],
+      "name": "Reviva              (Full Spell)",
+      "note": "skills.txt and vimes ability_data.txt disagree",
+      "section": "magic",
+      "status": "ambiguous"
+    },
+    "0x0151": {
+      "elements": [
+        "X"
+      ],
+      "name": "Sacrifice",
+      "note": "skills.txt and vimes ability_data.txt disagree",
+      "section": "magic",
+      "status": "ambiguous"
+    },
+    "0x0152": {
+      "elements": [
+        "S"
+      ],
+      "name": "DirtyFan",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0153": {
+      "elements": [
+        "X"
+      ],
+      "name": "ElementDissolve",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0154": {
+      "elements": [
+        "X"
+      ],
+      "name": "BraveHeart",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0155": {
+      "elements": [
+        "P"
+      ],
+      "name": "Enemy Fire",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0156": {
+      "elements": [
+        "X"
+      ],
+      "name": "Reviva              (Restores full HP)",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0157": {
+      "elements": [
+        "X"
+      ],
+      "name": "CounterMagician",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0158": {
+      "elements": [
+        "F"
+      ],
+      "name": "BlackCat",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0159": {
+      "elements": [
+        "F"
+      ],
+      "name": "Nightmare",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x015A": {
+      "elements": [
+        "F"
+      ],
+      "name": "Jackal",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x015B": {
+      "elements": [
+        "F"
+      ],
+      "name": "Cockatrice",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x015C": {
+      "elements": [
+        "F"
+      ],
+      "name": "Reaper",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x015D": {
+      "elements": [
+        "S",
+        "P",
+        "H"
+      ],
+      "name": "MillionDollers",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x015E": {
+      "elements": [
+        "X"
+      ],
+      "name": "ShadowHold",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x015F": {
+      "elements": [
+        "S"
+      ],
+      "name": "SilverFang",
+      "section": "magic",
+      "status": "documented"
+    },
+    "0x0160": {
+      "elements": [
+        "X"
+      ],
+      "name": "DodgeDrain",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0161": {
+      "elements": [
+        "X"
+      ],
+      "name": "DodgeTouch",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0162": {
+      "elements": [
+        "X"
+      ],
+      "name": "DodgeGale",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0163": {
+      "elements": [
+        "X"
+      ],
+      "name": "DodgeSmash",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0164": {
+      "elements": [
+        "X"
+      ],
+      "name": "DodgeTail",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0165": {
+      "elements": [
+        "F"
+      ],
+      "name": "DodgeNeedle",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0166": {
+      "elements": [
+        "F"
+      ],
+      "name": "DodgeTackle",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0167": {
+      "elements": [
+        "F"
+      ],
+      "name": "DodgeWing",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0168": {
+      "elements": [
+        "X"
+      ],
+      "name": "DodgePowder",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0169": {
+      "elements": [
+        "X"
+      ],
+      "name": "DodgeRiddle",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x016A": {
+      "elements": [
+        "X"
+      ],
+      "name": "DodgeSeduction",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x016B": {
+      "elements": [
+        "X"
+      ],
+      "name": "DodgeFlash",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x016C": {
+      "elements": [
+        "X"
+      ],
+      "name": "DodgeNet",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x016D": {
+      "elements": [
+        "X"
+      ],
+      "name": "DodgeThunder",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x016E": {
+      "elements": [
+        "X"
+      ],
+      "name": "DodgeTremor",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x016F": {
+      "elements": [
+        "X"
+      ],
+      "name": "DodgeRock",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0170": {
+      "elements": [
+        "X"
+      ],
+      "name": "DodgeGaze",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0171": {
+      "elements": [
+        "X"
+      ],
+      "name": "DodgeDeathGrip",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0172": {
+      "elements": [
+        "S"
+      ],
+      "name": "Kyon'sSmile         (Unknown Effect)",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0173": {
+      "elements": [
+        "S"
+      ],
+      "name": "Kyon'sSmile         (Unknown Effect)",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0174": {
+      "elements": [
+        "S"
+      ],
+      "name": "Kyon'sSmile         (Unknown Effect)",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0175": {
+      "elements": [
+        "S"
+      ],
+      "name": "Evasion Laser",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0176": {
+      "elements": [
+        "S"
+      ],
+      "name": "Evasion Rocket",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0177": {
+      "elements": [
+        "S"
+      ],
+      "name": "Evasion Bullet",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0178": {
+      "elements": [
+        "S"
+      ],
+      "name": "Virus",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0179": {
+      "elements": [
+        "S"
+      ],
+      "name": "Kyon'sSmile         (Unknown Effect)",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x017A": {
+      "elements": [
+        "S"
+      ],
+      "name": "ShootingMastery",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x017B": {
+      "elements": [
+        "S"
+      ],
+      "name": "CombatMastery",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x017C": {
+      "elements": [
+        "S"
+      ],
+      "name": "TigerProgram",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x017D": {
+      "elements": [
+        "S"
+      ],
+      "name": "DragonProgram",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x017E": {
+      "elements": [
+        "S"
+      ],
+      "name": "MaxwellProgram",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x017F": {
+      "elements": [
+        "S"
+      ],
+      "name": "SelfRepair",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0180": {
+      "elements": [
+        "E",
+        "F"
+      ],
+      "name": "Blaster",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0181": {
+      "elements": [
+        "S",
+        "F"
+      ],
+      "name": "BlasterSword",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0182": {
+      "elements": [
+        "X"
+      ],
+      "name": "Paralyzer",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0183": {
+      "elements": [
+        "F",
+        "So"
+      ],
+      "name": "SonicBlaster",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0184": {
+      "elements": [
+        "P",
+        "B",
+        "Wa"
+      ],
+      "name": "WaterCannon",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0185": {
+      "elements": [
+        "H"
+      ],
+      "name": "BeamCannon",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0186": {
+      "elements": [
+        "E"
+      ],
+      "name": "Magnablast",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0187": {
+      "elements": [
+        "P"
+      ],
+      "name": "Vulcan",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0188": {
+      "elements": [
+        "E"
+      ],
+      "name": "BoltCannon",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0189": {
+      "elements": [
+        "H"
+      ],
+      "name": "FlameThrower",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x018A": {
+      "elements": [
+        "E"
+      ],
+      "name": "BoltThrower",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x018B": {
+      "elements": [
+        "E",
+        "F"
+      ],
+      "name": "PlasmaBullet",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x018C": {
+      "elements": [
+        "P",
+        "B",
+        "H"
+      ],
+      "name": "HE-Rocket",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x018D": {
+      "elements": [
+        "P",
+        "B",
+        "H"
+      ],
+      "name": "RandomBaz",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x018E": {
+      "elements": [
+        "P",
+        "B",
+        "H"
+      ],
+      "name": "Missile",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x018F": {
+      "elements": [
+        "F",
+        "So"
+      ],
+      "name": "MecSonata",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0190": {
+      "elements": [
+        "S",
+        "H",
+        "F"
+      ],
+      "name": "BeamSword",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0191": {
+      "elements": [
+        "X"
+      ],
+      "name": "ECM",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0192": {
+      "elements": [
+        "B"
+      ],
+      "name": "Hammer",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0193": {
+      "elements": [
+        "B",
+        "H",
+        "E",
+        "F"
+      ],
+      "name": "StarLightShower",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0194": {
+      "elements": [
+        "B",
+        "H",
+        "E"
+      ],
+      "name": "KAMIKAZE-Crush",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0195": {
+      "name": "AT-Missile",
+      "note": "skills.txt and vimes ability_data.txt disagree",
+      "section": "dodge_mec",
+      "status": "ambiguous"
+    },
+    "0x0196": {
+      "elements": [
+        "P",
+        "B",
+        "H"
+      ],
+      "name": "MicroMissile",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0197": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F"
+      ],
+      "name": "InterceptSystem",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0198": {
+      "elements": [
+        "P",
+        "B"
+      ],
+      "name": "RailCannon",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x0199": {
+      "elements": [
+        "P"
+      ],
+      "name": "MachineVulcan",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x019A": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "Gr"
+      ],
+      "name": "Shock Soldier",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x019B": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "AA"
+      ],
+      "name": "Pop-Knight",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x019C": {
+      "elements": [
+        "F"
+      ],
+      "name": "Laser",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x019D": {
+      "elements": [
+        "F"
+      ],
+      "name": "Graviton",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x019E": {
+      "elements": [
+        "E"
+      ],
+      "name": "Bit",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x019F": {
+      "elements": [
+        "X"
+      ],
+      "name": "SatelliteLinker",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x01A0": {
+      "elements": [
+        "F"
+      ],
+      "name": "RepairPack",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x01A1": {
+      "elements": [
+        "B",
+        "H",
+        "E",
+        "F"
+      ],
+      "name": "CosmicRave",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x01A2": {
+      "elements": [
+        "X"
+      ],
+      "name": "LogicBomb",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x01A3": {
+      "elements": [
+        "X"
+      ],
+      "name": "Jammer",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x01A4": {
+      "elements": [
+        "X"
+      ],
+      "name": "HypnoFlash",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x01A5": {
+      "elements": [
+        "S",
+        "H",
+        "F"
+      ],
+      "name": "PluralSlash",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x01A6": {
+      "elements": [
+        "X"
+      ],
+      "name": "CounterECM",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x01A7": {
+      "elements": [
+        "X"
+      ],
+      "name": "V-MAX",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x01A8": {
+      "elements": [
+        "P"
+      ],
+      "name": "CrossHair",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x01A9": {
+      "elements": [
+        "P"
+      ],
+      "name": "RangeFire",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x01AA": {
+      "elements": [
+        "F"
+      ],
+      "name": "Magnify",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x01AB": {
+      "elements": [
+        "X"
+      ],
+      "name": "V-END",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x01AC": {
+      "elements": [
+        "B"
+      ],
+      "name": "HammerCrush",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x01AD": {
+      "elements": [
+        "X"
+      ],
+      "name": "EnergySupply",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x01AE": {
+      "elements": [
+        "B",
+        "H"
+      ],
+      "name": "Shoot-All",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x01AF": {
+      "elements": [
+        "F"
+      ],
+      "name": "GhostCannon",
+      "section": "dodge_mec",
+      "status": "documented"
+    },
+    "0x01B0": {
+      "elements": [
+        "S",
+        "F"
+      ],
+      "name": "MysticSword",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01B1": {
+      "elements": [
+        "P"
+      ],
+      "name": "Needle",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01B2": {
+      "elements": [
+        "P"
+      ],
+      "name": "Lance",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01B3": {
+      "elements": [
+        "F"
+      ],
+      "name": "BloodSucker",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01B4": {
+      "elements": [
+        "S"
+      ],
+      "name": "Blade",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01B5": {
+      "elements": [
+        "F"
+      ],
+      "name": "MagicHeal",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01B6": {
+      "elements": [
+        "B"
+      ],
+      "name": "GremlinEffect",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01B7": {
+      "elements": [
+        "X",
+        "Gz"
+      ],
+      "name": "Hypnotism",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01B8": {
+      "elements": [
+        "H"
+      ],
+      "name": "FireBreath",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01B9": {
+      "elements": [
+        "F",
+        "So"
+      ],
+      "name": "Oscillation",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01BA": {
+      "elements": [
+        "X"
+      ],
+      "name": "PsyNet",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01BB": {
+      "elements": [
+        "S",
+        "H"
+      ],
+      "name": "HeatSmash",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01BC": {
+      "elements": [
+        "X"
+      ],
+      "name": "Flash",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01BD": {
+      "elements": [
+        "S"
+      ],
+      "name": "GriffithScratch",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01BE": {
+      "elements": [
+        "X"
+      ],
+      "name": "Portrait",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01BF": {
+      "elements": [
+        "X"
+      ],
+      "name": "Portrait",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01C0": {
+      "elements": [
+        "B",
+        "F"
+      ],
+      "name": "MysticGlove",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01C1": {
+      "elements": [
+        "X",
+        "So"
+      ],
+      "name": "Da-dum",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01C2": {
+      "elements": [
+        "P",
+        "B",
+        "Wa"
+      ],
+      "name": "WaterCannon",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01C3": {
+      "elements": [
+        "F"
+      ],
+      "name": "DeadlyPowder",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01C4": {
+      "elements": [
+        "X"
+      ],
+      "name": "Spoil",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01C5": {
+      "elements": [
+        "B"
+      ],
+      "name": "PoisonusBlow",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01C6": {
+      "elements": [
+        "B"
+      ],
+      "name": "Feeler",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01C7": {
+      "elements": [
+        "X"
+      ],
+      "name": "Psych-out",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01C8": {
+      "elements": [
+        "H",
+        "E"
+      ],
+      "name": "SpreadBlaster",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01C9": {
+      "elements": [
+        "S",
+        "P"
+      ],
+      "name": "HellWing",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01CA": {
+      "elements": [
+        "P"
+      ],
+      "name": "GrapeShot",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01CB": {
+      "elements": [
+        "C"
+      ],
+      "name": "ArcticBreath",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01CC": {
+      "elements": [
+        "S",
+        "C"
+      ],
+      "name": "IceSmash",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01CD": {
+      "elements": [
+        "F"
+      ],
+      "name": "Crystalizer",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01CE": {
+      "elements": [
+        "B",
+        "F"
+      ],
+      "name": "TigerRampage",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01CF": {
+      "elements": [
+        "B",
+        "F"
+      ],
+      "name": "TigerRampage",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01D0": {
+      "elements": [
+        "B",
+        "F"
+      ],
+      "name": "MysticBoots",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01D1": {
+      "elements": [
+        "X",
+        "Gr"
+      ],
+      "name": "Sweep",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01D2": {
+      "elements": [
+        "B"
+      ],
+      "name": "PowerKick",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01D3": {
+      "elements": [
+        "E"
+      ],
+      "name": "ThunderBall",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01D4": {
+      "elements": [
+        "S",
+        "F"
+      ],
+      "name": "BladeNet",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01D5": {
+      "elements": [
+        "X"
+      ],
+      "name": "Assist",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01D6": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "Gr"
+      ],
+      "name": "Spiders",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01D7": {
+      "elements": [
+        "X"
+      ],
+      "name": "Suffocation",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01D8": {
+      "elements": [
+        "B",
+        "Gr"
+      ],
+      "name": "Tremor",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01D9": {
+      "elements": [
+        "X"
+      ],
+      "name": "MysteryTap",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01DA": {
+      "elements": [
+        "F",
+        "Gr"
+      ],
+      "name": "QuickSand",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01DB": {
+      "elements": [
+        "E"
+      ],
+      "name": "ThunderBolt",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01DC": {
+      "elements": [
+        "S"
+      ],
+      "name": "Assasinate",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01DD": {
+      "elements": [
+        "S",
+        "B",
+        "So"
+      ],
+      "name": "TitasWave",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01DE": {
+      "elements": [
+        "X"
+      ],
+      "name": "Portrait",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01DF": {
+      "elements": [
+        "B",
+        "H"
+      ],
+      "name": "Shoot-All",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01E0": {
+      "elements": [
+        "E"
+      ],
+      "name": "Bit",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01E1": {
+      "elements": [
+        "X"
+      ],
+      "name": "PoisonDamage",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01E2": {
+      "elements": [
+        "X"
+      ],
+      "name": "PowerSave",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01E3": {
+      "elements": [
+        "S",
+        "P",
+        "B",
+        "H",
+        "C",
+        "E",
+        "F"
+      ],
+      "name": "BervaCounter",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01E4": {
+      "elements": [
+        "F"
+      ],
+      "name": "MoonScraper",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01E5": {
+      "elements": [
+        "B",
+        "H"
+      ],
+      "name": "GodHand",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01E6": {
+      "elements": [
+        "B",
+        "H",
+        "C",
+        "E"
+      ],
+      "name": "LordCannon",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01E7": {
+      "elements": [
+        "X"
+      ],
+      "name": "Lord'sDinner",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01E8": {
+      "elements": [
+        "P"
+      ],
+      "name": "Vulcan",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01E9": {
+      "elements": [
+        "S"
+      ],
+      "name": "ChainHeat",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01EA": {
+      "elements": [
+        "B"
+      ],
+      "name": "IronBall",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01EB": {
+      "elements": [
+        "E",
+        "F"
+      ],
+      "name": "Retribution",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01EC": {
+      "elements": [
+        "X"
+      ],
+      "name": "SpaceContact",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01ED": {
+      "elements": [
+        "F"
+      ],
+      "name": "Carnage",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01EE": {
+      "elements": [
+        "X",
+        "Gz"
+      ],
+      "name": "Hypnotism",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01EF": {
+      "elements": [
+        "X"
+      ],
+      "name": "LifeSteal",
+      "section": "mystic_enemy",
+      "status": "documented"
+    },
+    "0x01F0": {
+      "elements": [
+        "P",
+        "H"
+      ],
+      "name": "HyperBazooka",
+      "section": "enemy",
+      "status": "documented"
+    },
+    "0x01F1": {
+      "elements": [
+        "F"
+      ],
+      "name": "BusterLauncher",
+      "section": "enemy",
+      "status": "documented"
+    },
+    "0x01F2": {
+      "elements": [
+        "X"
+      ],
+      "name": "Smile",
+      "section": "enemy",
+      "status": "documented"
+    },
+    "0x01F3": {
+      "elements": [
+        "F"
+      ],
+      "name": "3Mistresses",
+      "section": "enemy",
+      "status": "documented"
+    },
+    "0x01F4": {
+      "elements": [
+        "F"
+      ],
+      "name": "AntiStone",
+      "section": "enemy",
+      "status": "documented"
+    },
+    "0x01F5": {
+      "elements": [
+        "S"
+      ],
+      "name": "Sabers",
+      "section": "enemy",
+      "status": "documented"
+    },
+    "0x01F6": {
+      "elements": [
+        "X"
+      ],
+      "name": "Call",
+      "section": "enemy",
+      "status": "documented"
+    },
+    "0x01F7": {
+      "name": "RunAway",
+      "section": "enemy",
+      "status": "documented"
+    },
+    "0x01F8": {
+      "elements": [
+        "P"
+      ],
+      "name": "StunNeedle",
+      "section": "enemy",
+      "status": "documented"
+    },
+    "0x01F9": {
+      "elements": [
+        "X"
+      ],
+      "name": "Salmonella",
+      "section": "enemy",
+      "status": "documented"
+    },
+    "0x01FA": {
+      "elements": [
+        "X"
+      ],
+      "name": "FlashBomb",
+      "section": "enemy",
+      "status": "documented"
+    },
+    "0x01FB": {
+      "elements": [
+        "H",
+        "C",
+        "E"
+      ],
+      "name": "MagicStone",
+      "section": "enemy",
+      "status": "documented"
+    },
+    "0x01FC": {
+      "elements": [
+        "S",
+        "H",
+        "F"
+      ],
+      "name": "FinalStrike",
+      "section": "enemy",
+      "status": "documented"
+    },
+    "0x01FD": {
+      "elements": [
+        "B"
+      ],
+      "name": "Trample",
+      "section": "enemy",
+      "status": "documented"
+    },
+    "0x01FE": {
+      "elements": [
+        "P",
+        "B"
+      ],
+      "name": "HeavyRailCannon",
+      "section": "enemy",
+      "status": "documented"
+    },
+    "0x01FF": {
+      "name": "Defense",
+      "section": "enemy",
+      "status": "documented"
+    }
+  },
+  "meta": {
+    "count": 512,
+    "derived_from": "docs/gameinfo/json/abilities.json",
+    "description": "Ability id to name lookup for the save viewer",
+    "element_legend": {
+      "AA": "Anti-air attribute",
+      "B": "Blunt element",
+      "C": "Cold element",
+      "E": "Electrical element",
+      "F": "Force element",
+      "Gr": "Ground attribute",
+      "Gz": "Gaze attribute",
+      "H": "Heat element",
+      "P": "Piercing element",
+      "S": "Slashing element",
+      "So": "Sonic attribute",
+      "Th": "Throw attribute",
+      "Wa": "Water attribute",
+      "X": "Status FX element"
+    },
+    "element_order": [
+      "S",
+      "P",
+      "B",
+      "H",
+      "C",
+      "E",
+      "F",
+      "X",
+      "Gr",
+      "Gz",
+      "So",
+      "Wa",
+      "Th",
+      "AA"
+    ],
+    "element_source": "docs/gameinfo/zaraktheus/ability_elements.htm",
+    "generator": "tests/sfr_save_editor/build_gameinfo.py",
+    "grid_rule": "ability_id = (byte - 0x38) * 8 + bit, most significant bit first",
+    "status_note": "Names are documented community data, not extracted from the game's asset tables. 'ambiguous' marks ids where the two community sources disagree."
+  },
+  "sections": [
+    {
+      "ability_ids": [
+        0,
+        63
+      ],
+      "basis": "documented header in char_status.txt (0x38-0x3F)",
+      "bytes": 8,
+      "key": "sword",
+      "label": "Sword arts",
+      "offset": "0x38"
+    },
+    {
+      "ability_ids": [
+        64,
+        79
+      ],
+      "basis": "documented header in char_status.txt (0x40-0x41)",
+      "bytes": 2,
+      "key": "gun",
+      "label": "Gun arts",
+      "offset": "0x40"
+    },
+    {
+      "ability_ids": [
+        80,
+        127
+      ],
+      "basis": "documented header in char_status.txt (0x42-0x47)",
+      "bytes": 6,
+      "key": "fighting",
+      "label": "Fighting arts",
+      "offset": "0x42"
+    },
+    {
+      "ability_ids": [
+        128,
+        255
+      ],
+      "basis": "inferred from evidence: exactly 128 slots matching the guide's '128 different Monster Abilities', ids 0x80-0xFF per the transformation tables, and held only by Monster-race characters in all 158 INIT records; char_status.txt itself leaves 0x48-0x57 as '??'",
+      "bytes": 16,
+      "key": "monster",
+      "label": "Monster abilities",
+      "offset": "0x48"
+    },
+    {
+      "ability_ids": [
+        256,
+        351
+      ],
+      "basis": "documented header in char_status.txt (0x58-0x63)",
+      "bytes": 12,
+      "key": "magic",
+      "label": "Magic",
+      "offset": "0x58"
+    },
+    {
+      "ability_ids": [
+        352,
+        431
+      ],
+      "basis": "documented header in char_status.txt (0x64-0x6D)",
+      "bytes": 10,
+      "key": "dodge_mec",
+      "label": "Dodge / Mec arts",
+      "offset": "0x64"
+    },
+    {
+      "ability_ids": [
+        432,
+        495
+      ],
+      "basis": "documented header in char_status.txt (0x6E-0x75)",
+      "bytes": 8,
+      "key": "mystic_enemy",
+      "label": "Mystic / Enemy skills",
+      "offset": "0x6E"
+    },
+    {
+      "ability_ids": [
+        496,
+        511
+      ],
+      "basis": "inferred: beyond the last PC category (0x1EF), held by no character in any INIT set or in the save, and used by enemies as AI/boss actions (Defense, RunAway, Trample, HeavyRailCannon); char_status.txt says '??'",
+      "bytes": 2,
+      "key": "enemy",
+      "label": "Enemy abilities",
+      "offset": "0x76"
+    }
+  ]
+}

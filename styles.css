@@ -1,0 +1,1953 @@
+/* SaGa Frontier Remastered Save Tool - presentation only. */
+
+:root {
+  --bg: #12141a;
+  --panel: #1a1d25;
+  --panel-soft: #21252f;
+  --line: #2c313c;
+  --text: #e6e8ee;
+  --muted: #9aa2b1;
+  --accent: #6ea8fe;
+  --ok: #57c78a;
+  --warn: #e0b153;
+  --error: #ef6b73;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, #1b1f28, #151821);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 0.01em;
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.header-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.build-stamp {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.pill {
+  flex: 0 0 auto;
+  padding: 5px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+
+.panel h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+
+.card h4 {
+  margin: 16px 0 8px;
+  font-size: 13px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.hint {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+code {
+  font-family: var(--mono);
+  font-size: 12px;
+  background: var(--panel-soft);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+.file-drop {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px dashed #3a4150;
+  border-radius: 8px;
+  background: var(--panel-soft);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.file-drop:hover { border-color: var(--accent); }
+.file-drop input {
+  /* The native file control has a large intrinsic width; letting it shrink is
+     what keeps this row inside a phone-width panel. */
+  min-width: 0;
+  flex: 1 1 140px;
+  max-width: 260px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.file-info { margin-top: 14px; }
+
+.status {
+  margin-top: 12px;
+  padding: 9px 12px;
+  border-radius: 7px;
+  font-size: 13px;
+  border: 1px solid var(--line);
+  background: var(--panel-soft);
+}
+
+.status-ok { border-color: #2f5c46; color: var(--ok); }
+.status-warn { border-color: #5c4a2b; color: var(--warn); }
+.status-error { border-color: #5c2f33; color: var(--error); }
+.status-busy { color: var(--muted); }
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+/* The sidebar pins as one unit: slots on top, page index under them. It caps
+   to the viewport; if the three slot rows and the index do not fit, the whole
+   sidebar scrolls rather than crushing either control. */
+.layout-aside {
+  position: sticky;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-self: start;
+  min-width: 0;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+/* The slot panel keeps its three rows. If the sidebar cannot fit both the
+   slots and the index, the sidebar scrolls rather than crushing either. */
+.layout-aside > section {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 0 0 auto;
+}
+
+.layout-aside #slot-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-aside .slots {
+  flex: 0 0 auto;
+}
+
+/* Grid and flex items default to min-width: auto, which lets wide content
+   (tables, long ids) push a panel past the viewport instead of scrolling
+   inside its own .table-scroll. Zero here, scrolling inside stays the job of
+   the element that owns the overflow. */
+.layout > *,
+.panel,
+.detail-grid > * {
+  min-width: 0;
+}
+
+/* Page index (inside the pinned sidebar) */
+
+.page-index {
+  /* Never shrink: every section stays listed even when the sidebar is capped. */
+  flex: 0 0 auto;
+}
+
+.page-index h2 { margin-bottom: 6px; }
+.page-index .hint { margin-bottom: 0; }
+
+#page-index-view[hidden],
+.character-rail[hidden] { display: none; }
+
+.page-index-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.page-index-head h2 { margin: 0; }
+
+.rail-open-character,
+.rail-back {
+  flex: 0 0 auto;
+  padding: 2px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.rail-open-character:hover:not(:disabled),
+.rail-back:hover { border-color: var(--accent); color: var(--text); }
+
+.rail-open-character:disabled { opacity: 0.4; cursor: default; }
+
+/* The character summary drills over the page index, using the same panel
+   footprint instead of adding a third sidebar card. */
+.character-rail { display: flex; flex-direction: column; }
+
+.character-rail-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.character-rail-head h2 { margin: 0; }
+
+.rail-character { min-width: 0; }
+
+.rail-character-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.rail-character-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.rail-character-meta {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.rail-facts {
+  display: grid;
+  gap: 3px;
+  margin: 6px 0 0;
+}
+
+.rail-facts > div {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 6px;
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.rail-facts dt { color: var(--muted); }
+.rail-facts dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.rail-raw { color: var(--muted); font-size: 10px; }
+
+.rail-vitals {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  margin-top: 7px;
+  padding: 5px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.rail-vital { display: flex; flex-direction: column; min-width: 0; }
+
+.rail-vital-label,
+.rail-stat-label {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.rail-vital-value {
+  overflow: hidden;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rail-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 3px 6px;
+  margin-top: 6px;
+}
+
+.rail-stat {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 3px;
+  min-width: 0;
+}
+
+.rail-stat-value {
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.rail-counts {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.page-index-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Two columns let the whole index sit beside three slot rows on a laptop
+   screen without the sidebar scrolling. The phone copy stays one column. */
+#page-index-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+  gap: 0;
+}
+
+.page-index-list[hidden] { display: none; }
+
+.page-index-link {
+  display: block;
+  padding: 5px 8px;
+  border-left: 2px solid transparent;
+  border-radius: 6px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* 26px desktop rows: the index has to clear three *populated* slot rows plus
+   the fast row and pager, not just the shorter empty rows. The phone copy
+   keeps the roomier 30px links. */
+#page-index-list .page-index-link { padding: 3px 8px; }
+
+.page-index-link:hover { background: rgba(255, 255, 255, 0.04); }
+
+.page-index-link.is-active {
+  border-left-color: var(--accent);
+  background: rgba(110, 168, 254, 0.10);
+  color: var(--accent);
+}
+
+/* The same list is a collapsed block above the detail below 860px. */
+.page-index-mobile { display: none; }
+.page-index-mobile[hidden] { display: none; }
+.page-index-mobile summary {
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.page-index-mobile .page-index-list { margin-top: 8px; }
+
+/* An index jump should not put the card flush against the viewport edge. */
+#detail section.card { scroll-margin-top: 16px; }
+
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; }
+  .layout-aside {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    align-self: auto;
+  }
+  #page-index { display: none; }
+  .page-index-mobile {
+    display: block;
+    margin-bottom: 14px;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel-soft);
+  }
+}
+
+/* Slot picker */
+
+.slots {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* One page is three rows; the pager, not a scrollbar, moves between pages. */
+.slots > li[hidden] { display: none; }
+
+/* The filter lives in the panel header so it costs no vertical space. */
+.slot-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.slot-heading h2 { margin: 0; }
+
+.slot-filter {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.slot-filter input {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.slot-filter input:disabled { cursor: default; opacity: 0.45; }
+
+/* Quick and Auto are secondary shortcuts, one row under the three slots. */
+.slot-fast { margin-top: 6px; }
+.slot-fast:empty { display: none; }
+
+.slot-fast-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.slot-fast-button {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  min-width: 0;
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.2;
+  text-align: left;
+  cursor: pointer;
+}
+
+.slot-fast-button:hover:not(:disabled) { border-color: #46506a; }
+.slot-fast-button:disabled { opacity: 0.42; cursor: default; }
+
+.slot-fast-button.is-selected {
+  border-color: var(--accent);
+  background: rgba(110, 168, 254, 0.10);
+}
+
+.slot-fast-kind {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.slot-fast-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.slot-pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.slot-page {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.pager-button {
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel-soft);
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.pager-button:hover:not(:disabled) { border-color: var(--accent); }
+.pager-button:disabled { opacity: 0.4; cursor: default; }
+
+.slot {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 2px 10px;
+  width: 100%;
+  text-align: left;
+  padding: 9px 11px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel-soft);
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+}
+
+.slot:hover:not(:disabled) { border-color: #46506a; }
+.slot:disabled { cursor: default; opacity: 0.42; }
+
+.slot.is-selected {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px rgba(110, 168, 254, 0.35);
+}
+
+.slot-index {
+  grid-row: span 3;
+  align-self: center;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.slot-name { font-size: 14px; }
+
+.slot-meta {
+  grid-column: 2;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Room names are long, so they get their own line and are clamped to two;
+   the full name stays available in the button's title. */
+.slot-map {
+  grid-column: 2;
+  font-size: 12px;
+  line-height: 1.35;
+  color: var(--muted);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.slot-map.is-unmapped { font-style: italic; opacity: 0.75; }
+
+.map-name { color: var(--text); }
+.map-name.is-unmapped { color: var(--muted); font-style: italic; }
+
+/* Detail */
+
+.detail-grid {
+  display: grid;
+  /* min() lets a track fall back to the container width below 280px, so cards
+     do not force the page wider than a phone. */
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.card {
+  background: var(--panel-soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.card-wide { grid-column: 1 / -1; }
+
+.kv {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 6px 16px;
+  margin: 0;
+  font-size: 13px;
+}
+
+.kv dt { color: var(--muted); }
+
+/* Values can be long unbreakable tokens: the 64-character SHA-256, and
+   JSON.stringify output in the round-trip report. Without a break opportunity
+   they widen the grid track past the panel and the whole page scrolls sideways
+   at narrow widths. anywhere breaks only when there is no other choice, so the
+   hash keeps one line where there is room; minmax(0, 1fr) above lets the track
+   shrink below the token's intrinsic width. */
+.kv dd {
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.kv-inline { grid-template-columns: max-content minmax(0, 1fr); }
+
+.chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+}
+
+.chip {
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #262b36;
+  font-size: 13px;
+}
+
+.count {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.table-scroll { overflow-x: auto; }
+
+.grid {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.grid th,
+.grid td {
+  padding: 5px 8px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.grid th {
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: sticky;
+  top: 0;
+  background: var(--panel-soft);
+}
+
+.grid tbody tr:hover { background: #262b36; }
+
+.grid .num { text-align: right; font-variant-numeric: tabular-nums; }
+.grid .mono { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+
+/* Ability table: names wrap rather than forcing one very wide line. */
+.grid-abilities td {
+  white-space: normal;
+  min-width: 96px;
+  vertical-align: top;
+}
+
+.grid-abilities td:last-child { min-width: 260px; }
+
+.group-label {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 6px;
+  border-radius: 999px;
+  font-size: 10px;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  vertical-align: 1px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.badge-documented { color: #8fa6c4; border-color: #33415a; }
+.badge-asset { color: #7fb3d5; border-color: #2f4a5c; }
+.badge-placeholder { color: #8a8f99; border-color: #3a3f4a; }
+.badge-ambiguous { color: var(--warn); border-color: #5c4a2b; }
+.badge-unknown,
+.badge-unmapped { color: var(--error); border-color: #5c2f33; }
+
+.empty {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-style: italic;
+}
+
+.error {
+  margin: 0;
+  color: var(--error);
+  font-size: 13px;
+}
+
+.app-footer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px 32px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.app-footer p { margin: 0; }
+
+/* Keyboard controls disclosure: one line at the top, full table when opened. */
+
+.keyboard-help {
+  max-width: 1280px;
+  margin: 16px auto 0;
+  padding: 0 24px;
+}
+
+.keyboard-help > summary {
+  width: fit-content;
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel-soft);
+  color: var(--muted);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.keyboard-help > summary:hover { color: var(--text); }
+.keyboard-help[open] > summary { color: var(--text); border-color: #3a4150; }
+
+.keyboard-help > summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.keys-panel { margin-top: 10px; }
+
+.keys {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.keys th,
+.keys td {
+  padding: 6px 10px 6px 0;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.keys th {
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.keys td:nth-child(2) { color: var(--muted); white-space: nowrap; }
+.keys tbody tr:last-child td { border-bottom: 0; }
+
+.kbd,
+kbd {
+  display: inline-block;
+  min-width: 20px;
+  padding: 1px 6px;
+  border: 1px solid var(--line);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  background: #262b36;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.keys-note { margin: 10px 0 0; }
+
+/* Position of the selected record, shown in the detail header. */
+.roster-position {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+/* Landing area and data container */
+
+.drop-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 160px;
+  padding: 28px 20px;
+  border: 1px dashed #3a4150;
+  border-radius: 10px;
+  background: var(--panel-soft);
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 120ms ease, background 120ms ease;
+}
+
+.drop-zone:hover,
+.drop-zone:focus-visible { border-color: var(--accent); background: #242a35; }
+
+.drop-zone.is-dragging {
+  border-color: var(--accent);
+  border-style: solid;
+  background: #263041;
+}
+
+.drop-title { margin: 0; font-size: 15px; }
+.drop-sub { margin: 0; color: var(--muted); font-size: 13px; }
+
+.browse-row {
+  margin-top: 12px;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.file-drop { max-width: 100%; }
+
+/* Live folder (Chromium only; the whole block is hidden without the API) */
+
+.live-save {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.live-save[hidden] { display: none; }
+
+.live-save-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.live-save h3 {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.live-state {
+  flex: 0 0 auto;
+  padding: 2px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.live-state.is-connected { border-color: #2f5c46; color: var(--ok); }
+.live-state.is-watching { border-color: #33415a; color: var(--accent); }
+
+.live-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.live-button,
+.snapshot-export {
+  padding: 4px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.live-button:hover:not(:disabled),
+.snapshot-export:hover { border-color: var(--accent); }
+.live-button:disabled { opacity: 0.45; cursor: default; }
+
+.live-status {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.live-status-ok { color: var(--ok); }
+.live-status-warn { color: var(--warn); }
+.live-status-error { color: var(--error); }
+.live-status-busy { color: var(--muted); }
+
+.live-settings { margin-top: 10px; }
+
+.live-settings > summary {
+  width: fit-content;
+  color: var(--muted);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.live-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(175px, 100%), 1fr));
+  gap: 8px 16px;
+  margin-top: 10px;
+}
+
+.live-check,
+.live-field {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.live-field select {
+  min-width: 0;
+  max-width: 100%;
+  padding: 2px 4px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--panel-soft);
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+}
+
+.snapshot-block {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.snapshot-block[hidden] { display: none; }
+
+.snapshot-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.snapshot-head h4 {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.snapshot-head .hint { margin: 0; }
+
+.snapshot-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.snapshot-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+}
+
+.snapshot-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.snapshot-time { font-variant-numeric: tabular-nums; }
+.snapshot-meta { color: var(--muted); font-size: 11px; overflow-wrap: anywhere; }
+
+.snapshot-export { flex: 0 0 auto; padding: 2px 9px; font-size: 11px; }
+
+.data-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.data-container[hidden] { display: none; }
+
+.byte-inspector h3 { margin: 14px 0 8px; font-size: 13px; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.06em; }
+
+.grid-hex .hex-bytes { color: var(--text); white-space: pre; }
+.grid-hex .hex-ascii { color: var(--muted); white-space: pre; }
+.grid-hex td { border-bottom: none; }
+.grid-hex tbody tr:nth-child(even) { background: rgba(255, 255, 255, 0.02); }
+
+.hex-ascii { white-space: pre; }
+
+/* Character drill-down */
+
+.row-selectable { cursor: pointer; }
+
+/* The name cell carries the real control, so the row keeps its table role. */
+.row-select {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.row-select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.row-select[aria-pressed="true"] { color: #cfe0ff; }
+
+.is-selected-row,
+.grid tbody tr.is-selected-row:hover {
+  background: #2b3446;
+  box-shadow: inset 2px 0 0 var(--accent);
+}
+
+.character-detail .kv { margin-bottom: 12px; }
+
+/* Clears the sticky table header when the card is scrolled into view. */
+.character-detail { scroll-margin-top: 12px; }
+
+.detail-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  gap: 16px 28px;
+  align-items: start;
+}
+
+.detail-block h4 { margin: 14px 0 6px; }
+.detail-block h4:first-child { margin-top: 0; }
+
+.detail-block h5 {
+  margin: 10px 0 4px;
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.detail-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 13px;
+}
+
+.detail-ability,
+.detail-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 3px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.detail-item .mono { flex: none; }
+
+/* Mec body profile: the stat table and the per-part boost note. */
+.mec-stat-name {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.detail-boosts {
+  flex: 1;
+  text-align: right;
+  color: var(--muted);
+}
+
+.element-flags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  flex: none;
+}
+
+.element-flag {
+  display: inline-block;
+  min-width: 20px;
+  padding: 0 5px;
+  border-radius: 4px;
+  border: 1px solid #33415a;
+  background: #202838;
+  color: #9db6d8;
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 16px;
+  text-align: center;
+  cursor: help;
+}
+
+.empty-flags {
+  color: var(--muted);
+  font-size: 11px;
+  font-family: var(--mono);
+}
+
+.chip-unknown {
+  color: var(--warn);
+  border-color: #5c4a2b;
+}
+
+/* Mystic absorbs: one row per weapon, with the stored boosts under the name. */
+.mystic-value { display: block; }
+.mystic-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+}
+.mystic-line {
+  display: block;
+  margin-top: 3px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.mystic-line .mono { color: var(--text); }
+
+.learned-group + .learned-group { margin-top: 6px; }
+
+/* Scenario flags: the label and meaning wrap, the byte and value stay narrow. */
+.grid-flags td:nth-child(3),
+.grid-flags td:nth-child(4) { white-space: normal; }
+
+.grid-flags td:nth-child(3) { min-width: 140px; }
+.grid-flags td:nth-child(4) { min-width: 220px; }
+
+.flag-meaning { color: var(--text); }
+.flag-meaning-pair { margin: 0 0 3px; }
+.flag-meaning-pair:last-child { margin-bottom: 0; }
+.flag-meaning-pair .flag-meaning { display: block; }
+.flag-meaning-ja {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+/* Block labels follow the same English-over-source shape as the meanings. */
+.flag-block-pair .flag-block-en { display: block; }
+.flag-block-ja {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.45;
+}
+.flag-unknown { color: var(--muted); font-style: italic; }
+
+.flag-summary { margin: 8px 0 10px; }
+
+.flag-view {
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--line);
+}
+
+.flag-view > summary {
+  padding: 4px 0;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.flag-view > summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.flag-view-title { color: var(--text); }
+
+/* Long views scroll inside the card so a 512-row table cannot push the page
+   into one endless column; the column header stays at the top of the scroll. */
+.flag-scroll { max-height: 420px; overflow-y: auto; }
+
+.flag-scroll thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--panel-soft);
+}
+
+.flag-row-unset td { opacity: 0.55; }
+.flag-row-unset .flag-unknown { font-style: normal; }
+
+.flag-empty { margin: 8px 0 0; }
+
+/* The phone layout below turns each byte row into a stacked block, so the
+   column labels move into the cells; on wider screens the table header does
+   that job and these labels stay out of the layout. */
+.flag-cell-label { display: none; }
+
+.flag-glossary {
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+
+.flag-glossary > summary {
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.flag-glossary > summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.flag-glossary-list { margin-top: 8px; font-size: 12px; row-gap: 8px; }
+.flag-glossary-list dt { white-space: normal; }
+
+.rank-note { color: var(--muted); }
+
+/* INIT sets: one collapsible block per set, the best match open by default. */
+
+.init-score {
+  margin: 0 0 6px;
+  font-size: 13px;
+}
+
+.init-prediction {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.init-set {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #232833;
+}
+
+.init-set.is-best { border-color: #33415a; }
+
+.init-set > summary {
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.init-set > summary:hover { color: #cfe0ff; }
+
+.init-set > summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.init-set .table-scroll { margin-top: 8px; }
+
+.grid-init tr.init-differs td { color: var(--warn); }
+
+/* Shop purchase record: same collapsible shape as the INIT sets, with the
+   complete tables highlighted and unbought stock muted. */
+
+.shop-label-warning {
+  margin: 0 0 10px;
+  padding: 8px 10px;
+  border: 1px solid #5c4a2b;
+  border-left: 3px solid var(--warn);
+  border-radius: 6px;
+  background: #272216;
+  color: var(--warn);
+  font-size: 12px;
+}
+
+
+.shop-set {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #232833;
+}
+
+.shop-set.is-complete { border-color: #2f4a5c; }
+
+.shop-set > summary {
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.shop-set > summary:hover { color: #cfe0ff; }
+
+.shop-set > summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.shop-set .table-scroll { margin-top: 8px; }
+
+.grid-shop td:first-child { white-space: normal; min-width: 140px; }
+.grid-shop tr.shop-unbought td { color: var(--muted); }
+.grid-shop tr.shop-bought td.num { color: var(--accent); }
+
+/* Still-to-buy checklist: grouped by location, then by stock table, with the
+   items inline so a shopping trip can be read at a glance without opening the
+   ledger blocks above. */
+.shop-remaining {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.shop-remaining h4 {
+  margin: 0 0 4px;
+  font-size: 13px;
+}
+
+.shop-remaining-group {
+  padding: 6px 0 2px;
+  border-top: 1px dashed var(--line);
+}
+
+.shop-remaining-group > summary {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.shop-remaining-group > summary::-webkit-details-marker { display: none; }
+
+.shop-remaining-group > summary::before {
+  content: '\25B8';
+  display: inline-block;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.shop-remaining-group[open] > summary::before { transform: rotate(90deg); }
+
+.shop-remaining-group > summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.shop-remaining-head {
+  display: flex;
+  flex: 1;
+  align-items: baseline;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.shop-remaining-location {
+  font-size: 13px;
+  font-weight: 600;
+  color: #cfe0ff;
+}
+
+.shop-remaining-row {
+  margin-left: 10px;
+  padding: 1px 0;
+}
+
+.shop-remaining-label { font-size: 12px; color: var(--text); }
+
+.shop-remaining-items {
+  margin: 1px 0 2px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* Ability schools */
+
+.grid-schools td:first-child,
+.grid-elements td:first-child { white-space: normal; }
+.grid-schools .badge { margin-left: 8px; }
+
+.grid tbody tr.school-unused td,
+.grid tbody tr.element-unused td { color: var(--muted); }
+
+.unused-note { color: var(--warn); }
+
+.chips-abilities { gap: 6px; font-size: 12px; }
+
+.chip-ability {
+  padding: 2px 8px;
+  font-size: 12px;
+}
+
+.chip-ability .mono { color: var(--muted); margin-right: 2px; }
+
+.grid .num.is-zero { color: var(--muted); }
+.grid .num.is-hit { color: var(--accent); font-weight: 500; }
+
+/* Phone flag tables: Byte/Value stay on the first line, Block and Meaning
+   span the row beneath. The table header becomes a compact sticky legend;
+   the four details views and their counts are unchanged. */
+@media (max-width: 600px) {
+  /* The longer product name needs the full header width on a phone. */
+  .app-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 18px 24px;
+  }
+
+  .header-meta {
+    justify-content: flex-start;
+  }
+
+  .flag-byte-grid,
+  .flag-byte-grid tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .flag-byte-grid thead {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: 4px 0;
+    background: var(--panel-soft);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .flag-byte-grid thead tr {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2px 0;
+  }
+
+  .flag-byte-grid thead th {
+    position: static;
+    display: block;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .flag-byte-grid thead th + th::before {
+    content: "\00B7";
+    margin: 0 6px;
+    color: var(--muted);
+  }
+
+  .flag-byte-grid tbody tr {
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr);
+    grid-template-areas:
+      "byte value"
+      "block block"
+      "meaning meaning";
+    gap: 5px 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .flag-byte-grid td {
+    display: block;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    white-space: normal;
+    vertical-align: top;
+  }
+
+  .flag-byte-grid td:nth-child(1),
+  .flag-byte-grid td:nth-child(2),
+  .flag-byte-grid td:nth-child(3),
+  .flag-byte-grid td:nth-child(4) { min-width: 0; }
+
+  .flag-byte-grid td:nth-child(1) { grid-area: byte; }
+  .flag-byte-grid td:nth-child(2) { grid-area: value; }
+  .flag-byte-grid td:nth-child(3) { grid-area: block; }
+  .flag-byte-grid td:nth-child(4) { grid-area: meaning; }
+
+  .flag-byte-grid .flag-cell-label {
+    display: block;
+    margin-bottom: 2px;
+    color: var(--muted);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+
+  .flag-byte-grid .flag-meaning-pair { margin-bottom: 5px; }
+  .flag-byte-grid .flag-meaning-pair:last-child { margin-bottom: 0; }
+
+  /* Definition lists in every card: a max-content label column leaves some
+     values under 50px at phone width (the round-trip report, the shop summary,
+     the flag glossary, the System file). Give the label its own line and the
+     value the full card width; desktop keeps the two-column grid. */
+  .kv {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px 0;
+  }
+
+  .kv dt {
+    margin-top: 9px;
+    font-size: 12px;
+  }
+
+  .kv dt:first-child { margin-top: 0; }
+
+  /* Roster and ability tables: the same rows, rearranged as labeled blocks.
+     The header is replaced by per-cell labels, so no column has to fit beside
+     another and .table-scroll has nothing left to scroll. */
+  .grid-roster,
+  .grid-roster tbody,
+  .grid-abilities,
+  .grid-abilities tbody,
+  .grid-schools,
+  .grid-schools tbody,
+  .grid-elements,
+  .grid-elements tbody,
+  .grid-init,
+  .grid-init tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .grid-roster thead,
+  .grid-abilities thead,
+  .grid-schools thead,
+  .grid-elements thead,
+  .grid-init thead { display: none; }
+
+  .grid-roster tbody tr,
+  .grid-abilities tbody tr,
+  .grid-schools tbody tr,
+  .grid-elements tbody tr {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .grid-roster tbody tr {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    /* WP and JP need two columns: their values reach 150/150, which a 49px
+       cell can only fit by breaking the number. The other stats stay short. */
+    grid-template-areas:
+      "chr name name name"
+      "hp lp wp wp"
+      "jp jp str dex"
+      "hnd mnd mgc con"
+      "chm atk itm skl";
+    gap: 3px 8px;
+    padding: 8px 0;
+  }
+
+  .grid-abilities tbody tr {
+    display: grid;
+    grid-template-columns: 56px minmax(0, 1fr);
+    grid-template-areas:
+      "chr character"
+      "arts arts"
+      "items items"
+      "learned learned";
+    gap: 6px 10px;
+  }
+
+  .grid-schools tbody tr {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "school school"
+      "byte ids"
+      "held selected";
+    gap: 6px 10px;
+  }
+
+  .grid-elements tbody tr {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "element element"
+      "code arts"
+      "characters selected";
+    gap: 6px 10px;
+  }
+
+  .grid-roster td,
+  .grid-abilities td,
+  .grid-schools td,
+  .grid-elements td,
+  .grid-init td {
+    display: block;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    white-space: normal;
+    /* Only matters below 360px, where a 7-character WP/JP value can be wider
+       than a four-column roster cell; at 360px every value already fits. */
+    overflow-wrap: anywhere;
+    vertical-align: top;
+  }
+
+  .grid-roster td.num,
+  .grid-schools td.num,
+  .grid-elements td.num,
+  .grid-init td.num { text-align: left; }
+
+  /* The desktop ability table reserves 260px for the learned list; a phone
+     block does not need that floor. */
+  .grid-abilities td:last-child { min-width: 0; }
+
+  .grid-roster td::before,
+  .grid-abilities td::before,
+  .grid-schools td::before,
+  .grid-elements td::before,
+  .grid-init td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 2px;
+    color: var(--muted);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+
+  /* Roster and INIT values are short enough to sit beside their labels, which
+     halves the row height: five single-line rows instead of ten lines. */
+  .grid-roster td::before,
+  .grid-init td::before {
+    display: inline;
+    margin-right: 3px;
+    margin-bottom: 0;
+    font-size: 8px;
+  }
+
+  .grid-roster td:nth-child(1) { grid-area: chr; }
+  .grid-roster td:nth-child(2) { grid-area: name; }
+  .grid-roster td:nth-child(3) { grid-area: hp; }
+  .grid-roster td:nth-child(4) { grid-area: lp; }
+  .grid-roster td:nth-child(5) { grid-area: wp; }
+  .grid-roster td:nth-child(6) { grid-area: jp; }
+  .grid-roster td:nth-child(7) { grid-area: str; }
+  .grid-roster td:nth-child(8) { grid-area: dex; }
+  .grid-roster td:nth-child(9) { grid-area: hnd; }
+  .grid-roster td:nth-child(10) { grid-area: mnd; }
+  .grid-roster td:nth-child(11) { grid-area: mgc; }
+  .grid-roster td:nth-child(12) { grid-area: con; }
+  .grid-roster td:nth-child(13) { grid-area: chm; }
+  .grid-roster td:nth-child(14) { grid-area: atk; }
+  .grid-roster td:nth-child(15) { grid-area: itm; }
+  .grid-roster td:nth-child(16) { grid-area: skl; }
+
+  .grid-abilities td:nth-child(1) { grid-area: chr; }
+  .grid-abilities td:nth-child(2) { grid-area: character; }
+  .grid-abilities td:nth-child(3) { grid-area: arts; }
+  .grid-abilities td:nth-child(4) { grid-area: items; }
+  .grid-abilities td:nth-child(5) { grid-area: learned; }
+
+  .grid-schools td:nth-child(1) { grid-area: school; }
+  .grid-schools td:nth-child(2) { grid-area: byte; }
+  .grid-schools td:nth-child(3) { grid-area: ids; }
+  .grid-schools td:nth-child(4) { grid-area: held; }
+  .grid-schools td:nth-child(5) { grid-area: selected; }
+
+  .grid-elements td:nth-child(1) { grid-area: element; }
+  .grid-elements td:nth-child(2) { grid-area: code; }
+  .grid-elements td:nth-child(3) { grid-area: arts; }
+  .grid-elements td:nth-child(4) { grid-area: characters; }
+  .grid-elements td:nth-child(5) { grid-area: selected; }
+
+  /* INIT sets: 15 fields per record, five single-line rows. Learned takes the
+     last full-width line because it is the only value that can need room. */
+  .grid-init tbody tr {
+    display: grid;
+    /* 52px gives `CHR 0x00` room; three equal stat tracks follow. */
+    grid-template-columns: 52px repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+      "chr name name name"
+      "hp lp wp jp"
+      "str qui int wil"
+      "psy vit cha gear"
+      "learned learned learned learned";
+    gap: 3px 8px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .grid-init td:nth-child(1) { grid-area: chr; }
+  .grid-init td:nth-child(2) { grid-area: name; }
+  .grid-init td:nth-child(3) { grid-area: hp; }
+  .grid-init td:nth-child(4) { grid-area: lp; }
+  .grid-init td:nth-child(5) { grid-area: wp; }
+  .grid-init td:nth-child(6) { grid-area: jp; }
+  .grid-init td:nth-child(7) { grid-area: str; }
+  .grid-init td:nth-child(8) { grid-area: qui; }
+  .grid-init td:nth-child(9) { grid-area: int; }
+  .grid-init td:nth-child(10) { grid-area: wil; }
+  .grid-init td:nth-child(11) { grid-area: psy; }
+  .grid-init td:nth-child(12) { grid-area: vit; }
+  .grid-init td:nth-child(13) { grid-area: cha; }
+  .grid-init td:nth-child(14) { grid-area: gear; }
+  .grid-init td:nth-child(15) { grid-area: learned; }
+
+  /* The shop ledger has only Item / ID / Bought; fixed tracks keep it inside
+     the 199px card without stacking three short columns. */
+  .grid-shop {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .grid-shop th,
+  .grid-shop td { padding: 5px 5px; }
+
+  .grid-shop th {
+    font-size: 10px;
+    letter-spacing: 0.03em;
+  }
+
+  .grid-shop th:nth-child(2),
+  .grid-shop td:nth-child(2) { width: 38px; }
+
+  .grid-shop th:nth-child(3),
+  .grid-shop td:nth-child(3) { width: 52px; }
+
+  .grid-shop td:first-child {
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  /* Byte dump: one 16-byte line per block. The hex string wraps at its spaces;
+     the ASCII gutter gets its own line rather than a second column. */
+  .grid-hex,
+  .grid-hex tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .grid-hex thead { display: none; }
+
+  .grid-hex tbody tr {
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .grid-hex td {
+    display: block;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .grid-hex td::before {
+    content: attr(data-label);
+    display: inline;
+    margin-right: 4px;
+    color: var(--muted);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+
+  .grid-hex .hex-bytes,
+  .grid-hex .hex-ascii { white-space: pre-wrap; }
+
+  /* Character arrays: four short columns fit with percentage tracks; the
+     names and companionChrNo values wrap instead of widening the table. */
+  .grid-character {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .grid-character th,
+  .grid-character td { padding: 5px 4px; }
+
+  .grid-character th {
+    font-size: 10px;
+    letter-spacing: 0.03em;
+  }
+
+  .grid-character th:nth-child(1) { width: 38%; }
+  .grid-character th:nth-child(2) { width: 17%; }
+  .grid-character th:nth-child(3) { width: 16%; }
+
+  .grid-character td {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .grid-character td:nth-child(1) { font-size: 11px; }
+
+  /* Item array: fixed id/hex/qty tracks leave the name column enough room to
+     wrap. The badge is compacted because a 51px asset pill cannot fit the
+     remaining 45px of content at 300px. */
+  .grid-item-hex {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .grid-item-hex th,
+  .grid-item-hex td { padding: 5px 4px; }
+
+  .grid-item-hex th {
+    font-size: 10px;
+    letter-spacing: 0.03em;
+  }
+
+  .grid-item-hex th:nth-child(1),
+  .grid-item-hex td:nth-child(1) { width: 26px; }
+
+  .grid-item-hex th:nth-child(2),
+  .grid-item-hex td:nth-child(2) { width: 42px; }
+
+  .grid-item-hex th:nth-child(4),
+  .grid-item-hex td:nth-child(4) { width: 40px; }
+
+  .grid-item-hex td {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .grid-item-hex td:nth-child(2) {
+    white-space: nowrap;
+    font-size: 10px;
+  }
+
+  .grid-item-hex .badge {
+    margin-left: 4px;
+    padding: 0 4px;
+    font-size: 9px;
+    letter-spacing: 0.02em;
+  }
+}

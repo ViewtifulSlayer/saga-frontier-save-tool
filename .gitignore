@@ -1,0 +1,26 @@
+# Local research assets - never publish. The public site is the runtime
+# surface only: index.html, app.js, platform.js, styles.css and the nine JSON
+# tables under docs/.
+docs/gameinfo/
+docs/gamedata/
+docs/pre-research/
+
+# Private engineering notes and agent docs (kept in the Resonance7 workspace).
+docs/agent_state.json
+docs/project_runbook.md
+docs/save_layout.md
+AGENTS.md
+
+# Scratch.
+src/
+
+# Save files and backups.
+*.bin
+*.bak
+*.bak[0-9]
+
+# OS and editor files.
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/

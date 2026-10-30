@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SaGa Frontier Remastered Save Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <h1>SaGa Frontier Remastered Save Tool</h1>
+      <p class="subtitle">Read-only. Nothing is written, converted, or uploaded.</p>
+    </div>
+    <div class="header-meta">
+      <!-- Static copy of SaveCore.BUILD: it still reads correctly if app.js fails,
+           and verify_viewer.js fails when the header and both script URLs drift. -->
+      <span class="build-stamp" id="build-stamp">Build 2026-10-30.1</span>
+      <span class="pill">client-side only</span>
+    </div>
+  </header>
+
+  <details class="keyboard-help">
+    <summary>Keyboard controls</summary>
+    <div class="panel keys-panel">
+      <p class="hint">Every control here is reachable without a mouse. The character detail card
+        names its roster position, so you can tell which row you are on when the table is off-screen.</p>
+      <table class="keys">
+        <thead>
+          <tr>
+            <th scope="col">Keys</th>
+            <th scope="col">Where</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><kbd>Tab</kbd> / <kbd>Shift</kbd> + <kbd>Tab</kbd></td>
+            <td>Anywhere</td>
+            <td>Next or previous control</td>
+          </tr>
+          <tr>
+            <td><kbd>Enter</kbd> or <kbd>Space</kbd></td>
+            <td>Drop zone</td>
+            <td>Open the file picker</td>
+          </tr>
+          <tr>
+            <td><kbd>Enter</kbd> or <kbd>Space</kbd></td>
+            <td>Slot button</td>
+            <td>Load that slot</td>
+          </tr>
+          <tr>
+            <td><kbd>↓</kbd> / <kbd>↑</kbd></td>
+            <td>Roster row</td>
+            <td>Select the next or previous character. Focus stays on the row and the page does not
+              jump to the detail card, so you can walk the whole roster.</td>
+          </tr>
+          <tr>
+            <td><kbd>Home</kbd> / <kbd>End</kbd></td>
+            <td>Roster row</td>
+            <td>Select the first or last character</td>
+          </tr>
+          <tr>
+            <td><kbd>Enter</kbd> or <kbd>Space</kbd></td>
+            <td>Roster row</td>
+            <td>Select the character and scroll to the detail card</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="hint keys-note">Arrow keys stop at the ends of the roster rather than wrapping. They move
+        focus and selection together, so the row with focus is the character in the card. <kbd>Tab</kbd>
+        still steps through the rows without changing the selection.</p>
+    </div>
+  </details>
+
+  <main>
+    <section class="panel" aria-labelledby="load-heading">          <h2 id="load-heading">Load a save file</h2>
+
+      <div id="drop-zone" class="drop-zone" role="button" tabindex="0"
+           aria-label="Drop a save file here, or press Enter to browse">
+        <p class="drop-title">Drop your save file here</p>
+        <p class="drop-sub">SaveData.bin, a decrypted .json mirror, or a .dat dump</p>
+      </div>
+
+      <div class="browse-row">
+        <label class="file-drop" for="save-file">
+          <input id="save-file" type="file" accept=".bin,.dat,.json,application/json">
+          <span>or choose a file</span>
+        </label>
+      </div>
+
+      <!-- Semi-live browser mode. The whole block is hidden unless platform.js
+           reports the File System Access API. Read-only: the folder is opened
+           with mode: 'read' and the only optional copies live in IndexedDB. -->
+      <div class="live-save" id="live-save" hidden>
+        <div class="live-save-head">
+          <h3 id="live-heading">Live save folder</h3>
+          <span class="live-state" id="live-state">Not connected</span>
+        </div>
+        <p class="hint">Choose the folder that contains <code>SaveData.bin</code> once. This works in
+          Chromium browsers, watches for the game's next save, and never writes to the folder.</p>
+        <div class="live-actions">
+          <button type="button" class="live-button" id="live-pick">Choose folder</button>
+          <button type="button" class="live-button" id="live-reconnect" hidden>Reconnect</button>
+          <button type="button" class="live-button" id="live-reload" hidden>Reload now</button>
+        </div>
+        <p class="live-status" id="live-status" role="status" aria-live="polite" hidden></p>
+
+        <details class="live-settings">
+          <summary>Watcher settings</summary>
+          <div class="live-grid">
+            <label class="live-check"><input type="checkbox" id="live-watch" checked> Watch folder</label>
+            <label class="live-check"><input type="checkbox" id="live-auto" checked> Auto-reload</label>
+            <label class="live-field">Poll interval
+              <select id="live-interval">
+                <option value="2000">2 seconds</option>
+                <option value="5000">5 seconds</option>
+                <option value="10000">10 seconds</option>
+              </select>
+            </label>
+            <label class="live-check"><input type="checkbox" id="live-snapshots"> Keep snapshots</label>
+            <label class="live-field">Keep last
+              <select id="live-retention">
+                <option value="3">3 snapshots</option>
+                <option value="5">5 snapshots</option>
+                <option value="10" selected>10 snapshots</option>
+                <option value="25">25 snapshots</option>
+              </select>
+            </label>
+          </div>
+        </details>
+
+        <div class="snapshot-block" id="snapshot-block" hidden>
+          <div class="snapshot-head">
+            <h4>Snapshots <span class="count" id="snapshot-count"></span></h4>
+            <span class="hint">Stored in this browser; Export downloads a copy.</span>
+          </div>
+          <p class="hint" id="snapshot-empty">No snapshots yet.</p>
+          <ul class="snapshot-list" id="snapshot-list"></ul>
+        </div>
+      </div>
+
+      <div id="status" class="status" role="status" aria-live="polite" hidden></div>
+    </section>
+
+    <div id="data-container" class="data-container" hidden>
+      <section class="panel" aria-labelledby="file-heading">
+        <h2 id="file-heading">Loaded file</h2>
+        <div id="file-info" class="file-info"></div>
+      </section>
+
+      <section class="panel" aria-labelledby="bytes-heading">
+        <h2 id="bytes-heading">Byte stream</h2>
+        <div id="byte-inspector" class="byte-inspector"></div>
+      </section>
+
+      <div class="layout">
+        <div class="layout-aside">
+          <section class="panel" aria-labelledby="slots-heading">
+            <div class="slot-heading">
+              <h2 id="slots-heading">Save slots</h2>
+              <label class="slot-filter" for="slot-populated">
+                <input type="checkbox" id="slot-populated" disabled>
+                <span>Populated only</span>
+              </label>
+            </div>
+            <div id="slot-list" class="slot-list">
+              <p class="empty">No file loaded.</p>
+            </div>
+            <div class="slot-fast" id="slot-fast"></div>
+            <div class="slot-pager" role="group" aria-label="Save slot pages">
+              <button type="button" class="pager-button" id="slot-prev"
+                aria-label="Previous save slots" disabled>Prev</button>
+              <span class="slot-page" id="slot-page" aria-live="polite">No file loaded</span>
+              <button type="button" class="pager-button" id="slot-next"
+                aria-label="Next save slots" disabled>Next</button>
+            </div>
+          </section>
+
+          <!-- Built from the cards that actually rendered, so a card missing
+               from this save is missing from the index too. The character
+               summary drills over this same footprint instead of adding a
+               third panel that could push the sidebar past the viewport. -->
+          <nav class="panel page-index" id="page-index" aria-label="Page sections and character summary">
+            <div id="page-index-view">
+              <div class="page-index-head">
+                <h2 id="page-index-heading">On this page</h2>
+                <button type="button" class="rail-open-character" id="character-open"
+                  aria-controls="character-rail" aria-expanded="false"
+                  title="Open a compact character summary" disabled>Character</button>
+              </div>
+              <p class="hint" id="page-index-hint">Load a save to see the sections.</p>
+              <ol class="page-index-list" id="page-index-list" hidden></ol>
+            </div>
+            <div class="character-rail" id="character-rail" role="region"
+              aria-labelledby="character-rail-heading" hidden>
+              <div class="character-rail-head">
+                <h2 id="character-rail-heading">Character</h2>
+                <button type="button" class="rail-back" id="character-rail-back"
+                  aria-label="Back to page sections">Back</button>
+              </div>
+              <div id="character-rail-body"></div>
+            </div>
+          </nav>
+        </div>
+
+        <section class="panel" aria-labelledby="detail-heading">
+          <h2 id="detail-heading">Slot contents</h2>
+          <details class="page-index-mobile" id="page-index-mobile" hidden>
+            <summary>On this page</summary>
+            <ol class="page-index-list" id="page-index-mobile-list"></ol>
+          </details>
+          <div id="detail" class="detail">
+            <p class="empty">Select a slot to inspect it.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="app-footer">
+    <p>
+      Read-only viewer. Integrity fields (<code>sfSys.chk*</code>) are not validated or recomputed.
+      Character and item names marked <span class="badge badge-documented">documented</span> come from a
+      community table and are not verified against your file. Ability names, element flags, race labels
+      and gift bits come from the community data project and are likewise unverified.
+    </p>
+  </footer>
+
+  <!-- v= is the build id: bump it with SaveCore.BUILD so a changed app is never
+       served from a stale HTTP cache. platform.js must load before app.js so
+       window.SaveSource exists when the controller binds. -->
+  <script src="platform.js?v=2026-10-30.1"></script>
+  <script src="app.js?v=2026-10-30.1"></script>
+</body>
+</html>

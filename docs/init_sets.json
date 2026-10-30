@@ -1,0 +1,4975 @@
+{
+  "meta": {
+    "characters": 40,
+    "description": "Per-character INIT 1-4 baselines for the save viewer",
+    "fields": [
+      "hp",
+      "lp",
+      "wp",
+      "jp",
+      "stats",
+      "race",
+      "gifts",
+      "type",
+      "arts",
+      "items",
+      "learned"
+    ],
+    "gaps": {
+      "0x00": [
+        "3",
+        "4"
+      ]
+    },
+    "generator": "tests/sfr_save_editor/build_init_sets.py",
+    "records": 158,
+    "selection_rule": "The set is chosen at scenario start from the final Battle Rank of the last scenario completed into System Data.",
+    "sets": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "source": "docs/gameinfo/json/characters_init.json",
+    "source_sha256": "2ae94b3736e61e9fe655150e69d89b94c8e9bc9ab053ba9cc1746de2f880cfcd",
+    "status_note": "Translated from the community INITDATA files. Values are game data, not extracted from the Remastered assets."
+  },
+  "sets": {
+    "1": {
+      "0x00": {
+        "arts": [
+          65
+        ],
+        "gifts": 0,
+        "hp": 120,
+        "items": [
+          51,
+          72,
+          128,
+          169,
+          192
+        ],
+        "jp": 0,
+        "learned": 1,
+        "lp": 9,
+        "name": "Emelia",
+        "race": 65,
+        "stats": {
+          "cha": 22,
+          "int": 10,
+          "psy": 7,
+          "qui": 19,
+          "str": 13,
+          "vit": 19,
+          "wil": 21
+        },
+        "type": 1,
+        "wp": 18
+      },
+      "0x01": {
+        "arts": [],
+        "gifts": 0,
+        "hp": 80,
+        "items": [
+          16,
+          177,
+          129,
+          168
+        ],
+        "jp": 0,
+        "learned": 0,
+        "lp": 10,
+        "name": "Lute",
+        "race": 129,
+        "stats": {
+          "cha": 18,
+          "int": 10,
+          "psy": 13,
+          "qui": 4,
+          "str": 7,
+          "vit": 4,
+          "wil": 2
+        },
+        "type": 2,
+        "wp": 10
+      },
+      "0x02": {
+        "arts": [
+          97
+        ],
+        "gifts": 0,
+        "hp": 90,
+        "items": [
+          17,
+          49,
+          161,
+          168
+        ],
+        "jp": 0,
+        "learned": 4,
+        "lp": 9,
+        "name": "Red",
+        "race": 129,
+        "stats": {
+          "cha": 10,
+          "int": 11,
+          "psy": 9,
+          "qui": 12,
+          "str": 15,
+          "vit": 14,
+          "wil": 14
+        },
+        "type": 11,
+        "wp": 12
+      },
+      "0x03": {
+        "arts": [
+          97
+        ],
+        "gifts": 16,
+        "hp": 150,
+        "items": [
+          64,
+          130,
+          172,
+          192
+        ],
+        "jp": 10,
+        "learned": 1,
+        "lp": 9,
+        "name": "Fuse",
+        "race": 129,
+        "stats": {
+          "cha": 13,
+          "int": 20,
+          "psy": 23,
+          "qui": 17,
+          "str": 29,
+          "vit": 18,
+          "wil": 19
+        },
+        "type": 6,
+        "wp": 25
+      },
+      "0x04": {
+        "arts": [
+          288,
+          289,
+          290,
+          291
+        ],
+        "gifts": 4,
+        "hp": 125,
+        "items": [
+          157,
+          170
+        ],
+        "jp": 30,
+        "learned": 4,
+        "lp": 7,
+        "name": "Blue",
+        "race": 129,
+        "stats": {
+          "cha": 14,
+          "int": 29,
+          "psy": 26,
+          "qui": 19,
+          "str": 9,
+          "vit": 8,
+          "wil": 24
+        },
+        "type": 0,
+        "wp": 0
+      },
+      "0x05": {
+        "arts": [
+          1,
+          432
+        ],
+        "gifts": 8,
+        "hp": 160,
+        "items": [
+          20,
+          138,
+          169,
+          192
+        ],
+        "jp": 20,
+        "learned": 2,
+        "lp": 8,
+        "name": "Asellus",
+        "race": 65,
+        "stats": {
+          "cha": 27,
+          "int": 15,
+          "psy": 39,
+          "qui": 21,
+          "str": 27,
+          "vit": 16,
+          "wil": 13
+        },
+        "type": 1,
+        "wp": 20
+      },
+      "0x06": {
+        "arts": [],
+        "gifts": 0,
+        "hp": 100,
+        "items": [
+          71,
+          8,
+          114,
+          114,
+          141
+        ],
+        "jp": 0,
+        "learned": 0,
+        "lp": 15,
+        "name": "T260",
+        "race": 4,
+        "stats": {
+          "cha": 5,
+          "int": 5,
+          "psy": 5,
+          "qui": 5,
+          "str": 5,
+          "vit": 5,
+          "wil": 5
+        },
+        "type": 0,
+        "wp": 50
+      },
+      "0x07": {
+        "arts": [
+          165,
+          166,
+          173
+        ],
+        "gifts": 0,
+        "hp": 60,
+        "items": [
+          149
+        ],
+        "jp": 12,
+        "learned": 3,
+        "lp": 10,
+        "name": "Riki",
+        "race": 8,
+        "stats": {
+          "cha": 8,
+          "int": 8,
+          "psy": 8,
+          "qui": 8,
+          "str": 8,
+          "vit": 8,
+          "wil": 8
+        },
+        "type": 0,
+        "wp": 16
+      },
+      "0x08": {
+        "arts": [
+          288,
+          289,
+          290,
+          291
+        ],
+        "gifts": 4,
+        "hp": 125,
+        "items": [
+          157,
+          170
+        ],
+        "jp": 30,
+        "learned": 4,
+        "lp": 7,
+        "name": "Rouge",
+        "race": 129,
+        "stats": {
+          "cha": 14,
+          "int": 29,
+          "psy": 26,
+          "qui": 19,
+          "str": 9,
+          "vit": 8,
+          "wil": 24
+        },
+        "type": 0,
+        "wp": 0
+      },
+      "0x09": {
+        "arts": [
+          3,
+          65,
+          67,
+          304,
+          305
+        ],
+        "gifts": 16,
+        "hp": 150,
+        "items": [
+          22,
+          51,
+          179,
+          130,
+          184,
+          192
+        ],
+        "jp": 15,
+        "learned": 5,
+        "lp": 9,
+        "name": "Roufas",
+        "race": 129,
+        "stats": {
+          "cha": 20,
+          "int": 27,
+          "psy": 11,
+          "qui": 15,
+          "str": 23,
+          "vit": 26,
+          "wil": 24
+        },
+        "type": 5,
+        "wp": 25
+      },
+      "0x0A": {
+        "arts": [
+          97,
+          1,
+          2,
+          3,
+          4,
+          12
+        ],
+        "gifts": 0,
+        "hp": 120,
+        "items": [
+          17,
+          171
+        ],
+        "jp": 0,
+        "learned": 7,
+        "lp": 10,
+        "name": "Gen",
+        "race": 129,
+        "stats": {
+          "cha": 6,
+          "int": 8,
+          "psy": 12,
+          "qui": 16,
+          "str": 19,
+          "vit": 18,
+          "wil": 10
+        },
+        "type": 7,
+        "wp": 15
+      },
+      "0x0B": {
+        "arts": [
+          97,
+          103,
+          104,
+          102
+        ],
+        "gifts": 0,
+        "hp": 160,
+        "items": [
+          171,
+          184,
+          192,
+          203
+        ],
+        "jp": 0,
+        "learned": 4,
+        "lp": 8,
+        "name": "Fei-on",
+        "race": 129,
+        "stats": {
+          "cha": 15,
+          "int": 12,
+          "psy": 18,
+          "qui": 27,
+          "str": 30,
+          "vit": 25,
+          "wil": 21
+        },
+        "type": 8,
+        "wp": 38
+      },
+      "0x0C": {
+        "arts": [
+          1,
+          2
+        ],
+        "gifts": 0,
+        "hp": 130,
+        "items": [
+          21,
+          128,
+          168,
+          184,
+          192
+        ],
+        "jp": 0,
+        "learned": 2,
+        "lp": 9,
+        "name": "Annie",
+        "race": 65,
+        "stats": {
+          "cha": 11,
+          "int": 9,
+          "psy": 15,
+          "qui": 17,
+          "str": 15,
+          "vit": 13,
+          "wil": 18
+        },
+        "type": 4,
+        "wp": 20
+      },
+      "0x0D": {
+        "arts": [
+          107,
+          98
+        ],
+        "gifts": 0,
+        "hp": 100,
+        "items": [
+          128,
+          168,
+          200
+        ],
+        "jp": 0,
+        "learned": 2,
+        "lp": 8,
+        "name": "Liza",
+        "race": 65,
+        "stats": {
+          "cha": 20,
+          "int": 20,
+          "psy": 18,
+          "qui": 24,
+          "str": 14,
+          "vit": 12,
+          "wil": 13
+        },
+        "type": 12,
+        "wp": 24
+      },
+      "0x0E": {
+        "arts": [
+          74,
+          65,
+          70,
+          5,
+          6,
+          10
+        ],
+        "gifts": 0,
+        "hp": 250,
+        "items": [
+          51,
+          54,
+          26,
+          21,
+          130,
+          169,
+          177,
+          192
+        ],
+        "jp": 10,
+        "learned": 6,
+        "lp": 8,
+        "name": "Capt.Hamilton",
+        "race": 65,
+        "stats": {
+          "cha": 11,
+          "int": 24,
+          "psy": 21,
+          "qui": 17,
+          "str": 20,
+          "vit": 25,
+          "wil": 18
+        },
+        "type": 10,
+        "wp": 25
+      },
+      "0x0F": {
+        "arts": [
+          264,
+          265,
+          296,
+          297
+        ],
+        "gifts": 0,
+        "hp": 120,
+        "items": [
+          64,
+          48,
+          130,
+          172,
+          192
+        ],
+        "jp": 18,
+        "learned": 4,
+        "lp": 9,
+        "name": "Doll",
+        "race": 65,
+        "stats": {
+          "cha": 21,
+          "int": 22,
+          "psy": 15,
+          "qui": 21,
+          "str": 16,
+          "vit": 20,
+          "wil": 17
+        },
+        "type": 9,
+        "wp": 12
+      },
+      "0x10": {
+        "arts": [
+          65,
+          256,
+          257
+        ],
+        "gifts": 0,
+        "hp": 70,
+        "items": [
+          48,
+          128,
+          169,
+          184,
+          192
+        ],
+        "jp": 16,
+        "learned": 3,
+        "lp": 10,
+        "name": "Mei-ling",
+        "race": 65,
+        "stats": {
+          "cha": 10,
+          "int": 12,
+          "psy": 16,
+          "qui": 8,
+          "str": 3,
+          "vit": 7,
+          "wil": 7
+        },
+        "type": 1,
+        "wp": 9
+      },
+      "0x11": {
+        "arts": [],
+        "gifts": 0,
+        "hp": 90,
+        "items": [
+          17,
+          176,
+          129,
+          184,
+          192
+        ],
+        "jp": 0,
+        "learned": 0,
+        "lp": 9,
+        "name": "Woman",
+        "race": 65,
+        "stats": {
+          "cha": 10,
+          "int": 13,
+          "psy": 17,
+          "qui": 10,
+          "str": 19,
+          "vit": 15,
+          "wil": 11
+        },
+        "type": 0,
+        "wp": 15
+      },
+      "0x12": {
+        "arts": [
+          296,
+          297,
+          257,
+          259,
+          432
+        ],
+        "gifts": 8,
+        "hp": 160,
+        "items": [
+          159,
+          202
+        ],
+        "jp": 40,
+        "learned": 7,
+        "lp": 8,
+        "name": "White Rose",
+        "race": 66,
+        "stats": {
+          "cha": 28,
+          "int": 25,
+          "psy": 25,
+          "qui": 18,
+          "str": 16,
+          "vit": 15,
+          "wil": 19
+        },
+        "type": 0,
+        "wp": 16
+      },
+      "0x13": {
+        "arts": [
+          432,
+          448,
+          464
+        ],
+        "gifts": 8,
+        "hp": 220,
+        "items": [
+          20,
+          159
+        ],
+        "jp": 27,
+        "learned": 5,
+        "lp": 8,
+        "name": "Ildon",
+        "race": 130,
+        "stats": {
+          "cha": 26,
+          "int": 22,
+          "psy": 33,
+          "qui": 16,
+          "str": 28,
+          "vit": 13,
+          "wil": 26
+        },
+        "type": 0,
+        "wp": 33
+      },
+      "0x14": {
+        "arts": [
+          296,
+          328
+        ],
+        "gifts": 136,
+        "hp": 200,
+        "items": [
+          19,
+          134,
+          214
+        ],
+        "jp": 26,
+        "learned": 2,
+        "lp": 8,
+        "name": "Mesarthim",
+        "race": 66,
+        "stats": {
+          "cha": 25,
+          "int": 16,
+          "psy": 24,
+          "qui": 23,
+          "str": 17,
+          "vit": 11,
+          "wil": 12
+        },
+        "type": 0,
+        "wp": 18
+      },
+      "0x15": {
+        "arts": [
+          312,
+          313,
+          314,
+          432,
+          448,
+          464
+        ],
+        "gifts": 8,
+        "hp": 400,
+        "items": [
+          20,
+          159,
+          170
+        ],
+        "jp": 30,
+        "learned": 10,
+        "lp": 9,
+        "name": "Zozma",
+        "race": 130,
+        "stats": {
+          "cha": 30,
+          "int": 26,
+          "psy": 32,
+          "qui": 24,
+          "str": 19,
+          "vit": 13,
+          "wil": 11
+        },
+        "type": 0,
+        "wp": 40
+      },
+      "0x16": {
+        "arts": [
+          344,
+          345,
+          348,
+          296,
+          432
+        ],
+        "gifts": 8,
+        "hp": 180,
+        "items": [
+          19,
+          159,
+          169,
+          192
+        ],
+        "jp": 66,
+        "learned": 8,
+        "lp": 6,
+        "name": "Rei",
+        "race": 66,
+        "stats": {
+          "cha": 33,
+          "int": 32,
+          "psy": 28,
+          "qui": 18,
+          "str": 9,
+          "vit": 8,
+          "wil": 19
+        },
+        "type": 0,
+        "wp": 6
+      },
+      "0x17": {
+        "arts": [
+          297,
+          432,
+          448,
+          464
+        ],
+        "gifts": 8,
+        "hp": 150,
+        "items": [
+          64,
+          159
+        ],
+        "jp": 20,
+        "learned": 2,
+        "lp": 8,
+        "name": "Silence",
+        "race": 130,
+        "stats": {
+          "cha": 23,
+          "int": 16,
+          "psy": 24,
+          "qui": 19,
+          "str": 21,
+          "vit": 16,
+          "wil": 11
+        },
+        "type": 0,
+        "wp": 25
+      },
+      "0x18": {
+        "arts": [
+          264,
+          320,
+          322,
+          297,
+          432
+        ],
+        "gifts": 8,
+        "hp": 160,
+        "items": [
+          70,
+          21,
+          175,
+          192
+        ],
+        "jp": 38,
+        "learned": 7,
+        "lp": 7,
+        "name": "Dr. Nusakan",
+        "race": 130,
+        "stats": {
+          "cha": 24,
+          "int": 24,
+          "psy": 26,
+          "qui": 13,
+          "str": 22,
+          "vit": 15,
+          "wil": 16
+        },
+        "type": 0,
+        "wp": 30
+      },
+      "0x19": {
+        "arts": [
+          281,
+          283,
+          284,
+          285,
+          432,
+          448,
+          464
+        ],
+        "gifts": 8,
+        "hp": 360,
+        "items": [
+          159,
+          170,
+          195
+        ],
+        "jp": 60,
+        "learned": 12,
+        "lp": 10,
+        "name": "TimeLord",
+        "race": 130,
+        "stats": {
+          "cha": 27,
+          "int": 21,
+          "psy": 31,
+          "qui": 28,
+          "str": 15,
+          "vit": 17,
+          "wil": 24
+        },
+        "type": 0,
+        "wp": 45
+      },
+      "0x1A": {
+        "arts": [
+          419
+        ],
+        "gifts": 0,
+        "hp": 75,
+        "items": [
+          85,
+          160,
+          99,
+          105,
+          143
+        ],
+        "jp": 0,
+        "learned": 1,
+        "lp": 20,
+        "name": "Rabbit",
+        "race": 4,
+        "stats": {
+          "cha": 20,
+          "int": 25,
+          "psy": 10,
+          "qui": 20,
+          "str": 5,
+          "vit": 10,
+          "wil": 15
+        },
+        "type": 0,
+        "wp": 75
+      },
+      "0x1B": {
+        "arts": [
+          420,
+          429
+        ],
+        "gifts": 0,
+        "hp": 125,
+        "items": [
+          116,
+          88,
+          107,
+          140
+        ],
+        "jp": 0,
+        "learned": 2,
+        "lp": 20,
+        "name": "Leonard",
+        "race": 4,
+        "stats": {
+          "cha": 10,
+          "int": 45,
+          "psy": 5,
+          "qui": 10,
+          "str": 15,
+          "vit": 10,
+          "wil": 5
+        },
+        "type": 0,
+        "wp": 80
+      },
+      "0x1C": {
+        "arts": [],
+        "gifts": 0,
+        "hp": 100,
+        "items": [
+          48,
+          49,
+          110,
+          194,
+          96,
+          93,
+          139
+        ],
+        "jp": 0,
+        "learned": 0,
+        "lp": 15,
+        "name": "ZEKE",
+        "race": 4,
+        "stats": {
+          "cha": 10,
+          "int": 15,
+          "psy": 1,
+          "qui": 50,
+          "str": 15,
+          "vit": 5,
+          "wil": 15
+        },
+        "type": 0,
+        "wp": 30
+      },
+      "0x1D": {
+        "arts": [
+          420
+        ],
+        "gifts": 0,
+        "hp": 100,
+        "items": [
+          99,
+          106,
+          141
+        ],
+        "jp": 0,
+        "learned": 1,
+        "lp": 20,
+        "name": "BJ&K",
+        "race": 4,
+        "stats": {
+          "cha": 10,
+          "int": 35,
+          "psy": 5,
+          "qui": 5,
+          "str": 5,
+          "vit": 10,
+          "wil": 30
+        },
+        "type": 0,
+        "wp": 55
+      },
+      "0x1E": {
+        "arts": [
+          378
+        ],
+        "gifts": 0,
+        "hp": 250,
+        "items": [
+          150,
+          150,
+          97,
+          92,
+          95,
+          142
+        ],
+        "jp": 0,
+        "learned": 1,
+        "lp": 25,
+        "name": "PzkwV",
+        "race": 4,
+        "stats": {
+          "cha": 10,
+          "int": 5,
+          "psy": 1,
+          "qui": 5,
+          "str": 10,
+          "vit": 30,
+          "wil": 35
+        },
+        "type": 0,
+        "wp": 75
+      },
+      "0x1F": {
+        "arts": [
+          424,
+          425
+        ],
+        "gifts": 0,
+        "hp": 120,
+        "items": [
+          111,
+          98,
+          107,
+          140
+        ],
+        "jp": 0,
+        "learned": 2,
+        "lp": 20,
+        "name": "EngineerCar",
+        "race": 4,
+        "stats": {
+          "cha": 5,
+          "int": 25,
+          "psy": 5,
+          "qui": 5,
+          "str": 15,
+          "vit": 15,
+          "wil": 35
+        },
+        "type": 0,
+        "wp": 75
+      },
+      "0x20": {
+        "arts": [],
+        "gifts": 0,
+        "hp": 105,
+        "items": [
+          90,
+          141
+        ],
+        "jp": 0,
+        "learned": 0,
+        "lp": 20,
+        "name": "CommonMec",
+        "race": 4,
+        "stats": {
+          "cha": 15,
+          "int": 20,
+          "psy": 5,
+          "qui": 10,
+          "str": 20,
+          "vit": 15,
+          "wil": 10
+        },
+        "type": 0,
+        "wp": 40
+      },
+      "0x21": {
+        "arts": [
+          197,
+          157,
+          176,
+          171
+        ],
+        "gifts": 0,
+        "hp": 180,
+        "items": [
+          149,
+          150
+        ],
+        "jp": 28,
+        "learned": 12,
+        "lp": 10,
+        "name": "Thunder",
+        "race": 8,
+        "stats": {
+          "cha": 6,
+          "int": 16,
+          "psy": 20,
+          "qui": 11,
+          "str": 25,
+          "vit": 24,
+          "wil": 12
+        },
+        "type": 0,
+        "wp": 36
+      },
+      "0x22": {
+        "arts": [
+          227,
+          173,
+          186,
+          234
+        ],
+        "gifts": 0,
+        "hp": 180,
+        "items": [
+          145
+        ],
+        "jp": 20,
+        "learned": 12,
+        "lp": 7,
+        "name": "Cotton",
+        "race": 8,
+        "stats": {
+          "cha": 21,
+          "int": 12,
+          "psy": 13,
+          "qui": 31,
+          "str": 16,
+          "vit": 16,
+          "wil": 22
+        },
+        "type": 0,
+        "wp": 46
+      },
+      "0x23": {
+        "arts": [
+          192,
+          212,
+          172,
+          225,
+          255
+        ],
+        "gifts": 0,
+        "hp": 240,
+        "items": [
+          156,
+          156,
+          216,
+          125
+        ],
+        "jp": 66,
+        "learned": 51,
+        "lp": 4,
+        "name": "Sei",
+        "race": 152,
+        "stats": {
+          "cha": 40,
+          "int": 34,
+          "psy": 34,
+          "qui": 34,
+          "str": 41,
+          "vit": 44,
+          "wil": 40
+        },
+        "type": 0,
+        "wp": 99
+      },
+      "0x24": {
+        "arts": [
+          272,
+          273,
+          274,
+          275,
+          276,
+          277,
+          211,
+          254
+        ],
+        "gifts": 0,
+        "hp": 400,
+        "items": [
+          144,
+          145,
+          219
+        ],
+        "jp": 128,
+        "learned": 39,
+        "lp": 6,
+        "name": "Kylin",
+        "race": 8,
+        "stats": {
+          "cha": 82,
+          "int": 90,
+          "psy": 70,
+          "qui": 71,
+          "str": 52,
+          "vit": 41,
+          "wil": 48
+        },
+        "type": 0,
+        "wp": 150
+      },
+      "0x25": {
+        "arts": [
+          185,
+          212,
+          228
+        ],
+        "gifts": 0,
+        "hp": 90,
+        "items": [
+          151,
+          151
+        ],
+        "jp": 28,
+        "learned": 10,
+        "lp": 10,
+        "name": "Slime",
+        "race": 8,
+        "stats": {
+          "cha": 4,
+          "int": 7,
+          "psy": 24,
+          "qui": 6,
+          "str": 8,
+          "vit": 28,
+          "wil": 22
+        },
+        "type": 0,
+        "wp": 26
+      },
+      "0x26": {
+        "arts": [
+          187,
+          194,
+          179,
+          180
+        ],
+        "gifts": 0,
+        "hp": 440,
+        "items": [
+          144,
+          145,
+          150
+        ],
+        "jp": 0,
+        "learned": 35,
+        "lp": 8,
+        "name": "Suzaku",
+        "race": 8,
+        "stats": {
+          "cha": 80,
+          "int": 56,
+          "psy": 68,
+          "qui": 80,
+          "str": 62,
+          "vit": 64,
+          "wil": 71
+        },
+        "type": 0,
+        "wp": 108
+      },
+      "0x27": {
+        "arts": [
+          138,
+          142,
+          204,
+          236,
+          128,
+          184,
+          199,
+          233
+        ],
+        "gifts": 0,
+        "hp": 160,
+        "items": [
+          149,
+          150,
+          184
+        ],
+        "jp": 0,
+        "learned": 25,
+        "lp": 10,
+        "name": "RedTurnip",
+        "race": 8,
+        "stats": {
+          "cha": 25,
+          "int": 25,
+          "psy": 29,
+          "qui": 15,
+          "str": 17,
+          "vit": 23,
+          "wil": 32
+        },
+        "type": 0,
+        "wp": 32
+      }
+    },
+    "2": {
+      "0x00": {
+        "arts": [
+          65
+        ],
+        "gifts": 0,
+        "hp": 160,
+        "items": [
+          51,
+          72,
+          128,
+          169,
+          192
+        ],
+        "jp": 0,
+        "learned": 2,
+        "lp": 9,
+        "name": "Emelia",
+        "race": 65,
+        "stats": {
+          "cha": 26,
+          "int": 12,
+          "psy": 9,
+          "qui": 23,
+          "str": 18,
+          "vit": 23,
+          "wil": 27
+        },
+        "type": 1,
+        "wp": 27
+      },
+      "0x01": {
+        "arts": [],
+        "gifts": 0,
+        "hp": 120,
+        "items": [
+          16,
+          177,
+          129,
+          168
+        ],
+        "jp": 0,
+        "learned": 0,
+        "lp": 10,
+        "name": "Lute",
+        "race": 129,
+        "stats": {
+          "cha": 26,
+          "int": 11,
+          "psy": 14,
+          "qui": 5,
+          "str": 8,
+          "vit": 5,
+          "wil": 3
+        },
+        "type": 2,
+        "wp": 15
+      },
+      "0x02": {
+        "arts": [
+          97,
+          99
+        ],
+        "gifts": 0,
+        "hp": 120,
+        "items": [
+          17,
+          49,
+          161,
+          168
+        ],
+        "jp": 0,
+        "learned": 2,
+        "lp": 9,
+        "name": "Red",
+        "race": 129,
+        "stats": {
+          "cha": 12,
+          "int": 13,
+          "psy": 9,
+          "qui": 16,
+          "str": 18,
+          "vit": 17,
+          "wil": 19
+        },
+        "type": 11,
+        "wp": 16
+      },
+      "0x03": {
+        "arts": [
+          97,
+          98,
+          304
+        ],
+        "gifts": 16,
+        "hp": 170,
+        "items": [
+          64,
+          130,
+          172,
+          192
+        ],
+        "jp": 15,
+        "learned": 3,
+        "lp": 9,
+        "name": "Fuse",
+        "race": 129,
+        "stats": {
+          "cha": 15,
+          "int": 21,
+          "psy": 25,
+          "qui": 18,
+          "str": 32,
+          "vit": 20,
+          "wil": 20
+        },
+        "type": 6,
+        "wp": 30
+      },
+      "0x04": {
+        "arts": [
+          288,
+          289,
+          290,
+          291
+        ],
+        "gifts": 4,
+        "hp": 155,
+        "items": [
+          157,
+          170
+        ],
+        "jp": 35,
+        "learned": 4,
+        "lp": 7,
+        "name": "Blue",
+        "race": 129,
+        "stats": {
+          "cha": 15,
+          "int": 32,
+          "psy": 29,
+          "qui": 21,
+          "str": 9,
+          "vit": 8,
+          "wil": 26
+        },
+        "type": 0,
+        "wp": 0
+      },
+      "0x05": {
+        "arts": [
+          1,
+          432
+        ],
+        "gifts": 8,
+        "hp": 180,
+        "items": [
+          20,
+          138,
+          169,
+          192
+        ],
+        "jp": 25,
+        "learned": 3,
+        "lp": 8,
+        "name": "Asellus",
+        "race": 65,
+        "stats": {
+          "cha": 31,
+          "int": 18,
+          "psy": 41,
+          "qui": 21,
+          "str": 27,
+          "vit": 17,
+          "wil": 16
+        },
+        "type": 1,
+        "wp": 25
+      },
+      "0x06": {
+        "arts": [],
+        "gifts": 0,
+        "hp": 100,
+        "items": [
+          71,
+          8,
+          114,
+          114,
+          141
+        ],
+        "jp": 0,
+        "learned": 0,
+        "lp": 15,
+        "name": "T260",
+        "race": 4,
+        "stats": {
+          "cha": 5,
+          "int": 5,
+          "psy": 5,
+          "qui": 5,
+          "str": 5,
+          "vit": 5,
+          "wil": 5
+        },
+        "type": 0,
+        "wp": 50
+      },
+      "0x07": {
+        "arts": [
+          165,
+          166,
+          173
+        ],
+        "gifts": 0,
+        "hp": 60,
+        "items": [
+          149
+        ],
+        "jp": 12,
+        "learned": 7,
+        "lp": 10,
+        "name": "Riki",
+        "race": 8,
+        "stats": {
+          "cha": 8,
+          "int": 8,
+          "psy": 8,
+          "qui": 8,
+          "str": 8,
+          "vit": 8,
+          "wil": 8
+        },
+        "type": 0,
+        "wp": 16
+      },
+      "0x08": {
+        "arts": [
+          288,
+          289,
+          290,
+          291
+        ],
+        "gifts": 4,
+        "hp": 155,
+        "items": [
+          157,
+          170
+        ],
+        "jp": 35,
+        "learned": 4,
+        "lp": 7,
+        "name": "Rouge",
+        "race": 129,
+        "stats": {
+          "cha": 15,
+          "int": 32,
+          "psy": 29,
+          "qui": 21,
+          "str": 9,
+          "vit": 8,
+          "wil": 26
+        },
+        "type": 0,
+        "wp": 0
+      },
+      "0x09": {
+        "arts": [
+          4,
+          65,
+          67,
+          304,
+          305
+        ],
+        "gifts": 16,
+        "hp": 180,
+        "items": [
+          22,
+          51,
+          179,
+          130,
+          184,
+          192
+        ],
+        "jp": 20,
+        "learned": 6,
+        "lp": 9,
+        "name": "Roufas",
+        "race": 129,
+        "stats": {
+          "cha": 21,
+          "int": 30,
+          "psy": 13,
+          "qui": 16,
+          "str": 25,
+          "vit": 28,
+          "wil": 26
+        },
+        "type": 5,
+        "wp": 30
+      },
+      "0x0A": {
+        "arts": [
+          97,
+          1,
+          2,
+          3,
+          4,
+          12
+        ],
+        "gifts": 0,
+        "hp": 150,
+        "items": [
+          17,
+          171
+        ],
+        "jp": 0,
+        "learned": 7,
+        "lp": 10,
+        "name": "Gen",
+        "race": 129,
+        "stats": {
+          "cha": 6,
+          "int": 8,
+          "psy": 13,
+          "qui": 18,
+          "str": 22,
+          "vit": 19,
+          "wil": 11
+        },
+        "type": 7,
+        "wp": 20
+      },
+      "0x0B": {
+        "arts": [
+          97,
+          103,
+          104,
+          102,
+          105
+        ],
+        "gifts": 0,
+        "hp": 200,
+        "items": [
+          171,
+          184,
+          192,
+          203
+        ],
+        "jp": 0,
+        "learned": 5,
+        "lp": 8,
+        "name": "Fei-on",
+        "race": 129,
+        "stats": {
+          "cha": 17,
+          "int": 12,
+          "psy": 20,
+          "qui": 29,
+          "str": 33,
+          "vit": 30,
+          "wil": 24
+        },
+        "type": 8,
+        "wp": 44
+      },
+      "0x0C": {
+        "arts": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "gifts": 0,
+        "hp": 165,
+        "items": [
+          21,
+          128,
+          168,
+          184,
+          192
+        ],
+        "jp": 0,
+        "learned": 4,
+        "lp": 9,
+        "name": "Annie",
+        "race": 65,
+        "stats": {
+          "cha": 13,
+          "int": 10,
+          "psy": 17,
+          "qui": 21,
+          "str": 19,
+          "vit": 16,
+          "wil": 21
+        },
+        "type": 4,
+        "wp": 20
+      },
+      "0x0D": {
+        "arts": [
+          107,
+          98,
+          101,
+          108
+        ],
+        "gifts": 0,
+        "hp": 130,
+        "items": [
+          128,
+          168,
+          200
+        ],
+        "jp": 0,
+        "learned": 4,
+        "lp": 8,
+        "name": "Liza",
+        "race": 65,
+        "stats": {
+          "cha": 22,
+          "int": 23,
+          "psy": 20,
+          "qui": 29,
+          "str": 15,
+          "vit": 13,
+          "wil": 14
+        },
+        "type": 12,
+        "wp": 28
+      },
+      "0x0E": {
+        "arts": [
+          74,
+          65,
+          70,
+          5,
+          6,
+          10
+        ],
+        "gifts": 0,
+        "hp": 280,
+        "items": [
+          51,
+          54,
+          26,
+          21,
+          130,
+          169,
+          177,
+          192
+        ],
+        "jp": 13,
+        "learned": 6,
+        "lp": 8,
+        "name": "Capt.Hamilton",
+        "race": 65,
+        "stats": {
+          "cha": 13,
+          "int": 26,
+          "psy": 23,
+          "qui": 19,
+          "str": 22,
+          "vit": 27,
+          "wil": 20
+        },
+        "type": 10,
+        "wp": 22
+      },
+      "0x0F": {
+        "arts": [
+          264,
+          265,
+          296,
+          297
+        ],
+        "gifts": 0,
+        "hp": 160,
+        "items": [
+          64,
+          48,
+          130,
+          172,
+          192
+        ],
+        "jp": 24,
+        "learned": 5,
+        "lp": 9,
+        "name": "Doll",
+        "race": 65,
+        "stats": {
+          "cha": 23,
+          "int": 26,
+          "psy": 16,
+          "qui": 24,
+          "str": 18,
+          "vit": 21,
+          "wil": 18
+        },
+        "type": 9,
+        "wp": 16
+      },
+      "0x10": {
+        "arts": [
+          65,
+          70,
+          256,
+          257
+        ],
+        "gifts": 0,
+        "hp": 90,
+        "items": [
+          48,
+          128,
+          169,
+          184,
+          192
+        ],
+        "jp": 20,
+        "learned": 4,
+        "lp": 10,
+        "name": "Mei-ling",
+        "race": 65,
+        "stats": {
+          "cha": 11,
+          "int": 15,
+          "psy": 18,
+          "qui": 10,
+          "str": 3,
+          "vit": 8,
+          "wil": 10
+        },
+        "type": 1,
+        "wp": 12
+      },
+      "0x11": {
+        "arts": [],
+        "gifts": 0,
+        "hp": 90,
+        "items": [
+          17,
+          176,
+          129,
+          184,
+          192
+        ],
+        "jp": 0,
+        "learned": 0,
+        "lp": 9,
+        "name": "Woman",
+        "race": 65,
+        "stats": {
+          "cha": 10,
+          "int": 13,
+          "psy": 17,
+          "qui": 10,
+          "str": 19,
+          "vit": 15,
+          "wil": 11
+        },
+        "type": 0,
+        "wp": 15
+      },
+      "0x12": {
+        "arts": [
+          296,
+          297,
+          257,
+          259,
+          432
+        ],
+        "gifts": 8,
+        "hp": 180,
+        "items": [
+          159,
+          202
+        ],
+        "jp": 42,
+        "learned": 8,
+        "lp": 8,
+        "name": "White Rose",
+        "race": 66,
+        "stats": {
+          "cha": 32,
+          "int": 25,
+          "psy": 25,
+          "qui": 18,
+          "str": 16,
+          "vit": 15,
+          "wil": 19
+        },
+        "type": 0,
+        "wp": 20
+      },
+      "0x13": {
+        "arts": [
+          432,
+          448,
+          464
+        ],
+        "gifts": 8,
+        "hp": 250,
+        "items": [
+          20,
+          159
+        ],
+        "jp": 29,
+        "learned": 5,
+        "lp": 8,
+        "name": "Ildon",
+        "race": 130,
+        "stats": {
+          "cha": 28,
+          "int": 22,
+          "psy": 33,
+          "qui": 16,
+          "str": 28,
+          "vit": 13,
+          "wil": 26
+        },
+        "type": 0,
+        "wp": 35
+      },
+      "0x14": {
+        "arts": [
+          296,
+          328
+        ],
+        "gifts": 136,
+        "hp": 220,
+        "items": [
+          19,
+          134,
+          214
+        ],
+        "jp": 28,
+        "learned": 2,
+        "lp": 8,
+        "name": "Mesarthim",
+        "race": 66,
+        "stats": {
+          "cha": 27,
+          "int": 16,
+          "psy": 24,
+          "qui": 23,
+          "str": 17,
+          "vit": 11,
+          "wil": 12
+        },
+        "type": 0,
+        "wp": 20
+      },
+      "0x15": {
+        "arts": [
+          312,
+          313,
+          314,
+          432,
+          448,
+          464
+        ],
+        "gifts": 8,
+        "hp": 410,
+        "items": [
+          20,
+          159,
+          170
+        ],
+        "jp": 31,
+        "learned": 10,
+        "lp": 9,
+        "name": "Zozma",
+        "race": 130,
+        "stats": {
+          "cha": 35,
+          "int": 26,
+          "psy": 32,
+          "qui": 24,
+          "str": 19,
+          "vit": 13,
+          "wil": 11
+        },
+        "type": 0,
+        "wp": 41
+      },
+      "0x16": {
+        "arts": [
+          344,
+          345,
+          348,
+          296,
+          432
+        ],
+        "gifts": 8,
+        "hp": 210,
+        "items": [
+          19,
+          159,
+          169,
+          192
+        ],
+        "jp": 66,
+        "learned": 8,
+        "lp": 6,
+        "name": "Rei",
+        "race": 66,
+        "stats": {
+          "cha": 38,
+          "int": 32,
+          "psy": 28,
+          "qui": 18,
+          "str": 9,
+          "vit": 8,
+          "wil": 19
+        },
+        "type": 0,
+        "wp": 6
+      },
+      "0x17": {
+        "arts": [
+          297,
+          432,
+          448,
+          464
+        ],
+        "gifts": 8,
+        "hp": 180,
+        "items": [
+          64,
+          159
+        ],
+        "jp": 23,
+        "learned": 2,
+        "lp": 8,
+        "name": "Silence",
+        "race": 130,
+        "stats": {
+          "cha": 26,
+          "int": 16,
+          "psy": 24,
+          "qui": 19,
+          "str": 21,
+          "vit": 16,
+          "wil": 11
+        },
+        "type": 0,
+        "wp": 26
+      },
+      "0x18": {
+        "arts": [
+          264,
+          320,
+          322,
+          297,
+          432
+        ],
+        "gifts": 8,
+        "hp": 190,
+        "items": [
+          70,
+          21,
+          175,
+          192
+        ],
+        "jp": 42,
+        "learned": 7,
+        "lp": 7,
+        "name": "Dr. Nusakan",
+        "race": 130,
+        "stats": {
+          "cha": 26,
+          "int": 24,
+          "psy": 26,
+          "qui": 13,
+          "str": 22,
+          "vit": 15,
+          "wil": 16
+        },
+        "type": 0,
+        "wp": 32
+      },
+      "0x19": {
+        "arts": [
+          281,
+          283,
+          284,
+          285,
+          432,
+          448,
+          464
+        ],
+        "gifts": 8,
+        "hp": 370,
+        "items": [
+          159,
+          170,
+          195
+        ],
+        "jp": 60,
+        "learned": 12,
+        "lp": 10,
+        "name": "TimeLord",
+        "race": 130,
+        "stats": {
+          "cha": 29,
+          "int": 21,
+          "psy": 31,
+          "qui": 28,
+          "str": 15,
+          "vit": 17,
+          "wil": 24
+        },
+        "type": 0,
+        "wp": 47
+      },
+      "0x1A": {
+        "arts": [
+          419
+        ],
+        "gifts": 0,
+        "hp": 75,
+        "items": [
+          85,
+          160,
+          116,
+          99,
+          105,
+          143
+        ],
+        "jp": 0,
+        "learned": 1,
+        "lp": 20,
+        "name": "Rabbit",
+        "race": 4,
+        "stats": {
+          "cha": 20,
+          "int": 25,
+          "psy": 10,
+          "qui": 20,
+          "str": 5,
+          "vit": 10,
+          "wil": 15
+        },
+        "type": 0,
+        "wp": 75
+      },
+      "0x1B": {
+        "arts": [
+          420,
+          429
+        ],
+        "gifts": 0,
+        "hp": 125,
+        "items": [
+          116,
+          88,
+          107,
+          140
+        ],
+        "jp": 0,
+        "learned": 2,
+        "lp": 20,
+        "name": "Leonard",
+        "race": 4,
+        "stats": {
+          "cha": 10,
+          "int": 45,
+          "psy": 5,
+          "qui": 10,
+          "str": 15,
+          "vit": 10,
+          "wil": 5
+        },
+        "type": 0,
+        "wp": 80
+      },
+      "0x1C": {
+        "arts": [],
+        "gifts": 0,
+        "hp": 100,
+        "items": [
+          48,
+          51,
+          110,
+          194,
+          96,
+          93,
+          139
+        ],
+        "jp": 0,
+        "learned": 0,
+        "lp": 15,
+        "name": "ZEKE",
+        "race": 4,
+        "stats": {
+          "cha": 10,
+          "int": 15,
+          "psy": 1,
+          "qui": 50,
+          "str": 15,
+          "vit": 5,
+          "wil": 15
+        },
+        "type": 0,
+        "wp": 30
+      },
+      "0x1D": {
+        "arts": [
+          420
+        ],
+        "gifts": 0,
+        "hp": 100,
+        "items": [
+          120,
+          99,
+          106,
+          141
+        ],
+        "jp": 0,
+        "learned": 1,
+        "lp": 20,
+        "name": "BJ&K",
+        "race": 4,
+        "stats": {
+          "cha": 10,
+          "int": 35,
+          "psy": 5,
+          "qui": 5,
+          "str": 5,
+          "vit": 10,
+          "wil": 30
+        },
+        "type": 0,
+        "wp": 55
+      },
+      "0x1E": {
+        "arts": [
+          378
+        ],
+        "gifts": 0,
+        "hp": 250,
+        "items": [
+          150,
+          150,
+          97,
+          92,
+          95,
+          142
+        ],
+        "jp": 0,
+        "learned": 1,
+        "lp": 25,
+        "name": "PzkwV",
+        "race": 4,
+        "stats": {
+          "cha": 10,
+          "int": 5,
+          "psy": 1,
+          "qui": 5,
+          "str": 10,
+          "vit": 30,
+          "wil": 35
+        },
+        "type": 0,
+        "wp": 75
+      },
+      "0x1F": {
+        "arts": [
+          424,
+          425
+        ],
+        "gifts": 0,
+        "hp": 120,
+        "items": [
+          111,
+          98,
+          107,
+          140
+        ],
+        "jp": 0,
+        "learned": 2,
+        "lp": 20,
+        "name": "EngineerCar",
+        "race": 4,
+        "stats": {
+          "cha": 5,
+          "int": 25,
+          "psy": 5,
+          "qui": 5,
+          "str": 15,
+          "vit": 15,
+          "wil": 35
+        },
+        "type": 0,
+        "wp": 75
+      },
+      "0x20": {
+        "arts": [],
+        "gifts": 0,
+        "hp": 105,
+        "items": [
+          116,
+          90,
+          141
+        ],
+        "jp": 0,
+        "learned": 0,
+        "lp": 20,
+        "name": "CommonMec",
+        "race": 4,
+        "stats": {
+          "cha": 15,
+          "int": 20,
+          "psy": 5,
+          "qui": 10,
+          "str": 20,
+          "vit": 15,
+          "wil": 10
+        },
+        "type": 0,
+        "wp": 40
+      },
+      "0x21": {
+        "arts": [
+          197,
+          157,
+          176,
+          171
+        ],
+        "gifts": 0,
+        "hp": 180,
+        "items": [
+          200,
+          149,
+          150
+        ],
+        "jp": 28,
+        "learned": 12,
+        "lp": 10,
+        "name": "Thunder",
+        "race": 8,
+        "stats": {
+          "cha": 6,
+          "int": 16,
+          "psy": 20,
+          "qui": 11,
+          "str": 25,
+          "vit": 24,
+          "wil": 12
+        },
+        "type": 0,
+        "wp": 36
+      },
+      "0x22": {
+        "arts": [
+          227,
+          173,
+          186,
+          234
+        ],
+        "gifts": 0,
+        "hp": 180,
+        "items": [
+          145
+        ],
+        "jp": 20,
+        "learned": 16,
+        "lp": 7,
+        "name": "Cotton",
+        "race": 8,
+        "stats": {
+          "cha": 21,
+          "int": 12,
+          "psy": 13,
+          "qui": 31,
+          "str": 16,
+          "vit": 16,
+          "wil": 22
+        },
+        "type": 0,
+        "wp": 46
+      },
+      "0x23": {
+        "arts": [
+          192,
+          212,
+          172,
+          225,
+          255
+        ],
+        "gifts": 0,
+        "hp": 240,
+        "items": [
+          156,
+          156,
+          216,
+          125
+        ],
+        "jp": 66,
+        "learned": 51,
+        "lp": 4,
+        "name": "Sei",
+        "race": 152,
+        "stats": {
+          "cha": 40,
+          "int": 34,
+          "psy": 34,
+          "qui": 34,
+          "str": 41,
+          "vit": 44,
+          "wil": 40
+        },
+        "type": 0,
+        "wp": 99
+      },
+      "0x24": {
+        "arts": [
+          272,
+          273,
+          274,
+          275,
+          276,
+          277,
+          211,
+          254
+        ],
+        "gifts": 0,
+        "hp": 400,
+        "items": [
+          144,
+          145,
+          219
+        ],
+        "jp": 128,
+        "learned": 39,
+        "lp": 6,
+        "name": "Kylin",
+        "race": 8,
+        "stats": {
+          "cha": 82,
+          "int": 90,
+          "psy": 70,
+          "qui": 71,
+          "str": 52,
+          "vit": 41,
+          "wil": 48
+        },
+        "type": 0,
+        "wp": 150
+      },
+      "0x25": {
+        "arts": [
+          185,
+          212,
+          228
+        ],
+        "gifts": 0,
+        "hp": 90,
+        "items": [
+          151,
+          151
+        ],
+        "jp": 28,
+        "learned": 10,
+        "lp": 10,
+        "name": "Slime",
+        "race": 8,
+        "stats": {
+          "cha": 4,
+          "int": 7,
+          "psy": 24,
+          "qui": 6,
+          "str": 8,
+          "vit": 28,
+          "wil": 22
+        },
+        "type": 0,
+        "wp": 26
+      },
+      "0x26": {
+        "arts": [
+          187,
+          194,
+          179,
+          180
+        ],
+        "gifts": 0,
+        "hp": 440,
+        "items": [
+          144,
+          145,
+          150
+        ],
+        "jp": 0,
+        "learned": 35,
+        "lp": 8,
+        "name": "Suzaku",
+        "race": 8,
+        "stats": {
+          "cha": 80,
+          "int": 56,
+          "psy": 68,
+          "qui": 80,
+          "str": 62,
+          "vit": 64,
+          "wil": 71
+        },
+        "type": 0,
+        "wp": 108
+      },
+      "0x27": {
+        "arts": [
+          138,
+          142,
+          204,
+          236,
+          128,
+          184,
+          199,
+          233
+        ],
+        "gifts": 0,
+        "hp": 160,
+        "items": [
+          149,
+          150,
+          184
+        ],
+        "jp": 0,
+        "learned": 25,
+        "lp": 10,
+        "name": "RedTurnip",
+        "race": 8,
+        "stats": {
+          "cha": 25,
+          "int": 25,
+          "psy": 29,
+          "qui": 15,
+          "str": 17,
+          "vit": 23,
+          "wil": 32
+        },
+        "type": 0,
+        "wp": 32
+      }
+    },
+    "3": {
+      "0x01": {
+        "arts": [
+          1
+        ],
+        "gifts": 0,
+        "hp": 160,
+        "items": [
+          16,
+          177,
+          129,
+          168
+        ],
+        "jp": 0,
+        "learned": 1,
+        "lp": 10,
+        "name": "Lute",
+        "race": 129,
+        "stats": {
+          "cha": 32,
+          "int": 12,
+          "psy": 15,
+          "qui": 6,
+          "str": 9,
+          "vit": 6,
+          "wil": 4
+        },
+        "type": 2,
+        "wp": 20
+      },
+      "0x02": {
+        "arts": [
+          97,
+          99,
+          73
+        ],
+        "gifts": 0,
+        "hp": 150,
+        "items": [
+          17,
+          49,
+          161,
+          168
+        ],
+        "jp": 0,
+        "learned": 3,
+        "lp": 9,
+        "name": "Red",
+        "race": 129,
+        "stats": {
+          "cha": 14,
+          "int": 14,
+          "psy": 9,
+          "qui": 18,
+          "str": 21,
+          "vit": 18,
+          "wil": 22
+        },
+        "type": 11,
+        "wp": 20
+      },
+      "0x03": {
+        "arts": [
+          97,
+          98,
+          99,
+          304,
+          308
+        ],
+        "gifts": 16,
+        "hp": 200,
+        "items": [
+          64,
+          130,
+          172,
+          192
+        ],
+        "jp": 20,
+        "learned": 5,
+        "lp": 9,
+        "name": "Fuse",
+        "race": 129,
+        "stats": {
+          "cha": 17,
+          "int": 23,
+          "psy": 26,
+          "qui": 20,
+          "str": 34,
+          "vit": 22,
+          "wil": 21
+        },
+        "type": 6,
+        "wp": 35
+      },
+      "0x04": {
+        "arts": [
+          288,
+          289,
+          290,
+          291
+        ],
+        "gifts": 4,
+        "hp": 185,
+        "items": [
+          157,
+          170
+        ],
+        "jp": 40,
+        "learned": 4,
+        "lp": 7,
+        "name": "Blue",
+        "race": 129,
+        "stats": {
+          "cha": 15,
+          "int": 35,
+          "psy": 31,
+          "qui": 23,
+          "str": 9,
+          "vit": 8,
+          "wil": 29
+        },
+        "type": 0,
+        "wp": 0
+      },
+      "0x05": {
+        "arts": [
+          1,
+          432
+        ],
+        "gifts": 8,
+        "hp": 205,
+        "items": [
+          20,
+          138,
+          169,
+          192
+        ],
+        "jp": 29,
+        "learned": 3,
+        "lp": 8,
+        "name": "Asellus",
+        "race": 65,
+        "stats": {
+          "cha": 34,
+          "int": 19,
+          "psy": 45,
+          "qui": 21,
+          "str": 27,
+          "vit": 18,
+          "wil": 18
+        },
+        "type": 1,
+        "wp": 27
+      },
+      "0x06": {
+        "arts": [],
+        "gifts": 0,
+        "hp": 100,
+        "items": [
+          71,
+          8,
+          114,
+          114,
+          141
+        ],
+        "jp": 0,
+        "learned": 0,
+        "lp": 15,
+        "name": "T260",
+        "race": 4,
+        "stats": {
+          "cha": 5,
+          "int": 5,
+          "psy": 5,
+          "qui": 5,
+          "str": 5,
+          "vit": 5,
+          "wil": 5
+        },
+        "type": 0,
+        "wp": 50
+      },
+      "0x07": {
+        "arts": [
+          165,
+          166,
+          173
+        ],
+        "gifts": 0,
+        "hp": 60,
+        "items": [
+          149
+        ],
+        "jp": 12,
+        "learned": 11,
+        "lp": 10,
+        "name": "Riki",
+        "race": 8,
+        "stats": {
+          "cha": 8,
+          "int": 8,
+          "psy": 8,
+          "qui": 8,
+          "str": 8,
+          "vit": 8,
+          "wil": 8
+        },
+        "type": 0,
+        "wp": 16
+      },
+      "0x08": {
+        "arts": [
+          288,
+          289,
+          290,
+          291
+        ],
+        "gifts": 4,
+        "hp": 185,
+        "items": [
+          157,
+          170
+        ],
+        "jp": 40,
+        "learned": 4,
+        "lp": 7,
+        "name": "Rouge",
+        "race": 129,
+        "stats": {
+          "cha": 15,
+          "int": 35,
+          "psy": 31,
+          "qui": 23,
+          "str": 9,
+          "vit": 8,
+          "wil": 29
+        },
+        "type": 0,
+        "wp": 0
+      },
+      "0x09": {
+        "arts": [
+          8,
+          65,
+          67,
+          304,
+          305
+        ],
+        "gifts": 16,
+        "hp": 210,
+        "items": [
+          22,
+          51,
+          179,
+          130,
+          184,
+          192
+        ],
+        "jp": 22,
+        "learned": 7,
+        "lp": 9,
+        "name": "Roufas",
+        "race": 129,
+        "stats": {
+          "cha": 22,
+          "int": 33,
+          "psy": 15,
+          "qui": 16,
+          "str": 27,
+          "vit": 30,
+          "wil": 28
+        },
+        "type": 5,
+        "wp": 34
+      },
+      "0x0A": {
+        "arts": [
+          103,
+          1,
+          2,
+          3,
+          4,
+          12
+        ],
+        "gifts": 0,
+        "hp": 170,
+        "items": [
+          17,
+          171
+        ],
+        "jp": 0,
+        "learned": 8,
+        "lp": 10,
+        "name": "Gen",
+        "race": 129,
+        "stats": {
+          "cha": 6,
+          "int": 8,
+          "psy": 14,
+          "qui": 20,
+          "str": 24,
+          "vit": 20,
+          "wil": 12
+        },
+        "type": 7,
+        "wp": 26
+      },
+      "0x0B": {
+        "arts": [
+          97,
+          103,
+          104,
+          102,
+          105,
+          113
+        ],
+        "gifts": 0,
+        "hp": 240,
+        "items": [
+          171,
+          184,
+          192,
+          203
+        ],
+        "jp": 0,
+        "learned": 6,
+        "lp": 8,
+        "name": "Fei-on",
+        "race": 129,
+        "stats": {
+          "cha": 18,
+          "int": 13,
+          "psy": 21,
+          "qui": 31,
+          "str": 36,
+          "vit": 33,
+          "wil": 25
+        },
+        "type": 8,
+        "wp": 52
+      },
+      "0x0C": {
+        "arts": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "gifts": 0,
+        "hp": 205,
+        "items": [
+          21,
+          128,
+          168,
+          184,
+          192
+        ],
+        "jp": 0,
+        "learned": 5,
+        "lp": 9,
+        "name": "Annie",
+        "race": 65,
+        "stats": {
+          "cha": 15,
+          "int": 11,
+          "psy": 18,
+          "qui": 25,
+          "str": 22,
+          "vit": 20,
+          "wil": 23
+        },
+        "type": 4,
+        "wp": 30
+      },
+      "0x0D": {
+        "arts": [
+          107,
+          98,
+          101,
+          108,
+          106
+        ],
+        "gifts": 0,
+        "hp": 160,
+        "items": [
+          128,
+          168,
+          200
+        ],
+        "jp": 0,
+        "learned": 5,
+        "lp": 8,
+        "name": "Liza",
+        "race": 65,
+        "stats": {
+          "cha": 24,
+          "int": 25,
+          "psy": 22,
+          "qui": 33,
+          "str": 16,
+          "vit": 14,
+          "wil": 15
+        },
+        "type": 12,
+        "wp": 33
+      },
+      "0x0E": {
+        "arts": [
+          74,
+          65,
+          70,
+          5,
+          6,
+          10
+        ],
+        "gifts": 0,
+        "hp": 310,
+        "items": [
+          51,
+          54,
+          26,
+          21,
+          130,
+          169,
+          177,
+          192
+        ],
+        "jp": 15,
+        "learned": 6,
+        "lp": 8,
+        "name": "Capt.Hamilton",
+        "race": 65,
+        "stats": {
+          "cha": 15,
+          "int": 28,
+          "psy": 25,
+          "qui": 21,
+          "str": 24,
+          "vit": 29,
+          "wil": 22
+        },
+        "type": 10,
+        "wp": 20
+      },
+      "0x0F": {
+        "arts": [
+          264,
+          265,
+          296,
+          297
+        ],
+        "gifts": 0,
+        "hp": 200,
+        "items": [
+          64,
+          48,
+          130,
+          172,
+          192
+        ],
+        "jp": 30,
+        "learned": 6,
+        "lp": 9,
+        "name": "Doll",
+        "race": 65,
+        "stats": {
+          "cha": 25,
+          "int": 30,
+          "psy": 17,
+          "qui": 27,
+          "str": 20,
+          "vit": 22,
+          "wil": 19
+        },
+        "type": 9,
+        "wp": 18
+      },
+      "0x10": {
+        "arts": [
+          65,
+          70,
+          73,
+          256,
+          257
+        ],
+        "gifts": 0,
+        "hp": 110,
+        "items": [
+          51,
+          129,
+          169,
+          184,
+          192
+        ],
+        "jp": 24,
+        "learned": 5,
+        "lp": 10,
+        "name": "Mei-ling",
+        "race": 65,
+        "stats": {
+          "cha": 12,
+          "int": 17,
+          "psy": 20,
+          "qui": 11,
+          "str": 3,
+          "vit": 9,
+          "wil": 13
+        },
+        "type": 1,
+        "wp": 15
+      },
+      "0x11": {
+        "arts": [],
+        "gifts": 0,
+        "hp": 90,
+        "items": [
+          17,
+          176,
+          129,
+          184,
+          192
+        ],
+        "jp": 0,
+        "learned": 0,
+        "lp": 9,
+        "name": "Woman",
+        "race": 65,
+        "stats": {
+          "cha": 10,
+          "int": 13,
+          "psy": 17,
+          "qui": 10,
+          "str": 19,
+          "vit": 15,
+          "wil": 11
+        },
+        "type": 0,
+        "wp": 15
+      },
+      "0x12": {
+        "arts": [
+          296,
+          297,
+          257,
+          259,
+          432
+        ],
+        "gifts": 8,
+        "hp": 200,
+        "items": [
+          159,
+          202
+        ],
+        "jp": 44,
+        "learned": 8,
+        "lp": 8,
+        "name": "White Rose",
+        "race": 66,
+        "stats": {
+          "cha": 36,
+          "int": 25,
+          "psy": 25,
+          "qui": 18,
+          "str": 16,
+          "vit": 15,
+          "wil": 19
+        },
+        "type": 0,
+        "wp": 23
+      },
+      "0x13": {
+        "arts": [
+          432,
+          448,
+          464
+        ],
+        "gifts": 8,
+        "hp": 280,
+        "items": [
+          20,
+          159
+        ],
+        "jp": 30,
+        "learned": 5,
+        "lp": 8,
+        "name": "Ildon",
+        "race": 130,
+        "stats": {
+          "cha": 30,
+          "int": 22,
+          "psy": 33,
+          "qui": 16,
+          "str": 28,
+          "vit": 13,
+          "wil": 26
+        },
+        "type": 0,
+        "wp": 37
+      },
+      "0x14": {
+        "arts": [
+          296,
+          328
+        ],
+        "gifts": 136,
+        "hp": 240,
+        "items": [
+          19,
+          134,
+          214
+        ],
+        "jp": 30,
+        "learned": 2,
+        "lp": 8,
+        "name": "Mesarthim",
+        "race": 66,
+        "stats": {
+          "cha": 29,
+          "int": 16,
+          "psy": 24,
+          "qui": 23,
+          "str": 17,
+          "vit": 11,
+          "wil": 12
+        },
+        "type": 0,
+        "wp": 22
+      },
+      "0x15": {
+        "arts": [
+          312,
+          313,
+          314,
+          432,
+          448,
+          464
+        ],
+        "gifts": 8,
+        "hp": 420,
+        "items": [
+          20,
+          159,
+          170
+        ],
+        "jp": 32,
+        "learned": 10,
+        "lp": 9,
+        "name": "Zozma",
+        "race": 130,
+        "stats": {
+          "cha": 40,
+          "int": 26,
+          "psy": 32,
+          "qui": 24,
+          "str": 19,
+          "vit": 13,
+          "wil": 11
+        },
+        "type": 0,
+        "wp": 42
+      },
+      "0x16": {
+        "arts": [
+          344,
+          345,
+          348,
+          296,
+          432
+        ],
+        "gifts": 8,
+        "hp": 240,
+        "items": [
+          19,
+          159,
+          169,
+          192
+        ],
+        "jp": 66,
+        "learned": 8,
+        "lp": 6,
+        "name": "Rei",
+        "race": 66,
+        "stats": {
+          "cha": 44,
+          "int": 32,
+          "psy": 28,
+          "qui": 18,
+          "str": 9,
+          "vit": 8,
+          "wil": 19
+        },
+        "type": 0,
+        "wp": 6
+      },
+      "0x17": {
+        "arts": [
+          297,
+          432,
+          448,
+          464
+        ],
+        "gifts": 8,
+        "hp": 210,
+        "items": [
+          64,
+          159
+        ],
+        "jp": 24,
+        "learned": 2,
+        "lp": 8,
+        "name": "Silence",
+        "race": 130,
+        "stats": {
+          "cha": 29,
+          "int": 16,
+          "psy": 24,
+          "qui": 19,
+          "str": 21,
+          "vit": 16,
+          "wil": 11
+        },
+        "type": 0,
+        "wp": 28
+      },
+      "0x18": {
+        "arts": [
+          264,
+          320,
+          322,
+          297,
+          432
+        ],
+        "gifts": 8,
+        "hp": 240,
+        "items": [
+          70,
+          21,
+          175,
+          192
+        ],
+        "jp": 44,
+        "learned": 7,
+        "lp": 7,
+        "name": "Dr. Nusakan",
+        "race": 130,
+        "stats": {
+          "cha": 28,
+          "int": 24,
+          "psy": 26,
+          "qui": 13,
+          "str": 22,
+          "vit": 15,
+          "wil": 16
+        },
+        "type": 0,
+        "wp": 34
+      },
+      "0x19": {
+        "arts": [
+          281,
+          283,
+          284,
+          285,
+          432,
+          448,
+          464
+        ],
+        "gifts": 8,
+        "hp": 380,
+        "items": [
+          159,
+          170,
+          195
+        ],
+        "jp": 60,
+        "learned": 12,
+        "lp": 10,
+        "name": "TimeLord",
+        "race": 130,
+        "stats": {
+          "cha": 31,
+          "int": 21,
+          "psy": 31,
+          "qui": 28,
+          "str": 15,
+          "vit": 17,
+          "wil": 24
+        },
+        "type": 0,
+        "wp": 47
+      },
+      "0x1A": {
+        "arts": [
+          419
+        ],
+        "gifts": 0,
+        "hp": 75,
+        "items": [
+          85,
+          160,
+          77,
+          116,
+          99,
+          105,
+          143
+        ],
+        "jp": 0,
+        "learned": 1,
+        "lp": 20,
+        "name": "Rabbit",
+        "race": 4,
+        "stats": {
+          "cha": 20,
+          "int": 25,
+          "psy": 10,
+          "qui": 20,
+          "str": 5,
+          "vit": 10,
+          "wil": 15
+        },
+        "type": 0,
+        "wp": 75
+      },
+      "0x1B": {
+        "arts": [
+          420,
+          429
+        ],
+        "gifts": 0,
+        "hp": 125,
+        "items": [
+          76,
+          116,
+          88,
+          107,
+          140
+        ],
+        "jp": 0,
+        "learned": 2,
+        "lp": 20,
+        "name": "Leonard",
+        "race": 4,
+        "stats": {
+          "cha": 10,
+          "int": 45,
+          "psy": 5,
+          "qui": 10,
+          "str": 15,
+          "vit": 10,
+          "wil": 5
+        },
+        "type": 0,
+        "wp": 80
+      },
+      "0x1C": {
+        "arts": [],
+        "gifts": 0,
+        "hp": 100,
+        "items": [
+          48,
+          52,
+          110,
+          194,
+          96,
+          93,
+          139
+        ],
+        "jp": 0,
+        "learned": 0,
+        "lp": 15,
+        "name": "ZEKE",
+        "race": 4,
+        "stats": {
+          "cha": 10,
+          "int": 15,
+          "psy": 1,
+          "qui": 50,
+          "str": 15,
+          "vit": 5,
+          "wil": 15
+        },
+        "type": 0,
+        "wp": 30
+      },
+      "0x1D": {
+        "arts": [
+          420
+        ],
+        "gifts": 0,
+        "hp": 100,
+        "items": [
+          150,
+          120,
+          99,
+          106,
+          141
+        ],
+        "jp": 0,
+        "learned": 1,
+        "lp": 20,
+        "name": "BJ&K",
+        "race": 4,
+        "stats": {
+          "cha": 10,
+          "int": 35,
+          "psy": 5,
+          "qui": 5,
+          "str": 5,
+          "vit": 10,
+          "wil": 30
+        },
+        "type": 0,
+        "wp": 55
+      },
+      "0x1E": {
+        "arts": [
+          378
+        ],
+        "gifts": 0,
+        "hp": 250,
+        "items": [
+          150,
+          150,
+          97,
+          92,
+          95,
+          142
+        ],
+        "jp": 0,
+        "learned": 1,
+        "lp": 25,
+        "name": "PzkwV",
+        "race": 4,
+        "stats": {
+          "cha": 10,
+          "int": 5,
+          "psy": 1,
+          "qui": 5,
+          "str": 10,
+          "vit": 30,
+          "wil": 35
+        },
+        "type": 0,
+        "wp": 75
+      },
+      "0x1F": {
+        "arts": [
+          424,
+          425
+        ],
+        "gifts": 0,
+        "hp": 120,
+        "items": [
+          116,
+          111,
+          98,
+          107,
+          140
+        ],
+        "jp": 0,
+        "learned": 2,
+        "lp": 20,
+        "name": "EngineerCar",
+        "race": 4,
+        "stats": {
+          "cha": 5,
+          "int": 25,
+          "psy": 5,
+          "qui": 5,
+          "str": 15,
+          "vit": 15,
+          "wil": 35
+        },
+        "type": 0,
+        "wp": 75
+      },
+      "0x20": {
+        "arts": [],
+        "gifts": 0,
+        "hp": 105,
+        "items": [
+          116,
+          90,
+          141
+        ],
+        "jp": 0,
+        "learned": 0,
+        "lp": 20,
+        "name": "CommonMec",
+        "race": 4,
+        "stats": {
+          "cha": 15,
+          "int": 20,
+          "psy": 5,
+          "qui": 10,
+          "str": 20,
+          "vit": 15,
+          "wil": 10
+        },
+        "type": 0,
+        "wp": 40
+      },
+      "0x21": {
+        "arts": [
+          197,
+          157,
+          176,
+          171
+        ],
+        "gifts": 0,
+        "hp": 180,
+        "items": [
+          200,
+          200,
+          149,
+          150
+        ],
+        "jp": 28,
+        "learned": 12,
+        "lp": 10,
+        "name": "Thunder",
+        "race": 8,
+        "stats": {
+          "cha": 6,
+          "int": 16,
+          "psy": 20,
+          "qui": 11,
+          "str": 25,
+          "vit": 24,
+          "wil": 12
+        },
+        "type": 0,
+        "wp": 36
+      },
+      "0x22": {
+        "arts": [
+          227,
+          173,
+          186,
+          234
+        ],
+        "gifts": 0,
+        "hp": 180,
+        "items": [
+          145
+        ],
+        "jp": 20,
+        "learned": 20,
+        "lp": 7,
+        "name": "Cotton",
+        "race": 8,
+        "stats": {
+          "cha": 21,
+          "int": 12,
+          "psy": 13,
+          "qui": 31,
+          "str": 16,
+          "vit": 16,
+          "wil": 22
+        },
+        "type": 0,
+        "wp": 46
+      },
+      "0x23": {
+        "arts": [
+          192,
+          212,
+          172,
+          225,
+          255
+        ],
+        "gifts": 0,
+        "hp": 240,
+        "items": [
+          156,
+          156,
+          216,
+          125
+        ],
+        "jp": 66,
+        "learned": 51,
+        "lp": 4,
+        "name": "Sei",
+        "race": 152,
+        "stats": {
+          "cha": 40,
+          "int": 34,
+          "psy": 34,
+          "qui": 34,
+          "str": 41,
+          "vit": 44,
+          "wil": 40
+        },
+        "type": 0,
+        "wp": 99
+      },
+      "0x24": {
+        "arts": [
+          272,
+          273,
+          274,
+          275,
+          276,
+          277,
+          211,
+          254
+        ],
+        "gifts": 0,
+        "hp": 400,
+        "items": [
+          144,
+          145,
+          219
+        ],
+        "jp": 128,
+        "learned": 39,
+        "lp": 6,
+        "name": "Kylin",
+        "race": 8,
+        "stats": {
+          "cha": 82,
+          "int": 90,
+          "psy": 70,
+          "qui": 71,
+          "str": 52,
+          "vit": 41,
+          "wil": 48
+        },
+        "type": 0,
+        "wp": 150
+      },
+      "0x25": {
+        "arts": [
+          185,
+          212,
+          228
+        ],
+        "gifts": 0,
+        "hp": 90,
+        "items": [
+          151,
+          151
+        ],
+        "jp": 28,
+        "learned": 10,
+        "lp": 10,
+        "name": "Slime",
+        "race": 8,
+        "stats": {
+          "cha": 4,
+          "int": 7,
+          "psy": 24,
+          "qui": 6,
+          "str": 8,
+          "vit": 28,
+          "wil": 22
+        },
+        "type": 0,
+        "wp": 26
+      },
+      "0x26": {
+        "arts": [
+          187,
+          194,
+          179,
+          180
+        ],
+        "gifts": 0,
+        "hp": 440,
+        "items": [
+          144,
+          145,
+          150
+        ],
+        "jp": 0,
+        "learned": 35,
+        "lp": 8,
+        "name": "Suzaku",
+        "race": 8,
+        "stats": {
+          "cha": 80,
+          "int": 56,
+          "psy": 68,
+          "qui": 80,
+          "str": 62,
+          "vit": 64,
+          "wil": 71
+        },
+        "type": 0,
+        "wp": 108
+      },
+      "0x27": {
+        "arts": [
+          138,
+          142,
+          204,
+          236,
+          128,
+          184,
+          199,
+          233
+        ],
+        "gifts": 0,
+        "hp": 160,
+        "items": [
+          149,
+          150,
+          184
+        ],
+        "jp": 0,
+        "learned": 25,
+        "lp": 10,
+        "name": "RedTurnip",
+        "race": 8,
+        "stats": {
+          "cha": 25,
+          "int": 25,
+          "psy": 29,
+          "qui": 15,
+          "str": 17,
+          "vit": 23,
+          "wil": 32
+        },
+        "type": 0,
+        "wp": 32
+      }
+    },
+    "4": {
+      "0x01": {
+        "arts": [
+          1,
+          2
+        ],
+        "gifts": 0,
+        "hp": 180,
+        "items": [
+          16,
+          177,
+          129,
+          168
+        ],
+        "jp": 0,
+        "learned": 2,
+        "lp": 10,
+        "name": "Lute",
+        "race": 129,
+        "stats": {
+          "cha": 36,
+          "int": 13,
+          "psy": 16,
+          "qui": 7,
+          "str": 10,
+          "vit": 7,
+          "wil": 5
+        },
+        "type": 2,
+        "wp": 25
+      },
+      "0x02": {
+        "arts": [
+          97,
+          99,
+          73
+        ],
+        "gifts": 0,
+        "hp": 180,
+        "items": [
+          17,
+          49,
+          161,
+          168
+        ],
+        "jp": 0,
+        "learned": 3,
+        "lp": 9,
+        "name": "Red",
+        "race": 129,
+        "stats": {
+          "cha": 15,
+          "int": 14,
+          "psy": 10,
+          "qui": 20,
+          "str": 23,
+          "vit": 19,
+          "wil": 24
+        },
+        "type": 11,
+        "wp": 23
+      },
+      "0x03": {
+        "arts": [
+          97,
+          98,
+          99,
+          304,
+          309
+        ],
+        "gifts": 16,
+        "hp": 220,
+        "items": [
+          64,
+          130,
+          172,
+          192
+        ],
+        "jp": 20,
+        "learned": 6,
+        "lp": 9,
+        "name": "Fuse",
+        "race": 129,
+        "stats": {
+          "cha": 18,
+          "int": 24,
+          "psy": 27,
+          "qui": 21,
+          "str": 35,
+          "vit": 23,
+          "wil": 23
+        },
+        "type": 6,
+        "wp": 40
+      },
+      "0x04": {
+        "arts": [
+          288,
+          289,
+          290,
+          291
+        ],
+        "gifts": 4,
+        "hp": 210,
+        "items": [
+          157,
+          170
+        ],
+        "jp": 45,
+        "learned": 4,
+        "lp": 7,
+        "name": "Blue",
+        "race": 129,
+        "stats": {
+          "cha": 16,
+          "int": 37,
+          "psy": 32,
+          "qui": 25,
+          "str": 9,
+          "vit": 8,
+          "wil": 30
+        },
+        "type": 0,
+        "wp": 0
+      },
+      "0x05": {
+        "arts": [
+          1,
+          432
+        ],
+        "gifts": 8,
+        "hp": 230,
+        "items": [
+          20,
+          138,
+          169,
+          192
+        ],
+        "jp": 31,
+        "learned": 4,
+        "lp": 8,
+        "name": "Asellus",
+        "race": 65,
+        "stats": {
+          "cha": 41,
+          "int": 20,
+          "psy": 48,
+          "qui": 21,
+          "str": 27,
+          "vit": 19,
+          "wil": 19
+        },
+        "type": 1,
+        "wp": 29
+      },
+      "0x06": {
+        "arts": [],
+        "gifts": 0,
+        "hp": 100,
+        "items": [
+          71,
+          8,
+          114,
+          114,
+          141
+        ],
+        "jp": 0,
+        "learned": 0,
+        "lp": 15,
+        "name": "T260",
+        "race": 4,
+        "stats": {
+          "cha": 5,
+          "int": 5,
+          "psy": 5,
+          "qui": 5,
+          "str": 5,
+          "vit": 5,
+          "wil": 5
+        },
+        "type": 0,
+        "wp": 50
+      },
+      "0x07": {
+        "arts": [
+          165,
+          166,
+          173
+        ],
+        "gifts": 0,
+        "hp": 60,
+        "items": [
+          149
+        ],
+        "jp": 12,
+        "learned": 15,
+        "lp": 10,
+        "name": "Riki",
+        "race": 8,
+        "stats": {
+          "cha": 8,
+          "int": 8,
+          "psy": 8,
+          "qui": 8,
+          "str": 8,
+          "vit": 8,
+          "wil": 8
+        },
+        "type": 0,
+        "wp": 16
+      },
+      "0x08": {
+        "arts": [
+          288,
+          289,
+          290,
+          291
+        ],
+        "gifts": 4,
+        "hp": 210,
+        "items": [
+          157,
+          170
+        ],
+        "jp": 45,
+        "learned": 4,
+        "lp": 7,
+        "name": "Rouge",
+        "race": 129,
+        "stats": {
+          "cha": 16,
+          "int": 37,
+          "psy": 32,
+          "qui": 25,
+          "str": 9,
+          "vit": 8,
+          "wil": 30
+        },
+        "type": 0,
+        "wp": 0
+      },
+      "0x09": {
+        "arts": [
+          9,
+          65,
+          67,
+          304,
+          305
+        ],
+        "gifts": 16,
+        "hp": 240,
+        "items": [
+          22,
+          51,
+          179,
+          130,
+          184,
+          192
+        ],
+        "jp": 23,
+        "learned": 8,
+        "lp": 9,
+        "name": "Roufas",
+        "race": 129,
+        "stats": {
+          "cha": 23,
+          "int": 35,
+          "psy": 16,
+          "qui": 17,
+          "str": 29,
+          "vit": 31,
+          "wil": 29
+        },
+        "type": 5,
+        "wp": 37
+      },
+      "0x0A": {
+        "arts": [
+          103,
+          1,
+          2,
+          3,
+          4,
+          12
+        ],
+        "gifts": 0,
+        "hp": 190,
+        "items": [
+          17,
+          171
+        ],
+        "jp": 0,
+        "learned": 8,
+        "lp": 10,
+        "name": "Gen",
+        "race": 129,
+        "stats": {
+          "cha": 6,
+          "int": 8,
+          "psy": 15,
+          "qui": 20,
+          "str": 25,
+          "vit": 22,
+          "wil": 14
+        },
+        "type": 7,
+        "wp": 33
+      },
+      "0x0B": {
+        "arts": [
+          97,
+          103,
+          104,
+          102,
+          105,
+          113,
+          116
+        ],
+        "gifts": 0,
+        "hp": 270,
+        "items": [
+          171,
+          184,
+          192,
+          203
+        ],
+        "jp": 0,
+        "learned": 7,
+        "lp": 8,
+        "name": "Fei-on",
+        "race": 129,
+        "stats": {
+          "cha": 19,
+          "int": 14,
+          "psy": 23,
+          "qui": 33,
+          "str": 38,
+          "vit": 38,
+          "wil": 26
+        },
+        "type": 8,
+        "wp": 58
+      },
+      "0x0C": {
+        "arts": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          12
+        ],
+        "gifts": 0,
+        "hp": 235,
+        "items": [
+          21,
+          128,
+          168,
+          184,
+          192
+        ],
+        "jp": 0,
+        "learned": 6,
+        "lp": 9,
+        "name": "Annie",
+        "race": 65,
+        "stats": {
+          "cha": 17,
+          "int": 12,
+          "psy": 20,
+          "qui": 29,
+          "str": 25,
+          "vit": 23,
+          "wil": 25
+        },
+        "type": 4,
+        "wp": 37
+      },
+      "0x0D": {
+        "arts": [
+          107,
+          98,
+          101,
+          108,
+          106
+        ],
+        "gifts": 0,
+        "hp": 180,
+        "items": [
+          128,
+          168,
+          200
+        ],
+        "jp": 0,
+        "learned": 5,
+        "lp": 8,
+        "name": "Liza",
+        "race": 65,
+        "stats": {
+          "cha": 26,
+          "int": 28,
+          "psy": 24,
+          "qui": 37,
+          "str": 17,
+          "vit": 16,
+          "wil": 16
+        },
+        "type": 12,
+        "wp": 35
+      },
+      "0x0E": {
+        "arts": [
+          74,
+          65,
+          70,
+          5,
+          6,
+          10
+        ],
+        "gifts": 0,
+        "hp": 340,
+        "items": [
+          51,
+          54,
+          26,
+          21,
+          130,
+          169,
+          177,
+          192
+        ],
+        "jp": 20,
+        "learned": 6,
+        "lp": 8,
+        "name": "Capt.Hamilton",
+        "race": 65,
+        "stats": {
+          "cha": 17,
+          "int": 30,
+          "psy": 27,
+          "qui": 23,
+          "str": 26,
+          "vit": 31,
+          "wil": 24
+        },
+        "type": 10,
+        "wp": 35
+      },
+      "0x0F": {
+        "arts": [
+          264,
+          265,
+          296,
+          297
+        ],
+        "gifts": 0,
+        "hp": 240,
+        "items": [
+          64,
+          48,
+          130,
+          172,
+          192
+        ],
+        "jp": 34,
+        "learned": 7,
+        "lp": 9,
+        "name": "Doll",
+        "race": 65,
+        "stats": {
+          "cha": 27,
+          "int": 34,
+          "psy": 18,
+          "qui": 29,
+          "str": 22,
+          "vit": 23,
+          "wil": 20
+        },
+        "type": 9,
+        "wp": 20
+      },
+      "0x10": {
+        "arts": [
+          65,
+          70,
+          73,
+          256,
+          257
+        ],
+        "gifts": 0,
+        "hp": 130,
+        "items": [
+          51,
+          129,
+          169,
+          184,
+          192
+        ],
+        "jp": 27,
+        "learned": 5,
+        "lp": 10,
+        "name": "Mei-ling",
+        "race": 65,
+        "stats": {
+          "cha": 13,
+          "int": 20,
+          "psy": 22,
+          "qui": 12,
+          "str": 3,
+          "vit": 10,
+          "wil": 15
+        },
+        "type": 1,
+        "wp": 18
+      },
+      "0x11": {
+        "arts": [],
+        "gifts": 0,
+        "hp": 90,
+        "items": [
+          17,
+          176,
+          129,
+          184,
+          192
+        ],
+        "jp": 0,
+        "learned": 0,
+        "lp": 9,
+        "name": "Woman",
+        "race": 65,
+        "stats": {
+          "cha": 10,
+          "int": 13,
+          "psy": 17,
+          "qui": 10,
+          "str": 19,
+          "vit": 15,
+          "wil": 11
+        },
+        "type": 0,
+        "wp": 15
+      },
+      "0x12": {
+        "arts": [
+          296,
+          297,
+          257,
+          259,
+          432
+        ],
+        "gifts": 8,
+        "hp": 220,
+        "items": [
+          159,
+          202
+        ],
+        "jp": 46,
+        "learned": 8,
+        "lp": 8,
+        "name": "White Rose",
+        "race": 66,
+        "stats": {
+          "cha": 44,
+          "int": 25,
+          "psy": 25,
+          "qui": 18,
+          "str": 16,
+          "vit": 15,
+          "wil": 19
+        },
+        "type": 0,
+        "wp": 25
+      },
+      "0x13": {
+        "arts": [
+          432,
+          448,
+          464
+        ],
+        "gifts": 8,
+        "hp": 300,
+        "items": [
+          20,
+          159
+        ],
+        "jp": 32,
+        "learned": 5,
+        "lp": 8,
+        "name": "Ildon",
+        "race": 130,
+        "stats": {
+          "cha": 32,
+          "int": 22,
+          "psy": 33,
+          "qui": 16,
+          "str": 28,
+          "vit": 13,
+          "wil": 26
+        },
+        "type": 0,
+        "wp": 40
+      },
+      "0x14": {
+        "arts": [
+          296,
+          328
+        ],
+        "gifts": 136,
+        "hp": 250,
+        "items": [
+          19,
+          134,
+          214
+        ],
+        "jp": 33,
+        "learned": 2,
+        "lp": 8,
+        "name": "Mesarthim",
+        "race": 66,
+        "stats": {
+          "cha": 31,
+          "int": 16,
+          "psy": 24,
+          "qui": 23,
+          "str": 17,
+          "vit": 11,
+          "wil": 12
+        },
+        "type": 0,
+        "wp": 24
+      },
+      "0x15": {
+        "arts": [
+          312,
+          313,
+          314,
+          432,
+          448,
+          464
+        ],
+        "gifts": 8,
+        "hp": 430,
+        "items": [
+          20,
+          159,
+          170
+        ],
+        "jp": 33,
+        "learned": 10,
+        "lp": 9,
+        "name": "Zozma",
+        "race": 130,
+        "stats": {
+          "cha": 44,
+          "int": 26,
+          "psy": 32,
+          "qui": 24,
+          "str": 19,
+          "vit": 13,
+          "wil": 11
+        },
+        "type": 0,
+        "wp": 44
+      },
+      "0x16": {
+        "arts": [
+          344,
+          345,
+          348,
+          296,
+          432
+        ],
+        "gifts": 8,
+        "hp": 260,
+        "items": [
+          19,
+          159,
+          169,
+          192
+        ],
+        "jp": 66,
+        "learned": 8,
+        "lp": 6,
+        "name": "Rei",
+        "race": 66,
+        "stats": {
+          "cha": 51,
+          "int": 32,
+          "psy": 28,
+          "qui": 18,
+          "str": 9,
+          "vit": 8,
+          "wil": 19
+        },
+        "type": 0,
+        "wp": 6
+      },
+      "0x17": {
+        "arts": [
+          297,
+          432,
+          448,
+          464
+        ],
+        "gifts": 8,
+        "hp": 230,
+        "items": [
+          64,
+          159
+        ],
+        "jp": 26,
+        "learned": 2,
+        "lp": 8,
+        "name": "Silence",
+        "race": 130,
+        "stats": {
+          "cha": 32,
+          "int": 16,
+          "psy": 24,
+          "qui": 19,
+          "str": 21,
+          "vit": 16,
+          "wil": 11
+        },
+        "type": 0,
+        "wp": 30
+      },
+      "0x18": {
+        "arts": [
+          264,
+          320,
+          322,
+          297,
+          432
+        ],
+        "gifts": 8,
+        "hp": 270,
+        "items": [
+          70,
+          21,
+          175,
+          192
+        ],
+        "jp": 47,
+        "learned": 7,
+        "lp": 7,
+        "name": "Dr. Nusakan",
+        "race": 130,
+        "stats": {
+          "cha": 30,
+          "int": 24,
+          "psy": 26,
+          "qui": 13,
+          "str": 22,
+          "vit": 15,
+          "wil": 16
+        },
+        "type": 0,
+        "wp": 36
+      },
+      "0x19": {
+        "arts": [
+          281,
+          283,
+          284,
+          285,
+          432,
+          448,
+          464
+        ],
+        "gifts": 8,
+        "hp": 390,
+        "items": [
+          159,
+          170,
+          195
+        ],
+        "jp": 60,
+        "learned": 12,
+        "lp": 10,
+        "name": "TimeLord",
+        "race": 130,
+        "stats": {
+          "cha": 33,
+          "int": 21,
+          "psy": 31,
+          "qui": 28,
+          "str": 15,
+          "vit": 17,
+          "wil": 24
+        },
+        "type": 0,
+        "wp": 49
+      },
+      "0x1A": {
+        "arts": [
+          419
+        ],
+        "gifts": 0,
+        "hp": 75,
+        "items": [
+          85,
+          160,
+          77,
+          116,
+          99,
+          105,
+          143
+        ],
+        "jp": 0,
+        "learned": 1,
+        "lp": 20,
+        "name": "Rabbit",
+        "race": 4,
+        "stats": {
+          "cha": 20,
+          "int": 25,
+          "psy": 10,
+          "qui": 20,
+          "str": 5,
+          "vit": 10,
+          "wil": 15
+        },
+        "type": 0,
+        "wp": 75
+      },
+      "0x1B": {
+        "arts": [
+          420,
+          429
+        ],
+        "gifts": 0,
+        "hp": 125,
+        "items": [
+          76,
+          116,
+          88,
+          107,
+          140
+        ],
+        "jp": 0,
+        "learned": 2,
+        "lp": 20,
+        "name": "Leonard",
+        "race": 4,
+        "stats": {
+          "cha": 10,
+          "int": 45,
+          "psy": 5,
+          "qui": 10,
+          "str": 15,
+          "vit": 10,
+          "wil": 5
+        },
+        "type": 0,
+        "wp": 80
+      },
+      "0x1C": {
+        "arts": [],
+        "gifts": 0,
+        "hp": 100,
+        "items": [
+          48,
+          54,
+          110,
+          111,
+          194,
+          96,
+          93,
+          139
+        ],
+        "jp": 0,
+        "learned": 0,
+        "lp": 15,
+        "name": "ZEKE",
+        "race": 4,
+        "stats": {
+          "cha": 10,
+          "int": 15,
+          "psy": 1,
+          "qui": 50,
+          "str": 15,
+          "vit": 5,
+          "wil": 15
+        },
+        "type": 0,
+        "wp": 30
+      },
+      "0x1D": {
+        "arts": [
+          420
+        ],
+        "gifts": 0,
+        "hp": 100,
+        "items": [
+          146,
+          120,
+          99,
+          106,
+          141
+        ],
+        "jp": 0,
+        "learned": 1,
+        "lp": 20,
+        "name": "BJ&K",
+        "race": 4,
+        "stats": {
+          "cha": 10,
+          "int": 35,
+          "psy": 5,
+          "qui": 5,
+          "str": 5,
+          "vit": 10,
+          "wil": 30
+        },
+        "type": 0,
+        "wp": 55
+      },
+      "0x1E": {
+        "arts": [
+          378
+        ],
+        "gifts": 0,
+        "hp": 250,
+        "items": [
+          150,
+          150,
+          97,
+          92,
+          95,
+          142
+        ],
+        "jp": 0,
+        "learned": 1,
+        "lp": 25,
+        "name": "PzkwV",
+        "race": 4,
+        "stats": {
+          "cha": 10,
+          "int": 5,
+          "psy": 1,
+          "qui": 5,
+          "str": 10,
+          "vit": 30,
+          "wil": 35
+        },
+        "type": 0,
+        "wp": 75
+      },
+      "0x1F": {
+        "arts": [
+          424,
+          425
+        ],
+        "gifts": 0,
+        "hp": 120,
+        "items": [
+          116,
+          111,
+          98,
+          107,
+          140
+        ],
+        "jp": 0,
+        "learned": 2,
+        "lp": 20,
+        "name": "EngineerCar",
+        "race": 4,
+        "stats": {
+          "cha": 5,
+          "int": 25,
+          "psy": 5,
+          "qui": 5,
+          "str": 15,
+          "vit": 15,
+          "wil": 35
+        },
+        "type": 0,
+        "wp": 75
+      },
+      "0x20": {
+        "arts": [],
+        "gifts": 0,
+        "hp": 105,
+        "items": [
+          116,
+          90,
+          141
+        ],
+        "jp": 0,
+        "learned": 0,
+        "lp": 20,
+        "name": "CommonMec",
+        "race": 4,
+        "stats": {
+          "cha": 15,
+          "int": 20,
+          "psy": 5,
+          "qui": 10,
+          "str": 20,
+          "vit": 15,
+          "wil": 10
+        },
+        "type": 0,
+        "wp": 40
+      },
+      "0x21": {
+        "arts": [
+          197,
+          157,
+          176,
+          171
+        ],
+        "gifts": 0,
+        "hp": 180,
+        "items": [
+          200,
+          200,
+          200,
+          149,
+          150
+        ],
+        "jp": 28,
+        "learned": 12,
+        "lp": 10,
+        "name": "Thunder",
+        "race": 8,
+        "stats": {
+          "cha": 6,
+          "int": 16,
+          "psy": 20,
+          "qui": 11,
+          "str": 25,
+          "vit": 24,
+          "wil": 12
+        },
+        "type": 0,
+        "wp": 36
+      },
+      "0x22": {
+        "arts": [
+          227,
+          173,
+          186,
+          234
+        ],
+        "gifts": 0,
+        "hp": 180,
+        "items": [
+          145
+        ],
+        "jp": 20,
+        "learned": 24,
+        "lp": 7,
+        "name": "Cotton",
+        "race": 8,
+        "stats": {
+          "cha": 21,
+          "int": 12,
+          "psy": 13,
+          "qui": 31,
+          "str": 16,
+          "vit": 16,
+          "wil": 22
+        },
+        "type": 0,
+        "wp": 46
+      },
+      "0x23": {
+        "arts": [
+          192,
+          212,
+          172,
+          225,
+          255
+        ],
+        "gifts": 0,
+        "hp": 240,
+        "items": [
+          156,
+          156,
+          216,
+          125
+        ],
+        "jp": 66,
+        "learned": 51,
+        "lp": 4,
+        "name": "Sei",
+        "race": 152,
+        "stats": {
+          "cha": 40,
+          "int": 34,
+          "psy": 34,
+          "qui": 34,
+          "str": 41,
+          "vit": 44,
+          "wil": 40
+        },
+        "type": 0,
+        "wp": 99
+      },
+      "0x24": {
+        "arts": [
+          272,
+          273,
+          274,
+          275,
+          276,
+          277,
+          211,
+          254
+        ],
+        "gifts": 0,
+        "hp": 400,
+        "items": [
+          144,
+          145,
+          219
+        ],
+        "jp": 128,
+        "learned": 39,
+        "lp": 6,
+        "name": "Kylin",
+        "race": 8,
+        "stats": {
+          "cha": 82,
+          "int": 90,
+          "psy": 70,
+          "qui": 71,
+          "str": 52,
+          "vit": 41,
+          "wil": 48
+        },
+        "type": 0,
+        "wp": 150
+      },
+      "0x25": {
+        "arts": [
+          185,
+          212,
+          228
+        ],
+        "gifts": 0,
+        "hp": 90,
+        "items": [
+          151,
+          151
+        ],
+        "jp": 28,
+        "learned": 10,
+        "lp": 10,
+        "name": "Slime",
+        "race": 8,
+        "stats": {
+          "cha": 4,
+          "int": 7,
+          "psy": 24,
+          "qui": 6,
+          "str": 8,
+          "vit": 28,
+          "wil": 22
+        },
+        "type": 0,
+        "wp": 26
+      },
+      "0x26": {
+        "arts": [
+          187,
+          194,
+          179,
+          180
+        ],
+        "gifts": 0,
+        "hp": 440,
+        "items": [
+          144,
+          145,
+          150
+        ],
+        "jp": 0,
+        "learned": 35,
+        "lp": 8,
+        "name": "Suzaku",
+        "race": 8,
+        "stats": {
+          "cha": 80,
+          "int": 56,
+          "psy": 68,
+          "qui": 80,
+          "str": 62,
+          "vit": 64,
+          "wil": 71
+        },
+        "type": 0,
+        "wp": 108
+      },
+      "0x27": {
+        "arts": [
+          138,
+          142,
+          204,
+          236,
+          128,
+          184,
+          199,
+          233
+        ],
+        "gifts": 0,
+        "hp": 160,
+        "items": [
+          149,
+          150,
+          184
+        ],
+        "jp": 0,
+        "learned": 25,
+        "lp": 10,
+        "name": "RedTurnip",
+        "race": 8,
+        "stats": {
+          "cha": 25,
+          "int": 25,
+          "psy": 29,
+          "qui": 15,
+          "str": 17,
+          "vit": 23,
+          "wil": 32
+        },
+        "type": 0,
+        "wp": 32
+      }
+    }
+  }
+}

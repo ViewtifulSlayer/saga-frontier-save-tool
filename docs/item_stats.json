@@ -1,0 +1,3404 @@
+{
+  "items": {
+    "0x00": {
+      "hp": 5,
+      "name": "Cure",
+      "stats": {
+        "cha": 1,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 1
+    },
+    "0x01": {
+      "hp": 5,
+      "name": "PowerCure",
+      "stats": {
+        "cha": 1,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 1
+    },
+    "0x02": {
+      "hp": 5,
+      "name": "MaxCure",
+      "stats": {
+        "cha": 1,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 1
+    },
+    "0x03": {
+      "hp": 5,
+      "name": "Antistone",
+      "stats": {
+        "cha": 1,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 1
+    },
+    "0x04": {
+      "hp": 5,
+      "name": "SnakeOil",
+      "stats": {
+        "cha": 1,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 1
+    },
+    "0x05": {
+      "hp": 5,
+      "name": "LifeCandy",
+      "stats": {
+        "cha": 1,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 1
+    },
+    "0x06": {
+      "hp": 5,
+      "name": "NotUse",
+      "stats": {
+        "cha": 1,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 1
+    },
+    "0x07": {
+      "hp": 5,
+      "name": "Backpack",
+      "stats": {
+        "cha": 1,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 1
+    },
+    "0x08": {
+      "hp": 5,
+      "name": "RepairKit",
+      "stats": {
+        "cha": 1,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 1
+    },
+    "0x09": {
+      "hp": 5,
+      "name": "RottenMeat",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x0A": {
+      "hp": 5,
+      "name": "FlashBomb",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x0B": {
+      "hp": 10,
+      "name": "MagicStone",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 2,
+        "wil": null
+      },
+      "tot": 2
+    },
+    "0x0C": {
+      "hp": 5,
+      "name": "LuckyCoin",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x0D": {
+      "hp": 5,
+      "name": "UnluckyCoin",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x0E": {
+      "hp": 5,
+      "name": "StunNeedle",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x0F": {
+      "hp": null,
+      "name": "NotUse",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x10": {
+      "hp": 20,
+      "name": "Knife",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 4,
+        "str": 4,
+        "vit": null,
+        "wil": 4
+      },
+      "tot": 12
+    },
+    "0x11": {
+      "hp": 35,
+      "name": "BroadSword",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 7,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 7
+    },
+    "0x12": {
+      "hp": 25,
+      "name": "KukriBlade",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 5,
+        "str": 5,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 10
+    },
+    "0x13": {
+      "hp": 30,
+      "name": "ShadowDagger",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": 6,
+        "qui": 6,
+        "str": 6,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 18
+    },
+    "0x14": {
+      "hp": 30,
+      "name": "FiendRod",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": 6,
+        "qui": null,
+        "str": 6,
+        "vit": null,
+        "wil": 6
+      },
+      "tot": 18
+    },
+    "0x15": {
+      "hp": 40,
+      "name": "LaserKnife",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 10,
+        "str": 10,
+        "vit": null,
+        "wil": 10
+      },
+      "tot": 30
+    },
+    "0x16": {
+      "hp": 50,
+      "name": "SamuraiSword",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 10,
+        "str": 10,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 20
+    },
+    "0x17": {
+      "hp": 70,
+      "name": "CeramicSword",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 13,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 13
+    },
+    "0x18": {
+      "hp": 80,
+      "name": "TwinSword",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 10,
+        "vit": null,
+        "wil": 10
+      },
+      "tot": 20
+    },
+    "0x19": {
+      "hp": null,
+      "name": "SilverSpread",
+      "stats": {
+        "cha": 5,
+        "int": 5,
+        "psy": 5,
+        "qui": 5,
+        "str": 5,
+        "vit": 5,
+        "wil": 5
+      },
+      "tot": 35
+    },
+    "0x1A": {
+      "hp": 60,
+      "name": "Osc-Sword",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 15,
+        "vit": null,
+        "wil": 15
+      },
+      "tot": 30
+    },
+    "0x1B": {
+      "hp": 65,
+      "name": "Katana",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 13,
+        "str": 13,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 26
+    },
+    "0x1C": {
+      "hp": 50,
+      "name": "JackalSword",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": 16,
+        "qui": null,
+        "str": 16,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 32
+    },
+    "0x1D": {
+      "hp": 75,
+      "name": "NotUse",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 15,
+        "str": 15,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 30
+    },
+    "0x1E": {
+      "hp": null,
+      "name": "Glirandly",
+      "stats": {
+        "cha": 9,
+        "int": 9,
+        "psy": 9,
+        "qui": 9,
+        "str": 9,
+        "vit": 9,
+        "wil": 9
+      },
+      "tot": 63
+    },
+    "0x1F": {
+      "hp": null,
+      "name": "RaySword",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x20": {
+      "hp": 100,
+      "name": "RuneSword",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": 20,
+        "qui": null,
+        "str": 20,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 40
+    },
+    "0x21": {
+      "hp": 90,
+      "name": "Twin Dragon",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 18,
+        "str": 18,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 36
+    },
+    "0x22": {
+      "hp": 100,
+      "name": "SplashSword",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": 20,
+        "qui": null,
+        "str": 20,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 40
+    },
+    "0x23": {
+      "hp": 80,
+      "name": "TwiggyRod",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 16,
+        "str": 16,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 32
+    },
+    "0x24": {
+      "hp": 250,
+      "name": "CometBlade",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 25,
+        "str": 25,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 50
+    },
+    "0x25": {
+      "hp": 100,
+      "name": "ZeroSword",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 20,
+        "str": 20,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 40
+    },
+    "0x26": {
+      "hp": 200,
+      "name": "Obsidian",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 25,
+        "str": 25,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 50
+    },
+    "0x27": {
+      "hp": 250,
+      "name": "Kusanagi",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 25,
+        "str": 25,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 50
+    },
+    "0x28": {
+      "hp": 150,
+      "name": "Murakumo",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 15,
+        "str": 15,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 30
+    },
+    "0x29": {
+      "hp": 25,
+      "name": "IronPipe",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x2A": {
+      "hp": 250,
+      "name": "DragonSword",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 30,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 30
+    },
+    "0x2B": {
+      "hp": 200,
+      "name": "SilverMoon",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 25,
+        "str": 25,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 50
+    },
+    "0x2C": {
+      "hp": 150,
+      "name": "Asura",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": 30,
+        "qui": null,
+        "str": 30,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 60
+    },
+    "0x2D": {
+      "hp": 200,
+      "name": "GoldenLion",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": 25,
+        "qui": null,
+        "str": 25,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 50
+    },
+    "0x2E": {
+      "hp": 200,
+      "name": "Lordstar",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 20,
+        "str": 20,
+        "vit": null,
+        "wil": 20
+      },
+      "tot": 60
+    },
+    "0x2F": {
+      "hp": 5,
+      "name": "LightSword",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x30": {
+      "hp": 25,
+      "name": "AGUNI-SSP",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 5,
+        "str": null,
+        "vit": 5,
+        "wil": 5
+      },
+      "tot": 15
+    },
+    "0x31": {
+      "hp": 25,
+      "name": "EasyRifle",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 5,
+        "str": null,
+        "vit": 5,
+        "wil": 5
+      },
+      "tot": 15
+    },
+    "0x32": {
+      "hp": 25,
+      "name": "NotUse",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 5,
+        "str": null,
+        "vit": null,
+        "wil": 5
+      },
+      "tot": 10
+    },
+    "0x33": {
+      "hp": 50,
+      "name": "AGUNI-CP1",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 10,
+        "str": null,
+        "vit": null,
+        "wil": 10
+      },
+      "tot": 20
+    },
+    "0x34": {
+      "hp": 50,
+      "name": "KillerRifle",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 10,
+        "str": null,
+        "vit": null,
+        "wil": 25
+      },
+      "tot": 35
+    },
+    "0x35": {
+      "hp": 50,
+      "name": "TroopRifle",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 10,
+        "str": null,
+        "vit": null,
+        "wil": 10
+      },
+      "tot": 20
+    },
+    "0x36": {
+      "hp": 75,
+      "name": "EagleGun",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 13,
+        "str": null,
+        "vit": null,
+        "wil": 13
+      },
+      "tot": 26
+    },
+    "0x37": {
+      "hp": 75,
+      "name": "SniperRifle",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 13,
+        "str": null,
+        "vit": null,
+        "wil": 13
+      },
+      "tot": 26
+    },
+    "0x38": {
+      "hp": 200,
+      "name": "BehemothRifle",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 10,
+        "str": null,
+        "vit": 10,
+        "wil": 10
+      },
+      "tot": 30
+    },
+    "0x39": {
+      "hp": 100,
+      "name": "AGUNI-MBX",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 16,
+        "str": null,
+        "vit": 16,
+        "wil": 16
+      },
+      "tot": 48
+    },
+    "0x3A": {
+      "hp": 50,
+      "name": "DuelGun",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 20,
+        "str": null,
+        "vit": 20,
+        "wil": 20
+      },
+      "tot": 60
+    },
+    "0x3B": {
+      "hp": null,
+      "name": "LivingRifle",
+      "stats": {
+        "cha": 13,
+        "int": 13,
+        "psy": 13,
+        "qui": 13,
+        "str": 13,
+        "vit": 13,
+        "wil": 13
+      },
+      "tot": 91
+    },
+    "0x3C": {
+      "hp": 150,
+      "name": "ZenGun",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": 20,
+        "qui": 20,
+        "str": null,
+        "vit": null,
+        "wil": 20
+      },
+      "tot": 60
+    },
+    "0x3D": {
+      "hp": 150,
+      "name": "LethalGun",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 20,
+        "str": null,
+        "vit": 20,
+        "wil": 20
+      },
+      "tot": 60
+    },
+    "0x3E": {
+      "hp": 5,
+      "name": "BrokenRifle",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 1,
+        "str": null,
+        "vit": null,
+        "wil": 1
+      },
+      "tot": 2
+    },
+    "0x3F": {
+      "hp": 150,
+      "name": "LightRifle",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": 30,
+        "qui": 30,
+        "str": null,
+        "vit": null,
+        "wil": 30
+      },
+      "tot": 90
+    },
+    "0x40": {
+      "hp": 40,
+      "name": "HandBlaster",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 7,
+        "str": null,
+        "vit": null,
+        "wil": 7
+      },
+      "tot": 14
+    },
+    "0x41": {
+      "hp": 90,
+      "name": "LaserCarbine",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 13,
+        "str": null,
+        "vit": null,
+        "wil": 13
+      },
+      "tot": 26
+    },
+    "0x42": {
+      "hp": 175,
+      "name": "HyperBlaster",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 25,
+        "str": null,
+        "vit": null,
+        "wil": 25
+      },
+      "tot": 50
+    },
+    "0x43": {
+      "hp": 80,
+      "name": "BeamCannon",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 15,
+        "wil": 15
+      },
+      "tot": 30
+    },
+    "0x44": {
+      "hp": 80,
+      "name": "LightningCannon",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 15,
+        "wil": 15
+      },
+      "tot": 30
+    },
+    "0x45": {
+      "hp": 150,
+      "name": "SonicCannon",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 20,
+        "str": null,
+        "vit": null,
+        "wil": 20
+      },
+      "tot": 40
+    },
+    "0x46": {
+      "hp": 70,
+      "name": "WaterCannon",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 10,
+        "wil": 10
+      },
+      "tot": 20
+    },
+    "0x47": {
+      "hp": 20,
+      "name": "JunkBazooka",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 5,
+        "vit": null,
+        "wil": 5
+      },
+      "tot": 10
+    },
+    "0x48": {
+      "hp": 70,
+      "name": "LightVulcan",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 8,
+        "str": null,
+        "vit": 8,
+        "wil": 8
+      },
+      "tot": 24
+    },
+    "0x49": {
+      "hp": 150,
+      "name": "MachineVulcan",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 18,
+        "str": null,
+        "vit": 18,
+        "wil": 18
+      },
+      "tot": 54
+    },
+    "0x4A": {
+      "hp": 125,
+      "name": "Thunderbolt",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 20,
+        "wil": 20
+      },
+      "tot": 40
+    },
+    "0x4B": {
+      "hp": 125,
+      "name": "Flame Thrower",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 20,
+        "wil": 20
+      },
+      "tot": 40
+    },
+    "0x4C": {
+      "hp": 125,
+      "name": "Bolt Thrower",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 20,
+        "wil": 20
+      },
+      "tot": 40
+    },
+    "0x4D": {
+      "hp": 100,
+      "name": "IonCannon",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 15,
+        "str": null,
+        "vit": null,
+        "wil": 15
+      },
+      "tot": 30
+    },
+    "0x4E": {
+      "hp": 150,
+      "name": "GrainCannon",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 10,
+        "str": null,
+        "vit": 10,
+        "wil": 30
+      },
+      "tot": 50
+    },
+    "0x4F": {
+      "hp": 250,
+      "name": "HG-Cannon",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 30,
+        "str": null,
+        "vit": null,
+        "wil": 30
+      },
+      "tot": 60
+    },
+    "0x50": {
+      "hp": 100,
+      "name": "GhostCannon",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": 10,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": 20
+      },
+      "tot": 30
+    },
+    "0x51": {
+      "hp": 70,
+      "name": "LightBazooka",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": 15
+      },
+      "tot": 15
+    },
+    "0x52": {
+      "hp": 200,
+      "name": "HEAT Bazooka",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": 30
+      },
+      "tot": 30
+    },
+    "0x53": {
+      "hp": 250,
+      "name": "HyperionBazooka",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": 40
+      },
+      "tot": 40
+    },
+    "0x54": {
+      "hp": 60,
+      "name": "DOBBY Bazooka",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 8,
+        "vit": 8,
+        "wil": 8
+      },
+      "tot": 24
+    },
+    "0x55": {
+      "hp": 90,
+      "name": "MissilePod",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 15,
+        "vit": null,
+        "wil": 15
+      },
+      "tot": 30
+    },
+    "0x56": {
+      "hp": 150,
+      "name": "BigMissile",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 20,
+        "vit": null,
+        "wil": 20
+      },
+      "tot": 40
+    },
+    "0x57": {
+      "hp": 225,
+      "name": "SuperMissile",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 25,
+        "vit": null,
+        "wil": 25
+      },
+      "tot": 50
+    },
+    "0x58": {
+      "hp": null,
+      "name": "BeamSword",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x59": {
+      "hp": null,
+      "name": "MegaBeamSword",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x5A": {
+      "hp": 25,
+      "name": "Hammer",
+      "stats": {
+        "cha": null,
+        "int": 5,
+        "psy": null,
+        "qui": 5,
+        "str": 15,
+        "vit": 10,
+        "wil": 15
+      },
+      "tot": 50
+    },
+    "0x5B": {
+      "hp": null,
+      "name": "LaserCannon",
+      "stats": {
+        "cha": 5,
+        "int": 30,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 5,
+        "wil": 25
+      },
+      "tot": 65
+    },
+    "0x5C": {
+      "hp": null,
+      "name": "AT Missile",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x5D": {
+      "hp": null,
+      "name": "AT Missile",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x5E": {
+      "hp": null,
+      "name": "RailCanon",
+      "stats": {
+        "cha": null,
+        "int": 10,
+        "psy": null,
+        "qui": 45,
+        "str": 10,
+        "vit": null,
+        "wil": 10
+      },
+      "tot": 75
+    },
+    "0x5F": {
+      "hp": null,
+      "name": "MicroMissile",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x60": {
+      "hp": null,
+      "name": "RailCannon",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x61": {
+      "hp": null,
+      "name": "RailCannon",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x62": {
+      "hp": null,
+      "name": "MachineVulcan",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x63": {
+      "hp": null,
+      "name": "LaserCannon",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x64": {
+      "hp": null,
+      "name": "MinorLaser",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x65": {
+      "hp": null,
+      "name": "LaserCannon",
+      "stats": {
+        "cha": 15,
+        "int": 20,
+        "psy": 5,
+        "qui": 15,
+        "str": null,
+        "vit": 5,
+        "wil": 5
+      },
+      "tot": 65
+    },
+    "0x66": {
+      "hp": null,
+      "name": "DragonCannon",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x67": {
+      "hp": null,
+      "name": "JunkVulcan",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x68": {
+      "hp": null,
+      "name": "SatelliteBeam",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x69": {
+      "hp": null,
+      "name": "BitSystem",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x6A": {
+      "hp": null,
+      "name": "MediPack",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x6B": {
+      "hp": null,
+      "name": "RepairPack",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x6C": {
+      "hp": 50,
+      "name": "RepairPack",
+      "stats": {
+        "cha": null,
+        "int": 20,
+        "psy": null,
+        "qui": null,
+        "str": 10,
+        "vit": 10,
+        "wil": 30
+      },
+      "tot": 70
+    },
+    "0x6D": {
+      "hp": null,
+      "name": "OctopusBoard",
+      "stats": {
+        "cha": null,
+        "int": 30,
+        "psy": null,
+        "qui": 25,
+        "str": 25,
+        "vit": null,
+        "wil": 25
+      },
+      "tot": 105
+    },
+    "0x6E": {
+      "hp": 50,
+      "name": "NakajimaBoard",
+      "stats": {
+        "cha": null,
+        "int": 10,
+        "psy": null,
+        "qui": 30,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 40
+    },
+    "0x6F": {
+      "hp": 100,
+      "name": "NakajimaBoard2",
+      "stats": {
+        "cha": null,
+        "int": 15,
+        "psy": null,
+        "qui": 15,
+        "str": null,
+        "vit": null,
+        "wil": 15
+      },
+      "tot": 45
+    },
+    "0x70": {
+      "hp": 100,
+      "name": "V-Special",
+      "stats": {
+        "cha": 15,
+        "int": 15,
+        "psy": 15,
+        "qui": 15,
+        "str": 15,
+        "vit": 15,
+        "wil": 15
+      },
+      "tot": 105
+    },
+    "0x71": {
+      "hp": 100,
+      "name": "V-System",
+      "stats": {
+        "cha": 15,
+        "int": 15,
+        "psy": 15,
+        "qui": 15,
+        "str": 15,
+        "vit": 15,
+        "wil": 15
+      },
+      "tot": 105
+    },
+    "0x72": {
+      "hp": null,
+      "name": "JunkParts",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 3,
+        "str": 3,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 6
+    },
+    "0x73": {
+      "hp": 125,
+      "name": "RailCannon",
+      "stats": {
+        "cha": 5,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 5,
+        "vit": 25,
+        "wil": 30
+      },
+      "tot": 65
+    },
+    "0x74": {
+      "hp": 100,
+      "name": "MemoryBoard",
+      "stats": {
+        "cha": null,
+        "int": 25,
+        "psy": null,
+        "qui": 20,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 45
+    },
+    "0x75": {
+      "hp": 100,
+      "name": "SecretBoard",
+      "stats": {
+        "cha": null,
+        "int": 15,
+        "psy": null,
+        "qui": 20,
+        "str": null,
+        "vit": null,
+        "wil": 20
+      },
+      "tot": 55
+    },
+    "0x76": {
+      "hp": null,
+      "name": "LastRing",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x77": {
+      "hp": null,
+      "name": "TrainingGun",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x78": {
+      "hp": 20,
+      "name": "Buckler",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 4,
+        "vit": 4,
+        "wil": null
+      },
+      "tot": 8
+    },
+    "0x79": {
+      "hp": 40,
+      "name": "ShellShield",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 8,
+        "vit": 8,
+        "wil": null
+      },
+      "tot": 16
+    },
+    "0x7A": {
+      "hp": 100,
+      "name": "ExcelShield",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 20,
+        "vit": 20,
+        "wil": null
+      },
+      "tot": 40
+    },
+    "0x7B": {
+      "hp": 75,
+      "name": "GenbuShield",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 15,
+        "vit": 15,
+        "wil": null
+      },
+      "tot": 30
+    },
+    "0x7C": {
+      "hp": 75,
+      "name": "DragonShield",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 15,
+        "vit": 15,
+        "wil": null
+      },
+      "tot": 30
+    },
+    "0x7D": {
+      "hp": 75,
+      "name": "Mizukagami",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 15,
+        "vit": 15,
+        "wil": null
+      },
+      "tot": 30
+    },
+    "0x7E": {
+      "hp": 100,
+      "name": "DurahanShield",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 20,
+        "vit": 20,
+        "wil": null
+      },
+      "tot": 40
+    },
+    "0x7F": {
+      "hp": 100,
+      "name": "WonderBangle",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 20,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 20
+    },
+    "0x80": {
+      "hp": 35,
+      "name": "FiberVest",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 7,
+        "wil": null
+      },
+      "tot": 7
+    },
+    "0x81": {
+      "hp": 50,
+      "name": "HardLeather",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 5,
+        "wil": null
+      },
+      "tot": 5
+    },
+    "0x82": {
+      "hp": 65,
+      "name": "ArmorVest",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 5,
+        "wil": null
+      },
+      "tot": 5
+    },
+    "0x83": {
+      "hp": 75,
+      "name": "ElectroArmor",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 15,
+        "str": null,
+        "vit": 15,
+        "wil": null
+      },
+      "tot": 30
+    },
+    "0x84": {
+      "hp": 100,
+      "name": "WarLordArmor",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 20,
+        "vit": 20,
+        "wil": null
+      },
+      "tot": 40
+    },
+    "0x85": {
+      "hp": 20,
+      "name": "DarkRobe",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x86": {
+      "hp": 100,
+      "name": "BlueElf",
+      "stats": {
+        "cha": null,
+        "int": 15,
+        "psy": 15,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 30
+    },
+    "0x87": {
+      "hp": 20,
+      "name": "GlowRobe",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x88": {
+      "hp": 20,
+      "name": "MoonlightRobe",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x89": {
+      "hp": 20,
+      "name": "StardustRobe",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x8A": {
+      "hp": 20,
+      "name": "ShadeRobe",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x8B": {
+      "hp": null,
+      "name": "Accelerator",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x8C": {
+      "hp": null,
+      "name": "Mini Plant",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x8D": {
+      "hp": null,
+      "name": "MecBody",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x8E": {
+      "hp": null,
+      "name": "FortBody",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x8F": {
+      "hp": null,
+      "name": "ECM System",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0x90": {
+      "hp": 40,
+      "name": "FireLeather",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 8,
+        "wil": null
+      },
+      "tot": 8
+    },
+    "0x91": {
+      "hp": 50,
+      "name": "CelestialLeather",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 10,
+        "wil": null
+      },
+      "tot": 10
+    },
+    "0x92": {
+      "hp": 75,
+      "name": "HyperScale",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 15,
+        "wil": null
+      },
+      "tot": 15
+    },
+    "0x93": {
+      "hp": 100,
+      "name": "AngelArmor",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 20,
+        "str": null,
+        "vit": 20,
+        "wil": null
+      },
+      "tot": 40
+    },
+    "0x94": {
+      "hp": 150,
+      "name": "PlutoArmor",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": 20,
+        "qui": null,
+        "str": null,
+        "vit": 20,
+        "wil": null
+      },
+      "tot": 40
+    },
+    "0x95": {
+      "hp": 5,
+      "name": "BeastLeather",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 1,
+        "wil": null
+      },
+      "tot": 1
+    },
+    "0x96": {
+      "hp": 25,
+      "name": "Protector",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 5,
+        "wil": null
+      },
+      "tot": 5
+    },
+    "0x97": {
+      "hp": 5,
+      "name": "SlimyArmor",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 1,
+        "wil": null
+      },
+      "tot": 1
+    },
+    "0x98": {
+      "hp": 5,
+      "name": "JerryArmor",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 1,
+        "wil": null
+      },
+      "tot": 1
+    },
+    "0x99": {
+      "hp": 25,
+      "name": "BoneBreast",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 5,
+        "wil": null
+      },
+      "tot": 5
+    },
+    "0x9A": {
+      "hp": 65,
+      "name": "LivingArmor",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": 13,
+        "qui": null,
+        "str": null,
+        "vit": 13,
+        "wil": null
+      },
+      "tot": 26
+    },
+    "0x9B": {
+      "hp": 75,
+      "name": "HarmoniumArmor",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 15,
+        "str": null,
+        "vit": 15,
+        "wil": null
+      },
+      "tot": 30
+    },
+    "0x9C": {
+      "hp": 5,
+      "name": "SkeleMail",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 1,
+        "wil": null
+      },
+      "tot": 1
+    },
+    "0x9D": {
+      "hp": 20,
+      "name": "MasterRobe",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 4,
+        "wil": null
+      },
+      "tot": 4
+    },
+    "0x9E": {
+      "hp": 50,
+      "name": "GoldenFleece",
+      "stats": {
+        "cha": 10,
+        "int": null,
+        "psy": 10,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 20
+    },
+    "0x9F": {
+      "hp": null,
+      "name": "MysticMail",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xA0": {
+      "hp": 50,
+      "name": "CombatSuit",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 10,
+        "str": 10,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 20
+    },
+    "0xA1": {
+      "hp": 75,
+      "name": "JumpSuit",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 15,
+        "str": 15,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 30
+    },
+    "0xA2": {
+      "hp": 90,
+      "name": "CyberSuit",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 18,
+        "str": 18,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 36
+    },
+    "0xA3": {
+      "hp": 100,
+      "name": "PoweredSuit",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 20,
+        "str": 20,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 40
+    },
+    "0xA4": {
+      "hp": 200,
+      "name": "SprigganSuit",
+      "stats": {
+        "cha": null,
+        "int": 25,
+        "psy": null,
+        "qui": 25,
+        "str": 25,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 75
+    },
+    "0xA5": {
+      "hp": 60,
+      "name": "RubberSuit",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 12,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 12
+    },
+    "0xA6": {
+      "hp": 200,
+      "name": "GolemSuit",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 30,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 30
+    },
+    "0xA7": {
+      "hp": null,
+      "name": "WhiteDress",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xA8": {
+      "hp": 5,
+      "name": "CottonShirt",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xA9": {
+      "hp": 5,
+      "name": "SilkShirt",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xAA": {
+      "hp": 5,
+      "name": "Magicwear",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xAB": {
+      "hp": 5,
+      "name": "Budowear",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xAC": {
+      "hp": 5,
+      "name": "Defendwear",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xAD": {
+      "hp": 5,
+      "name": "Hyperwear",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xAE": {
+      "hp": 5,
+      "name": "PowerBelt",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xAF": {
+      "hp": 5,
+      "name": "Mysticwear",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xB0": {
+      "hp": 25,
+      "name": "JunkHelm",
+      "stats": {
+        "cha": null,
+        "int": 5,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": 5
+      },
+      "tot": 10
+    },
+    "0xB1": {
+      "hp": 25,
+      "name": "Yolk Hat",
+      "stats": {
+        "cha": null,
+        "int": 1,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": 1
+      },
+      "tot": 2
+    },
+    "0xB2": {
+      "hp": 75,
+      "name": "FiberHood",
+      "stats": {
+        "cha": null,
+        "int": 15,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": 15
+      },
+      "tot": 30
+    },
+    "0xB3": {
+      "hp": 100,
+      "name": "LaserScope",
+      "stats": {
+        "cha": null,
+        "int": 20,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": 20
+      },
+      "tot": 40
+    },
+    "0xB4": {
+      "hp": 75,
+      "name": "MirrorGlass",
+      "stats": {
+        "cha": null,
+        "int": 25,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": 25
+      },
+      "tot": 50
+    },
+    "0xB5": {
+      "hp": 100,
+      "name": "InfraScope",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": 20
+      },
+      "tot": 20
+    },
+    "0xB6": {
+      "hp": 50,
+      "name": "Egg Hat",
+      "stats": {
+        "cha": null,
+        "int": 10,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": 10
+      },
+      "tot": 20
+    },
+    "0xB7": {
+      "hp": 75,
+      "name": "Magihat",
+      "stats": {
+        "cha": null,
+        "int": 15,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 15
+    },
+    "0xB8": {
+      "hp": 10,
+      "name": "LeatherGlove",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 5,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 5
+    },
+    "0xB9": {
+      "hp": 50,
+      "name": "ShellBracer",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 10,
+        "vit": 10,
+        "wil": null
+      },
+      "tot": 20
+    },
+    "0xBA": {
+      "hp": 75,
+      "name": "ArmorGlove",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 15,
+        "vit": 15,
+        "wil": null
+      },
+      "tot": 30
+    },
+    "0xBB": {
+      "hp": 100,
+      "name": "CyberGlove",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 20,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 20
+    },
+    "0xBC": {
+      "hp": 100,
+      "name": "OgreGlove",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 20,
+        "vit": 20,
+        "wil": null
+      },
+      "tot": 40
+    },
+    "0xBD": {
+      "hp": 75,
+      "name": "NornsBangle",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": 15,
+        "qui": null,
+        "str": 15,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 30
+    },
+    "0xBE": {
+      "hp": 150,
+      "name": "SH-Armlet",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 20,
+        "vit": 20,
+        "wil": null
+      },
+      "tot": 40
+    },
+    "0xBF": {
+      "hp": 100,
+      "name": "HarmoniumBangle",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 20,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 20
+    },
+    "0xC0": {
+      "hp": 10,
+      "name": "LeatherBoots",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 5,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 5
+    },
+    "0xC1": {
+      "hp": 50,
+      "name": "RubberShoes",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 10,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 10
+    },
+    "0xC2": {
+      "hp": 75,
+      "name": "JetBoots",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 15,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 15
+    },
+    "0xC3": {
+      "hp": 75,
+      "name": "FeatherBoots",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": 15,
+        "qui": 15,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 30
+    },
+    "0xC4": {
+      "hp": 100,
+      "name": "Iron Clogs",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 20,
+        "wil": null
+      },
+      "tot": 20
+    },
+    "0xC5": {
+      "hp": 10,
+      "name": "Catsocks",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 5,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 5
+    },
+    "0xC6": {
+      "hp": 150,
+      "name": "SH-Anklet",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 20,
+        "str": null,
+        "vit": 20,
+        "wil": null
+      },
+      "tot": 40
+    },
+    "0xC7": {
+      "hp": 75,
+      "name": "DanceShoes",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 15,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 15
+    },
+    "0xC8": {
+      "hp": 5,
+      "name": "FangAmulet",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xC9": {
+      "hp": 5,
+      "name": "WingAmulet",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xCA": {
+      "hp": 5,
+      "name": "FlowerAmulet",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xCB": {
+      "hp": 25,
+      "name": "SteelAmulet",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 5,
+        "str": 5,
+        "vit": 5,
+        "wil": null
+      },
+      "tot": 15
+    },
+    "0xCC": {
+      "hp": 5,
+      "name": "FireCrystal",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xCD": {
+      "hp": 5,
+      "name": "IceCrystal",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xCE": {
+      "hp": 5,
+      "name": "BoltCrystal",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xCF": {
+      "hp": 5,
+      "name": "BloodChalice",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xD0": {
+      "hp": 50,
+      "name": "HarmoniumEarring",
+      "stats": {
+        "cha": null,
+        "int": 10,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 10
+    },
+    "0xD1": {
+      "hp": 50,
+      "name": "EMES Tag",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 10,
+        "wil": null
+      },
+      "tot": 10
+    },
+    "0xD2": {
+      "hp": 5,
+      "name": "WindShell",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xD3": {
+      "hp": 5,
+      "name": "FeatherCharm",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xD4": {
+      "hp": 5,
+      "name": "SeaStone",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xD5": {
+      "hp": 50,
+      "name": "PurpleEye",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": 10,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 10
+    },
+    "0xD6": {
+      "hp": null,
+      "name": "MellowRing",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xD7": {
+      "hp": 5,
+      "name": "PearlHeart",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xD8": {
+      "hp": 25,
+      "name": "KrisKnife",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": 5,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 5
+    },
+    "0xD9": {
+      "hp": null,
+      "name": "UnicornTear",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": 1,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 1
+    },
+    "0xDA": {
+      "hp": 50,
+      "name": "Tao-TiehPattern",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": 10,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 10
+    },
+    "0xDB": {
+      "hp": 5,
+      "name": "FovosGrail",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xDC": {
+      "hp": 5,
+      "name": "SandVessel",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xDD": {
+      "hp": 5,
+      "name": "AngelBroach",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xDE": {
+      "hp": 5,
+      "name": "CharmNecklace",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xDF": {
+      "hp": null,
+      "name": "RING/Guardian",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xE0": {
+      "hp": null,
+      "name": "RING/Merchant",
+      "stats": {
+        "cha": 10,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 10
+    },
+    "0xE1": {
+      "hp": null,
+      "name": "RING/Thief",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": 10,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 10
+    },
+    "0xE2": {
+      "hp": null,
+      "name": "RING/Schemer",
+      "stats": {
+        "cha": null,
+        "int": 10,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 10
+    },
+    "0xE3": {
+      "hp": null,
+      "name": "RING/Hero",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": 10
+      },
+      "tot": 10
+    },
+    "0xE4": {
+      "hp": null,
+      "name": "RING/Hermit",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xE5": {
+      "hp": null,
+      "name": "RING/Healer",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 10,
+        "wil": null
+      },
+      "tot": 10
+    },
+    "0xE6": {
+      "hp": null,
+      "name": "RING/Fighter",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": 10,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 10
+    },
+    "0xE7": {
+      "hp": null,
+      "name": "RING/Lord",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": 10,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": 10
+    },
+    "0xE8": {
+      "hp": 5,
+      "name": "BrokenBumper",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 1,
+        "wil": null
+      },
+      "tot": 1
+    },
+    "0xE9": {
+      "hp": 5,
+      "name": "Junk",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xEA": {
+      "hp": 5,
+      "name": "Magatama",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xEB": {
+      "hp": 15,
+      "name": "Bumper",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": 3,
+        "wil": null
+      },
+      "tot": 3
+    },
+    "0xEC": {
+      "hp": null,
+      "name": "JunkPart",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xED": {
+      "hp": 5,
+      "name": "SleetCoin",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xEE": {
+      "hp": 5,
+      "name": "SolGrail",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    },
+    "0xEF": {
+      "hp": 5,
+      "name": "ThunderCharm",
+      "stats": {
+        "cha": null,
+        "int": null,
+        "psy": null,
+        "qui": null,
+        "str": null,
+        "vit": null,
+        "wil": null
+      },
+      "tot": null
+    }
+  },
+  "meta": {
+    "description": "Mec item stat boosts for the save viewer's body profile",
+    "excluded": "0xF0-0xFF key items: not equippable, and the chart omits them.",
+    "fields": [
+      "name",
+      "hp",
+      "tot",
+      "stats"
+    ],
+    "generator": "tests/sfr_save_editor/build_item_stats.py",
+    "id_range": [
+      "0x00",
+      "0xEF"
+    ],
+    "name_note": "name is the guide's spelling, kept for auditing. The viewer displays the resources.assets spelling from constants.json.",
+    "null_note": "null means the chart prints a dash: the item gives no boost to that stat. hp and tot are null when the chart prints ---.",
+    "race_note": "This is the Mec column only (ITEMD03). Human, Mystic and Monster records use different boost tables (ITEMD02) and must not read these values.",
+    "records": 240,
+    "source": "docs/gameinfo/gamefaqs/in-depth_guides/Data_Mechanics_Guide_by_Zaraktheus.txt",
+    "source_section": "[ITEMD03] Item Mec Stat Boosts Chart",
+    "source_sha256": "0ebaa4824ae12aee8db106dbf549f01a65b045b75fdccc24c9b3ee4e66f46549",
+    "stat_labels": [
+      "STR",
+      "QUI",
+      "INT",
+      "WIL",
+      "PSY",
+      "VIT",
+      "CHA"
+    ],
+    "stat_order": [
+      "str",
+      "qui",
+      "int",
+      "wil",
+      "psy",
+      "vit",
+      "cha"
+    ]
+  }
+}

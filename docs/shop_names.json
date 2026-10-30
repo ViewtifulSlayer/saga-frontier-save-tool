@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "description": "Labels for systemData.shopRecordList Type ids, matched from where each table's stock is sold.",
+    "schema_version": 2,
+    "source": "https://essenceofsaga.wordpress.com/home/book-index/item-selling/ - item-by-item sale locations, retrieved 2026-10-29; shop grouping cross-checked against https://steamcommunity.com/app/1295270/discussions/0/3109152828471163523/",
+    "method": "A label is assigned only when every item in the table's fixed stock list is documented as sold at that location. The game itself has no shop-name table: global-metadata.dat contains ShopRecord, ShopItemRecord and ShopType, but no shop name strings, so these are location and stock labels rather than in-game names.",
+    "confidence_rule": "high = the whole stock list is sold only at that location, or the combination is unique to it; medium = the location is shared with another gold seller and the contents cannot distinguish them.",
+    "unmapped_rule": "A Type missing here falls back to 'Shop table N' in the viewer. Do not add a label without item-level sale evidence.",
+    "grouping": "Each entry carries a location (town or area) used to group stock tables in the viewer's Still to buy list; label is 'location - stock'. A Type without a location is grouped under Unlabelled tables."
+  },
+  "shops": {
+    "0": {
+      "location": "Koorong",
+      "label": "Koorong - Boots",
+      "confidence": "high",
+      "basis": "LeatherBoots, RubberShoes, JetBoots and FeatherBoots are sold in Koorong and nowhere else."
+    },
+    "1": {
+      "location": "Kyo",
+      "label": "Kyo - Misc",
+      "confidence": "high",
+      "basis": "Every item is sold in Kyo; the coins, amulets and Budowear are Kyo-only, and the full set does not fit Omble or Magic Kingdom."
+    },
+    "2": {
+      "location": "Shrike",
+      "label": "Shrike - Nakajima Robotics",
+      "confidence": "high",
+      "basis": "RepairKit and the seven Mec weapons are all Shrike stock; RepairKit is also sold in Junk and Scrap, but the combination is Shrike-only."
+    },
+    "3": {
+      "location": "Manhattan",
+      "label": "Manhattan - Accessory",
+      "confidence": "high",
+      "basis": "PearlHeart, the three crystals, HarmoniumEarring, BloodChalice, PurpleEye and WonderBangle are all Manhattan-only."
+    },
+    "4": {
+      "location": "Koorong",
+      "label": "Koorong - Recovery items",
+      "confidence": "high",
+      "basis": "All seven items are sold in Koorong; Omble and Junk stock subsets, but Koorong is the only place that sells the whole list."
+    },
+    "5": {
+      "location": "Junk",
+      "label": "Junk - Misc",
+      "confidence": "high",
+      "basis": "Cure through SnakeOil plus RepairKit, HyperBlaster and GrainCannon is the Junk stock; Koorong and Omble carry only part of it."
+    },
+    "6": {
+      "location": "Magic Kingdom",
+      "label": "Magic Kingdom - Misc",
+      "confidence": "high",
+      "basis": "Magicwear, BoltCrystal, Magi-Water, XMagi-Drink, MagicStone and RuneSword are all sold in the Magic Kingdom; the full set is unique to it."
+    },
+    "7": {
+      "location": "Koorong",
+      "label": "Koorong - Guns",
+      "confidence": "high",
+      "basis": "The eight AGUNI and rifle models are sold in Koorong and nowhere else."
+    },
+    "8": {
+      "location": "Koorong",
+      "label": "Koorong - Swords",
+      "confidence": "high",
+      "basis": "All eight swords are Koorong stock; RuneSword is also sold in the Magic Kingdom and ZeroSword in Nelson, but the combination is Koorong-only."
+    },
+    "9": {
+      "location": "Koorong",
+      "label": "Koorong - Armor",
+      "confidence": "high",
+      "basis": "The six vests and suits plus ArmorGlove and CyberGlove are all Koorong-only."
+    },
+    "10": {
+      "location": "Koorong",
+      "label": "Koorong - Helms",
+      "confidence": "high",
+      "basis": "JunkHelm, YolkHat, FiberHood, InfraScope, LaserScope and MirrorGlass are all Koorong-only."
+    },
+    "11": {
+      "location": "Luminous",
+      "label": "Luminous - Omble",
+      "confidence": "high",
+      "basis": "The three cures plus MagicStone, ShadowDagger and DarkRobe is the Omble stock; Koorong, Junk and Magic Kingdom sell only parts of it."
+    },
+    "12": {
+      "location": "Koorong",
+      "label": "Koorong - Heavy weapons",
+      "confidence": "high",
+      "basis": "Flame Thrower through HyperBlaster are all sold in Koorong; GrainCannon and HyperBlaster are also Junk stock. The vendor inside Koorong is not identified by any source, so the label names the stock rather than a shopkeeper."
+    },
+    "13": {
+      "location": "Nelson",
+      "label": "Nelson - Weapon/Armor",
+      "confidence": "high",
+      "basis": "Buckler, ShellShield and WarLordArmor are Nelson-only; ZeroSword is also sold in Koorong, but the full set is the Nelson shop."
+    },
+    "14": {
+      "location": "Koorong",
+      "label": "Koorong - Gold Exchange",
+      "confidence": "medium",
+      "basis": "Only GoldIngot. Koorong and Nelson are the two documented gold sellers, and the contents cannot distinguish them; 14 is the low id inside the standard 0-14 range, which is the basis for assigning Koorong here."
+    },
+    "60": {
+      "location": "Facinaturu",
+      "label": "Facinaturu - LP items",
+      "confidence": "high",
+      "basis": "Asura, Tao-TiehPattern, ShadeRobe and SandVessel are the four items bought with max LP in Facinaturu."
+    },
+    "90": {
+      "location": "Nelson",
+      "label": "Nelson - Gold Ingot",
+      "confidence": "medium",
+      "basis": "Only GoldIngot. Assigned to Nelson because 90 sits outside the standard 0-14 range, unlike the Koorong gold table at 14; contents cannot distinguish the two."
+    }
+  }
+}
