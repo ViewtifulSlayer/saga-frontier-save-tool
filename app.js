@@ -43,6 +43,10 @@
   // save only stores a form id in tribial_work.data[0]; this table turns that
   // byte into a name and lists the ability sets that reach the form.
   var MONSTER_FORMS_PATH = 'docs/monster_forms.json';
+  // Generated category map plus documented form stat lines. Optional: without
+  // it the checklist still reads the save, but the table-2 category check and
+  // the documented stat lines are unavailable.
+  var MONSTER_LAB_PATH = 'docs/monster_lab.json';
   var MONSTER_RACES = [0x08, 0x98];
   // Monster abilities are ids 128-255, the block the ability table calls
   // `monster`. Prime HP is four points per distinct absorbed ability.
@@ -62,7 +66,7 @@
   // Bump it whenever app.js, platform.js or a table changes. verify_viewer.js
   // fails if the index.html copies drift from this constant, which is the only
   // silent way a stale page could keep being served.
-  var BUILD = '2026-10-30.2';
+  var BUILD = '2026-10-30.4';
   var SLOT_PAGE_SIZE = 3;
   // Browser-only live-folder preferences. The directory handle itself lives in
   // IndexedDB inside platform.js; this is only the user's chosen behavior.
@@ -904,6 +908,17 @@
         equipAttack: toNumberArray(record.eqpAtk).filter(function (v) {
           return v !== null && v !== SENTINELS.equipAttack;
         }),
+        // The transformed Monster check reads slots in the order 8, 1-7. Keep
+        // the sentinels here so a hole is a real position, not a shifted list.
+        equipAttackSlots: (function () {
+          var raw = toNumberArray(record.eqpAtk);
+          var slots = [];
+          for (var slot = 0; slot < 8; slot++) {
+            var value = slot < raw.length ? raw[slot] : null;
+            slots.push(value === null || value === SENTINELS.equipAttack ? null : value);
+          }
+          return slots;
+        })(),
         equipItem: toNumberArray(record.eqpItm).filter(function (v) {
           return v !== null && v !== SENTINELS.equipItem;
         }),
@@ -1071,7 +1086,7 @@
    * Name resolution
    * ------------------------------------------------------------------ */
 
-  function makeResolver(constants, abilities, maps, flags, shops, itemStats, mysticAbsorbs, monsterForms) {
+  function makeResolver(constants, abilities, maps, flags, shops, itemStats, mysticAbsorbs, monsterForms, monsterLab) {
     var characters = (constants && constants.characters) || {};
     var items = (constants && constants.items) || {};
     var itemTable = (itemStats && itemStats.items) || {};
@@ -1080,6 +1095,8 @@
     var monsterTargets = (monsterForms && Array.isArray(monsterForms.targets))
       ? monsterForms.targets
       : [];
+    var monsterLabAbilities = (monsterLab && monsterLab.abilities) || {};
+    var monsterLabFormStats = (monsterLab && monsterLab.form_stats) || {};
     var mapTable = (maps && maps.maps) || {};
     var areaTable = (constants && constants.areas) || {};
     var flagTable = (flags && flags.flags) || {};
@@ -1216,7 +1233,27 @@
           return target && target.form === key;
         });
       },
-      hasMonsterForms: function () { return Object.keys(monsterTable).length > 0; }
+      monsterTargets: function () { return monsterTargets.slice(); },
+      hasMonsterForms: function () { return Object.keys(monsterTable).length > 0; },
+      monsterFormEntries: function () { return monsterFormEntries(monsterTable); },
+      monsterFormStats: function (id) {
+        return Array.isArray(monsterLabFormStats[hex2(id)]) ? monsterLabFormStats[hex2(id)] : [];
+      },
+      monsterAbility: function (id) {
+        var entry = monsterLabAbilities[hex4(id)];
+        if (!entry || typeof entry !== 'object') {
+          return { known: false, name: null, category: null, satisfies: false, spaceMagic: false };
+        }
+        return {
+          known: true,
+          name: entry.name || null,
+          category: entry.category || null,
+          satisfies: entry.satisfies !== false,
+          spaceMagic: Boolean(entry.space_magic)
+        };
+      },
+      monsterAbilities: function () { return monsterLabAbilities; },
+      hasMonsterLab: function () { return Object.keys(monsterLabAbilities).length > 0; }
     };
   }
 
@@ -1823,7 +1860,7 @@
 
   function abilityListItem(entry, resolver) {
     return h('li', { className: 'detail-ability' },
-      h('span', { className: 'ability-name' }, nameWithBadge(entry.resolved, entry.id)),
+      h('span', { className: 'ability-name' }, entityName(entry.resolved, entry.id, 'ability')),
       elementFlags(entry.resolved.elements, resolver)
     );
   }
@@ -2175,7 +2212,8 @@
 
   function monsterRequirementText(ids, resolver) {
     return (ids || []).map(function (id) {
-      var value = parseInt(id, 16);
+      // Table rows carry hex strings; the status helper returns numbers.
+      var value = typeof id === 'number' ? id : parseInt(id, 16);
       var resolved = resolver && typeof resolver.ability === 'function'
         ? resolver.ability(value)
         : { name: null };
@@ -2272,6 +2310,1642 @@
     );
   }
 
+  /* ------------------------------------------------------------------ *
+   * Monster Lab
+   *
+   * A Monster PC stores two different ability sets: getskill is the absorbed
+   * history (Prime HP, four points per distinct monster ability) and eqpAtk is
+   * the live eight-slot menu. The transformation check reads the equipped menu
+   * in the order 8, 1-7, so the Lab keeps slot positions rather than the
+   * filtered equipAttack list the roster card uses.
+   * ------------------------------------------------------------------ */
+
+  var MONSTER_SLOT_COUNT = 8;
+  var MONSTER_SLOT_ORDER = [7, 0, 1, 2, 3, 4, 5, 6];
+  var MONSTER_STAT_FIELDS = [
+    { key: 'str', code: 'STR' },
+    { key: 'qui', code: 'QUI' },
+    { key: 'int', code: 'INT' },
+    { key: 'wil', code: 'WIL' },
+    { key: 'psy', code: 'PSY' },
+    { key: 'vit', code: 'VIT' },
+    { key: 'cha', code: 'CHA' }
+  ];
+
+  function isMonsterAbilityId(id) {
+    var value = num(id);
+    return value !== null && value >= MONSTER_ABILITY_LOW && value <= MONSTER_ABILITY_HIGH;
+  }
+
+  function uniqueNumbers(values) {
+    var seen = {};
+    var out = [];
+    (values || []).forEach(function (value) {
+      var id = num(value);
+      if (id === null || seen[id]) return;
+      seen[id] = true;
+      out.push(id);
+    });
+    return out;
+  }
+
+  function monsterLabSaveState(record) {
+    var absorbed = uniqueNumbers((record.skills || []).map(function (entry) {
+      return entry.abilityId;
+    }).filter(isMonsterAbilityId));
+    var slots = (record.equipAttackSlots || []).slice(0, MONSTER_SLOT_COUNT);
+    while (slots.length < MONSTER_SLOT_COUNT) slots.push(null);
+    return {
+      absorbed: absorbed,
+      slots: slots.map(function (id) { return id === null || id === undefined ? null : num(id); })
+    };
+  }
+
+  function monsterLabUiValues(record, ui) {
+    var save = monsterLabSaveState(record);
+    var mode = Boolean(ui && ui.mode && ui.chrNo === record.chrNo);
+    var slots = (mode && Array.isArray(ui.slots) ? ui.slots : save.slots).slice(0, MONSTER_SLOT_COUNT);
+    while (slots.length < MONSTER_SLOT_COUNT) slots.push(null);
+    return {
+      mode: mode,
+      absorbed: mode ? uniqueNumbers(ui.absorbed) : save.absorbed.slice(),
+      slots: slots.map(function (id) { return id === null || id === undefined ? null : num(id); }),
+      nextAbilityId: mode && ui.nextAbilityId !== null && ui.nextAbilityId !== undefined
+        ? num(ui.nextAbilityId)
+        : null,
+      save: save
+    };
+  }
+
+  function monsterFormMeta(forms, formId) {
+    var entry = forms && forms[hex2(formId)];
+    return entry && typeof entry === 'object'
+      ? { known: true, name: entry.name || null, variant: entry.variant || null }
+      : { known: false, name: null, variant: null };
+  }
+
+  function monsterFormEntries(forms) {
+    return Object.keys(forms || {}).map(function (key) {
+      var entry = forms[key];
+      return {
+        form: key,
+        formId: parseInt(key, 16),
+        name: entry && entry.name ? entry.name : key,
+        variant: entry && entry.variant ? entry.variant : null
+      };
+    }).sort(function (a, b) { return a.formId - b.formId; });
+  }
+
+  function monsterFormStatsFor(formStats, formId) {
+    var list = formStats && formStats[hex2(formId)];
+    return Array.isArray(list) ? list : [];
+  }
+
+  function monsterFirstByCategory(slots, categories) {
+    var out = {};
+    Object.keys(MONSTER_CATEGORY_LABELS).forEach(function (key) { out[key] = null; });
+    MONSTER_SLOT_ORDER.forEach(function (slotIndex) {
+      var id = slots[slotIndex];
+      if (id === null || id === undefined) return;
+      var entry = categories && categories[hex4(id)];
+      if (!entry || !entry.category || !out.hasOwnProperty(entry.category)) return;
+      if (out[entry.category] !== null) return;
+      out[entry.category] = {
+        id: id,
+        slot: slotIndex + 1,
+        name: entry.name,
+        spaceMagic: Boolean(entry.space_magic),
+        satisfies: entry.satisfies !== false
+      };
+    });
+    return out;
+  }
+
+  function monsterRequirementsMet(requires, firstByCategory) {
+    var missing = [];
+    Object.keys(requires || {}).forEach(function (category) {
+      var first = firstByCategory[category];
+      var options = (requires[category] || []).map(function (value) { return parseInt(value, 16); });
+      if (!first || options.indexOf(first.id) === -1) missing.push(category);
+    });
+    return missing;
+  }
+
+  function simulateMonsterTransform(input) {
+    input = input || {};
+    var targets = Array.isArray(input.targets) ? input.targets : [];
+    var forms = input.forms || {};
+    var categories = input.categories || {};
+    var currentForm = num(input.currentForm);
+    var baseHp = num(input.baseHp);
+    var absorbed = uniqueNumbers((input.absorbed || []).filter(isMonsterAbilityId));
+    var nextId = num(input.nextAbilityId);
+    var slots = (input.slots || []).slice(0, MONSTER_SLOT_COUNT);
+    while (slots.length < MONSTER_SLOT_COUNT) slots.push(null);
+    slots = slots.map(function (id) {
+      var value = num(id);
+      return value === null || value === SENTINELS.equipAttack ? null : value;
+    });
+
+    var isNewAbility = nextId !== null && isMonsterAbilityId(nextId) &&
+      absorbed.indexOf(nextId) === -1;
+    if (nextId !== null) slots[7] = nextId;
+    var postAbsorbed = absorbed.slice();
+    if (isNewAbility) postAbsorbed.push(nextId);
+    var primeBefore = absorbed.length * PRIME_HP_PER_ABILITY;
+    var primeAfter = postAbsorbed.length * PRIME_HP_PER_ABILITY;
+    var currentMaxBefore = baseHp === null ? null : baseHp + primeBefore;
+    var currentMaxAfter = baseHp === null ? null : baseHp + primeAfter;
+    var currentKey = currentForm === null || currentForm === undefined ? null : hex2(currentForm);
+    var currentMeta = monsterFormMeta(forms, currentForm);
+    var firstByCategory = monsterFirstByCategory(slots, categories);
+    var equipped = {};
+    slots.forEach(function (id) { if (id !== null) equipped[id] = true; });
+
+    var table1 = { rows: [], match: null };
+    var t1Rows = targets.filter(function (target) { return target && target.table === 1; });
+    for (var i1 = 0; i1 < t1Rows.length; i1++) {
+      var row1 = t1Rows[i1];
+      var required = (row1.requires && row1.requires.all) || [];
+      var missing = required.map(function (value) { return parseInt(value, 16); }).filter(function (id) {
+        return !equipped[id];
+      });
+      var already = row1.form === currentKey;
+      var satisfied = missing.length === 0;
+      var entry1 = {
+        index: i1,
+        row: row1,
+        formId: parseInt(row1.form, 16),
+        name: row1.name,
+        required: required.map(function (value) { return parseInt(value, 16); }),
+        missing: missing,
+        satisfied: satisfied,
+        alreadyCurrent: already,
+        matched: satisfied && !already,
+        skippedCurrent: satisfied && already
+      };
+      table1.rows.push(entry1);
+      if (entry1.matched) {
+        table1.match = entry1;
+        break;
+      }
+    }
+
+    var table2 = {
+      rows: [],
+      match: null,
+      startIndex: null,
+      startHpBelow: null,
+      wrapped: false,
+      unavailable: false,
+      skippedByTable1: Boolean(table1.match)
+    };
+    if (!table1.match) {
+      var t2Rows = targets.filter(function (target) { return target && target.table === 2; });
+      if (currentMaxAfter === null) {
+        table2.unavailable = true;
+      } else if (t2Rows.length) {
+        var start = -1;
+        for (var s = 0; s < t2Rows.length; s++) {
+          if (num(t2Rows[s].hp_below) !== null && currentMaxAfter < num(t2Rows[s].hp_below)) {
+            start = s;
+            break;
+          }
+        }
+        if (start === -1) start = t2Rows.length - 1;
+        table2.startIndex = start;
+        table2.startHpBelow = num(t2Rows[start].hp_below);
+
+        var order = [];
+        for (var f = start; f < t2Rows.length; f++) order.push(f);
+        for (var b = start - 1; b >= 0; b--) { order.push(b); table2.wrapped = true; }
+        for (var oi = 0; oi < order.length; oi++) {
+          var index2 = order[oi];
+          var row2 = t2Rows[index2];
+          var missingCategories = monsterRequirementsMet(row2.requires, firstByCategory);
+          var entry2 = {
+            index: index2,
+            row: row2,
+            formId: parseInt(row2.form, 16),
+            name: row2.name,
+            hpBelow: num(row2.hp_below),
+            missingCategories: missingCategories,
+            satisfied: missingCategories.length === 0,
+            matched: missingCategories.length === 0
+          };
+          table2.rows.push(entry2);
+          if (entry2.matched) { table2.match = entry2; break; }
+        }
+      }
+    }
+
+    var resultEntry = table1.match || table2.match || null;
+    var resultForm = resultEntry ? resultEntry.formId : currentForm;
+    var resultMeta = monsterFormMeta(forms, resultForm);
+    var resultStats = monsterFormStatsFor(input.formStats, resultForm);
+
+    return {
+      currentForm: currentForm,
+      currentName: currentMeta.name,
+      currentVariant: currentMeta.variant,
+      baseHp: baseHp,
+      absorbed: absorbed,
+      absorbedCount: absorbed.length,
+      primeBefore: primeBefore,
+      primeAfter: primeAfter,
+      currentMaxBefore: currentMaxBefore,
+      currentMaxAfter: currentMaxAfter,
+      nextAbilityId: nextId,
+      isNewAbility: isNewAbility,
+      slots: slots,
+      firstByCategory: firstByCategory,
+      table1: table1,
+      table2: table2,
+      resultForm: resultForm,
+      resultName: resultMeta.name,
+      resultVariant: resultMeta.variant,
+      resultStats: resultStats,
+      changed: resultForm !== currentForm,
+      matchedTable: table1.match ? 1 : (table2.match ? 2 : null)
+    };
+  }
+
+  function monsterTargetStatus(target, context) {
+    context = context || {};
+    var currentKey = context.currentForm === null || context.currentForm === undefined
+      ? null
+      : hex2(context.currentForm);
+    var isCurrent = target.form === currentKey;
+    if (target.table === 1) {
+      var required = (target.requires && target.requires.all) || [];
+      var missing = required.map(function (value) { return parseInt(value, 16); }).filter(function (id) {
+        return !context.equipped || !context.equipped[id];
+      });
+      var satisfied1 = missing.length === 0;
+      return {
+        current: isCurrent,
+        satisfied: satisfied1,
+        status: isCurrent ? 'current' : (satisfied1 ? 'ready' : (missing.length === required.length ? 'locked' : 'partial')),
+        missing: missing,
+        missingCategories: []
+      };
+    }
+    var missingCategories = monsterRequirementsMet(target.requires, context.firstByCategory || {});
+    var satisfied2 = missingCategories.length === 0;
+    var categoryCount = Object.keys(target.requires || {}).length;
+    return {
+      current: isCurrent,
+      satisfied: satisfied2,
+      status: isCurrent ? 'current' : (satisfied2 ? 'ready'
+        : (missingCategories.length === categoryCount ? 'locked' : 'partial')),
+      missing: [],
+      missingCategories: missingCategories
+    };
+  }
+
+  function monsterStatusRank(status) {
+    return { locked: 0, partial: 1, ready: 2, current: 3 }[status] || 0;
+  }
+
+  function monsterGroupStatus(rows, context) {
+    var best = null;
+    rows.forEach(function (row) {
+      var status = monsterTargetStatus(row, context);
+      if (!best || monsterStatusRank(status.status) > monsterStatusRank(best.status)) {
+        best = { status: status.status, target: row, detail: status };
+      }
+    });
+    return best;
+  }
+
+  function monsterStatusLabel(status) {
+    if (status === 'current') return 'current form';
+    if (status === 'ready') return 'requirements met';
+    if (status === 'partial') return 'partial';
+    return 'locked';
+  }
+
+  function monsterTargetGroups(targets) {
+    var order = [];
+    var byForm = {};
+    (targets || []).forEach(function (target) {
+      if (!byForm[target.form]) { byForm[target.form] = []; order.push(target.form); }
+      byForm[target.form].push(target);
+    });
+    return order.map(function (form) {
+      return { form: form, formId: parseInt(form, 16), rows: byForm[form] };
+    });
+  }
+
+  function monsterNeededSet(targets) {
+    var needed = {};
+    (targets || []).forEach(function (target) {
+      var ids = target.requires && target.requires.all ? target.requires.all : [];
+      ids.forEach(function (value) { needed[parseInt(value, 16)] = true; });
+      Object.keys(target.requires || {}).forEach(function (key) {
+        if (key === 'all') return;
+        (target.requires[key] || []).forEach(function (value) { needed[parseInt(value, 16)] = true; });
+      });
+    });
+    return needed;
+  }
+
+  function monsterEquippedLookup(slots) {
+    var equipped = {};
+    (slots || []).forEach(function (id) { if (id !== null) equipped[id] = true; });
+    return equipped;
+  }
+
+  function monsterLabContext(currentForm, slots) {
+    return {
+      currentForm: currentForm,
+      slots: slots,
+      equipped: monsterEquippedLookup(slots),
+      firstByCategory: monsterFirstByCategory(slots, {})
+    };
+  }
+
+  function newMonsterLabState() {
+    return {
+      byChr: {},
+      ui: {
+        open: { checklist: true, library: false, calculator: false },
+        checklistFilter: 'all',
+        library: { filter: 'all', table: 'all', query: '', form: null },
+        target: null
+      }
+    };
+  }
+
+  function monsterLabUiFor(ui, chrNo) {
+    var panels = (ui && ui.ui) || {};
+    var override = ui && ui.byChr ? ui.byChr[chrNo] : null;
+    return {
+      mode: Boolean(override && override.mode),
+      chrNo: chrNo,
+      absorbed: override ? override.absorbed : [],
+      slots: override ? override.slots : [],
+      nextAbilityId: override ? override.nextAbilityId : null,
+      open: panels.open || { checklist: true, library: false, calculator: false },
+      checklistFilter: panels.checklistFilter || 'all',
+      library: panels.library || { filter: 'all', table: 'all', query: '', form: null },
+      target: panels.target || null
+    };
+  }
+
+  // Turns one documented target row into a menu that satisfies it. Table 1
+  // needs every listed ability equipped; table 2 needs one listed ability to be
+  // the first of its category in slot order. Clearing the menu first is what
+  // makes the chosen table-2 ability first, so the suggestion is deterministic.
+  function monsterPlanSlots(target) {
+    var slots = [null, null, null, null, null, null, null, null];
+    var absorbed = [];
+    if (!target) return { slots: slots, absorbed: absorbed, possible: false };
+    var picked = [];
+    if (target.table === 1) {
+      picked = (target.requires && target.requires.all ? target.requires.all : [])
+        .map(function (value) { return parseInt(value, 16); });
+    } else {
+      Object.keys(MONSTER_CATEGORY_LABELS).forEach(function (category) {
+        var ids = target.requires && target.requires[category];
+        if (!ids || !ids.length) return;
+        picked.push(parseInt(ids[0], 16));
+      });
+    }
+    picked = uniqueNumbers(picked);
+    if (picked.length > MONSTER_SLOT_COUNT) {
+      return { slots: slots, absorbed: absorbed, possible: false };
+    }
+    MONSTER_SLOT_ORDER.forEach(function (slotIndex, position) {
+      if (position >= picked.length) return;
+      slots[slotIndex] = picked[position];
+    });
+    absorbed = picked.slice();
+    return { slots: slots, absorbed: absorbed, possible: true };
+  }
+
+  function monsterStatsMatch(documented, observed) {
+    if (!documented || !observed) return false;
+    for (var i = 0; i < MONSTER_STAT_FIELDS.length; i++) {
+      if (num(documented[MONSTER_STAT_FIELDS[i].key]) !== num(observed[STAT_FIELDS[i].key])) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function monsterObservedStats(record) {
+    if (!record || !record.stats) return null;
+    var out = {};
+    MONSTER_STAT_FIELDS.forEach(function (field, index) {
+      out[field.key] = num(record.stats[STAT_FIELDS[index].key]);
+    });
+    return out;
+  }
+
+  function monsterPrimaryStats(entries, observed) {
+    if (!entries || !entries.length) return null;
+    if (observed) {
+      var matched = entries.filter(function (entry) {
+        return monsterStatsMatch(entry.stats, observed);
+      });
+      if (matched.length) return matched[0];
+    }
+    var withBhp = entries.filter(function (entry) {
+      return entry.bhp !== null && entry.bhp !== undefined;
+    });
+    return withBhp.length ? withBhp[0] : entries[0];
+  }
+
+  function monsterAbilitiesEquivalent(a, b) {
+    if (!a || !b) return false;
+    return a.id === b.id && a.slot === b.slot;
+  }
+
+  function monsterAbilityOptions(abilities, selectedId) {
+    var options = [h('option', { value: '', selected: selectedId === null || selectedId === undefined }, 'Empty')];
+    var table = (abilities && abilities.abilities) || {};
+    Object.keys(table).sort(function (a, b) { return parseInt(a, 16) - parseInt(b, 16); })
+      .forEach(function (key) {
+        var id = parseInt(key, 16);
+        var entry = table[key] || {};
+        options.push(h('option', {
+          value: String(id),
+          selected: selectedId === id
+        }, (entry.name || key) + ' (' + key + ')'));
+      });
+    return options;
+  }
+
+  function monsterPcOptions(vm, resolver, selectedChr) {
+    return (vm.roster || []).filter(function (record) {
+      return MONSTER_RACES.indexOf(num(record.race)) !== -1;
+    }).map(function (record) {
+      return h('option', {
+        value: String(record.chrNo),
+        selected: record.chrNo === selectedChr
+      }, displayName(resolver.character(record.chrNo), record.chrNo) + '  (' + hex2(record.chrNo) + ')');
+    });
+  }
+
+  function monsterStatLine(entry) {
+    return MONSTER_STAT_FIELDS.map(function (field) {
+      var value = entry && entry.stats ? num(entry.stats[field.key]) : null;
+      return field.code + ' ' + (value === null ? '-' : formatNumber(value));
+    }).join('  ');
+  }
+
+  function monsterFormTableLabel(rows) {
+    var tables = [];
+    (rows || []).forEach(function (row) {
+      if (tables.indexOf(row.table) === -1) tables.push(row.table);
+    });
+    return tables.length ? tables.map(function (table) { return 'T' + table; }).join(' / ') : 'no row';
+  }
+
+  function monsterTargetSummary(target, resolver) {
+    if (target.table === 1) {
+      return 'All: ' + monsterRequirementText(target.requires && target.requires.all, resolver);
+    }
+    return Object.keys(MONSTER_CATEGORY_LABELS).filter(function (category) {
+      return target.requires && target.requires[category];
+    }).map(function (category) {
+      return MONSTER_CATEGORY_LABELS[category] + ': ' +
+        monsterRequirementText(target.requires[category], resolver);
+    }).join('; ');
+  }
+
+  function monsterChecklistTargets(targets, context, resolver) {
+    var groups = monsterTargetGroups(targets);
+    var counts = { current: 0, ready: 0, partial: 0, locked: 0 };
+    var rows = groups.map(function (group) {
+      var best = monsterGroupStatus(group.rows, context);
+      counts[best.status] = (counts[best.status] || 0) + 1;
+      var meta = monsterFormMeta((context.forms || {}), group.formId);
+      var variant = meta.variant
+        ? h('span', { className: 'chip chip-inferred' }, meta.variant)
+        : null;
+      var rowsBlock = group.rows.map(function (target) {
+        var status = monsterTargetStatus(target, context);
+        var missing;
+        if (target.table === 1) {
+          missing = status.missing.length
+            ? 'Missing ' + monsterRequirementText(status.missing, resolver) + '.'
+            : 'All required abilities equipped.';
+        } else {
+          missing = status.missingCategories.length
+            ? 'Missing ' + status.missingCategories.map(function (key) {
+                return MONSTER_CATEGORY_LABELS[key] || key;
+              }).join(', ') + ' first ability.'
+            : 'Every required category has a matching first ability.';
+        }
+        return h('div', { className: 'monster-target-row is-' + status.status },
+          h('span', { className: 'chip' }, 'T' + target.table),
+          target.table === 2 && target.hp_below !== null
+            ? h('span', { className: 'monster-target-hp' }, 'HP < ' + formatNumber(target.hp_below))
+            : null,
+          h('span', { className: 'monster-target-req' }, monsterTargetSummary(target, resolver)),
+          h('span', { className: 'hint monster-target-missing' }, missing)
+        );
+      });
+      return h('div', { className: 'monster-target-form is-' + best.status },
+        h('div', { className: 'monster-target-head' },
+          h('span', { className: 'monster-target-name' }, meta.name || group.form),
+          h('span', { className: 'mono' }, group.form),
+          variant,
+          h('span', { className: 'chip monster-status chip-' + best.status }, monsterStatusLabel(best.status)),
+          h('span', { className: 'count' }, group.rows.length + ' row' + (group.rows.length === 1 ? '' : 's'))
+        ),
+        rowsBlock
+      );
+    });
+    return {
+      nodes: rows,
+      counts: counts
+    };
+  }
+
+  function buildMonsterChecklist(profile, values, resolver, categories, targets, ui, options) {
+    var absorbedLookup = {};
+    values.absorbed.forEach(function (id) { absorbedLookup[id] = true; });
+    var neededSet = monsterNeededSet(targets);
+    var filter = ui.checklistFilter || 'all';
+    var abilityIds = [];
+    for (var id = MONSTER_ABILITY_LOW; id <= MONSTER_ABILITY_HIGH; id++) {
+      if (filter === 'absorbed' && !absorbedLookup[id]) continue;
+      if (filter === 'missing' && absorbedLookup[id]) continue;
+      if (filter === 'needed' && (!neededSet[id] || absorbedLookup[id])) continue;
+      abilityIds.push(id);
+    }
+    var groups = {};
+    abilityIds.forEach(function (id) {
+      var entry = categories[hex4(id)];
+      var category = entry && entry.category && MONSTER_CATEGORY_LABELS[entry.category]
+        ? entry.category : 'other';
+      (groups[category] = groups[category] || []).push(id);
+    });
+    var abilityRows = [];
+    Object.keys(MONSTER_CATEGORY_LABELS).forEach(function (category) {
+      var ids = groups[category] || [];
+      if (!ids.length) return;
+      abilityRows.push(h('tr', { className: 'monster-category-row' },
+        h('th', { colspan: 5 }, MONSTER_CATEGORY_LABELS[category], '  ',
+          h('span', { className: 'count' }, ids.length))
+      ));
+      ids.forEach(function (abilityId) {
+        var entry = categories[hex4(abilityId)];
+        var ability = resolver.ability(abilityId);
+        var slot = values.slots.indexOf(abilityId);
+        var equipped = slot !== -1;
+        var absorbed = Boolean(absorbedLookup[abilityId]);
+        var toggle = values.mode
+          ? h('input', {
+              type: 'checkbox',
+              checked: absorbed,
+              'data-lab-focus': 'monster-absorb-' + abilityId,
+              onChange: function (event) {
+                if (typeof options.onMonsterAbsorb === 'function') {
+                  options.onMonsterAbsorb(abilityId, event.target.checked);
+                }
+              }
+            })
+          : h('span', {
+              className: 'monster-check' + (absorbed ? ' is-on' : ''),
+              title: absorbed ? 'Absorbed' : 'Not absorbed'
+            }, absorbed ? 'yes' : 'no');
+        abilityRows.push(h('tr', {
+          className: 'monster-ability-row' + (absorbed ? ' is-absorbed' : '') +
+            (equipped ? ' is-equipped' : '')
+        },
+          h('td', { className: 'monster-ability-name' }, ability.name || 'Unmapped'),
+          h('td', { className: 'mono' }, hex4(abilityId)),
+          h('td', null, entry && entry.category ? MONSTER_CATEGORY_LABELS[entry.category] : '—'),
+          h('td', { className: 'monster-absorb-cell' }, toggle),
+          h('td', { className: 'num' }, equipped ? String(slot + 1) : '—')
+        ));
+      });
+    });
+    if (groups.other && groups.other.length) {
+      abilityRows.push(h('tr', { className: 'monster-category-row' },
+        h('th', { colspan: 5 }, 'Uncategorised', '  ', h('span', { className: 'count' }, groups.other.length))
+      ));
+      groups.other.forEach(function (abilityId) {
+        abilityRows.push(h('tr', { className: 'monster-ability-row' },
+          h('td', { className: 'monster-ability-name' }, resolver.ability(abilityId).name || 'Unmapped'),
+          h('td', { className: 'mono' }, hex4(abilityId)),
+          h('td', null, '—'),
+          h('td', null, absorbedLookup[abilityId] ? 'yes' : 'no'),
+          h('td', { className: 'num' }, values.slots.indexOf(abilityId) !== -1
+            ? String(values.slots.indexOf(abilityId) + 1) : '—')
+        ));
+      });
+    }
+
+    var neededCount = Object.keys(neededSet).filter(function (id) {
+      return !absorbedLookup[id];
+    }).length;
+    var filterOptions = [
+      { value: 'all', label: 'All 128' },
+      { value: 'absorbed', label: 'Absorbed (' + values.absorbed.length + ')' },
+      { value: 'missing', label: 'Missing (' + (128 - values.absorbed.length) + ')' },
+      { value: 'needed', label: 'Needed by a form (' + neededCount + ')' }
+    ].map(function (entry) {
+      return h('option', { value: entry.value, selected: filter === entry.value }, entry.label);
+    });
+
+    var otherEquipped = (values.slots || []).filter(function (equippedId) {
+      return equippedId !== null && !isMonsterAbilityId(equippedId);
+    });
+    var targetBlock = monsterChecklistTargets(targets, {
+      currentForm: profile.formId,
+      equipped: monsterEquippedLookup(values.slots),
+      firstByCategory: monsterFirstByCategory(values.slots, categories),
+      forms: options.monsterForms && options.monsterForms.forms
+    }, resolver);
+
+    return h('div', { className: 'monster-checklist' },
+      h('div', { className: 'monster-subhead' },
+        h('label', { className: 'monster-filter-label' }, 'Ability view',
+          h('select', {
+            'data-lab-focus': 'monster-ability-filter',
+            onChange: function (event) {
+              if (typeof options.onMonsterChecklistFilter === 'function') {
+                options.onMonsterChecklistFilter(event.target.value);
+              }
+            }
+          }, filterOptions)
+        ),
+        h('span', { className: 'hint' },
+          countLabel(values.absorbed.length, 'absorbed ability', 'absorbed abilities') +
+          ' · ' + formatNumber(neededCount) + ' still needed by a documented form')
+      ),
+      h('p', { className: 'hint' },
+        'Absorbed is the learned history from getskill; Equipped is the live eqpAtk slot 1-8. ' +
+        'A form\u2019s check reads the equipped menu in the order 8, 1, 2, 3, 4, 5, 6, 7, so slot 8 is listed first below.'),
+      values.mode
+        ? h('p', { className: 'hint monster-whatif-note' },
+            'What-if mode: toggles and slot changes are temporary and never touch the file. Reset returns to the save.')
+        : null,
+      h('div', { className: 'table-scroll monster-ability-scroll' },
+        h('table', { className: 'grid grid-monster-abilities' },
+          h('thead', null, h('tr', null,
+            h('th', null, 'Ability'),
+            h('th', null, 'ID'),
+            h('th', null, 'Category'),
+            h('th', null, 'Absorbed'),
+            h('th', null, 'Slot')
+          )),
+          h('tbody', null, abilityRows)
+        )
+      ),
+      otherEquipped.length
+        ? h('p', { className: 'hint' },
+            'Other equipped arts outside the 128 monster block: ' + otherEquipped.map(function (equippedId) {
+              return displayName(resolver.ability(equippedId), equippedId);
+            }).join(', ') + '.')
+        : null,
+      h('h4', { className: 'monster-subheading' }, 'Transformation targets'),
+      h('p', { className: 'hint' },
+        'Status is a requirements check, not a promise: the game chooses the first matching row in table order, ' +
+        'and table 2 starts at the row for the current max HP. The Calculator resolves the actual result.'),
+      h('div', { className: 'monster-status-summary' },
+        h('span', { className: 'chip chip-current' }, 'current ' + targetBlock.counts.current),
+        h('span', { className: 'chip chip-ready' }, 'requirements met ' + targetBlock.counts.ready),
+        h('span', { className: 'chip chip-partial' }, 'partial ' + targetBlock.counts.partial),
+        h('span', { className: 'chip chip-locked' }, 'locked ' + targetBlock.counts.locked)
+      ),
+      targetBlock.nodes.length
+        ? h('div', { className: 'monster-target-scroll' }, targetBlock.nodes)
+        : h('p', { className: 'empty' }, 'No documented transformation rows loaded.')
+    );
+  }
+
+  function monsterFormDetail(formId, entries, rows, profile, resolver, options) {
+    var meta = monsterFormMeta((options.monsterForms && options.monsterForms.forms) || {}, formId);
+    var observed = formId === profile.formId ? monsterObservedStats(profile.record) : null;
+    var statsBlocks = entries.map(function (entry, index) {
+      var flags = [];
+      if (entry.match === 'ambiguous') flags.push('name-level: ambiguous form id');
+      if (entry.variant) flags.push('variant ' + entry.variant);
+      return h('div', { className: 'monster-form-variant' },
+        h('h5', null, entry.name || meta.name || hex2(formId),
+          h('span', { className: 'count' }, flags.length ? '  ' + flags.join(' · ') : '  documented')),
+        h('table', { className: 'grid grid-monster-stats' },
+          h('thead', null, h('tr', null,
+            h('th', null, 'BHP'),
+            MONSTER_STAT_FIELDS.map(function (field) { return h('th', null, field.code); }),
+            h('th', null, 'WP'), h('th', null, 'JP'), h('th', null, 'LP'), h('th', null, 'DEF')
+          )),
+          h('tbody', null, h('tr', null,
+            h('td', { className: 'num' }, entry.bhp === null ? '—' : formatNumber(entry.bhp)),
+            MONSTER_STAT_FIELDS.map(function (field) {
+              var value = entry.stats ? entry.stats[field.key] : null;
+              var bonus = entry.stat_bonuses ? entry.stat_bonuses[field.key] : null;
+              return h('td', { className: 'num' }, value === null ? '—' : formatNumber(value) +
+                (bonus ? '+' + formatNumber(bonus) : ''));
+            }),
+            h('td', { className: 'num' }, entry.wp === null ? '—' : formatNumber(entry.wp)),
+            h('td', { className: 'num' }, entry.jp === null ? '—' : formatNumber(entry.jp)),
+            h('td', { className: 'num' }, entry.lp === null ? '—' : formatNumber(entry.lp)),
+            h('td', { className: 'num' }, entry.def === null ? '—' : formatNumber(entry.def))
+          ))
+        ),
+        h('p', { className: 'hint' },
+          'HP condition: ' + (entry.hp_condition || 'not documented') +
+          (entry.bhp === null ? '. No BHP line is documented for this variant.' : '')),
+        entry.requirements && entry.requirements.length
+          ? h('p', { className: 'monster-form-requirements' },
+              'Requirements: ' + entry.requirements.join(', ') + '.')
+          : null,
+        entry.hidden_gear && entry.hidden_gear.length
+          ? h('p', { className: 'hint' },
+              'Hidden gear: ' + entry.hidden_gear.map(function (gearItem) {
+                return gearItem.name;
+              }).join(', ') + '.')
+          : null
+      );
+    });
+
+    var observedBlock = observed
+      ? h('div', { className: 'monster-form-observed' },
+          h('h5', null, 'Observed in this save'),
+          h('p', { className: 'hint' },
+            'Record base HP ' + formatNumber(profile.baseHp) + ' · ' +
+            monsterStatLine({ stats: observed }) + '.'),
+          entries.some(function (entry) { return monsterStatsMatch(entry.stats, observed); })
+            ? h('p', { className: 'hint' }, 'One documented variant matches the seven recorded stats.')
+            : h('p', { className: 'hint' }, 'No documented stat line matches the recorded stats.')
+        )
+      : null;
+
+    var targetRows = (rows || []).map(function (row) {
+      return h('li', null,
+        'Table ' + row.table +
+        (row.table === 2 && row.hp_below !== null ? ', HP < ' + formatNumber(row.hp_below) : '') +
+        ': ' + monsterTargetSummary(row, resolver) + '.'
+      );
+    });
+
+    return h('div', { className: 'monster-form-detail', id: 'monster-form-detail' },
+      h('div', { className: 'monster-subhead' },
+        h('h4', null, (meta.name || ('Form ' + hex2(formId))) + '  ',
+          h('span', { className: 'mono' }, hex2(formId))),
+        h('button', { type: 'button', className: 'monster-close',
+          onClick: function () { if (typeof options.onMonsterForm === 'function') options.onMonsterForm(null); }
+        }, 'Close')
+      ),
+      h('p', { className: 'hint' },
+        'Documented stat lines are Oulak\u2019s FAQ; observed values come from this save\u2019s record. ' +
+        'They are shown separately and are not reconciled.'),
+      statsBlocks.length ? statsBlocks : h('p', { className: 'empty' }, 'No documented stat line for this form.'),
+      observedBlock,
+      h('h5', null, 'Documented transformation rows'),
+      targetRows.length ? h('ul', { className: 'monster-form-targets' }, targetRows)
+        : h('p', { className: 'hint' }, 'No documented transformation row reaches this form.'),
+      h('button', { type: 'button', className: 'monster-plan-button',
+        onClick: function () { if (typeof options.onMonsterPlan === 'function') options.onMonsterPlan(formId); }
+      }, 'Plan this form')
+    );
+  }
+
+  function buildMonsterLibrary(profile, resolver, targets, ui, options) {
+    var forms = resolver.monsterFormEntries();
+    var library = ui.library || { filter: 'all', table: 'all', query: '', form: null };
+    var query = String(library.query || '').trim().toLowerCase();
+    var filter = library.filter || 'all';
+    var tableFilter = library.table || 'all';
+    var rows = forms.map(function (entry) {
+      var formTargets = resolver.monsterTargetsFor(entry.formId);
+      var stats = resolver.monsterFormStats(entry.formId);
+      return {
+        form: entry.form,
+        formId: entry.formId,
+        name: entry.name,
+        variant: entry.variant,
+        targets: formTargets,
+        stats: stats,
+        observed: entry.formId === profile.formId ? monsterObservedStats(profile.record) : null
+      };
+    }).filter(function (row) {
+      if (filter === 'targets' && !row.targets.length) return false;
+      if (filter === 'stats' && !row.stats.length) return false;
+      if (filter === 'no-row' && row.targets.length) return false;
+      if (tableFilter !== 'all' && !row.targets.some(function (target) {
+        return String(target.table) === String(tableFilter);
+      })) return false;
+      if (!query) return true;
+      return row.name.toLowerCase().indexOf(query) !== -1 ||
+        hex2(row.formId).toLowerCase().indexOf(query) !== -1;
+    }).sort(function (a, b) {
+      var at = a.targets.length ? 0 : 1;
+      var bt = b.targets.length ? 0 : 1;
+      if (at !== bt) return at - bt;
+      return a.formId - b.formId;
+    });
+
+    var filterOptions = [
+      { value: 'all', label: 'All forms (' + forms.length + ')' },
+      { value: 'targets', label: 'With a transformation row' },
+      { value: 'stats', label: 'With documented stats' },
+      { value: 'no-row', label: 'No documented row' }
+    ].map(function (entry) {
+      return h('option', { value: entry.value, selected: filter === entry.value }, entry.label);
+    });
+    var tableOptions = [
+      { value: 'all', label: 'Both tables' },
+      { value: '1', label: 'Table 1 only' },
+      { value: '2', label: 'Table 2 only' }
+    ].map(function (entry) {
+      return h('option', { value: entry.value, selected: String(tableFilter) === entry.value }, entry.label);
+    });
+
+    var tableRows = rows.map(function (row) {
+      var primary = monsterPrimaryStats(row.stats, row.observed);
+      var meta = monsterFormMeta((options.monsterForms && options.monsterForms.forms) || {}, row.formId);
+      return h('tr', {
+        className: 'monster-library-row' + (library.form === row.form ? ' is-selected-row' : ''),
+        onClick: function () { if (typeof options.onMonsterForm === 'function') options.onMonsterForm(row.form); }
+      },
+        h('td', { className: 'mono', 'data-label': 'ID' }, row.form),
+        h('td', { 'data-label': 'Form' },
+          h('button', {
+            type: 'button', className: 'row-select',
+            'data-lab-focus': 'monster-form-' + row.form,
+            onClick: function (event) {
+              if (event && event.stopPropagation) event.stopPropagation();
+              if (typeof options.onMonsterForm === 'function') options.onMonsterForm(row.form);
+            }
+          }, meta.name || row.name),
+          row.variant ? h('span', { className: 'chip chip-inferred' }, row.variant) : null
+        ),
+        h('td', { 'data-label': 'Table' }, monsterFormTableLabel(row.targets)),
+        h('td', { className: 'num', 'data-label': 'BHP' },
+          primary && primary.bhp !== null ? formatNumber(primary.bhp) : '—'),
+        h('td', { className: 'monster-library-stats', 'data-label': 'Stats' },
+          primary ? monsterStatLine(primary) : '—'),
+        h('td', { className: 'monster-library-req', 'data-label': 'Requirements' },
+          row.targets.length ? monsterTargetSummary(row.targets[0], resolver) : 'no documented row'),
+        h('td', { 'data-label': 'Source' }, primary
+          ? (primary.match === 'ambiguous' ? 'documented (ambiguous)' : 'documented')
+          : 'not documented')
+      );
+    });
+
+    var selected = null;
+    if (library.form) {
+      selected = rows.filter(function (row) { return row.form === library.form; })[0] || null;
+      if (!selected) {
+        var all = forms.filter(function (row) { return row.form === library.form; })[0];
+        if (all) selected = {
+          form: all.form, formId: all.formId, name: all.name, variant: all.variant,
+          targets: resolver.monsterTargetsFor(all.formId),
+          stats: resolver.monsterFormStats(all.formId),
+          observed: all.formId === profile.formId ? monsterObservedStats(profile.record) : null
+        };
+      }
+    }
+
+    return h('div', { className: 'monster-library' },
+      h('div', { className: 'monster-subhead monster-library-filter' },
+        h('label', { className: 'monster-filter-label' }, 'View',
+          h('select', {
+            'data-lab-focus': 'monster-library-filter',
+            onChange: function (event) {
+              if (typeof options.onMonsterLibrary === 'function') options.onMonsterLibrary({ filter: event.target.value });
+            }
+          }, filterOptions)
+        ),
+        h('label', { className: 'monster-filter-label' }, 'Table',
+          h('select', {
+            'data-lab-focus': 'monster-library-table',
+            onChange: function (event) {
+              if (typeof options.onMonsterLibrary === 'function') options.onMonsterLibrary({ table: event.target.value });
+            }
+          }, tableOptions)
+        ),
+        h('label', { className: 'monster-filter-label monster-library-query' }, 'Find',
+          h('input', {
+            type: 'search',
+            value: library.query || '',
+            'data-lab-focus': 'monster-library-query',
+            onChange: function (event) {
+              if (typeof options.onMonsterLibrary === 'function') options.onMonsterLibrary({ query: event.target.value });
+            },
+            onKeyDown: function (event) {
+              if (event.key === 'Enter' && typeof options.onMonsterLibrary === 'function') {
+                options.onMonsterLibrary({ query: event.target.value });
+              }
+            }
+          })
+        ),
+        h('span', { className: 'hint' }, rows.length + ' forms shown')
+      ),
+      options.monsterLabError
+        ? h('p', { className: 'hint monster-warning' },
+            options.monsterLabError + '. Form names and requirement rows still load; documented stats are unavailable.')
+        : null,
+      selected ? monsterFormDetail(selected.formId, selected.stats, selected.targets,
+        profile, resolver, options) : null,
+      rows.length
+        ? h('div', { className: 'table-scroll monster-library-scroll' },
+            h('table', { className: 'grid grid-monster-library' },
+              h('thead', null, h('tr', null,
+                h('th', null, 'ID'),
+                h('th', null, 'Form'),
+                h('th', null, 'Table'),
+                h('th', null, 'BHP'),
+                h('th', null, 'Documented stats'),
+                h('th', null, 'Requirements'),
+                h('th', null, 'Source')
+              )),
+              h('tbody', null, tableRows)
+            )
+          )
+        : h('p', { className: 'empty' }, 'No form matches this filter.')
+    );
+  }
+
+  function monsterTraceNode(sim, resolver) {
+    var rows = [];
+    sim.table1.rows.forEach(function (entry) {
+      var reason = entry.matched ? 'matched'
+        : (entry.skippedCurrent ? 'skipped: already this form'
+          : 'missing ' + monsterRequirementText(entry.missing, resolver));
+      rows.push(h('li', { className: entry.matched ? 'is-match' : (entry.skippedCurrent ? 'is-skip' : 'is-miss') },
+        'Table 1 row ' + (entry.index + 1) + ' · ' + entry.name + ' ' + hex2(entry.formId) + ' — ' + reason));
+    });
+    sim.table2.rows.forEach(function (entry) {
+      var reason = entry.matched ? 'matched'
+        : 'missing ' + entry.missingCategories.map(function (key) {
+            return MONSTER_CATEGORY_LABELS[key] || key;
+          }).join(', ') + ' first ability';
+      rows.push(h('li', { className: entry.matched ? 'is-match' : 'is-miss' },
+        'Table 2 row ' + (entry.index + 1) + ' · ' + entry.name + ' ' + hex2(entry.formId) +
+        (entry.hpBelow === null ? '' : ' · HP < ' + formatNumber(entry.hpBelow)) + ' — ' + reason));
+    });
+    return h('details', { className: 'monster-trace' },
+      h('summary', null, 'Transformation trace (' + rows.length + ' rows checked)'),
+      rows.length ? h('ol', null, rows) : h('p', { className: 'hint' }, 'No documented row was checked.')
+    );
+  }
+
+  function buildMonsterCalculator(profile, values, resolver, categories, targets, ui, options) {
+    var forms = (options.monsterForms && options.monsterForms.forms) || {};
+    var formStats = (options.monsterLab && options.monsterLab.form_stats) || {};
+    var sim = simulateMonsterTransform({
+      currentForm: profile.formId,
+      baseHp: profile.baseHp,
+      absorbed: values.absorbed,
+      slots: values.slots,
+      nextAbilityId: values.nextAbilityId,
+      targets: targets,
+      forms: forms,
+      categories: categories,
+      formStats: formStats
+    });
+    var slotControls = [];
+    [0, 1, 2, 3, 4, 5, 6, 7].forEach(function (index) {
+      slotControls.push(h('label', { className: 'monster-slot' },
+        h('span', null, 'Slot ' + (index + 1) + (index === 7 ? ' (absorb)' : '')),
+        h('select', {
+          'data-lab-focus': 'monster-slot-' + index,
+          onChange: function (event) {
+            if (typeof options.onMonsterSlot === 'function') {
+              options.onMonsterSlot(index, event.target.value === '' ? null : Number(event.target.value));
+            }
+          }
+        }, monsterAbilityOptions(options.abilities, values.slots[index]))
+      ));
+    });
+    var firstRows = Object.keys(MONSTER_CATEGORY_LABELS).map(function (category) {
+      var first = sim.firstByCategory[category];
+      return h('tr', null,
+        h('td', null, MONSTER_CATEGORY_LABELS[category]),
+        h('td', { className: 'num' }, first ? String(first.slot) : '—'),
+        h('td', null, first ? first.name : 'none'),
+        h('td', null, first && first.spaceMagic ? 'Space Magic: blocks the category, satisfies nothing' : '')
+      );
+    });
+
+    var resultBase = profile.formId === sim.resultForm ? profile.baseHp : null;
+    var documentedBhp = null;
+    if (sim.resultStats && sim.resultStats.length) {
+      var withBhp = sim.resultStats.filter(function (entry) { return entry.bhp !== null; });
+      documentedBhp = withBhp.length ? withBhp[0].bhp : null;
+    }
+    var resultMax = resultBase !== null ? resultBase + sim.primeAfter
+      : (documentedBhp !== null ? documentedBhp + sim.primeAfter : null);
+    var resultName = sim.resultName || ('Form ' + hex2(sim.resultForm));
+    var resultVariant = sim.resultVariant ? h('span', { className: 'chip chip-inferred' }, sim.resultVariant) : null;
+
+    var table1Label = sim.table1.match
+      ? 'Table 1 row ' + (sim.table1.match.index + 1) + ': ' + sim.table1.match.name + ' matched.'
+      : 'Table 1: no match (' + sim.table1.rows.length + ' rows checked).';
+    var table2Label;
+    if (sim.table2.skippedByTable1) {
+      table2Label = 'Table 2 not reached: table 1 matched.';
+    } else if (sim.table2.unavailable) {
+      table2Label = 'Table 2 unavailable: the record has no base HP or the category table is missing.';
+    } else if (sim.table2.match) {
+      table2Label = 'Table 2 row ' + (sim.table2.match.index + 1) + ': ' + sim.table2.match.name +
+        ' matched after ' + sim.table2.rows.length + ' checks (started at row ' +
+        (sim.table2.startIndex + 1) + ', HP < ' + formatNumber(sim.table2.startHpBelow) +
+        (sim.table2.wrapped ? ', wrapped backwards' : '') + ').';
+    } else {
+      table2Label = 'Table 2: no match after ' + sim.table2.rows.length + ' checks (started at row ' +
+        (sim.table2.startIndex + 1) + ', HP < ' + formatNumber(sim.table2.startHpBelow) + ').';
+    }
+
+    var targetOptions = [h('option', { value: '', selected: !ui.target }, 'Choose a target form')];
+    monsterTargetGroups(targets).forEach(function (group) {
+      var meta = monsterFormMeta(forms, group.formId);
+      targetOptions.push(h('option', {
+        value: group.form,
+        selected: ui.target === group.form
+      }, meta.name || group.form));
+    });
+    var plannerRows = [];
+    if (ui.target) {
+      var targetRows = targets.filter(function (target) { return target.form === ui.target; });
+      var context = {
+        currentForm: profile.formId,
+        equipped: monsterEquippedLookup(values.slots),
+        firstByCategory: sim.firstByCategory
+      };
+      targetRows.forEach(function (target) {
+        var status = monsterTargetStatus(target, context);
+        var missing = target.table === 1
+          ? (status.missing.length ? 'Missing ' + monsterRequirementText(status.missing, resolver) + '.' : 'All required abilities are equipped.')
+          : (status.missingCategories.length
+              ? 'Missing ' + status.missingCategories.map(function (key) { return MONSTER_CATEGORY_LABELS[key] || key; }).join(', ') + ' first ability.'
+              : 'All required categories have a matching first ability.');
+        plannerRows.push(h('li', { className: 'is-' + status.status },
+          'Table ' + target.table +
+          (target.table === 2 && target.hp_below !== null ? ', HP < ' + formatNumber(target.hp_below) : '') +
+          ': ' + monsterTargetSummary(target, resolver) + '. ' + missing
+        ));
+      });
+    }
+
+    return h('div', { className: 'monster-calculator' },
+      h('p', { className: 'hint' },
+        'The check runs after a successful absorb. Slot 8 is replaced by the absorbed ability; ' +
+        'Prime HP rises by 4 only when the ability is new. The result is a model of the documented check, ' +
+        'not a guarantee that the absorb succeeds.'),
+      h('div', { className: 'monster-calculator-inputs' },
+        h('div', { className: 'monster-slot-grid' }, slotControls),
+        h('label', { className: 'monster-next-ability' }, 'Next absorbed ability',
+          h('select', {
+            'data-lab-focus': 'monster-next-ability',
+            onChange: function (event) {
+              if (typeof options.onMonsterNextAbility === 'function') {
+                options.onMonsterNextAbility(event.target.value === '' ? null : Number(event.target.value));
+              }
+            }
+          }, monsterAbilityOptions(options.abilities, values.nextAbilityId))
+        )
+      ),
+      h('div', { className: 'monster-result' },
+        h('h4', null, 'Result  ', h('span', { className: 'monster-result-name' }, resultName),
+          resultVariant,
+          h('span', { className: 'chip ' + (sim.changed ? 'chip-ready' : 'chip-locked') },
+            sim.changed ? 'changes' : 'unchanged')),
+        h('dl', { className: 'kv' },
+          kv('Current form', (sim.currentName || 'Form ' + hex2(sim.currentForm)) +
+            (sim.currentVariant ? ' (' + sim.currentVariant + ')' : '') + '  ' + hex2(sim.currentForm)),
+          kv('Base HP', profile.baseHp === null ? '—' : formatNumber(profile.baseHp)),
+          kv('Prime HP', formatNumber(sim.primeBefore) + ' → ' + formatNumber(sim.primeAfter) +
+            '  (' + sim.absorbedCount + ' absorbed)'),
+          kv('Current max HP', sim.currentMaxBefore === null ? '—' :
+            formatNumber(sim.currentMaxBefore) + ' → ' + formatNumber(sim.currentMaxAfter)),
+          kv('Result', resultName + '  ' + hex2(sim.resultForm) + (sim.resultVariant ? ' (' + sim.resultVariant + ')' : '')),
+          kv('Result base HP', resultBase !== null ? formatNumber(resultBase) + ' observed'
+            : (documentedBhp !== null ? formatNumber(documentedBhp) + ' documented' : 'not documented')),
+          kv('Result max HP', resultMax === null ? '—' : formatNumber(resultMax) +
+            (resultBase === null && documentedBhp !== null ? ' (documented base + Prime)' : ''))
+        ),
+        h('p', { className: 'hint' }, table1Label),
+        h('p', { className: 'hint' }, table2Label),
+        sim.table2.skippedByTable1 ? null : monsterTraceNode(sim, resolver)
+      ),
+      h('h4', null, 'First ability per category (slot order 8, 1-7)'),
+      h('div', { className: 'table-scroll' },
+        h('table', { className: 'grid grid-monster-categories' },
+          h('thead', null, h('tr', null,
+            h('th', null, 'Category'), h('th', null, 'Slot'), h('th', null, 'Ability'), h('th', null, 'Note')
+          )),
+          h('tbody', null, firstRows)
+        )
+      ),
+      h('h4', { className: 'monster-subheading' }, 'Target planner'),
+      h('p', { className: 'hint' },
+        'Choose a documented form to see every row that reaches it, the current missing pieces, and a suggested what-if menu.'),
+      h('label', { className: 'monster-filter-label' }, 'Target form',
+        h('select', {
+          'data-lab-focus': 'monster-target-select',
+          onChange: function (event) {
+            if (typeof options.onMonsterTarget === 'function') {
+              options.onMonsterTarget(event.target.value || null);
+            }
+          }
+        }, targetOptions)
+      ),
+      plannerRows.length
+        ? h('div', { className: 'monster-planner' },
+            h('ul', null, plannerRows),
+            h('button', { type: 'button', className: 'monster-plan-button',
+              onClick: function () {
+                if (typeof options.onMonsterPlanLoad === 'function') options.onMonsterPlanLoad();
+              }
+            }, 'Load into what-if')
+          )
+        : h('p', { className: 'hint' }, 'Choose a form to plan.')
+    );
+  }
+
+  function buildMonsterLab(vm, resolver, chrNo, options) {
+    options = options || {};
+    var record = rosterRecordFor(vm, chrNo);
+    if (!record || MONSTER_RACES.indexOf(num(record.race)) === -1) return null;
+    var ui = options.monsterUi || {};
+    var values = monsterLabUiValues(record, ui);
+    var formsData = options.monsterForms || {};
+    var forms = formsData.forms || {};
+    var targets = Array.isArray(formsData.targets) ? formsData.targets : [];
+    var categories = (options.monsterLab && options.monsterLab.abilities) || {};
+    var formStats = (options.monsterLab && options.monsterLab.form_stats) || {};
+    var open = ui.open || { checklist: true, library: false, calculator: false };
+    var formId = record.tribialWork && record.tribialWork.length ? num(record.tribialWork[0]) : null;
+    var meta = monsterFormMeta(forms, formId);
+    var absorbedCount = values.absorbed.length;
+    var profile = {
+      record: record,
+      formId: formId,
+      name: meta.name,
+      variant: meta.variant,
+      baseHp: num(record.hpMax),
+      absorbedCount: absorbedCount,
+      primeHp: absorbedCount * PRIME_HP_PER_ABILITY,
+      maxHp: num(record.hpMax) === null ? null : num(record.hpMax) + absorbedCount * PRIME_HP_PER_ABILITY
+    };
+    if (!targets.length && options.monsterFormsError) {
+      return h('section', { className: 'card card-wide', id: 'monster-lab', 'data-index-label': 'Monster Lab' },
+        h('h3', null, 'Monster Lab'),
+        h('p', { className: 'hint' }, options.monsterFormsError +
+          '. The live form id, base HP and absorbed count still decode; names and requirements stay hidden.')
+      );
+    }
+
+    return h('section', { className: 'card card-wide monster-lab', id: 'monster-lab', 'data-index-label': 'Monster Lab' },
+      h('div', { className: 'monster-lab-head' },
+        h('div', null,
+          h('h3', null, 'Monster Lab'),
+          h('p', { className: 'hint' },
+            'Checklist, documented library and transformation calculator for the selected Monster PC.')
+        ),
+        h('label', { className: 'monster-pc-picker' }, 'Monster PC',
+          h('select', {
+            'data-lab-focus': 'monster-pc',
+            onChange: function (event) {
+              if (typeof options.onSelectCharacter === 'function') {
+                options.onSelectCharacter(Number(event.target.value));
+              }
+            }
+          }, monsterPcOptions(vm, resolver, chrNo))
+        )
+      ),
+      h('div', { className: 'monster-lab-profile' },
+        h('span', { className: 'monster-current-form' },
+          (profile.name || 'Form ' + hex2(profile.formId)),
+          profile.variant ? h('span', { className: 'chip chip-inferred' }, profile.variant) : null,
+          h('span', { className: 'mono' }, hex2(profile.formId))),
+        h('span', { className: 'hint' },
+          'Base HP ' + (profile.baseHp === null ? '—' : formatNumber(profile.baseHp)) +
+          ' · Prime ' + formatNumber(profile.primeHp) +
+          ' · Max ' + (profile.maxHp === null ? '—' : formatNumber(profile.maxHp)) +
+          ' · ' + countLabel(profile.absorbedCount, 'absorbed ability', 'absorbed abilities')),
+        values.mode
+          ? h('span', { className: 'chip chip-whatif' }, 'What-if (not saved)')
+          : h('span', { className: 'hint' }, 'Read from the save'),
+        h('button', { type: 'button', className: 'monster-mode-button',
+          onClick: function () {
+            if (typeof options.onMonsterMode === 'function') options.onMonsterMode(!values.mode);
+          }
+        }, values.mode ? 'Reset to save' : 'Try changes')
+      ),
+      h('details', { className: 'monster-view', id: 'monster-checklist-view', open: open.checklist,
+        onToggle: function (isOpen) {
+          if (typeof options.onMonsterView === 'function') options.onMonsterView('checklist', isOpen);
+        }
+      },
+        h('summary', null, 'Checklist  ', h('span', { className: 'count' }, '128 abilities · ' + 84 + ' documented forms')),
+        buildMonsterChecklist(profile, values, resolver, categories, targets, ui, options)
+      ),
+      h('details', { className: 'monster-view', id: 'monster-library-view', open: open.library,
+        onToggle: function (isOpen) {
+          if (typeof options.onMonsterView === 'function') options.onMonsterView('library', isOpen);
+        }
+      },
+        h('summary', null, 'Library  ', h('span', { className: 'count' }, '256 form ids')),
+        buildMonsterLibrary(profile, resolver, targets, ui, options)
+      ),
+      h('details', { className: 'monster-view', id: 'monster-calculator-view', open: open.calculator,
+        onToggle: function (isOpen) {
+          if (typeof options.onMonsterView === 'function') options.onMonsterView('calculator', isOpen);
+        }
+      },
+        h('summary', null, 'Calculator  ', h('span', { className: 'count' }, 'next absorb and target planner')),
+        buildMonsterCalculator(profile, values, resolver, categories, targets, ui, options)
+      ),
+      options.monsterLabError
+        ? h('p', { className: 'hint monster-warning' }, options.monsterLabError +
+            '. Abilities and requirement rows still load; the category check and documented stats are unavailable.')
+        : null
+    );
+  }
+
+  /* ------------------------------------------------------------------ *
+   * Encyclopedia
+   *
+   * The entity layer is assembled from tables the page already fetches. It
+   * adds no runtime file: abilities come from ability_names.json, items from
+   * constants.json plus item_stats.json, and forms from monster_forms.json plus
+   * monster_lab.json. A hash route (#entity/<type>/<id>) opens the drawer, so a
+   * deep link survives a reload and the browser Back button works.
+   * ------------------------------------------------------------------ */
+
+  var ENTITY_TYPES = {
+    ability: { label: 'Ability', key: function (id) { return hex4(id); } },
+    form: { label: 'Form', key: function (id) { return hex2(id); } },
+    item: { label: 'Item', key: function (id) { return hex2(id); } }
+  };
+
+  function entityKey(type, id) {
+    var spec = ENTITY_TYPES[type];
+    return spec ? spec.key(id) : null;
+  }
+
+  function entityHref(type, id) {
+    return '#entity/' + type + '/' + entityKey(type, id);
+  }
+
+  function parseEntityRoute(hash) {
+    var match = /^#entity\/(ability|form|item)\/(0x[0-9a-f]{1,4})$/i.exec(String(hash || ''));
+    if (!match) return null;
+    var type = match[1].toLowerCase();
+    var id = parseInt(match[2], 16);
+    if (!isFinite(id)) return null;
+    return { type: type, id: id, key: entityKey(type, id) };
+  }
+
+  function entityLink(type, id, label) {
+    var spec = ENTITY_TYPES[type];
+    var key = entityKey(type, id);
+    if (!spec || !key) return label;
+    return h('a', {
+      className: 'entity-link',
+      href: entityHref(type, id),
+      'data-entity': type + ':' + key,
+      title: 'Open ' + spec.label.toLowerCase() + ' ' + key
+    },
+      label,
+      h('span', { className: 'entity-type-tag', 'aria-hidden': 'true' }, spec.label)
+    );
+  }
+
+  function entityName(resolved, id, type) {
+    return [entityLink(type, id, displayName(resolved, id)), statusBadge(resolved)];
+  }
+
+  function entitySectionLabel(resolver, key) {
+    var sections = resolver && typeof resolver.sections === 'function' ? resolver.sections() : [];
+    var found = null;
+    (sections || []).forEach(function (section) {
+      if (found === null && section && section.key === key) found = section;
+    });
+    return found ? found.label : (key || 'unclassified');
+  }
+
+  function entityTypeCounts(entities) {
+    var counts = { all: entities.length, ability: 0, form: 0, item: 0 };
+    entities.forEach(function (entity) { counts[entity.type]++; });
+    return counts;
+  }
+
+  function buildEntityIndex(resolver) {
+    var entities = [];
+    var sections = {};
+    (resolver.sections ? resolver.sections() : []).forEach(function (section) {
+      if (section && section.key) sections[section.key] = section.label || section.key;
+    });
+
+    for (var abilityId = 0; abilityId <= 511; abilityId++) {
+      var ability = resolver.ability(abilityId);
+      if (!ability.name) continue;
+      var parts = [sections[ability.section] || ability.section || 'unclassified'];
+      if (ability.elements && ability.elements.length) {
+        parts.push(ability.elements.join(' '));
+      }
+      var monster = resolver.monsterAbility(abilityId);
+      if (monster.known) {
+        parts.push(MONSTER_CATEGORY_LABELS[monster.category] || monster.category);
+        if (monster.spaceMagic) parts.push('Space Magic');
+      }
+      entities.push({
+        type: 'ability', id: abilityId, key: hex4(abilityId),
+        name: ability.name, summary: parts.join(' · ')
+      });
+    }
+
+    for (var formId = 0; formId <= 255; formId++) {
+      var form = resolver.monsterForm(formId);
+      if (!form.known || !form.name) continue;
+      var stats = resolver.monsterFormStats(formId);
+      var bhp = stats.length ? stats[0].bhp : null;
+      entities.push({
+        type: 'form', id: formId, key: hex2(formId),
+        name: form.name + (form.variant ? ' (' + form.variant + ')' : ''),
+        summary: (bhp === null ? 'no BHP line' : 'BHP ' + formatNumber(bhp)) +
+          ' · ' + countLabel(resolver.monsterTargetsFor(formId).length, 'row', 'rows')
+      });
+    }
+
+    for (var itemId = 0; itemId <= 255; itemId++) {
+      var item = resolver.item(itemId);
+      if (!item.name) continue;
+      var line = resolver.itemStat(itemId);
+      entities.push({
+        type: 'item', id: itemId, key: hex2(itemId),
+        name: item.name,
+        summary: (line.known ? statBoostText(line) : 'no Mec stat row') +
+          ' · ' + item.status
+      });
+    }
+
+    return entities;
+  }
+
+  function buildEncyclopedia(vm, resolver, options) {
+    options = options || {};
+    var ui = options.encyclopediaUi || {};
+    var type = ui.type || 'all';
+    var query = String(ui.query || '').trim().toLowerCase();
+    var entities = buildEntityIndex(resolver);
+    var counts = entityTypeCounts(entities);
+    var matches = entities.filter(function (entity) {
+      if (type !== 'all' && entity.type !== type) return false;
+      if (!query) return true;
+      return entity.name.toLowerCase().indexOf(query) !== -1 ||
+        entity.key.toLowerCase().indexOf(query) !== -1;
+    }).sort(function (a, b) {
+      var byName = a.name.localeCompare(b.name);
+      return byName !== 0 ? byName : a.id - b.id;
+    });
+    var limit = 40;
+    var shown = matches.slice(0, limit);
+    var typeOptions = [
+      { value: 'all', label: 'All types (' + formatNumber(counts.all) + ')' },
+      { value: 'ability', label: 'Abilities (' + formatNumber(counts.ability) + ')' },
+      { value: 'form', label: 'Forms (' + formatNumber(counts.form) + ')' },
+      { value: 'item', label: 'Items (' + formatNumber(counts.item) + ')' }
+    ].map(function (entry) {
+      return h('option', { value: entry.value, selected: type === entry.value }, entry.label);
+    });
+
+    var rows = shown.map(function (entity) {
+      return h('tr', { className: 'entity-row entity-row-' + entity.type },
+        h('td', { 'data-label': 'Type' }, ENTITY_TYPES[entity.type].label),
+        h('td', { className: 'mono', 'data-label': 'ID' }, entity.key),
+        h('td', { 'data-label': 'Name' }, entityLink(entity.type, entity.id, entity.name)),
+        h('td', { 'data-label': 'Summary' }, entity.summary)
+      );
+    });
+
+    return h('section', { className: 'card card-wide encyclopedia', id: 'encyclopedia', 'data-index-label': 'Encyclopedia' },
+      h('h3', null, 'Encyclopedia'),
+      h('p', { className: 'hint' },
+        'Abilities, forms and items assembled from the tables this page already loads. ' +
+        'Open a name for its record and every place it appears in this save; the address ' +
+        'bar carries the entity, so a link can be reloaded or shared.'),
+      h('div', { className: 'entity-controls' },
+        h('label', { className: 'monster-filter-label' }, 'Type',
+          h('select', {
+            'data-entity-focus': 'entity-type',
+            onChange: function (event) {
+              if (typeof options.onEntityType === 'function') options.onEntityType(event.target.value);
+            }
+          }, typeOptions)
+        ),
+        h('label', { className: 'monster-filter-label entity-search' }, 'Search',
+          h('input', {
+            type: 'search',
+            value: ui.query || '',
+            placeholder: 'name or 0x id',
+            'data-entity-focus': 'entity-search',
+            onChange: function (event) {
+              if (typeof options.onEntityQuery === 'function') options.onEntityQuery(event.target.value);
+            },
+            onKeyDown: function (event) {
+              if (event.key === 'Enter' && typeof options.onEntityQuery === 'function') {
+                options.onEntityQuery(event.target.value);
+              }
+            }
+          })
+        ),
+        h('span', { className: 'hint' },
+          formatNumber(matches.length) + ' match' + (matches.length === 1 ? '' : 'es') +
+          (matches.length > limit ? ' · showing first ' + limit : ''))
+      ),
+      shown.length
+        ? h('div', { className: 'table-scroll entity-scroll' },
+            h('table', { className: 'grid grid-entities' },
+              h('thead', null, h('tr', null,
+                h('th', null, 'Type'),
+                h('th', null, 'ID'),
+                h('th', null, 'Name'),
+                h('th', null, 'Summary')
+              )),
+              h('tbody', null, rows)
+            )
+          )
+        : h('p', { className: 'empty' }, 'No entity matches this filter.')
+    );
+  }
+
+  function entityCharacters(vm, type, id) {
+    var equipped = [];
+    var learned = [];
+    var itemholders = [];
+    var forms = [];
+    (vm && vm.roster || []).forEach(function (record) {
+      if (type === 'ability') {
+        if ((record.equipAttack || []).indexOf(id) !== -1) equipped.push(record);
+        if ((record.skills || []).some(function (entry) { return entry.abilityId === id; })) {
+          learned.push(record);
+        }
+      } else if (type === 'item') {
+        if ((record.equipItem || []).indexOf(id) !== -1) itemholders.push(record);
+      } else if (type === 'form') {
+        if (record.tribialWork && num(record.tribialWork[0]) === id) forms.push(record);
+      }
+    });
+    return { equipped: equipped, learned: learned, holders: itemholders, forms: forms };
+  }
+
+  function entityCharacterNames(records, resolver) {
+    if (!records.length) return 'none';
+    return records.map(function (record) {
+      return displayName(resolver.character(record.chrNo), record.chrNo);
+    }).join(', ');
+  }
+
+  function buildEntityDetail(route, vm, resolver, options) {
+    options = options || {};
+    if (!route || !ENTITY_TYPES[route.type]) return null;
+    var typeLabel = ENTITY_TYPES[route.type].label;
+    var head;
+    var body = [];
+    var key = route.key;
+
+    if (route.type === 'ability') {
+      var ability = resolver.ability(route.id);
+      var monster = resolver.monsterAbility(route.id);
+      head = nameWithBadge(ability, route.id);
+      body.push(h('dl', { className: 'kv' },
+        kv('Section', entitySectionLabel(resolver, ability.section)),
+        kv('Elements', ability.elements && ability.elements.length
+          ? h('span', { className: 'chips' }, ability.elements.map(function (code) {
+              return h('span', { className: 'chip', title: resolver.elementLabel(code) }, code);
+            }))
+          : 'none documented'),
+        kv('Monster ability', monster.known
+          ? (MONSTER_CATEGORY_LABELS[monster.category] || monster.category) +
+            (monster.spaceMagic ? ' · Space Magic · cannot satisfy' : '')
+          : 'no')
+      ));
+      var usage = entityCharacters(vm, 'ability', route.id);
+      body.push(h('h4', null, 'In this save'));
+      body.push(h('p', { className: 'hint' },
+        'Equipped by ' + formatNumber(usage.equipped.length) + ': ' +
+        entityCharacterNames(usage.equipped, resolver) + '. Learned by ' +
+        formatNumber(usage.learned.length) + ': ' +
+        entityCharacterNames(usage.learned, resolver) + '.'));
+      if (monster.known) {
+        var requiredBy = [];
+        (resolver.monsterTargets ? resolver.monsterTargets() : []).forEach(function (target) {
+          var ids = [];
+          if (target.table === 1) ids = target.requires && target.requires.all || [];
+          else {
+            Object.keys(target.requires || {}).forEach(function (category) {
+              ids = ids.concat(target.requires[category] || []);
+            });
+          }
+          if (ids.map(function (value) { return parseInt(value, 16); }).indexOf(route.id) !== -1) {
+            requiredBy.push(target);
+          }
+        });
+        body.push(h('h4', null, 'Required by ' + countLabel(requiredBy.length, 'form row', 'form rows')));
+        body.push(requiredBy.length
+          ? h('ul', { className: 'entity-usage-list' }, requiredBy.slice(0, 12).map(function (target) {
+              return h('li', null,
+                entityLink('form', parseInt(target.form, 16), target.name),
+                ' · Table ' + target.table +
+                (target.table === 2 && target.hp_below !== null
+                  ? ', HP < ' + formatNumber(target.hp_below) : '')
+              );
+            }).concat(requiredBy.length > 12
+              ? [h('li', { className: 'hint' }, '+' + (requiredBy.length - 12) + ' more')]
+              : []))
+          : h('p', { className: 'hint' }, 'No documented transformation row requires this ability.'));
+      }
+    } else if (route.type === 'item') {
+      var item = resolver.item(route.id);
+      head = nameWithBadge(item, route.id);
+      var stat = resolver.itemStat(route.id);
+      var held = 0;
+      (vm && vm.items || []).forEach(function (entry) {
+        if (entry.itemNo === route.id) held += num(entry.count) || 0;
+      });
+      var holders = entityCharacters(vm, 'item', route.id);
+      var shops = [];
+      (vm && vm.system && vm.system.shopRecords || []).forEach(function (shop) {
+        if ((shop.items || []).some(function (entry) { return entry.id === route.id; })) {
+          var info = resolver.shop(shop.type);
+          shops.push(info.label || ('Shop table ' + formatNumber(shop.type)));
+        }
+      });
+      body.push(h('dl', { className: 'kv' },
+        kv('Name source', item.status + (item.note ? ' · ' + item.note : '')),
+        kv('Held in this slot', formatNumber(held)),
+        kv('Equipped by', entityCharacterNames(holders.holders, resolver)),
+        kv('Mec stat line', stat.known ? statBoostText(stat) : 'no [ITEMD03] row'),
+        kv('Stocked at', shops.length ? shops.slice(0, 8).join('; ') +
+          (shops.length > 8 ? '; +' + (shops.length - 8) + ' more' : '') : 'no stock table')
+      ));
+    } else {
+      var form = resolver.monsterForm(route.id);
+      head = nameWithBadge(form.known ? form : { name: null, status: 'unmapped' }, route.id);
+      var formStats = resolver.monsterFormStats(route.id);
+      var targets = resolver.monsterTargetsFor(route.id);
+      var current = entityCharacters(vm, 'form', route.id);
+      body.push(h('dl', { className: 'kv' },
+        kv('Variant', form.variant || 'standard'),
+        kv('In this save', entityCharacterNames(current.forms, resolver)),
+        kv('Documented stat lines', formatNumber(formStats.length)),
+        kv('Reaching rows', formatNumber(targets.length))
+      ));
+      body.push(h('h4', null, 'Documented stats'));
+      body.push(formStats.length
+        ? h('div', { className: 'table-scroll' }, h('table', { className: 'grid grid-monster-stats' },
+            h('thead', null, h('tr', null,
+              h('th', null, 'Line'), h('th', null, 'BHP'),
+              MONSTER_STAT_FIELDS.map(function (field) { return h('th', null, field.code); })
+            )),
+            h('tbody', null, formStats.map(function (entry) {
+              return h('tr', null,
+                h('td', null, entry.name || 'documented'),
+                h('td', { className: 'num' }, entry.bhp === null ? '—' : formatNumber(entry.bhp)),
+                MONSTER_STAT_FIELDS.map(function (field) {
+                  var value = entry.stats ? num(entry.stats[field.key]) : null;
+                  return h('td', { className: 'num' }, value === null ? '—' : formatNumber(value));
+                })
+              );
+            }))
+          ))
+        : h('p', { className: 'hint' }, 'No documented stat line for this form.'));
+      body.push(h('h4', null, 'Transformation rows'));
+      body.push(targets.length
+        ? h('ul', { className: 'entity-usage-list' }, targets.map(function (target) {
+            return h('li', null,
+              'Table ' + target.table +
+              (target.table === 2 && target.hp_below !== null
+                ? ', HP < ' + formatNumber(target.hp_below) : '') + ': ' +
+              monsterTargetSummary(target, resolver)
+            );
+          }))
+        : h('p', { className: 'hint' }, 'No documented row reaches this form.'));
+      body.push(h('p', { className: 'hint' },
+        'A form id listed here is the destination of a check. The Monster Lab Calculator resolves ' +
+        'which row the current menu actually reaches.'));
+    }
+
+    return h('div', { className: 'entity-detail' },
+      h('div', { className: 'entity-detail-head' },
+        h('div', null,
+          h('h2', { id: 'entity-drawer-title' }, typeLabel + '  ', h('span', { className: 'mono' }, key)),
+          h('p', { className: 'entity-detail-name' }, head)
+        ),
+        h('button', { type: 'button', className: 'entity-close',
+          onClick: function () { if (typeof options.onClose === 'function') options.onClose(); }
+        }, 'Close')
+      ),
+      body,
+      route.type === 'ability' && resolver.monsterAbility(route.id).known
+        ? h('p', { className: 'hint' }, 'Open the Monster Lab on a Monster PC to check this ability against a live menu.')
+        : null
+    );
+  }
+
   // Per-character drill-down. Pure: it takes the view model and returns a
   // descriptor tree, so the harness can assert on it without a DOM.
   function buildCharacterDetail(vm, resolver, chrNo, options) {
@@ -2345,7 +4019,7 @@
       itemEntries.length
         ? h('ul', { className: 'detail-list' }, itemEntries.map(function (entry) {
             return h('li', { className: 'detail-item' },
-              h('span', { className: 'ability-name' }, nameWithBadge(entry.resolved, entry.id)),
+              h('span', { className: 'ability-name' }, entityName(entry.resolved, entry.id, 'item')),
               h('span', { className: 'mono' }, hex2(entry.id)),
               entry.boost
                 ? h('span', { className: 'detail-boosts mono' }, statBoostText(entry.boost))
@@ -2895,7 +4569,7 @@
           ? 'Unknown item'
           : displayName(resolver.item(item.id), item.id);
         return h('tr', { className: count > 0 ? 'shop-bought' : 'shop-unbought' },
-          h('td', null, name),
+          h('td', null, item.id === null ? name : entityLink('item', item.id, name)),
           h('td', { className: 'mono' }, item.id === null ? '??' : hex2(item.id)),
           h('td', { className: 'num' }, count > 0 ? formatNumber(count) : '-')
         );
@@ -3537,7 +5211,7 @@
                 return h('tr', null,
                   h('td', { className: 'num' }, String(entry.index)),
                   h('td', { className: 'mono' }, hex2(entry.itemNo)),
-                  h('td', null, nameWithBadge(resolver.item(entry.itemNo), entry.itemNo)),
+                  h('td', null, entityName(resolver.item(entry.itemNo), entry.itemNo, 'item')),
                   h('td', { className: 'num' }, formatNumber(entry.count))
                 );
               }))
@@ -3652,6 +5326,8 @@
       buildCharacterArrays(vm, resolver),
       buildAbilities(vm, resolver), roster,
       buildCharacterDetail(vm, resolver, selectedChr, options),
+      buildMonsterLab(vm, resolver, selectedChr, options),
+      buildEncyclopedia(vm, resolver, options),
       buildAbilitySchools(vm, resolver, selectedChr),
       buildElementCoverage(vm, resolver, selectedChr),
       buildInitSets(vm, resolver, options && options.initSets));
@@ -3761,6 +5437,10 @@
         el.addEventListener('click', value);
       } else if (key === 'onKeyDown') {
         el.addEventListener('keydown', value);
+      } else if (key === 'onChange') {
+        el.addEventListener('change', value);
+      } else if (key === 'onInput') {
+        el.addEventListener('input', value);
       } else if (key === 'onToggle') {
         // <details> has no click-time truth: the open state changes after the
         // click, so the toggle event is the only reliable signal.
@@ -3818,6 +5498,17 @@
       mysticAbsorbsError: null,
       monsterForms: null,
       monsterFormsError: null,
+      monsterLab: null,
+      monsterLabError: null,
+      // Monster Lab UI state. `byChr` holds only temporary what-if overrides;
+      // `ui` holds panel and filter state that survives character switches.
+      monsterLabState: newMonsterLabState(),
+      // Encyclopedia route and search state. The route is parsed from the hash;
+      // the drawer is rendered outside #detail so a character re-render cannot
+      // destroy it.
+      entityRoute: null,
+      encyclopedia: { query: '', type: 'all' },
+      currentVm: null,
       shopNames: null,
       shopNamesError: null,
       // Which still-to-buy stops are expanded, by location name. Survives slot
@@ -3881,7 +5572,7 @@
         visible,
         state.selected ? state.selected.key : null,
         selectSlot,
-        makeResolver(state.constants, state.abilities, state.maps, state.flags, state.shopNames, state.itemStats, state.mysticAbsorbs, state.monsterForms)
+        makeResolver(state.constants, state.abilities, state.maps, state.flags, state.shopNames, state.itemStats, state.mysticAbsorbs, state.monsterForms, state.monsterLab)
       ), dom.slotList);
       // Hide the rows outside the page on the mounted <li>s. The whole picker
       // stays in the DOM so the selection and the row titles survive paging.
@@ -3897,7 +5588,7 @@
           state.slots,
           state.selected ? state.selected.key : null,
           selectSlot,
-          makeResolver(state.constants, state.abilities, state.maps, state.flags, state.shopNames, state.itemStats, state.mysticAbsorbs, state.monsterForms)
+          makeResolver(state.constants, state.abilities, state.maps, state.flags, state.shopNames, state.itemStats, state.mysticAbsorbs, state.monsterForms, state.monsterLab)
         ), dom.slotFast);
       }
       updateSlotPager(bounds);
@@ -4114,6 +5805,97 @@
       target.focus({ preventScroll: Boolean(preventScroll) });
     }
 
+    // The Monster Lab re-renders the whole detail tree on every control change,
+    // which destroys the control that had focus. Hand focus back by its stable
+    // data-lab-focus name so a keyboard user keeps their place.
+    function focusMonsterControl(name) {
+      if (!name || !dom.detail || typeof dom.detail.querySelector !== 'function') return;
+      var target = dom.detail.querySelector('[data-lab-focus="' + name + '"]');
+      if (!target || typeof target.focus !== 'function') return;
+      target.focus({ preventScroll: true });
+      if (target.tagName === 'INPUT' && typeof target.setSelectionRange === 'function') {
+        var end = String(target.value || '').length;
+        try { target.setSelectionRange(end, end); } catch (err) { /* search inputs vary */ }
+      }
+    }
+
+    function rerenderMonsterLab(focusName) {
+      renderDetail(false, false);
+      focusMonsterControl(focusName);
+    }
+
+    function focusEntityControl(name) {
+      if (!name || !dom.detail || typeof dom.detail.querySelector !== 'function') return;
+      var target = dom.detail.querySelector('[data-entity-focus="' + name + '"]');
+      if (!target || typeof target.focus !== 'function') return;
+      target.focus({ preventScroll: true });
+    }
+
+    function closeEntityRoute() {
+      var hash = typeof window !== 'undefined' && window.location ? String(window.location.hash) : '';
+      state.entityRoute = null;
+      renderEntityDrawer();
+      if (hash.indexOf('#entity/') !== 0 || typeof window === 'undefined') return;
+      // Clear the address without adding a history entry. Assigning
+      // location.hash would leave an extra entry, so Back would re-open the
+      // record the user just closed.
+      if (window.history && typeof window.history.replaceState === 'function' &&
+          window.location && typeof window.location.pathname === 'string') {
+        window.history.replaceState(null, '', window.location.pathname +
+          (window.location.search || ''));
+        return;
+      }
+      if (window.location) window.location.hash = '';
+    }
+
+    function handleEntityHash() {
+      var hash = typeof window !== 'undefined' && window.location
+        ? String(window.location.hash) : '';
+      state.entityRoute = parseEntityRoute(hash);
+      renderEntityDrawer();
+    }
+
+    function renderEntityDrawer() {
+      if (!dom.entityDrawer) return;
+      dom.entityDrawer.innerHTML = '';
+      if (!state.entityRoute) {
+        dom.entityDrawer.hidden = true;
+        return;
+      }
+      var resolver = makeResolver(state.constants, state.abilities, state.maps, state.flags,
+        state.shopNames, state.itemStats, state.mysticAbsorbs, state.monsterForms, state.monsterLab);
+      var node = buildEntityDetail(state.entityRoute, state.currentVm, resolver, {
+        onClose: closeEntityRoute
+      });
+      if (!node) {
+        dom.entityDrawer.hidden = true;
+        return;
+      }
+      dom.entityDrawer.hidden = false;
+      mount(node, dom.entityDrawer);
+    }
+
+    function rerenderEncyclopedia(focusName) {
+      renderDetail(false, false);
+      focusEntityControl(focusName);
+    }
+
+    function ensureMonsterOverride(record) {
+      if (!record) return null;
+      var lab = state.monsterLabState;
+      if (!lab.byChr[record.chrNo]) {
+        var save = monsterLabSaveState(record);
+        lab.byChr[record.chrNo] = {
+          mode: true,
+          absorbed: save.absorbed.slice(),
+          slots: save.slots.slice(),
+          nextAbilityId: null
+        };
+      }
+      lab.byChr[record.chrNo].mode = true;
+      return lab.byChr[record.chrNo];
+    }
+
     // scrollToCharacter brings the card into view; refocus hands focus back to
     // the row control, which the re-render destroys. They are separate because
     // arrow-key browsing refocuses without scrolling to the card.
@@ -4122,9 +5904,11 @@
       if (!dom.detail) return;
       dom.detail.innerHTML = '';
       if (!state.selected || !state.container) {
+        state.currentVm = null;
         mount(h('p', { className: 'empty' }, 'Select a slot to inspect it.'), dom.detail);
         renderPageIndex([]);
         renderCharacterRail(null);
+        renderEntityDrawer();
         return;
       }
       try {
@@ -4134,19 +5918,24 @@
           state.slotCache[state.selected.key] = cached;
         }
         if (cached.empty) {
+          state.currentVm = null;
           mount(h('p', { className: 'empty' }, 'This slot has no inner save data.'), dom.detail);
           renderPageIndex([]);
           renderCharacterRail(null);
+          renderEntityDrawer();
           return;
         }
         var vm = buildViewModel(cached.data, state.selected, state.container.systemSaveData);
+        state.currentVm = vm;
         var resolver = makeResolver(state.constants, state.abilities, state.maps, state.flags,
-          state.shopNames, state.itemStats, state.mysticAbsorbs, state.monsterForms);
+          state.shopNames, state.itemStats, state.mysticAbsorbs, state.monsterForms, state.monsterLab);
         var selectedChr = state.selectedCharacter;
         if (selectedChr === null || selectedChr === undefined) selectedChr = vm.party.heroNo;
         // A preserved character may not exist in a different save. Fall back
         // to the leader rather than rendering an empty character detail.
         if (!rosterRecordFor(vm, selectedChr)) selectedChr = vm.party.heroNo;
+        var monsterTargets = state.monsterForms && Array.isArray(state.monsterForms.targets)
+          ? state.monsterForms.targets : [];
         var tree = buildDetail(vm, resolver, {
           selectedCharacter: selectedChr,
           initSets: state.initSets,
@@ -4155,7 +5944,115 @@
           shopTableError: state.shopNamesError,
           itemStatsError: state.itemStatsError,
           mysticAbsorbError: state.mysticAbsorbsError,
+          monsterForms: state.monsterForms,
           monsterFormsError: state.monsterFormsError,
+          monsterLab: state.monsterLab,
+          monsterLabError: state.monsterLabError,
+          monsterUi: monsterLabUiFor(state.monsterLabState, selectedChr),
+          abilities: state.abilities,
+          encyclopediaUi: state.encyclopedia,
+          onEntityType: function (value) {
+            state.encyclopedia.type = value;
+            rerenderEncyclopedia('entity-type');
+          },
+          onEntityQuery: function (value) {
+            state.encyclopedia.query = value;
+            rerenderEncyclopedia('entity-search');
+          },
+          onMonsterMode: function (enabled) {
+            var record = rosterRecordFor(vm, selectedChr);
+            if (!record) return;
+            if (enabled) {
+              var save = monsterLabSaveState(record);
+              state.monsterLabState.byChr[record.chrNo] = {
+                mode: true,
+                absorbed: save.absorbed.slice(),
+                slots: save.slots.slice(),
+                nextAbilityId: null
+              };
+            } else {
+              delete state.monsterLabState.byChr[record.chrNo];
+            }
+            rerenderMonsterLab(null);
+          },
+          onMonsterAbsorb: function (id, checked) {
+            var record = rosterRecordFor(vm, selectedChr);
+            var entry = ensureMonsterOverride(record);
+            if (!entry) return;
+            if (checked && entry.absorbed.indexOf(id) === -1) entry.absorbed.push(id);
+            if (!checked) {
+              entry.absorbed = entry.absorbed.filter(function (value) { return value !== id; });
+              entry.slots = entry.slots.map(function (value) { return value === id ? null : value; });
+            }
+            rerenderMonsterLab('monster-absorb-' + id);
+          },
+          onMonsterSlot: function (index, id) {
+            var record = rosterRecordFor(vm, selectedChr);
+            var entry = ensureMonsterOverride(record);
+            if (!entry) return;
+            entry.slots[index] = id;
+            if (id !== null && entry.absorbed.indexOf(id) === -1) entry.absorbed.push(id);
+            rerenderMonsterLab('monster-slot-' + index);
+          },
+          onMonsterNextAbility: function (id) {
+            var record = rosterRecordFor(vm, selectedChr);
+            var entry = ensureMonsterOverride(record);
+            if (!entry) return;
+            entry.nextAbilityId = id;
+            rerenderMonsterLab('monster-next-ability');
+          },
+          onMonsterView: function (view, isOpen) {
+            state.monsterLabState.ui.open[view] = Boolean(isOpen);
+            scheduleIndexUpdate();
+          },
+          onMonsterChecklistFilter: function (value) {
+            state.monsterLabState.ui.checklistFilter = value;
+            rerenderMonsterLab('monster-ability-filter');
+          },
+          onMonsterLibrary: function (patch) {
+            Object.keys(patch || {}).forEach(function (key) {
+              state.monsterLabState.ui.library[key] = patch[key];
+            });
+            rerenderMonsterLab(patch && patch.table ? 'monster-library-table'
+              : (patch && patch.query !== undefined ? 'monster-library-query' : 'monster-library-filter'));
+          },
+          onMonsterForm: function (form) {
+            state.monsterLabState.ui.library.form = form;
+            state.monsterLabState.ui.open.library = Boolean(form);
+            rerenderMonsterLab(form ? 'monster-form-' + form : null);
+          },
+          onMonsterPlan: function (form) {
+            state.monsterLabState.ui.library.form = form;
+            state.monsterLabState.ui.target = form;
+            state.monsterLabState.ui.open.library = true;
+            state.monsterLabState.ui.open.calculator = true;
+            rerenderMonsterLab('monster-target-select');
+          },
+          onMonsterTarget: function (form) {
+            state.monsterLabState.ui.target = form;
+            state.monsterLabState.ui.open.calculator = true;
+            rerenderMonsterLab('monster-target-select');
+          },
+          onMonsterPlanLoad: function () {
+            var record = rosterRecordFor(vm, selectedChr);
+            if (!record) return;
+            var targetForm = state.monsterLabState.ui.target;
+            var rows = monsterTargets.filter(function (target) { return target.form === targetForm; });
+            var plan = null;
+            for (var index = 0; index < rows.length && !plan; index++) {
+              var candidate = monsterPlanSlots(rows[index]);
+              if (candidate.possible) plan = candidate;
+            }
+            if (!plan) return;
+            var entry = ensureMonsterOverride(record);
+            if (!entry) return;
+            entry.slots = plan.slots;
+            entry.nextAbilityId = null;
+            plan.absorbed.forEach(function (id) {
+              if (entry.absorbed.indexOf(id) === -1) entry.absorbed.push(id);
+            });
+            rerenderMonsterLab('monster-slot-0');
+          },
           onShopToggle: function (location, isOpen) {
             if (isOpen) state.shopOpen[location] = true;
             else delete state.shopOpen[location];
@@ -4179,12 +6076,15 @@
         mount(tree, dom.detail);
         renderPageIndex(collectIndexEntries(tree));
         renderCharacterRail(vm, resolver, selectedChr);
+        renderEntityDrawer();
         if (refocus) focusCharacterControl(scrollToCharacter);
         if (scrollToCharacter) scrollCharacterIntoView();
       } catch (err) {
+        state.currentVm = null;
         mount(h('p', { className: 'error' }, err.message), dom.detail);
         renderPageIndex([]);
         renderCharacterRail(null);
+        renderEntityDrawer();
       }
     }
 
@@ -4214,6 +6114,9 @@
       state.selected = slot;
       state.selectedCharacter = options.character === undefined ? null : options.character;
       state.railCharacterOpen = false;
+      // A different slot is a different record, so temporary Monster Lab
+      // overrides must not leak across slots.
+      state.monsterLabState.byChr = {};
       renderSlotList();
       renderDetail();
     }
@@ -4292,6 +6195,15 @@
         // names the missing table instead of inventing names or arts.
         state.mysticAbsorbs = null;
         state.mysticAbsorbsError = 'Could not load ' + MYSTIC_ABSORB_PATH + ' (' + err.message + ')';
+      }
+      try {
+        state.monsterLab = await fetchJson(tableUrl(MONSTER_LAB_PATH));
+        state.monsterLabError = null;
+      } catch (err) {
+        // Optional: the checklist, names and transformation rows still load;
+        // the category check and documented stat lines name the gap.
+        state.monsterLab = null;
+        state.monsterLabError = 'Could not load ' + MONSTER_LAB_PATH + ' (' + err.message + ')';
       }
       try {
         state.monsterForms = await fetchJson(tableUrl(MONSTER_FORMS_PATH));
@@ -4381,6 +6293,7 @@
       state.railCharacterOpen = false;
       state.originalIntact = null;
       state.roundTrip = null;
+      state.monsterLabState = newMonsterLabState();
 
       // 5. Prove the pristine buffer did not move.
       var after = await sha256Hex(global.originalSaveData);
@@ -4903,11 +6816,20 @@
       // drill-over from there, so the document fallback is intentional.
       if (typeof document !== 'undefined' && typeof document.addEventListener === 'function') {
         document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape' && state.entityRoute) {
+            if (event.preventDefault) event.preventDefault();
+            closeEntityRoute();
+            return;
+          }
           if (state.railCharacterOpen && event.key === 'Escape') {
             if (event.preventDefault) event.preventDefault();
             closeCharacterRail(true);
           }
         });
+      }
+
+      if (typeof window !== 'undefined' && typeof window.addEventListener === 'function') {
+        window.addEventListener('hashchange', handleEntityHash);
       }
 
       bindPageIndex();
@@ -4926,7 +6848,8 @@
       ingestFile: ingestFile,
       handleFile: handleFile,
       selectSlot: selectSlot,
-      renderDetail: renderDetail
+      renderDetail: renderDetail,
+      handleEntityHash: handleEntityHash
     };
   }
 
@@ -4994,6 +6917,27 @@
     buildMysticAbsorbBlock: buildMysticAbsorbBlock,
     buildMonsterForm: buildMonsterForm,
     buildMonsterFormBlock: buildMonsterFormBlock,
+    buildEncyclopedia: buildEncyclopedia,
+    buildEntityIndex: buildEntityIndex,
+    buildEntityDetail: buildEntityDetail,
+    entityLink: entityLink,
+    entityHref: entityHref,
+    parseEntityRoute: parseEntityRoute,
+    buildMonsterLab: buildMonsterLab,
+    buildMonsterChecklist: buildMonsterChecklist,
+    buildMonsterLibrary: buildMonsterLibrary,
+    buildMonsterCalculator: buildMonsterCalculator,
+    simulateMonsterTransform: simulateMonsterTransform,
+    monsterPlanSlots: monsterPlanSlots,
+    monsterLabSaveState: monsterLabSaveState,
+    monsterLabUiValues: monsterLabUiValues,
+    monsterLabUiFor: monsterLabUiFor,
+    newMonsterLabState: newMonsterLabState,
+    monsterFirstByCategory: monsterFirstByCategory,
+    monsterEquippedLookup: monsterEquippedLookup,
+    monsterTargetStatus: monsterTargetStatus,
+    monsterRequirementText: monsterRequirementText,
+    MONSTER_SLOT_ORDER: MONSTER_SLOT_ORDER,
     MEC_BODY_TYPES: MEC_BODY_TYPES,
     MYSTIC_WEAPONS: MYSTIC_WEAPONS,
     MONSTER_RACES: MONSTER_RACES,
@@ -5060,12 +7004,14 @@
         snapshotBlock: document.getElementById('snapshot-block'),
         snapshotList: document.getElementById('snapshot-list'),
         snapshotEmpty: document.getElementById('snapshot-empty'),
-        snapshotCount: document.getElementById('snapshot-count')
+        snapshotCount: document.getElementById('snapshot-count'),
+        entityDrawer: document.getElementById('entity-drawer')
       });
       global.SaveViewerApp = app;
       function start() {
         app.bind();
         app.initLive();
+        app.handleEntityHash();
       }
       app.loadConstants().then(start, start);
     });

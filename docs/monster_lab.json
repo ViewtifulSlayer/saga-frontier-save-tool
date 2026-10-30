@@ -1,0 +1,7942 @@
+{
+  "schema": 1,
+  "meta": {
+    "description": "Monster ability categories and documented form stat lines for the Monster Lab",
+    "generator": "tests/sfr_save_tool/build_monster_lab.py",
+    "sources": {
+      "categories": {
+        "file": "docs/gameinfo/gamefaqs/in-depth_guides/Data_Mechanics_Guide_by_Zaraktheus.txt",
+        "section": "[MTRAN04] Monster Ability Categories",
+        "sha256": "0ebaa4824ae12aee8db106dbf549f01a65b045b75fdccc24c9b3ee4e66f46549"
+      },
+      "form_stats": {
+        "file": "docs/gameinfo/gamefaqs/in-depth_guides/Monster_FAQ_by_Oulak.txt",
+        "sha256": "1dd8e8d81dff61ef656c0f92ed57fc7f7f70d057707899dc6c482401a6b9c091"
+      },
+      "forms": {
+        "file": "docs/monster_forms.json",
+        "sha256": "a25b790d40069cba42221f438a72431f2761295cdf7fabaab01e138507c35318"
+      },
+      "ability_names": {
+        "file": "docs/ability_names.json",
+        "sha256": "0510307436720ed6b76732fd15258109eac8dffcd45e4aa43a066b71d34019b4"
+      }
+    },
+    "counts": {
+      "monster_abilities": 128,
+      "space_spells": 6,
+      "category_counts": {
+        "head": 19,
+        "arm": 24,
+        "leg": 11,
+        "body": 23,
+        "breath": 18,
+        "magical": 39
+      },
+      "form_blocks": 86,
+      "form_blocks_with_bhp": 83,
+      "form_blocks_without_bhp": 3,
+      "star_variants": 2,
+      "lummox_variants": 2,
+      "unique_blocks": 82,
+      "unique_form_ids": 80,
+      "ambiguous_names": 4,
+      "target_forms": 84,
+      "unique_target_coverage": 79
+    },
+    "crosschecks": {
+      "fixtures": {
+        "asellus": [
+          {
+            "chrNo": 7,
+            "form": "0x0F",
+            "formName": "Lummox",
+            "recordBaseHp": 60,
+            "recordStats": {
+              "str": 8,
+              "qui": 8,
+              "int": 8,
+              "wil": 8,
+              "psy": 8,
+              "vit": 8,
+              "cha": 8
+            },
+            "match": "full",
+            "documentedName": "Lummox(Green)",
+            "documentedBhp": 60,
+            "documentedStats": {
+              "str": 8,
+              "qui": 8,
+              "int": 8,
+              "wil": 8,
+              "psy": 8,
+              "vit": 8,
+              "cha": 8
+            }
+          },
+          {
+            "chrNo": 33,
+            "form": "0x5F",
+            "formName": "Ogre",
+            "recordBaseHp": 180,
+            "recordStats": {
+              "str": 25,
+              "qui": 11,
+              "int": 16,
+              "wil": 12,
+              "psy": 20,
+              "vit": 24,
+              "cha": 6
+            },
+            "match": "no_bhp",
+            "documentedName": "Ogre**",
+            "documentedBhp": null,
+            "documentedStats": {
+              "str": 25,
+              "qui": 11,
+              "int": 16,
+              "wil": 12,
+              "psy": 20,
+              "vit": 24,
+              "cha": 6
+            }
+          },
+          {
+            "chrNo": 34,
+            "form": "0x0A",
+            "formName": "Tidi",
+            "recordBaseHp": 180,
+            "recordStats": {
+              "str": 16,
+              "qui": 31,
+              "int": 12,
+              "wil": 22,
+              "psy": 13,
+              "vit": 16,
+              "cha": 21
+            },
+            "match": "full",
+            "documentedName": "Tidi",
+            "documentedBhp": 180,
+            "documentedStats": {
+              "str": 16,
+              "qui": 31,
+              "int": 12,
+              "wil": 22,
+              "psy": 13,
+              "vit": 16,
+              "cha": 21
+            }
+          },
+          {
+            "chrNo": 35,
+            "form": "0x8D",
+            "formName": "DeathLord",
+            "recordBaseHp": 240,
+            "recordStats": {
+              "str": 41,
+              "qui": 34,
+              "int": 34,
+              "wil": 40,
+              "psy": 34,
+              "vit": 44,
+              "cha": 40
+            },
+            "match": "full",
+            "documentedName": "Deathlord",
+            "documentedBhp": 240,
+            "documentedStats": {
+              "str": 41,
+              "qui": 34,
+              "int": 34,
+              "wil": 40,
+              "psy": 34,
+              "vit": 44,
+              "cha": 40
+            }
+          },
+          {
+            "chrNo": 36,
+            "form": "0x4C",
+            "formName": "KylinJr",
+            "recordBaseHp": 400,
+            "recordStats": {
+              "str": 52,
+              "qui": 71,
+              "int": 90,
+              "wil": 48,
+              "psy": 70,
+              "vit": 41,
+              "cha": 82
+            },
+            "match": "full",
+            "documentedName": "KylinJr.",
+            "documentedBhp": 400,
+            "documentedStats": {
+              "str": 52,
+              "qui": 71,
+              "int": 90,
+              "wil": 48,
+              "psy": 70,
+              "vit": 41,
+              "cha": 82
+            }
+          },
+          {
+            "chrNo": 37,
+            "form": "0x61",
+            "formName": "Slime",
+            "recordBaseHp": 90,
+            "recordStats": {
+              "str": 8,
+              "qui": 6,
+              "int": 7,
+              "wil": 22,
+              "psy": 24,
+              "vit": 28,
+              "cha": 4
+            },
+            "match": "full",
+            "documentedName": "Slime",
+            "documentedBhp": 90,
+            "documentedStats": {
+              "str": 8,
+              "qui": 6,
+              "int": 7,
+              "wil": 22,
+              "psy": 24,
+              "vit": 28,
+              "cha": 4
+            }
+          },
+          {
+            "chrNo": 38,
+            "form": "0x4E",
+            "formName": "SuzakuJr",
+            "recordBaseHp": 440,
+            "recordStats": {
+              "str": 62,
+              "qui": 80,
+              "int": 56,
+              "wil": 71,
+              "psy": 68,
+              "vit": 64,
+              "cha": 80
+            },
+            "match": "no_bhp",
+            "documentedName": "SuzakuJr.**",
+            "documentedBhp": null,
+            "documentedStats": {
+              "str": 62,
+              "qui": 80,
+              "int": 56,
+              "wil": 71,
+              "psy": 68,
+              "vit": 64,
+              "cha": 80
+            }
+          },
+          {
+            "chrNo": 39,
+            "form": "0x12",
+            "formName": "Mandrake",
+            "recordBaseHp": 160,
+            "recordStats": {
+              "str": 17,
+              "qui": 15,
+              "int": 25,
+              "wil": 32,
+              "psy": 29,
+              "vit": 23,
+              "cha": 25
+            },
+            "match": "stats_only",
+            "documentedName": "Mandrake",
+            "documentedBhp": 110,
+            "documentedStats": {
+              "str": 17,
+              "qui": 15,
+              "int": 25,
+              "wil": 32,
+              "psy": 29,
+              "vit": 23,
+              "cha": 25
+            }
+          }
+        ],
+        "t260g": [
+          {
+            "chrNo": 7,
+            "form": "0x0F",
+            "formName": "Lummox",
+            "recordBaseHp": 60,
+            "recordStats": {
+              "str": 8,
+              "qui": 8,
+              "int": 8,
+              "wil": 8,
+              "psy": 8,
+              "vit": 8,
+              "cha": 8
+            },
+            "match": "full",
+            "documentedName": "Lummox(Green)",
+            "documentedBhp": 60,
+            "documentedStats": {
+              "str": 8,
+              "qui": 8,
+              "int": 8,
+              "wil": 8,
+              "psy": 8,
+              "vit": 8,
+              "cha": 8
+            }
+          },
+          {
+            "chrNo": 33,
+            "form": "0x5F",
+            "formName": "Ogre",
+            "recordBaseHp": 180,
+            "recordStats": {
+              "str": 25,
+              "qui": 11,
+              "int": 16,
+              "wil": 12,
+              "psy": 20,
+              "vit": 24,
+              "cha": 6
+            },
+            "match": "no_bhp",
+            "documentedName": "Ogre**",
+            "documentedBhp": null,
+            "documentedStats": {
+              "str": 25,
+              "qui": 11,
+              "int": 16,
+              "wil": 12,
+              "psy": 20,
+              "vit": 24,
+              "cha": 6
+            }
+          },
+          {
+            "chrNo": 34,
+            "form": "0x0A",
+            "formName": "Tidi",
+            "recordBaseHp": 180,
+            "recordStats": {
+              "str": 16,
+              "qui": 31,
+              "int": 12,
+              "wil": 22,
+              "psy": 13,
+              "vit": 16,
+              "cha": 21
+            },
+            "match": "full",
+            "documentedName": "Tidi",
+            "documentedBhp": 180,
+            "documentedStats": {
+              "str": 16,
+              "qui": 31,
+              "int": 12,
+              "wil": 22,
+              "psy": 13,
+              "vit": 16,
+              "cha": 21
+            }
+          },
+          {
+            "chrNo": 35,
+            "form": "0x8D",
+            "formName": "DeathLord",
+            "recordBaseHp": 240,
+            "recordStats": {
+              "str": 41,
+              "qui": 34,
+              "int": 34,
+              "wil": 40,
+              "psy": 34,
+              "vit": 44,
+              "cha": 40
+            },
+            "match": "full",
+            "documentedName": "Deathlord",
+            "documentedBhp": 240,
+            "documentedStats": {
+              "str": 41,
+              "qui": 34,
+              "int": 34,
+              "wil": 40,
+              "psy": 34,
+              "vit": 44,
+              "cha": 40
+            }
+          },
+          {
+            "chrNo": 36,
+            "form": "0x4C",
+            "formName": "KylinJr",
+            "recordBaseHp": 400,
+            "recordStats": {
+              "str": 52,
+              "qui": 71,
+              "int": 90,
+              "wil": 48,
+              "psy": 70,
+              "vit": 41,
+              "cha": 82
+            },
+            "match": "full",
+            "documentedName": "KylinJr.",
+            "documentedBhp": 400,
+            "documentedStats": {
+              "str": 52,
+              "qui": 71,
+              "int": 90,
+              "wil": 48,
+              "psy": 70,
+              "vit": 41,
+              "cha": 82
+            }
+          },
+          {
+            "chrNo": 37,
+            "form": "0x61",
+            "formName": "Slime",
+            "recordBaseHp": 90,
+            "recordStats": {
+              "str": 8,
+              "qui": 6,
+              "int": 7,
+              "wil": 22,
+              "psy": 24,
+              "vit": 28,
+              "cha": 4
+            },
+            "match": "full",
+            "documentedName": "Slime",
+            "documentedBhp": 90,
+            "documentedStats": {
+              "str": 8,
+              "qui": 6,
+              "int": 7,
+              "wil": 22,
+              "psy": 24,
+              "vit": 28,
+              "cha": 4
+            }
+          },
+          {
+            "chrNo": 38,
+            "form": "0x4E",
+            "formName": "SuzakuJr",
+            "recordBaseHp": 440,
+            "recordStats": {
+              "str": 62,
+              "qui": 80,
+              "int": 56,
+              "wil": 71,
+              "psy": 68,
+              "vit": 64,
+              "cha": 80
+            },
+            "match": "no_bhp",
+            "documentedName": "SuzakuJr.**",
+            "documentedBhp": null,
+            "documentedStats": {
+              "str": 62,
+              "qui": 80,
+              "int": 56,
+              "wil": 71,
+              "psy": 68,
+              "vit": 64,
+              "cha": 80
+            }
+          },
+          {
+            "chrNo": 39,
+            "form": "0x12",
+            "formName": "Mandrake",
+            "recordBaseHp": 160,
+            "recordStats": {
+              "str": 17,
+              "qui": 15,
+              "int": 25,
+              "wil": 32,
+              "psy": 29,
+              "vit": 23,
+              "cha": 25
+            },
+            "match": "stats_only",
+            "documentedName": "Mandrake",
+            "documentedBhp": 110,
+            "documentedStats": {
+              "str": 17,
+              "qui": 15,
+              "int": 25,
+              "wil": 32,
+              "psy": 29,
+              "vit": 23,
+              "cha": 25
+            }
+          }
+        ]
+      },
+      "records": 16,
+      "full_matches": 10,
+      "no_bhp": 4,
+      "bhp_mismatch": 2,
+      "stats_only": 2
+    },
+    "ambiguous": {
+      "Chimera": {
+        "form_ids": [
+          "0x08",
+          "0x0E"
+        ],
+        "bhp": 505,
+        "stats": {
+          "str": 75,
+          "qui": 64,
+          "int": 48,
+          "wil": 67,
+          "psy": 46,
+          "vit": 73,
+          "cha": 57
+        }
+      },
+      "kraken": {
+        "form_ids": [
+          "0x28",
+          "0x2E"
+        ],
+        "bhp": 600,
+        "stats": {
+          "str": 78,
+          "qui": 54,
+          "int": 62,
+          "wil": 53,
+          "psy": 26,
+          "vit": 90,
+          "cha": 56
+        }
+      },
+      "Rabbat": {
+        "form_ids": [
+          "0x41",
+          "0x4D"
+        ],
+        "bhp": 110,
+        "stats": {
+          "str": 11,
+          "qui": 23,
+          "int": 9,
+          "wil": 15,
+          "psy": 22,
+          "vit": 9,
+          "cha": 21
+        }
+      },
+      "Nidheg": {
+        "form_ids": [
+          "0x8B",
+          "0x8C"
+        ],
+        "bhp": 240,
+        "stats": {
+          "str": 59,
+          "qui": 63,
+          "int": 13,
+          "wil": 32,
+          "psy": 14,
+          "vit": 37,
+          "cha": 13
+        }
+      }
+    },
+    "aliases": {
+      "abilities": {
+        "psyreflecter": "psyreflector",
+        "pheromone": "pheremone"
+      },
+      "forms": {
+        "dullahan": "durahan",
+        "deathlord": "deathlord",
+        "shreiker": "shrieker",
+        "suzakujr": "suzakujr",
+        "kylinjr": "kylinjr",
+        "trisaurjr": "trisaurjr",
+        "unicornjr": "unicornjr"
+      }
+    },
+    "notes": "Documented values are Oulak's form lines, not the save's resolved record. The library shows documented and observed values separately. Two blocks (Ogre** and SuzakuJr.**) match the fixture records' seven stats but carry no BHP line; Mandrake matches the seven stats while the record base HP is 160 and Oulak prints 110. Space Magic counts as Head for the first-ability check but cannot satisfy a requirement."
+  },
+  "abilities": {
+    "0x0080": {
+      "name": "Fang",
+      "guide_name": null,
+      "category": "head",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 128
+    },
+    "0x0081": {
+      "name": "FangCrush",
+      "guide_name": null,
+      "category": "head",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 129
+    },
+    "0x0082": {
+      "name": "DaggerJaw",
+      "guide_name": null,
+      "category": "head",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 130
+    },
+    "0x0083": {
+      "name": "Beak",
+      "guide_name": null,
+      "category": "head",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 131
+    },
+    "0x0084": {
+      "name": "Horn",
+      "guide_name": null,
+      "category": "head",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 132
+    },
+    "0x0085": {
+      "name": "StunGaze",
+      "guide_name": null,
+      "category": "head",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 133
+    },
+    "0x0086": {
+      "name": "CharmGaze",
+      "guide_name": null,
+      "category": "head",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 134
+    },
+    "0x0087": {
+      "name": "StoneGaze",
+      "guide_name": null,
+      "category": "head",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 135
+    },
+    "0x0088": {
+      "name": "DeathGaze",
+      "guide_name": null,
+      "category": "head",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 136
+    },
+    "0x0089": {
+      "name": "Hypnotism",
+      "guide_name": null,
+      "category": "head",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 137
+    },
+    "0x008A": {
+      "name": "Bloodsucker",
+      "guide_name": null,
+      "category": "head",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 138
+    },
+    "0x008B": {
+      "name": "Grasp",
+      "guide_name": null,
+      "category": "head",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 139
+    },
+    "0x008C": {
+      "name": "Petrify",
+      "guide_name": null,
+      "category": "head",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 140
+    },
+    "0x008D": {
+      "name": "DoubleAxe",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 141
+    },
+    "0x008E": {
+      "name": "BrainCrush",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 142
+    },
+    "0x008F": {
+      "name": "Beat",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 143
+    },
+    "0x0090": {
+      "name": "Scissors",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 144
+    },
+    "0x0091": {
+      "name": "PowerBeat",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 145
+    },
+    "0x0092": {
+      "name": "Psychout",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 146
+    },
+    "0x0093": {
+      "name": "Chop",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 147
+    },
+    "0x0094": {
+      "name": "Feeler",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 148
+    },
+    "0x0095": {
+      "name": "Claw",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 149
+    },
+    "0x0096": {
+      "name": "DeathGrip",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 150
+    },
+    "0x0097": {
+      "name": "PoisonGrip",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 151
+    },
+    "0x0098": {
+      "name": "GhostTouch",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 152
+    },
+    "0x0099": {
+      "name": "DeathTouch",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 153
+    },
+    "0x009A": {
+      "name": "StunTouch",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 154
+    },
+    "0x009B": {
+      "name": "Blade",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 155
+    },
+    "0x009C": {
+      "name": "GaleAttack",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 156
+    },
+    "0x009D": {
+      "name": "GroundHit",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 157
+    },
+    "0x009E": {
+      "name": "HeatSmash",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 158
+    },
+    "0x009F": {
+      "name": "IceSmash",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 159
+    },
+    "0x00A0": {
+      "name": "TitasWave",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 160
+    },
+    "0x00A1": {
+      "name": "Thrust",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 161
+    },
+    "0x00A2": {
+      "name": "Kick",
+      "guide_name": null,
+      "category": "leg",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 162
+    },
+    "0x00A3": {
+      "name": "Trample",
+      "guide_name": null,
+      "category": "leg",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 163
+    },
+    "0x00A4": {
+      "name": "GriffithScratch",
+      "guide_name": null,
+      "category": "leg",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 164
+    },
+    "0x00A5": {
+      "name": "Tail",
+      "guide_name": null,
+      "category": "leg",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 165
+    },
+    "0x00A6": {
+      "name": "TailHit",
+      "guide_name": null,
+      "category": "leg",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 166
+    },
+    "0x00A7": {
+      "name": "Sweep",
+      "guide_name": null,
+      "category": "leg",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 167
+    },
+    "0x00A8": {
+      "name": "SpinAttack",
+      "guide_name": null,
+      "category": "leg",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 168
+    },
+    "0x00A9": {
+      "name": "Stinger",
+      "guide_name": null,
+      "category": "leg",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 169
+    },
+    "0x00AA": {
+      "name": "PoisonNeedle",
+      "guide_name": null,
+      "category": "leg",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 170
+    },
+    "0x00AB": {
+      "name": "Feint",
+      "guide_name": null,
+      "category": "leg",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 171
+    },
+    "0x00AC": {
+      "name": "MinionStrike",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 172
+    },
+    "0x00AD": {
+      "name": "Heal",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 173
+    },
+    "0x00AE": {
+      "name": "Coils",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 174
+    },
+    "0x00AF": {
+      "name": "Tackle",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 175
+    },
+    "0x00B0": {
+      "name": "Dash",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 176
+    },
+    "0x00B1": {
+      "name": "Headbutt",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 177
+    },
+    "0x00B2": {
+      "name": "Stampede",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 178
+    },
+    "0x00B3": {
+      "name": "Wing",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 179
+    },
+    "0x00B4": {
+      "name": "GliderSpike",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 180
+    },
+    "0x00B5": {
+      "name": "Oscillation",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 181
+    },
+    "0x00B6": {
+      "name": "FireKiss",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 182
+    },
+    "0x00B7": {
+      "name": "Spore",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 183
+    },
+    "0x00B8": {
+      "name": "SeedVulcan",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 184
+    },
+    "0x00B9": {
+      "name": "Solvent",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 185
+    },
+    "0x00BA": {
+      "name": "Needles",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 186
+    },
+    "0x00BB": {
+      "name": "FireBarrier",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 187
+    },
+    "0x00BC": {
+      "name": "IceBarrier",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 188
+    },
+    "0x00BD": {
+      "name": "BoltBarrier",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 189
+    },
+    "0x00BE": {
+      "name": "CounterFear",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 190
+    },
+    "0x00BF": {
+      "name": "PsyReflector",
+      "guide_name": "PsyReflecter",
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 191
+    },
+    "0x00C0": {
+      "name": "Kusanagi",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 192
+    },
+    "0x00C1": {
+      "name": "GasFlame",
+      "guide_name": null,
+      "category": "breath",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 193
+    },
+    "0x00C2": {
+      "name": "FireBreath",
+      "guide_name": null,
+      "category": "breath",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 194
+    },
+    "0x00C3": {
+      "name": "FlameBlast",
+      "guide_name": null,
+      "category": "breath",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 195
+    },
+    "0x00C4": {
+      "name": "ArcticBreath",
+      "guide_name": null,
+      "category": "breath",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 196
+    },
+    "0x00C5": {
+      "name": "BoltBreath",
+      "guide_name": null,
+      "category": "breath",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 197
+    },
+    "0x00C6": {
+      "name": "BoltBlast",
+      "guide_name": null,
+      "category": "breath",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 198
+    },
+    "0x00C7": {
+      "name": "Ink",
+      "guide_name": null,
+      "category": "breath",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 199
+    },
+    "0x00C8": {
+      "name": "WaterCannon",
+      "guide_name": null,
+      "category": "breath",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 200
+    },
+    "0x00C9": {
+      "name": "StinkGas",
+      "guide_name": null,
+      "category": "breath",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 201
+    },
+    "0x00CA": {
+      "name": "PoisonGas",
+      "guide_name": null,
+      "category": "breath",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 202
+    },
+    "0x00CB": {
+      "name": "StoneGas",
+      "guide_name": null,
+      "category": "breath",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 203
+    },
+    "0x00CC": {
+      "name": "SleepGas",
+      "guide_name": null,
+      "category": "breath",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 204
+    },
+    "0x00CD": {
+      "name": "TripGas",
+      "guide_name": null,
+      "category": "breath",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 205
+    },
+    "0x00CE": {
+      "name": "MadAttack",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 206
+    },
+    "0x00CF": {
+      "name": "BeetleJuice",
+      "guide_name": null,
+      "category": "breath",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 207
+    },
+    "0x00D0": {
+      "name": "AcidBreath",
+      "guide_name": null,
+      "category": "breath",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 208
+    },
+    "0x00D1": {
+      "name": "DeadlyMoss",
+      "guide_name": null,
+      "category": "breath",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 209
+    },
+    "0x00D2": {
+      "name": "SphinxRiddle",
+      "guide_name": null,
+      "category": "breath",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 210
+    },
+    "0x00D3": {
+      "name": "Kylin'sSong",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 211
+    },
+    "0x00D4": {
+      "name": "HPDrain",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 212
+    },
+    "0x00D5": {
+      "name": "Seduction",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 213
+    },
+    "0x00D6": {
+      "name": "Pheremone",
+      "guide_name": "Pheromone",
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 214
+    },
+    "0x00D7": {
+      "name": "Flash",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 215
+    },
+    "0x00D8": {
+      "name": "SpiderNet",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 216
+    },
+    "0x00D9": {
+      "name": "BladeNet",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 217
+    },
+    "0x00DA": {
+      "name": "Ectoplasnet",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 218
+    },
+    "0x00DB": {
+      "name": "Thunderbolt",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 219
+    },
+    "0x00DC": {
+      "name": "PainPowder",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 220
+    },
+    "0x00DD": {
+      "name": "PoisonMist",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 221
+    },
+    "0x00DE": {
+      "name": "IllStorm",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 222
+    },
+    "0x00DF": {
+      "name": "Windblast",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 223
+    },
+    "0x00E0": {
+      "name": "Tornado",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 224
+    },
+    "0x00E1": {
+      "name": "SacredSong",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 225
+    },
+    "0x00E2": {
+      "name": "MagicHeal",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 226
+    },
+    "0x00E3": {
+      "name": "Assist",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 227
+    },
+    "0x00E4": {
+      "name": "Spoil",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 228
+    },
+    "0x00E5": {
+      "name": "GremlinTouch",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 229
+    },
+    "0x00E6": {
+      "name": "HeatWave",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 230
+    },
+    "0x00E7": {
+      "name": "MightyCyclone",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 231
+    },
+    "0x00E8": {
+      "name": "Maelstrom",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 232
+    },
+    "0x00E9": {
+      "name": "ElfShot",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 233
+    },
+    "0x00EA": {
+      "name": "Supersonic",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 234
+    },
+    "0x00EB": {
+      "name": "Lullaby",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 235
+    },
+    "0x00EC": {
+      "name": "Scream",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 236
+    },
+    "0x00ED": {
+      "name": "Siren",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 237
+    },
+    "0x00EE": {
+      "name": "Da-dum",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 238
+    },
+    "0x00EF": {
+      "name": "LightBall",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 239
+    },
+    "0x00F0": {
+      "name": "Tremor",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 240
+    },
+    "0x00F1": {
+      "name": "Quake",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 241
+    },
+    "0x00F2": {
+      "name": "QuickSand",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 242
+    },
+    "0x00F3": {
+      "name": "Rock",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 243
+    },
+    "0x00F4": {
+      "name": "MagneticStorm",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 244
+    },
+    "0x00F5": {
+      "name": "BattleSong",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 245
+    },
+    "0x00F6": {
+      "name": "SadSong",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 246
+    },
+    "0x00F7": {
+      "name": "Silf",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 247
+    },
+    "0x00F8": {
+      "name": "Ignis",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 248
+    },
+    "0x00F9": {
+      "name": "LifeRain",
+      "guide_name": null,
+      "category": "magical",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 249
+    },
+    "0x00FA": {
+      "name": "DivingPress",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 250
+    },
+    "0x00FB": {
+      "name": "PoisonGun",
+      "guide_name": null,
+      "category": "breath",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 251
+    },
+    "0x00FC": {
+      "name": "CentipedeCrush",
+      "guide_name": null,
+      "category": "leg",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 252
+    },
+    "0x00FD": {
+      "name": "BoomerangHook",
+      "guide_name": null,
+      "category": "arm",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 253
+    },
+    "0x00FE": {
+      "name": "Photosynthesis",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 254
+    },
+    "0x00FF": {
+      "name": "Deathsynthesis",
+      "guide_name": null,
+      "category": "body",
+      "section": "monster",
+      "satisfies": true,
+      "space_magic": false,
+      "id": 255
+    },
+    "0x0110": {
+      "name": "VaporBlast",
+      "guide_name": null,
+      "category": "head",
+      "section": "magic",
+      "satisfies": false,
+      "space_magic": true,
+      "id": 272
+    },
+    "0x0111": {
+      "name": "Vanish",
+      "guide_name": null,
+      "category": "head",
+      "section": "magic",
+      "satisfies": false,
+      "space_magic": true,
+      "id": 273
+    },
+    "0x0112": {
+      "name": "ReverseGravity",
+      "guide_name": null,
+      "category": "head",
+      "section": "magic",
+      "satisfies": false,
+      "space_magic": true,
+      "id": 274
+    },
+    "0x0113": {
+      "name": "LightShift",
+      "guide_name": null,
+      "category": "head",
+      "section": "magic",
+      "satisfies": false,
+      "space_magic": true,
+      "id": 275
+    },
+    "0x0114": {
+      "name": "DarkShift",
+      "guide_name": null,
+      "category": "head",
+      "section": "magic",
+      "satisfies": false,
+      "space_magic": true,
+      "id": 276
+    },
+    "0x0115": {
+      "name": "Vortex",
+      "guide_name": null,
+      "category": "head",
+      "section": "magic",
+      "satisfies": false,
+      "space_magic": true,
+      "id": 277
+    }
+  },
+  "form_stats": {
+    "0x00": [
+      {
+        "name": "Rocky",
+        "stats": {
+          "str": 8,
+          "qui": 6,
+          "int": 4,
+          "wil": 8,
+          "psy": 3,
+          "vit": 10,
+          "cha": 11
+        },
+        "stat_bonuses": {},
+        "bhp": 70,
+        "wp": 22,
+        "jp": 12,
+        "lp": 6,
+        "def": 9,
+        "hp_condition": "x-250",
+        "requirements": [
+          "Da-Dum"
+        ],
+        "hidden_gear": [
+          {
+            "name": "BeastLeather",
+            "values": [
+              6,
+              6,
+              12,
+              12,
+              2,
+              12,
+              2,
+              2
+            ]
+          },
+          {
+            "name": "SilkShirt",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              11,
+              3,
+              3
+            ]
+          }
+        ],
+        "defense_total": [
+          9,
+          9,
+          15,
+          15,
+          5,
+          23,
+          5,
+          5
+        ],
+        "source_line": 260,
+        "variant": null,
+        "match": "unique",
+        "form": "0x00"
+      }
+    ],
+    "0x02": [
+      {
+        "name": "Razorback",
+        "stats": {
+          "str": 25,
+          "qui": 22,
+          "int": 14,
+          "wil": 24,
+          "psy": 11,
+          "vit": 33,
+          "cha": 31
+        },
+        "stat_bonuses": {},
+        "bhp": 190,
+        "wp": 70,
+        "jp": 28,
+        "lp": 6,
+        "def": 14,
+        "hp_condition": "x-255",
+        "requirements": [
+          "Fang/FangCrush/DaggerJaw"
+        ],
+        "hidden_gear": [
+          {
+            "name": "BeastLeather",
+            "values": [
+              6,
+              6,
+              12,
+              12,
+              2,
+              12,
+              2,
+              2
+            ]
+          },
+          {
+            "name": "SilkShirt",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              11,
+              3,
+              3
+            ]
+          },
+          {
+            "name": "YolkHat",
+            "values": [
+              5,
+              5,
+              5,
+              5,
+              2,
+              10,
+              3,
+              3
+            ]
+          }
+        ],
+        "defense_total": [
+          14,
+          14,
+          20,
+          20,
+          7,
+          33,
+          7,
+          7
+        ],
+        "source_line": 276,
+        "variant": null,
+        "match": "unique",
+        "form": "0x02"
+      }
+    ],
+    "0x03": [
+      {
+        "name": "Aperider",
+        "stats": {
+          "str": 29,
+          "qui": 39,
+          "int": 6,
+          "wil": 34,
+          "psy": 23,
+          "vit": 34,
+          "cha": 28
+        },
+        "stat_bonuses": {},
+        "bhp": 250,
+        "wp": 78,
+        "jp": 36,
+        "lp": 6,
+        "def": 14,
+        "hp_condition": "x-275",
+        "requirements": [
+          "Hypnosis"
+        ],
+        "hidden_gear": [
+          {
+            "name": "BeastLeather",
+            "values": [
+              6,
+              6,
+              12,
+              12,
+              2,
+              12,
+              2,
+              2
+            ]
+          },
+          {
+            "name": "SilkShirt",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              11,
+              3,
+              3
+            ]
+          },
+          {
+            "name": "YolkHat",
+            "values": [
+              5,
+              5,
+              5,
+              5,
+              2,
+              10,
+              3,
+              3
+            ]
+          }
+        ],
+        "defense_total": [
+          14,
+          14,
+          20,
+          20,
+          7,
+          33,
+          7,
+          7
+        ],
+        "source_line": 293,
+        "variant": null,
+        "match": "unique",
+        "form": "0x03"
+      }
+    ],
+    "0x04": [
+      {
+        "name": "Hellhound",
+        "stats": {
+          "str": 46,
+          "qui": 40,
+          "int": 22,
+          "wil": 37,
+          "psy": 24,
+          "vit": 26,
+          "cha": 22
+        },
+        "stat_bonuses": {},
+        "bhp": 305,
+        "wp": 78,
+        "jp": 46,
+        "lp": 6,
+        "def": 17,
+        "hp_condition": "x-405",
+        "requirements": [
+          "FlameBreath/FlameBlast"
+        ],
+        "hidden_gear": [
+          {
+            "name": "FlameLeather",
+            "values": [
+              16,
+              16,
+              16,
+              16,
+              48,
+              16,
+              16,
+              16
+            ]
+          },
+          {
+            "name": "SolGrail",
+            "values": [
+              1,
+              1,
+              1,
+              1,
+              100,
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "defense_total": [
+          17,
+          17,
+          17,
+          17,
+          148,
+          17,
+          17,
+          17
+        ],
+        "source_line": 310,
+        "variant": null,
+        "match": "unique",
+        "form": "0x04"
+      }
+    ],
+    "0x05": [
+      {
+        "name": "Manticore",
+        "stats": {
+          "str": 64,
+          "qui": 41,
+          "int": 31,
+          "wil": 48,
+          "psy": 20,
+          "vit": 48,
+          "cha": 29
+        },
+        "stat_bonuses": {},
+        "bhp": 360,
+        "wp": 104,
+        "jp": 54,
+        "lp": 6,
+        "def": 34,
+        "hp_condition": "???",
+        "requirements": [
+          "Needles"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CelestialLeather",
+            "values": [
+              24,
+              24,
+              34,
+              34,
+              34,
+              34,
+              34,
+              24
+            ]
+          },
+          {
+            "name": "Protector",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              5,
+              5,
+              5,
+              5
+            ]
+          }
+        ],
+        "defense_total": [
+          34,
+          34,
+          44,
+          49,
+          39,
+          39,
+          39,
+          29
+        ],
+        "source_line": 326,
+        "variant": null,
+        "match": "unique",
+        "form": "0x05"
+      }
+    ],
+    "0x07": [
+      {
+        "name": "Butch",
+        "stats": {
+          "str": 51,
+          "qui": 63,
+          "int": 44,
+          "wil": 62,
+          "psy": 37,
+          "vit": 48,
+          "cha": 44
+        },
+        "stat_bonuses": {},
+        "bhp": 420,
+        "wp": 124,
+        "jp": 76,
+        "lp": 6,
+        "def": 30,
+        "hp_condition": "x-???",
+        "requirements": [
+          "PoisonNeedle",
+          "Spoil"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CelestialLeather",
+            "values": [
+              24,
+              24,
+              34,
+              34,
+              34,
+              34,
+              34,
+              24
+            ]
+          },
+          {
+            "name": "BeastLeather",
+            "values": [
+              6,
+              6,
+              12,
+              12,
+              2,
+              12,
+              2,
+              2
+            ]
+          }
+        ],
+        "defense_total": [
+          30,
+          30,
+          46,
+          46,
+          36,
+          46,
+          36,
+          26
+        ],
+        "source_line": 359,
+        "variant": null,
+        "match": "unique",
+        "form": "0x07"
+      }
+    ],
+    "0x08": [
+      {
+        "name": "Chimera",
+        "stats": {
+          "str": 75,
+          "qui": 64,
+          "int": 48,
+          "wil": 67,
+          "psy": 46,
+          "vit": 73,
+          "cha": 57
+        },
+        "stat_bonuses": {},
+        "bhp": 505,
+        "wp": 162,
+        "jp": 84,
+        "lp": 6,
+        "def": 40,
+        "hp_condition": "x-???",
+        "requirements": [
+          "GasFlame"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CelestialLeather",
+            "values": [
+              24,
+              24,
+              34,
+              34,
+              34,
+              34,
+              34,
+              24
+            ]
+          },
+          {
+            "name": "FlameLeather",
+            "values": [
+              16,
+              16,
+              16,
+              16,
+              48,
+              16,
+              16,
+              16
+            ]
+          }
+        ],
+        "defense_total": [
+          40,
+          40,
+          50,
+          50,
+          82,
+          50,
+          50,
+          40
+        ],
+        "source_line": 375,
+        "variant": null,
+        "match": "ambiguous",
+        "form": "0x08",
+        "ambiguous_with": [
+          "0x08",
+          "0x0E"
+        ]
+      }
+    ],
+    "0x0A": [
+      {
+        "name": "Tidi",
+        "stats": {
+          "str": 16,
+          "qui": 31,
+          "int": 12,
+          "wil": 22,
+          "psy": 13,
+          "vit": 16,
+          "cha": 21
+        },
+        "stat_bonuses": {},
+        "bhp": 180,
+        "wp": 46,
+        "jp": 20,
+        "lp": 7,
+        "def": 24,
+        "hp_condition": null,
+        "requirements": [
+          "Can't Morph"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CelestialLeather",
+            "values": [
+              24,
+              24,
+              34,
+              34,
+              34,
+              34,
+              34,
+              24
+            ]
+          }
+        ],
+        "defense_total": [
+          24,
+          24,
+          34,
+          34,
+          34,
+          34,
+          34,
+          24
+        ],
+        "source_line": 476,
+        "variant": null,
+        "match": "unique",
+        "form": "0x0A"
+      }
+    ],
+    "0x0C": [
+      {
+        "name": "MaskCat",
+        "stats": {
+          "str": 8,
+          "qui": 6,
+          "int": 4,
+          "wil": 8,
+          "psy": 3,
+          "vit": 10,
+          "cha": 11
+        },
+        "stat_bonuses": {},
+        "bhp": 70,
+        "wp": 22,
+        "jp": 12,
+        "lp": 6,
+        "def": 29,
+        "hp_condition": null,
+        "requirements": [
+          "Da-Dum"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CelestialLeather",
+            "values": [
+              24,
+              24,
+              34,
+              34,
+              34,
+              34,
+              34,
+              24
+            ]
+          },
+          {
+            "name": "JunkHelm",
+            "values": [
+              4,
+              4,
+              6,
+              6,
+              4,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "AmuletofSpirit",
+            "values": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "defense_total": [
+          29,
+          29,
+          41,
+          41,
+          39,
+          36,
+          36,
+          26
+        ],
+        "source_line": 426,
+        "variant": null,
+        "match": "unique",
+        "form": "0x0C"
+      }
+    ],
+    "0x0D": [
+      {
+        "name": "RABI",
+        "stats": {
+          "str": 10,
+          "qui": 10,
+          "int": 10,
+          "wil": 10,
+          "psy": 10,
+          "vit": 10,
+          "cha": 10
+        },
+        "stat_bonuses": {},
+        "bhp": 120,
+        "wp": 24,
+        "jp": 20,
+        "lp": 6,
+        "def": 48,
+        "hp_condition": "None",
+        "requirements": [
+          "Fang",
+          "CharmGaze",
+          "Psychout",
+          "Heal",
+          "Tornado"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CelestialLeather",
+            "values": [
+              24,
+              24,
+              34,
+              34,
+              34,
+              34,
+              34,
+              24
+            ]
+          },
+          {
+            "name": "LifeCandy",
+            "values": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "defense_total": [
+          48,
+          48,
+          68,
+          68,
+          68,
+          68,
+          68,
+          48
+        ],
+        "source_line": 1748,
+        "variant": null,
+        "match": "unique",
+        "form": "0x0D"
+      }
+    ],
+    "0x0E": [
+      {
+        "name": "Chimera",
+        "stats": {
+          "str": 75,
+          "qui": 64,
+          "int": 48,
+          "wil": 67,
+          "psy": 46,
+          "vit": 73,
+          "cha": 57
+        },
+        "stat_bonuses": {},
+        "bhp": 505,
+        "wp": 162,
+        "jp": 84,
+        "lp": 6,
+        "def": 40,
+        "hp_condition": "x-???",
+        "requirements": [
+          "GasFlame"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CelestialLeather",
+            "values": [
+              24,
+              24,
+              34,
+              34,
+              34,
+              34,
+              34,
+              24
+            ]
+          },
+          {
+            "name": "FlameLeather",
+            "values": [
+              16,
+              16,
+              16,
+              16,
+              48,
+              16,
+              16,
+              16
+            ]
+          }
+        ],
+        "defense_total": [
+          40,
+          40,
+          50,
+          50,
+          82,
+          50,
+          50,
+          40
+        ],
+        "source_line": 375,
+        "variant": null,
+        "match": "ambiguous",
+        "form": "0x0E",
+        "ambiguous_with": [
+          "0x08",
+          "0x0E"
+        ]
+      }
+    ],
+    "0x0F": [
+      {
+        "name": "Lummox(Green)",
+        "stats": {
+          "str": 8,
+          "qui": 8,
+          "int": 8,
+          "wil": 8,
+          "psy": 8,
+          "vit": 8,
+          "cha": 8
+        },
+        "stat_bonuses": {},
+        "bhp": 60,
+        "wp": 16,
+        "jp": 12,
+        "lp": 10,
+        "def": 6,
+        "hp_condition": null,
+        "requirements": [
+          "Can't Morph"
+        ],
+        "hidden_gear": [
+          {
+            "name": "BeastLeather",
+            "values": [
+              6,
+              6,
+              12,
+              12,
+              2,
+              12,
+              2,
+              2
+            ]
+          }
+        ],
+        "defense_total": [
+          6,
+          6,
+          12,
+          12,
+          2,
+          12,
+          2,
+          2
+        ],
+        "source_line": 460,
+        "variant": "green",
+        "match": "unique",
+        "form": "0x0F"
+      }
+    ],
+    "0x10": [
+      {
+        "name": "Cactus",
+        "stats": {
+          "str": 4,
+          "qui": 2,
+          "int": 7,
+          "wil": 13,
+          "psy": 8,
+          "vit": 11,
+          "cha": 7
+        },
+        "stat_bonuses": {},
+        "bhp": 60,
+        "wp": 14,
+        "jp": 18,
+        "lp": 6,
+        "def": 8,
+        "hp_condition": "x-260",
+        "requirements": [
+          "Needles"
+        ],
+        "hidden_gear": [
+          {
+            "name": "FiberVest",
+            "values": [
+              8,
+              8,
+              8,
+              12,
+              8,
+              8,
+              8,
+              8
+            ]
+          }
+        ],
+        "defense_total": [
+          8,
+          8,
+          8,
+          12,
+          8,
+          8,
+          8,
+          8
+        ],
+        "source_line": 494,
+        "variant": null,
+        "match": "unique",
+        "form": "0x10"
+      }
+    ],
+    "0x11": [
+      {
+        "name": "Sporepile",
+        "stats": {
+          "str": 12,
+          "qui": 6,
+          "int": 14,
+          "wil": 19,
+          "psy": 21,
+          "vit": 18,
+          "cha": 21
+        },
+        "stat_bonuses": {},
+        "bhp": 110,
+        "wp": 38,
+        "jp": 32,
+        "lp": 6,
+        "def": 13,
+        "hp_condition": "x-250",
+        "requirements": [
+          "Spore"
+        ],
+        "hidden_gear": [
+          {
+            "name": "BeastLeather",
+            "values": [
+              6,
+              6,
+              12,
+              12,
+              2,
+              12,
+              2,
+              2
+            ]
+          },
+          {
+            "name": "Budowear",
+            "values": [
+              7,
+              7,
+              12,
+              7,
+              7,
+              7,
+              7,
+              7
+            ]
+          }
+        ],
+        "defense_total": [
+          13,
+          13,
+          24,
+          19,
+          9,
+          19,
+          9,
+          9
+        ],
+        "source_line": 509,
+        "variant": null,
+        "match": "unique",
+        "form": "0x11"
+      }
+    ],
+    "0x12": [
+      {
+        "name": "Mandrake",
+        "stats": {
+          "str": 17,
+          "qui": 15,
+          "int": 25,
+          "wil": 32,
+          "psy": 29,
+          "vit": 23,
+          "cha": 25
+        },
+        "stat_bonuses": {},
+        "bhp": 110,
+        "wp": 32,
+        "jp": 10,
+        "lp": 10,
+        "def": 20,
+        "hp_condition": "None",
+        "requirements": [
+          "ElfShot",
+          "SleepGas",
+          "Scream",
+          "Ink",
+          "Bloodsucker"
+        ],
+        "hidden_gear": [
+          {
+            "name": "BeastLeather",
+            "values": [
+              6,
+              6,
+              12,
+              12,
+              2,
+              12,
+              2,
+              2
+            ]
+          },
+          {
+            "name": "Protector",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "LeatherGlove",
+            "values": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              2,
+              2,
+              2
+            ]
+          }
+        ],
+        "defense_total": [
+          20,
+          20,
+          26,
+          31,
+          11,
+          19,
+          9,
+          9
+        ],
+        "source_line": 525,
+        "variant": null,
+        "match": "unique",
+        "form": "0x12"
+      }
+    ],
+    "0x13": [
+      {
+        "name": "Trapvine",
+        "stats": {
+          "str": 26,
+          "qui": 16,
+          "int": 27,
+          "wil": 37,
+          "psy": 34,
+          "vit": 30,
+          "cha": 28
+        },
+        "stat_bonuses": {},
+        "bhp": 180,
+        "wp": 64,
+        "jp": 54,
+        "lp": 6,
+        "def": 15,
+        "hp_condition": "???",
+        "requirements": [
+          "Sweep"
+        ],
+        "hidden_gear": [
+          {
+            "name": "HardLeather",
+            "values": [
+              12,
+              12,
+              16,
+              22,
+              12,
+              12,
+              12,
+              12
+            ]
+          },
+          {
+            "name": "Silk Shirt",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              11,
+              3,
+              3
+            ]
+          }
+        ],
+        "defense_total": [
+          15,
+          15,
+          19,
+          25,
+          15,
+          23,
+          15,
+          15
+        ],
+        "source_line": 542,
+        "variant": null,
+        "match": "unique",
+        "form": "0x13"
+      }
+    ],
+    "0x14": [
+      {
+        "name": "Nightshade",
+        "stats": {
+          "str": 34,
+          "qui": 20,
+          "int": 38,
+          "wil": 49,
+          "psy": 43,
+          "vit": 36,
+          "cha": 31
+        },
+        "stat_bonuses": {},
+        "bhp": 225,
+        "wp": 76,
+        "jp": 70,
+        "lp": 6,
+        "def": 15,
+        "hp_condition": "???",
+        "requirements": [
+          "StunGaze/CharmGaze/StoneGaze/Hypnotism"
+        ],
+        "hidden_gear": [
+          {
+            "name": "HardLeather",
+            "values": [
+              12,
+              12,
+              16,
+              22,
+              12,
+              12,
+              12,
+              12
+            ]
+          },
+          {
+            "name": "Silk Shirt",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              11,
+              3,
+              3
+            ]
+          }
+        ],
+        "defense_total": [
+          15,
+          15,
+          19,
+          25,
+          15,
+          23,
+          15,
+          15
+        ],
+        "source_line": 558,
+        "variant": null,
+        "match": "unique",
+        "form": "0x14"
+      }
+    ],
+    "0x15": [
+      {
+        "name": "Treant",
+        "stats": {
+          "str": 41,
+          "qui": 23,
+          "int": 50,
+          "wil": 55,
+          "psy": 62,
+          "vit": 50,
+          "cha": 52
+        },
+        "stat_bonuses": {
+          "wil": 9
+        },
+        "bhp": 260,
+        "wp": 108,
+        "jp": 88,
+        "lp": 6,
+        "def": 27,
+        "hp_condition": "x-420",
+        "requirements": [
+          "Photosynthesis"
+        ],
+        "hidden_gear": [
+          {
+            "name": "ShadeRobe",
+            "values": [
+              9,
+              9,
+              9,
+              9,
+              24,
+              24,
+              24,
+              24
+            ]
+          },
+          {
+            "name": "BulletproofVest",
+            "values": [
+              18,
+              18,
+              22,
+              60,
+              18,
+              18,
+              18,
+              18
+            ]
+          }
+        ],
+        "defense_total": [
+          27,
+          27,
+          31,
+          69,
+          42,
+          42,
+          42,
+          42
+        ],
+        "source_line": 574,
+        "variant": null,
+        "match": "unique",
+        "form": "0x15"
+      }
+    ],
+    "0x16": [
+      {
+        "name": "Sunflower",
+        "stats": {
+          "str": 44,
+          "qui": 25,
+          "int": 47,
+          "wil": 62,
+          "psy": 59,
+          "vit": 54,
+          "cha": 54
+        },
+        "stat_bonuses": {},
+        "bhp": 310,
+        "wp": 114,
+        "jp": 88,
+        "lp": 6,
+        "def": 26,
+        "hp_condition": null,
+        "requirements": [
+          "Photosynthesis"
+        ],
+        "hidden_gear": [
+          {
+            "name": "SolGrail",
+            "values": [
+              1,
+              1,
+              1,
+              1,
+              100,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "BulletproofVest",
+            "values": [
+              18,
+              18,
+              22,
+              60,
+              18,
+              18,
+              18,
+              18
+            ]
+          },
+          {
+            "name": "Budowear",
+            "values": [
+              7,
+              7,
+              12,
+              7,
+              7,
+              7,
+              7,
+              7
+            ]
+          }
+        ],
+        "defense_total": [
+          26,
+          26,
+          35,
+          68,
+          125,
+          26,
+          26,
+          26
+        ],
+        "source_line": 590,
+        "variant": null,
+        "match": "unique",
+        "form": "0x16"
+      }
+    ],
+    "0x17": [
+      {
+        "name": "Shreiker",
+        "stats": {
+          "str": 53,
+          "qui": 42,
+          "int": 52,
+          "wil": 75,
+          "psy": 68,
+          "vit": 56,
+          "cha": 68
+        },
+        "stat_bonuses": {},
+        "bhp": 350,
+        "wp": 142,
+        "jp": 102,
+        "lp": 6,
+        "def": 42,
+        "hp_condition": "???",
+        "requirements": [
+          "Scream",
+          "Supersonic/SadSong"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CelestialLeather",
+            "values": [
+              24,
+              24,
+              34,
+              34,
+              34,
+              34,
+              34,
+              24
+            ]
+          },
+          {
+            "name": "BulletproofVest",
+            "values": [
+              18,
+              18,
+              22,
+              60,
+              18,
+              18,
+              18,
+              18
+            ]
+          }
+        ],
+        "defense_total": [
+          42,
+          42,
+          56,
+          94,
+          52,
+          52,
+          52,
+          42
+        ],
+        "source_line": 607,
+        "variant": null,
+        "match": "unique",
+        "form": "0x17"
+      }
+    ],
+    "0x18": [
+      {
+        "name": "CrystalTree",
+        "stats": {
+          "str": 64,
+          "qui": 38,
+          "int": 55,
+          "wil": 88,
+          "psy": 79,
+          "vit": 80,
+          "cha": 72
+        },
+        "stat_bonuses": {},
+        "bhp": 400,
+        "wp": 162,
+        "jp": 116,
+        "lp": 6,
+        "def": 25,
+        "hp_condition": "???",
+        "requirements": [
+          "Blade/GaleSlash",
+          "StoneGas"
+        ],
+        "hidden_gear": [
+          {
+            "name": "ThunderCharm",
+            "values": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              100
+            ]
+          },
+          {
+            "name": "HarmoniumArmour",
+            "values": [
+              24,
+              24,
+              24,
+              24,
+              20,
+              20,
+              24,
+              40
+            ]
+          }
+        ],
+        "defense_total": [
+          25,
+          25,
+          25,
+          25,
+          21,
+          21,
+          25,
+          140
+        ],
+        "source_line": 623,
+        "variant": null,
+        "match": "unique",
+        "form": "0x18"
+      }
+    ],
+    "0x1B": [
+      {
+        "name": "Thundragon",
+        "stats": {
+          "str": 62,
+          "qui": 48,
+          "int": 51,
+          "wil": 46,
+          "psy": 52,
+          "vit": 80,
+          "cha": 60
+        },
+        "stat_bonuses": {},
+        "bhp": 360,
+        "wp": 154,
+        "jp": 78,
+        "lp": 6,
+        "def": 32,
+        "hp_condition": "???",
+        "requirements": [
+          "Stinger",
+          "BoltBreath/BoltBlast",
+          "Thunderbolt"
+        ],
+        "hidden_gear": [
+          {
+            "name": "ThunderCharm",
+            "values": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              100
+            ]
+          },
+          {
+            "name": "HarmoniumArmour",
+            "values": [
+              24,
+              24,
+              24,
+              24,
+              20,
+              20,
+              24,
+              40
+            ]
+          },
+          {
+            "name": "Budowear",
+            "values": [
+              7,
+              7,
+              12,
+              7,
+              7,
+              7,
+              7,
+              7
+            ]
+          }
+        ],
+        "defense_total": [
+          32,
+          32,
+          37,
+          32,
+          28,
+          28,
+          32,
+          147
+        ],
+        "source_line": 1678,
+        "variant": null,
+        "match": "unique",
+        "form": "0x1B"
+      }
+    ],
+    "0x1F": [
+      {
+        "name": "Lummox(Pink)",
+        "stats": {
+          "str": 4,
+          "qui": 4,
+          "int": 4,
+          "wil": 4,
+          "psy": 4,
+          "vit": 4,
+          "cha": 4
+        },
+        "stat_bonuses": {},
+        "bhp": 60,
+        "wp": 10,
+        "jp": 10,
+        "lp": 6,
+        "def": 9,
+        "hp_condition": "None",
+        "requirements": [
+          "Chop",
+          "Claw",
+          "ElfShot"
+        ],
+        "hidden_gear": [
+          {
+            "name": "BeastLeather",
+            "values": [
+              6,
+              6,
+              12,
+              12,
+              2,
+              12,
+              2,
+              2
+            ]
+          },
+          {
+            "name": "SilkShirt",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              11,
+              3,
+              3
+            ]
+          }
+        ],
+        "defense_total": [
+          9,
+          9,
+          15,
+          15,
+          5,
+          23,
+          5,
+          5
+        ],
+        "source_line": 443,
+        "variant": "pink",
+        "match": "unique",
+        "form": "0x1F"
+      }
+    ],
+    "0x20": [
+      {
+        "name": "Gekko",
+        "stats": {
+          "str": 6,
+          "qui": 8,
+          "int": 3,
+          "wil": 1,
+          "psy": 1,
+          "vit": 12,
+          "cha": 7
+        },
+        "stat_bonuses": {},
+        "bhp": 85,
+        "wp": 20,
+        "jp": 6,
+        "lp": 6,
+        "def": 8,
+        "hp_condition": null,
+        "requirements": [
+          "Kick"
+        ],
+        "hidden_gear": [
+          {
+            "name": "SlimeSkin",
+            "values": [
+              8,
+              8,
+              32,
+              16,
+              8,
+              8,
+              8,
+              8
+            ]
+          }
+        ],
+        "defense_total": [
+          8,
+          8,
+          32,
+          16,
+          8,
+          8,
+          8,
+          8
+        ],
+        "source_line": 643,
+        "variant": null,
+        "match": "unique",
+        "form": "0x20"
+      }
+    ],
+    "0x22": [
+      {
+        "name": "Platoonpus",
+        "stats": {
+          "str": 28,
+          "qui": 25,
+          "int": 20,
+          "wil": 22,
+          "psy": 9,
+          "vit": 28,
+          "cha": 37
+        },
+        "stat_bonuses": {},
+        "bhp": 205,
+        "wp": 76,
+        "jp": 30,
+        "lp": 6,
+        "def": 5,
+        "hp_condition": "???",
+        "requirements": [
+          "Ink"
+        ],
+        "hidden_gear": [
+          {
+            "name": "ShellShield",
+            "values": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "YolkHat",
+            "values": [
+              5,
+              5,
+              5,
+              5,
+              10,
+              5,
+              5,
+              10
+            ]
+          }
+        ],
+        "defense_total": [
+          5,
+          5,
+          5,
+          5,
+          10,
+          5,
+          5,
+          10
+        ],
+        "source_line": 658,
+        "variant": null,
+        "match": "unique",
+        "form": "0x22"
+      }
+    ],
+    "0x23": [
+      {
+        "name": "Frillneck",
+        "stats": {
+          "str": 35,
+          "qui": 33,
+          "int": 29,
+          "wil": 28,
+          "psy": 12,
+          "vit": 36,
+          "cha": 32
+        },
+        "stat_bonuses": {},
+        "bhp": 270,
+        "wp": 84,
+        "jp": 38,
+        "lp": 6,
+        "def": 30,
+        "hp_condition": null,
+        "requirements": [
+          "Kick"
+        ],
+        "hidden_gear": [
+          {
+            "name": "Protector",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "HardLeather",
+            "values": [
+              12,
+              12,
+              16,
+              22,
+              12,
+              12,
+              12,
+              12
+            ]
+          }
+        ],
+        "defense_total": [
+          22,
+          22,
+          26,
+          37,
+          17,
+          17,
+          17,
+          17
+        ],
+        "source_line": 674,
+        "variant": null,
+        "match": "unique",
+        "form": "0x23"
+      }
+    ],
+    "0x24": [
+      {
+        "name": "Gaeatoad",
+        "stats": {
+          "str": 44,
+          "qui": 12,
+          "int": 40,
+          "wil": 38,
+          "psy": 8,
+          "vit": 68,
+          "cha": 16
+        },
+        "stat_bonuses": {},
+        "bhp": 355,
+        "wp": 78,
+        "jp": 48,
+        "lp": 6,
+        "def": 38,
+        "hp_condition": null,
+        "requirements": [
+          "Trample"
+        ],
+        "hidden_gear": [
+          {
+            "name": "SlimeSkin",
+            "values": [
+              8,
+              8,
+              32,
+              16,
+              8,
+              8,
+              8,
+              8
+            ]
+          },
+          {
+            "name": "SH-Armlet/Anklet",
+            "values": [
+              10,
+              10,
+              10,
+              10,
+              10,
+              10,
+              -10,
+              10
+            ]
+          },
+          {
+            "name": "BlueElf",
+            "values": [
+              20,
+              20,
+              20,
+              20,
+              25,
+              25,
+              25,
+              25
+            ]
+          }
+        ],
+        "defense_total": [
+          38,
+          38,
+          20,
+          62,
+          46,
+          43,
+          23,
+          43
+        ],
+        "source_line": 690,
+        "variant": null,
+        "match": "unique",
+        "form": "0x24"
+      }
+    ],
+    "0x26": [
+      {
+        "name": "Genbu",
+        "stats": {
+          "str": 64,
+          "qui": 38,
+          "int": 62,
+          "wil": 52,
+          "psy": 34,
+          "vit": 66,
+          "cha": 60
+        },
+        "stat_bonuses": {},
+        "bhp": 475,
+        "wp": 144,
+        "jp": 78,
+        "lp": 7,
+        "def": 44,
+        "hp_condition": "???",
+        "requirements": [
+          "ArcticBreath",
+          "MagneticStorm"
+        ],
+        "hidden_gear": [
+          {
+            "name": "GenbuShield",
+            "values": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "BlueElf",
+            "values": [
+              20,
+              20,
+              20,
+              20,
+              25,
+              25,
+              25,
+              25
+            ]
+          },
+          {
+            "name": "CelestialLeather",
+            "values": [
+              24,
+              24,
+              34,
+              34,
+              34,
+              34,
+              34,
+              24
+            ]
+          }
+        ],
+        "defense_total": [
+          44,
+          44,
+          54,
+          54,
+          59,
+          59,
+          59,
+          49
+        ],
+        "source_line": 731,
+        "variant": null,
+        "match": "unique",
+        "form": "0x26"
+      }
+    ],
+    "0x27": [
+      {
+        "name": "Basilisk",
+        "stats": {
+          "str": 71,
+          "qui": 51,
+          "int": 56,
+          "wil": 49,
+          "psy": 38,
+          "vit": 62,
+          "cha": 52
+        },
+        "stat_bonuses": {},
+        "bhp": 540,
+        "wp": 144,
+        "jp": 76,
+        "lp": 7,
+        "def": 48,
+        "hp_condition": "???",
+        "requirements": [
+          "StoneGaze",
+          "PoisonGrip"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CelestialLeather",
+            "values": [
+              24,
+              24,
+              34,
+              34,
+              34,
+              34,
+              34,
+              24
+            ]
+          }
+        ],
+        "defense_total": [
+          48,
+          48,
+          68,
+          68,
+          68,
+          68,
+          68,
+          48
+        ],
+        "source_line": 748,
+        "variant": null,
+        "match": "unique",
+        "form": "0x27"
+      }
+    ],
+    "0x28": [
+      {
+        "name": "kraken",
+        "stats": {
+          "str": 78,
+          "qui": 54,
+          "int": 62,
+          "wil": 53,
+          "psy": 26,
+          "vit": 90,
+          "cha": 56
+        },
+        "stat_bonuses": {
+          "psy": 7,
+          "vit": 7
+        },
+        "bhp": 600,
+        "wp": 166,
+        "jp": 74,
+        "lp": 8,
+        "def": 19,
+        "hp_condition": "???",
+        "requirements": [
+          "Ink",
+          "Maelstrom/MightyCyclone",
+          "Body C",
+          "Hp Cond. ???",
+          "Skills Needed:",
+          "Coils",
+          "Maelstrom",
+          "may be your only ticket to getting",
+          "the Snowfolk form because of the",
+          "high Base Hit Points."
+        ],
+        "hidden_gear": [],
+        "defense_total": null,
+        "source_line": 765,
+        "variant": null,
+        "match": "ambiguous",
+        "form": "0x28",
+        "ambiguous_with": [
+          "0x28",
+          "0x2E"
+        ]
+      }
+    ],
+    "0x29": [
+      {
+        "name": "PlatyKing",
+        "stats": {
+          "str": 48,
+          "qui": 55,
+          "int": 21,
+          "wil": 58,
+          "psy": 26,
+          "vit": 56,
+          "cha": 74
+        },
+        "stat_bonuses": {},
+        "bhp": 320,
+        "wp": 152,
+        "jp": 56,
+        "lp": 6,
+        "def": 26,
+        "hp_condition": null,
+        "requirements": [
+          "Beak",
+          "Da-Dum"
+        ],
+        "hidden_gear": [
+          {
+            "name": "BlueElf",
+            "values": [
+              20,
+              20,
+              20,
+              20,
+              25,
+              25,
+              25,
+              25
+            ]
+          },
+          {
+            "name": "KrisKnife",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              13,
+              13,
+              13,
+              13
+            ]
+          }
+        ],
+        "defense_total": [
+          26,
+          26,
+          26,
+          26,
+          51,
+          51,
+          51,
+          51
+        ],
+        "source_line": 805,
+        "variant": null,
+        "match": "unique",
+        "form": "0x29"
+      }
+    ],
+    "0x2A": [
+      {
+        "name": "Platyhooks",
+        "stats": {
+          "str": 51,
+          "qui": 64,
+          "int": 8,
+          "wil": 59,
+          "psy": 28,
+          "vit": 58,
+          "cha": 26
+        },
+        "stat_bonuses": {},
+        "bhp": 280,
+        "wp": 112,
+        "jp": 52,
+        "lp": 6,
+        "def": 26,
+        "hp_condition": "???",
+        "requirements": [
+          "Beak",
+          "AcidBreath",
+          "BoomerangHook",
+          "WaterCannon",
+          "otherwise."
+        ],
+        "hidden_gear": [
+          {
+            "name": "BlueElf",
+            "values": [
+              20,
+              20,
+              20,
+              20,
+              25,
+              25,
+              25,
+              25
+            ]
+          },
+          {
+            "name": "KrisKnife",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              13,
+              13,
+              13,
+              13
+            ]
+          }
+        ],
+        "defense_total": [
+          26,
+          26,
+          26,
+          26,
+          51,
+          51,
+          51,
+          51
+        ],
+        "source_line": 788,
+        "variant": null,
+        "match": "unique",
+        "form": "0x2A"
+      }
+    ],
+    "0x2E": [
+      {
+        "name": "kraken",
+        "stats": {
+          "str": 78,
+          "qui": 54,
+          "int": 62,
+          "wil": 53,
+          "psy": 26,
+          "vit": 90,
+          "cha": 56
+        },
+        "stat_bonuses": {
+          "psy": 7,
+          "vit": 7
+        },
+        "bhp": 600,
+        "wp": 166,
+        "jp": 74,
+        "lp": 8,
+        "def": 19,
+        "hp_condition": "???",
+        "requirements": [
+          "Ink",
+          "Maelstrom/MightyCyclone",
+          "Body C",
+          "Hp Cond. ???",
+          "Skills Needed:",
+          "Coils",
+          "Maelstrom",
+          "may be your only ticket to getting",
+          "the Snowfolk form because of the",
+          "high Base Hit Points."
+        ],
+        "hidden_gear": [],
+        "defense_total": null,
+        "source_line": 765,
+        "variant": null,
+        "match": "ambiguous",
+        "form": "0x2E",
+        "ambiguous_with": [
+          "0x28",
+          "0x2E"
+        ]
+      }
+    ],
+    "0x2F": [
+      {
+        "name": "TrisaurJr.",
+        "stats": {
+          "str": 63,
+          "qui": 49,
+          "int": 31,
+          "wil": 39,
+          "psy": 21,
+          "vit": 55,
+          "cha": 40
+        },
+        "stat_bonuses": {},
+        "bhp": 410,
+        "wp": 122,
+        "jp": 50,
+        "lp": 7,
+        "def": 30,
+        "hp_condition": null,
+        "requirements": [
+          "Trample",
+          "you have a definite plan, because",
+          "Body B",
+          "Hp Cond. 250",
+          "Skills Needed:",
+          "BoltBlast/BoltBreath",
+          "Body C",
+          "HP Cond. 475",
+          "Skills Needed:",
+          "Tremor/Quicksand",
+          "Dash/Tackle/Stampede"
+        ],
+        "hidden_gear": [],
+        "defense_total": null,
+        "source_line": 707,
+        "variant": null,
+        "match": "unique",
+        "form": "0x2F"
+      }
+    ],
+    "0x30": [
+      {
+        "name": "Shellworm",
+        "stats": {
+          "str": 9,
+          "qui": 12,
+          "int": 1,
+          "wil": 12,
+          "psy": 3,
+          "vit": 12,
+          "cha": 8
+        },
+        "stat_bonuses": {},
+        "bhp": 60,
+        "wp": 24,
+        "jp": 12,
+        "lp": 6,
+        "def": 15,
+        "hp_condition": null,
+        "requirements": [
+          "Scissors"
+        ],
+        "hidden_gear": [
+          {
+            "name": "Protector",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "SilkShirt",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              11,
+              3,
+              3
+            ]
+          },
+          {
+            "name": "PearlHeart",
+            "values": [
+              2,
+              2,
+              2,
+              2,
+              2,
+              7,
+              -3,
+              2
+            ]
+          }
+        ],
+        "defense_total": [
+          15,
+          15,
+          15,
+          20,
+          10,
+          23,
+          5,
+          10
+        ],
+        "source_line": 824,
+        "variant": null,
+        "match": "unique",
+        "form": "0x30"
+      }
+    ],
+    "0x31": [
+      {
+        "name": "Armorpilla",
+        "stats": {
+          "str": 17,
+          "qui": 6,
+          "int": 3,
+          "wil": 22,
+          "psy": 15,
+          "vit": 27,
+          "cha": 15
+        },
+        "stat_bonuses": {},
+        "bhp": 120,
+        "wp": 40,
+        "jp": 24,
+        "lp": 6,
+        "def": 18,
+        "hp_condition": null,
+        "requirements": [
+          "Horn"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CombatSuit",
+            "values": [
+              15,
+              15,
+              10,
+              15,
+              20,
+              20,
+              10,
+              10
+            ]
+          },
+          {
+            "name": "CottonShirt",
+            "values": [
+              3,
+              3,
+              7,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        ],
+        "defense_total": [
+          18,
+          18,
+          17,
+          18,
+          23,
+          23,
+          13,
+          13
+        ],
+        "source_line": 841,
+        "variant": null,
+        "match": "unique",
+        "form": "0x31"
+      }
+    ],
+    "0x32": [
+      {
+        "name": "KillerBee",
+        "stats": {
+          "str": 18,
+          "qui": 33,
+          "int": 9,
+          "wil": 28,
+          "psy": 21,
+          "vit": 29,
+          "cha": 26
+        },
+        "stat_bonuses": {},
+        "bhp": 170,
+        "wp": 66,
+        "jp": 34,
+        "lp": 6,
+        "def": 15,
+        "hp_condition": null,
+        "requirements": [
+          "Stinger/PoisonNeedle",
+          "Body C",
+          "HP Cond. 250",
+          "Skills Needed:",
+          "Ectoplasnet/BladeNet/SpiderNet"
+        ],
+        "hidden_gear": [
+          {
+            "name": "HardLeather",
+            "values": [
+              12,
+              12,
+              16,
+              22,
+              12,
+              12,
+              12,
+              12
+            ]
+          },
+          {
+            "name": "CottonShirt",
+            "values": [
+              3,
+              3,
+              7,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        ],
+        "defense_total": [
+          15,
+          15,
+          23,
+          25,
+          15,
+          15,
+          15,
+          15
+        ],
+        "source_line": 857,
+        "variant": null,
+        "match": "unique",
+        "form": "0x32"
+      }
+    ],
+    "0x33": [
+      {
+        "name": "Scorpion",
+        "stats": {
+          "str": 32,
+          "qui": 21,
+          "int": 12,
+          "wil": 37,
+          "psy": 26,
+          "vit": 44,
+          "cha": 28
+        },
+        "stat_bonuses": {},
+        "bhp": 220,
+        "wp": 76,
+        "jp": 42,
+        "lp": 6,
+        "def": 22,
+        "hp_condition": null,
+        "requirements": [
+          "Scissors"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CombatSuit",
+            "values": [
+              15,
+              15,
+              10,
+              15,
+              20,
+              20,
+              10,
+              10
+            ]
+          },
+          {
+            "name": "Budowear",
+            "values": [
+              7,
+              7,
+              12,
+              7,
+              7,
+              7,
+              7,
+              7
+            ]
+          }
+        ],
+        "defense_total": [
+          22,
+          22,
+          22,
+          22,
+          27,
+          27,
+          17,
+          17
+        ],
+        "source_line": 874,
+        "variant": null,
+        "match": "unique",
+        "form": "0x33"
+      }
+    ],
+    "0x34": [
+      {
+        "name": "Battlefly",
+        "stats": {
+          "str": 31,
+          "qui": 47,
+          "int": 16,
+          "wil": 40,
+          "psy": 37,
+          "vit": 46,
+          "cha": 45
+        },
+        "stat_bonuses": {},
+        "bhp": 260,
+        "wp": 106,
+        "jp": 50,
+        "lp": 6,
+        "def": 15,
+        "hp_condition": null,
+        "requirements": [
+          "PainPowder"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CombatSuit",
+            "values": [
+              15,
+              15,
+              10,
+              15,
+              20,
+              20,
+              10,
+              10
+            ]
+          }
+        ],
+        "defense_total": [
+          15,
+          15,
+          44,
+          23,
+          15,
+          15,
+          15,
+          15
+        ],
+        "source_line": 890,
+        "variant": null,
+        "match": "unique",
+        "form": "0x34"
+      }
+    ],
+    "0x37": [
+      {
+        "name": "IceWorm",
+        "stats": {
+          "str": 60,
+          "qui": 69,
+          "int": 27,
+          "wil": 72,
+          "psy": 41,
+          "vit": 82,
+          "cha": 58
+        },
+        "stat_bonuses": {},
+        "bhp": 410,
+        "wp": 162,
+        "jp": 74,
+        "lp": 6,
+        "def": 50,
+        "hp_condition": null,
+        "requirements": [
+          "IceSmash/Scissors",
+          "ArcticBreath"
+        ],
+        "hidden_gear": [
+          {
+            "name": "Hyperscale",
+            "values": [
+              30,
+              30,
+              20,
+              30,
+              20,
+              10,
+              20,
+              20
+            ]
+          },
+          {
+            "name": "BlueElf",
+            "values": [
+              20,
+              20,
+              20,
+              20,
+              25,
+              25,
+              25,
+              25
+            ]
+          }
+        ],
+        "defense_total": [
+          50,
+          50,
+          40,
+          50,
+          45,
+          35,
+          45,
+          45
+        ],
+        "source_line": 905,
+        "variant": null,
+        "match": "unique",
+        "form": "0x37"
+      }
+    ],
+    "0x38": [
+      {
+        "name": "ZeroWorm",
+        "stats": {
+          "str": 69,
+          "qui": 75,
+          "int": 31,
+          "wil": 78,
+          "psy": 46,
+          "vit": 86,
+          "cha": 70
+        },
+        "stat_bonuses": {},
+        "bhp": 460,
+        "wp": 184,
+        "jp": 82,
+        "lp": 6,
+        "def": 43,
+        "hp_condition": "???",
+        "requirements": [
+          "FangCrush",
+          "Scissors",
+          "BoltBreath/BoltBlast"
+        ],
+        "hidden_gear": [
+          {
+            "name": "Hyperscale",
+            "values": [
+              30,
+              30,
+              20,
+              30,
+              20,
+              10,
+              20,
+              20
+            ]
+          },
+          {
+            "name": "Protector",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "KrisKnife",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              13,
+              13,
+              13,
+              13
+            ]
+          }
+        ],
+        "defense_total": [
+          43,
+          43,
+          33,
+          48,
+          38,
+          28,
+          38,
+          38
+        ],
+        "source_line": 922,
+        "variant": null,
+        "match": "unique",
+        "form": "0x38"
+      }
+    ],
+    "0x3C": [
+      {
+        "name": "SonicBat",
+        "stats": {
+          "str": 26,
+          "qui": 47,
+          "int": 13,
+          "wil": 49,
+          "psy": 37,
+          "vit": 36,
+          "cha": 31
+        },
+        "stat_bonuses": {},
+        "bhp": 280,
+        "wp": 84,
+        "jp": 54,
+        "lp": 6,
+        "def": 33,
+        "hp_condition": null,
+        "requirements": [
+          "SuperSonic/Scream"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CelestialLeather",
+            "values": [
+              24,
+              24,
+              34,
+              34,
+              34,
+              34,
+              34,
+              24
+            ]
+          },
+          {
+            "name": "SilkShirt",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              11,
+              3,
+              3
+            ]
+          },
+          {
+            "name": "KrisKnife",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              13,
+              13,
+              13,
+              13
+            ]
+          }
+        ],
+        "defense_total": [
+          33,
+          33,
+          43,
+          43,
+          53,
+          69,
+          53,
+          43
+        ],
+        "source_line": 1127,
+        "variant": null,
+        "match": "unique",
+        "form": "0x3C"
+      }
+    ],
+    "0x3D": [
+      {
+        "name": "Straysheep",
+        "stats": {
+          "str": 46,
+          "qui": 38,
+          "int": 16,
+          "wil": 12,
+          "psy": 28,
+          "vit": 44,
+          "cha": 64
+        },
+        "stat_bonuses": {},
+        "bhp": 220,
+        "wp": 128,
+        "jp": 32,
+        "lp": 6,
+        "def": 7,
+        "hp_condition": null,
+        "requirements": [
+          "Dash/Stampede",
+          "Lullaby"
+        ],
+        "hidden_gear": [
+          {
+            "name": "BeastLeather",
+            "values": [
+              6,
+              6,
+              12,
+              12,
+              2,
+              12,
+              2,
+              2
+            ]
+          },
+          {
+            "name": "AmuletofSpirit",
+            "values": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "defense_total": [
+          7,
+          7,
+          13,
+          13,
+          2,
+          13,
+          3,
+          3
+        ],
+        "source_line": 410,
+        "variant": null,
+        "match": "unique",
+        "form": "0x3D"
+      }
+    ],
+    "0x40": [
+      {
+        "name": "Pickbird",
+        "stats": {
+          "str": 4,
+          "qui": 15,
+          "int": 3,
+          "wil": 9,
+          "psy": 9,
+          "vit": 1,
+          "cha": 11
+        },
+        "stat_bonuses": {},
+        "bhp": 55,
+        "wp": 20,
+        "jp": 14,
+        "lp": 5,
+        "def": 9,
+        "hp_condition": null,
+        "requirements": [
+          "Beak"
+        ],
+        "hidden_gear": [
+          {
+            "name": "BeastLeather",
+            "values": [
+              6,
+              6,
+              12,
+              12,
+              2,
+              12,
+              2,
+              2
+            ]
+          },
+          {
+            "name": "SilkShirt",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              11,
+              3,
+              3
+            ]
+          }
+        ],
+        "defense_total": [
+          9,
+          9,
+          15,
+          15,
+          5,
+          23,
+          5,
+          5
+        ],
+        "source_line": 942,
+        "variant": null,
+        "match": "unique",
+        "form": "0x40"
+      }
+    ],
+    "0x41": [
+      {
+        "name": "Rabbat",
+        "stats": {
+          "str": 11,
+          "qui": 23,
+          "int": 9,
+          "wil": 15,
+          "psy": 22,
+          "vit": 9,
+          "cha": 21
+        },
+        "stat_bonuses": {},
+        "bhp": 110,
+        "wp": 38,
+        "jp": 32,
+        "lp": 6,
+        "def": 12,
+        "hp_condition": null,
+        "requirements": [
+          "Bloodsucker"
+        ],
+        "hidden_gear": [
+          {
+            "name": "BeastLeather",
+            "values": [
+              6,
+              6,
+              12,
+              12,
+              2,
+              12,
+              2,
+              2
+            ]
+          },
+          {
+            "name": "SilkShirt",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              11,
+              3,
+              3
+            ]
+          }
+        ],
+        "defense_total": [
+          12,
+          12,
+          18,
+          18,
+          8,
+          34,
+          8,
+          8
+        ],
+        "source_line": 958,
+        "variant": null,
+        "match": "ambiguous",
+        "form": "0x41",
+        "ambiguous_with": [
+          "0x41",
+          "0x4D"
+        ]
+      }
+    ],
+    "0x42": [
+      {
+        "name": "DragonPup",
+        "stats": {
+          "str": 21,
+          "qui": 28,
+          "int": 19,
+          "wil": 20,
+          "psy": 26,
+          "vit": 17,
+          "cha": 32
+        },
+        "stat_bonuses": {},
+        "bhp": 170,
+        "wp": 64,
+        "jp": 36,
+        "lp": 5,
+        "def": 25,
+        "hp_condition": null,
+        "requirements": [
+          "FireBreath/FlameBlast/GasFlame"
+        ],
+        "hidden_gear": [
+          {
+            "name": "SolGrail",
+            "values": [
+              1,
+              1,
+              1,
+              1,
+              100,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "CelestialLeather",
+            "values": [
+              24,
+              24,
+              34,
+              34,
+              34,
+              34,
+              34,
+              24
+            ]
+          }
+        ],
+        "defense_total": [
+          25,
+          25,
+          35,
+          35,
+          134,
+          35,
+          35,
+          25
+        ],
+        "source_line": 975,
+        "variant": null,
+        "match": "unique",
+        "form": "0x42"
+      }
+    ],
+    "0x43": [
+      {
+        "name": "Harpy",
+        "stats": {
+          "str": 27,
+          "qui": 32,
+          "int": 24,
+          "wil": 22,
+          "psy": 18,
+          "vit": 28,
+          "cha": 51
+        },
+        "stat_bonuses": {},
+        "bhp": 215,
+        "wp": 94,
+        "jp": 36,
+        "lp": 5,
+        "def": 9,
+        "hp_condition": null,
+        "requirements": [
+          "Wing/Gliderspike"
+        ],
+        "hidden_gear": [
+          {
+            "name": "BeastLeather",
+            "values": [
+              6,
+              6,
+              12,
+              12,
+              2,
+              12,
+              2,
+              2
+            ]
+          },
+          {
+            "name": "SilkShirt",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              11,
+              3,
+              3
+            ]
+          },
+          {
+            "name": "ShellShield",
+            "values": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "defense_total": [
+          9,
+          9,
+          15,
+          15,
+          5,
+          23,
+          5,
+          5
+        ],
+        "source_line": 991,
+        "variant": null,
+        "match": "unique",
+        "form": "0x43"
+      }
+    ],
+    "0x44": [
+      {
+        "name": "Axebeak",
+        "stats": {
+          "str": 49,
+          "qui": 38,
+          "int": 17,
+          "wil": 34,
+          "psy": 29,
+          "vit": 37,
+          "cha": 38
+        },
+        "stat_bonuses": {},
+        "bhp": 270,
+        "wp": 100,
+        "jp": 44,
+        "lp": 5,
+        "def": 9,
+        "hp_condition": null,
+        "requirements": [
+          "Beak"
+        ],
+        "hidden_gear": [
+          {
+            "name": "BeastLeather",
+            "values": [
+              6,
+              6,
+              12,
+              12,
+              2,
+              12,
+              2,
+              2
+            ]
+          },
+          {
+            "name": "SilkShirt",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              11,
+              3,
+              3
+            ]
+          }
+        ],
+        "defense_total": [
+          9,
+          9,
+          15,
+          15,
+          5,
+          23,
+          5,
+          5
+        ],
+        "source_line": 1008,
+        "variant": null,
+        "match": "unique",
+        "form": "0x44"
+      }
+    ],
+    "0x45": [
+      {
+        "name": "Wyvern",
+        "stats": {
+          "str": 53,
+          "qui": 60,
+          "int": 26,
+          "wil": 45,
+          "psy": 49,
+          "vit": 29,
+          "cha": 50
+        },
+        "stat_bonuses": {},
+        "bhp": 320,
+        "wp": 120,
+        "jp": 64,
+        "lp": 5,
+        "def": 27,
+        "hp_condition": null,
+        "requirements": [
+          "Fang/FangCrush",
+          "Wing/GliderSpike",
+          "its sprite is",
+          "Body C",
+          "Hp Cond. 505",
+          "Skills Needed:",
+          "Windblast"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CelestialLeather",
+            "values": [
+              24,
+              24,
+              34,
+              34,
+              34,
+              34,
+              34,
+              24
+            ]
+          },
+          {
+            "name": "SilkShirt",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              11,
+              3,
+              3
+            ]
+          }
+        ],
+        "defense_total": [
+          27,
+          27,
+          37,
+          37,
+          37,
+          45,
+          37,
+          27
+        ],
+        "source_line": 1024,
+        "variant": null,
+        "match": "unique",
+        "form": "0x45"
+      }
+    ],
+    "0x46": [
+      {
+        "name": "Cockatrice",
+        "stats": {
+          "str": 55,
+          "qui": 61,
+          "int": 28,
+          "wil": 47,
+          "psy": 67,
+          "vit": 39,
+          "cha": 55
+        },
+        "stat_bonuses": {},
+        "bhp": 365,
+        "wp": 132,
+        "jp": 76,
+        "lp": 5,
+        "def": 27,
+        "hp_condition": "???",
+        "requirements": [
+          "Petrify"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CelestialLeather",
+            "values": [
+              24,
+              24,
+              34,
+              34,
+              34,
+              34,
+              34,
+              24
+            ]
+          },
+          {
+            "name": "SilkShirt",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              11,
+              3,
+              3
+            ]
+          }
+        ],
+        "defense_total": [
+          27,
+          27,
+          37,
+          37,
+          37,
+          45,
+          37,
+          27
+        ],
+        "source_line": 1042,
+        "variant": null,
+        "match": "unique",
+        "form": "0x46"
+      }
+    ],
+    "0x47": [
+      {
+        "name": "Sphinx",
+        "stats": {
+          "str": 43,
+          "qui": 58,
+          "int": 94,
+          "wil": 33,
+          "psy": 46,
+          "vit": 51,
+          "cha": 64
+        },
+        "stat_bonuses": {},
+        "bhp": 415,
+        "wp": 140,
+        "jp": 90,
+        "lp": 5,
+        "def": 27,
+        "hp_condition": "None",
+        "requirements": [
+          "SphinxRiddle"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CelestialLeather",
+            "values": [
+              24,
+              24,
+              34,
+              34,
+              34,
+              34,
+              34,
+              24
+            ]
+          },
+          {
+            "name": "SilkShirt",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              11,
+              3,
+              3
+            ]
+          }
+        ],
+        "defense_total": [
+          27,
+          27,
+          37,
+          37,
+          37,
+          45,
+          37,
+          27
+        ],
+        "source_line": 1058,
+        "variant": null,
+        "match": "unique",
+        "form": "0x47"
+      }
+    ],
+    "0x4A": [
+      {
+        "name": "UnicornJr.",
+        "stats": {
+          "str": 46,
+          "qui": 61,
+          "int": 70,
+          "wil": 45,
+          "psy": 49,
+          "vit": 35,
+          "cha": 71
+        },
+        "stat_bonuses": {},
+        "bhp": 300,
+        "wp": 142,
+        "jp": 86,
+        "lp": 5,
+        "def": 33,
+        "hp_condition": "x-???",
+        "requirements": [
+          "Horn/CharmGaze",
+          "MagicHeal"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CelestialLeather",
+            "values": [
+              24,
+              24,
+              34,
+              34,
+              34,
+              34,
+              34,
+              24
+            ]
+          },
+          {
+            "name": "BeastLeather",
+            "values": [
+              6,
+              6,
+              12,
+              12,
+              2,
+              12,
+              2,
+              2
+            ]
+          },
+          {
+            "name": "KrisKnife",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              13,
+              13,
+              13,
+              13
+            ]
+          }
+        ],
+        "defense_total": [
+          33,
+          33,
+          49,
+          49,
+          49,
+          59,
+          49,
+          39
+        ],
+        "source_line": 342,
+        "variant": null,
+        "match": "unique",
+        "form": "0x4A"
+      }
+    ],
+    "0x4B": [
+      {
+        "name": "GriffinJr.",
+        "stats": {
+          "str": 78,
+          "qui": 90,
+          "int": 37,
+          "wil": 66,
+          "psy": 89,
+          "vit": 53,
+          "cha": 78
+        },
+        "stat_bonuses": {},
+        "bhp": 450,
+        "wp": 188,
+        "jp": 100,
+        "lp": 5,
+        "def": 51,
+        "hp_condition": "None",
+        "requirements": [
+          "Beak",
+          "Wing",
+          "GriffithScratch",
+          "Tail"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CelestialLeather",
+            "values": [
+              24,
+              24,
+              34,
+              34,
+              34,
+              34,
+              34,
+              24
+            ]
+          },
+          {
+            "name": "KrisKnife",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              13,
+              13,
+              13,
+              13
+            ]
+          }
+        ],
+        "defense_total": [
+          51,
+          51,
+          71,
+          71,
+          81,
+          81,
+          81,
+          61
+        ],
+        "source_line": 1110,
+        "variant": null,
+        "match": "unique",
+        "form": "0x4B"
+      }
+    ],
+    "0x4C": [
+      {
+        "name": "KylinJr.",
+        "stats": {
+          "str": 52,
+          "qui": 71,
+          "int": 90,
+          "wil": 48,
+          "psy": 70,
+          "vit": 41,
+          "cha": 82
+        },
+        "stat_bonuses": {},
+        "bhp": 400,
+        "wp": 164,
+        "jp": 108,
+        "lp": 5,
+        "def": 49,
+        "hp_condition": "None",
+        "requirements": [
+          "Kylin'sSong"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CelestialLeather",
+            "values": [
+              24,
+              24,
+              34,
+              34,
+              34,
+              34,
+              34,
+              24
+            ]
+          },
+          {
+            "name": "AmuletofSpirit",
+            "values": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "defense_total": [
+          49,
+          49,
+          69,
+          69,
+          69,
+          69,
+          69,
+          49
+        ],
+        "source_line": 391,
+        "variant": null,
+        "match": "unique",
+        "form": "0x4C"
+      }
+    ],
+    "0x4D": [
+      {
+        "name": "Rabbat",
+        "stats": {
+          "str": 11,
+          "qui": 23,
+          "int": 9,
+          "wil": 15,
+          "psy": 22,
+          "vit": 9,
+          "cha": 21
+        },
+        "stat_bonuses": {},
+        "bhp": 110,
+        "wp": 38,
+        "jp": 32,
+        "lp": 6,
+        "def": 12,
+        "hp_condition": null,
+        "requirements": [
+          "Bloodsucker"
+        ],
+        "hidden_gear": [
+          {
+            "name": "BeastLeather",
+            "values": [
+              6,
+              6,
+              12,
+              12,
+              2,
+              12,
+              2,
+              2
+            ]
+          },
+          {
+            "name": "SilkShirt",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              11,
+              3,
+              3
+            ]
+          }
+        ],
+        "defense_total": [
+          12,
+          12,
+          18,
+          18,
+          8,
+          34,
+          8,
+          8
+        ],
+        "source_line": 958,
+        "variant": null,
+        "match": "ambiguous",
+        "form": "0x4D",
+        "ambiguous_with": [
+          "0x41",
+          "0x4D"
+        ]
+      }
+    ],
+    "0x4E": [
+      {
+        "name": "SuzakuJr.",
+        "stats": {
+          "str": 56,
+          "qui": 78,
+          "int": 45,
+          "wil": 51,
+          "psy": 57,
+          "vit": 66,
+          "cha": 82
+        },
+        "stat_bonuses": {},
+        "bhp": 455,
+        "wp": 182,
+        "jp": 80,
+        "lp": 5,
+        "def": 41,
+        "hp_condition": "???",
+        "requirements": [
+          "FireBarrier"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CelestialLeather",
+            "values": [
+              24,
+              24,
+              34,
+              34,
+              34,
+              34,
+              34,
+              24
+            ]
+          },
+          {
+            "name": "SolGrail",
+            "values": [
+              1,
+              1,
+              1,
+              1,
+              100,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "FlameLeather",
+            "values": [
+              16,
+              16,
+              16,
+              16,
+              48,
+              16,
+              16,
+              16
+            ]
+          }
+        ],
+        "defense_total": [
+          41,
+          41,
+          51,
+          51,
+          182,
+          51,
+          51,
+          41
+        ],
+        "source_line": 1074,
+        "variant": null,
+        "match": "unique",
+        "form": "0x4E"
+      },
+      {
+        "name": "SuzakuJr.**",
+        "stats": {
+          "str": 62,
+          "qui": 80,
+          "int": 56,
+          "wil": 71,
+          "psy": 68,
+          "vit": 64,
+          "cha": 80
+        },
+        "stat_bonuses": {},
+        "bhp": null,
+        "wp": 108,
+        "jp": 0,
+        "lp": 8,
+        "def": 50,
+        "hp_condition": "???",
+        "requirements": [
+          "FireBarrier"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CelestialLeather",
+            "values": [
+              24,
+              24,
+              34,
+              34,
+              34,
+              34,
+              34,
+              24
+            ]
+          },
+          {
+            "name": "Protector",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "FlameLeather",
+            "values": [
+              16,
+              16,
+              16,
+              16,
+              48,
+              16,
+              16,
+              16
+            ]
+          }
+        ],
+        "defense_total": [
+          50,
+          50,
+          60,
+          65,
+          87,
+          55,
+          55,
+          45
+        ],
+        "source_line": 1092,
+        "variant": "**",
+        "match": "unique",
+        "form": "0x4E"
+      }
+    ],
+    "0x5B": [
+      {
+        "name": "OgreLord",
+        "stats": {
+          "str": 69,
+          "qui": 41,
+          "int": 48,
+          "wil": 37,
+          "psy": 39,
+          "vit": 78,
+          "cha": 29
+        },
+        "stat_bonuses": {},
+        "bhp": 400,
+        "wp": 122,
+        "jp": 66,
+        "lp": 10,
+        "def": 47,
+        "hp_condition": "???",
+        "requirements": [
+          "GroundHit/DoubleAxe",
+          "Thunderbolt"
+        ],
+        "hidden_gear": [
+          {
+            "name": "CelestialLeather",
+            "values": [
+              24,
+              24,
+              34,
+              34,
+              34,
+              34,
+              34,
+              24
+            ]
+          },
+          {
+            "name": "Protector",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "KrisKnife",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              13,
+              13,
+              13,
+              13
+            ]
+          }
+        ],
+        "defense_total": [
+          47,
+          47,
+          57,
+          67,
+          57,
+          57,
+          57,
+          47
+        ],
+        "source_line": 1639,
+        "variant": null,
+        "match": "unique",
+        "form": "0x5B"
+      }
+    ],
+    "0x5F": [
+      {
+        "name": "Ogre",
+        "stats": {
+          "str": 27,
+          "qui": 11,
+          "int": 16,
+          "wil": 12,
+          "psy": 20,
+          "vit": 24,
+          "cha": 9
+        },
+        "stat_bonuses": {},
+        "bhp": 120,
+        "wp": 40,
+        "jp": 28,
+        "lp": 10,
+        "def": 16,
+        "hp_condition": "None",
+        "requirements": [
+          "BoltBreath",
+          "GroundHit",
+          "Dash"
+        ],
+        "hidden_gear": [
+          {
+            "name": "Protector",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "BeastLeather",
+            "values": [
+              6,
+              6,
+              12,
+              12,
+              2,
+              12,
+              2,
+              2
+            ]
+          }
+        ],
+        "defense_total": [
+          16,
+          16,
+          22,
+          27,
+          7,
+          17,
+          7,
+          7
+        ],
+        "source_line": 1607,
+        "variant": null,
+        "match": "unique",
+        "form": "0x5F"
+      },
+      {
+        "name": "Ogre**",
+        "stats": {
+          "str": 25,
+          "qui": 11,
+          "int": 16,
+          "wil": 12,
+          "psy": 20,
+          "vit": 24,
+          "cha": 6
+        },
+        "stat_bonuses": {},
+        "bhp": null,
+        "wp": 40,
+        "jp": 28,
+        "lp": 10,
+        "def": 16,
+        "hp_condition": "None",
+        "requirements": [
+          "BoltBreath",
+          "GroundHit",
+          "Dash"
+        ],
+        "hidden_gear": [
+          {
+            "name": "Protector",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "BeastLeather",
+            "values": [
+              6,
+              6,
+              12,
+              12,
+              2,
+              12,
+              2,
+              2
+            ]
+          }
+        ],
+        "defense_total": [
+          16,
+          16,
+          22,
+          27,
+          7,
+          17,
+          7,
+          7
+        ],
+        "source_line": 1623,
+        "variant": "**",
+        "match": "unique",
+        "form": "0x5F"
+      }
+    ],
+    "0x60": [
+      {
+        "name": "Xeno",
+        "stats": {
+          "str": 2,
+          "qui": 2,
+          "int": 1,
+          "wil": 16,
+          "psy": 13,
+          "vit": 16,
+          "cha": 4
+        },
+        "stat_bonuses": {},
+        "bhp": 50,
+        "wp": 14,
+        "jp": 20,
+        "lp": 8,
+        "def": 11,
+        "hp_condition": "x-120",
+        "requirements": [
+          "Fang"
+        ],
+        "hidden_gear": [
+          {
+            "name": "SlimeSkin",
+            "values": [
+              8,
+              8,
+              32,
+              16,
+              8,
+              8,
+              8,
+              8
+            ]
+          },
+          {
+            "name": "KrisKnife",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              13,
+              13,
+              13,
+              13
+            ]
+          }
+        ],
+        "defense_total": [
+          11,
+          11,
+          35,
+          19,
+          21,
+          21,
+          21,
+          21
+        ],
+        "source_line": 1147,
+        "variant": null,
+        "match": "unique",
+        "form": "0x60"
+      }
+    ],
+    "0x61": [
+      {
+        "name": "Slime",
+        "stats": {
+          "str": 8,
+          "qui": 6,
+          "int": 7,
+          "wil": 22,
+          "psy": 24,
+          "vit": 28,
+          "cha": 4
+        },
+        "stat_bonuses": {},
+        "bhp": 90,
+        "wp": 26,
+        "jp": 28,
+        "lp": 10,
+        "def": 16,
+        "hp_condition": "0-x",
+        "requirements": [
+          "Solvent"
+        ],
+        "hidden_gear": [
+          {
+            "name": "SlimeSkin",
+            "values": [
+              8,
+              8,
+              32,
+              16,
+              8,
+              8,
+              8,
+              8
+            ]
+          }
+        ],
+        "defense_total": [
+          16,
+          16,
+          64,
+          32,
+          16,
+          16,
+          16,
+          16
+        ],
+        "source_line": 1163,
+        "variant": null,
+        "match": "unique",
+        "form": "0x61"
+      }
+    ],
+    "0x62": [
+      {
+        "name": "Whipjelly",
+        "stats": {
+          "str": 16,
+          "qui": 20,
+          "int": 16,
+          "wil": 21,
+          "psy": 33,
+          "vit": 26,
+          "cha": 18
+        },
+        "stat_bonuses": {},
+        "bhp": 160,
+        "wp": 48,
+        "jp": 40,
+        "lp": 8,
+        "def": 13,
+        "hp_condition": null,
+        "requirements": [
+          "Sweep"
+        ],
+        "hidden_gear": [
+          {
+            "name": "SlimeSkin",
+            "values": [
+              8,
+              8,
+              32,
+              16,
+              8,
+              8,
+              8,
+              8
+            ]
+          },
+          {
+            "name": "YolkHat",
+            "values": [
+              5,
+              5,
+              5,
+              5,
+              2,
+              10,
+              2,
+              2
+            ]
+          }
+        ],
+        "defense_total": [
+          13,
+          13,
+          37,
+          21,
+          10,
+          18,
+          10,
+          10
+        ],
+        "source_line": 1179,
+        "variant": null,
+        "match": "unique",
+        "form": "0x62"
+      }
+    ],
+    "0x63": [
+      {
+        "name": "IceCrystal",
+        "stats": {
+          "str": 12,
+          "qui": 22,
+          "int": 17,
+          "wil": 31,
+          "psy": 44,
+          "vit": 31,
+          "cha": 30
+        },
+        "stat_bonuses": {},
+        "bhp": 200,
+        "wp": 62,
+        "jp": 50,
+        "lp": 8,
+        "def": 31,
+        "hp_condition": null,
+        "requirements": [
+          "IceSmash"
+        ],
+        "hidden_gear": [
+          {
+            "name": "Sleetcoin",
+            "values": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              100,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Protector",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "AccelerationSys.",
+            "values": [
+              10,
+              10,
+              10,
+              12,
+              10,
+              10,
+              5,
+              5
+            ]
+          }
+        ],
+        "defense_total": [
+          31,
+          31,
+          31,
+          46,
+          21,
+          120,
+          16,
+          16
+        ],
+        "source_line": 1195,
+        "variant": null,
+        "match": "unique",
+        "form": "0x63"
+      }
+    ],
+    "0x64": [
+      {
+        "name": "Unknown",
+        "stats": {
+          "str": 22,
+          "qui": 24,
+          "int": 62,
+          "wil": 48,
+          "psy": 46,
+          "vit": 32,
+          "cha": 17
+        },
+        "stat_bonuses": {},
+        "bhp": 260,
+        "wp": 56,
+        "jp": 82,
+        "lp": 8,
+        "def": 9,
+        "hp_condition": null,
+        "requirements": [
+          "Hypnotism/StoneGaze/CharmGaze/StunGaze"
+        ],
+        "hidden_gear": [
+          {
+            "name": "SolGrail",
+            "values": [
+              1,
+              1,
+              1,
+              1,
+              100,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Sleetcoin",
+            "values": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              100,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "ThunderCharm",
+            "values": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              100
+            ]
+          },
+          {
+            "name": "GelatinSuit",
+            "values": [
+              6,
+              38,
+              100,
+              38,
+              6,
+              6,
+              6,
+              6
+            ]
+          }
+        ],
+        "defense_total": [
+          9,
+          41,
+          103,
+          41,
+          108,
+          108,
+          9,
+          108
+        ],
+        "source_line": 1213,
+        "variant": null,
+        "match": "unique",
+        "form": "0x64"
+      }
+    ],
+    "0x67": [
+      {
+        "name": "Gelatin",
+        "stats": {
+          "str": 32,
+          "qui": 36,
+          "int": 16,
+          "wil": 74,
+          "psy": 68,
+          "vit": 99,
+          "cha": 28
+        },
+        "stat_bonuses": {
+          "qui": 5,
+          "wil": 5
+        },
+        "bhp": 400,
+        "wp": 110,
+        "jp": 84,
+        "lp": 8,
+        "def": 12,
+        "hp_condition": "???",
+        "requirements": [
+          "BoltBarrier",
+          "BoltBreath/BoltBlast"
+        ],
+        "hidden_gear": [
+          {
+            "name": "WindShell",
+            "values": [
+              5,
+              5,
+              5,
+              15,
+              5,
+              5,
+              15,
+              25
+            ]
+          },
+          {
+            "name": "ThunderCharm",
+            "values": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              100
+            ]
+          },
+          {
+            "name": "GelatinSuit",
+            "values": [
+              6,
+              38,
+              100,
+              38,
+              6,
+              6,
+              6,
+              6
+            ]
+          }
+        ],
+        "defense_total": [
+          12,
+          44,
+          106,
+          54,
+          12,
+          12,
+          22,
+          131
+        ],
+        "source_line": 1248,
+        "variant": null,
+        "match": "unique",
+        "form": "0x67"
+      }
+    ],
+    "0x68": [
+      {
+        "name": "Snowfolk",
+        "stats": {
+          "str": 56,
+          "qui": 46,
+          "int": 28,
+          "wil": 82,
+          "psy": 66,
+          "vit": 88,
+          "cha": 90
+        },
+        "stat_bonuses": {
+          "qui": 5,
+          "wil": 5
+        },
+        "bhp": 440,
+        "wp": 184,
+        "jp": 92,
+        "lp": 8,
+        "def": 12,
+        "hp_condition": "???",
+        "requirements": [
+          "IceSmash",
+          "ArcticBreath"
+        ],
+        "hidden_gear": [],
+        "defense_total": null,
+        "source_line": 1265,
+        "variant": null,
+        "match": "unique",
+        "form": "0x68"
+      }
+    ],
+    "0x6A": [
+      {
+        "name": "FireCrystal",
+        "stats": {
+          "str": 10,
+          "qui": 22,
+          "int": 17,
+          "wil": 31,
+          "psy": 44,
+          "vit": 31,
+          "cha": 30
+        },
+        "stat_bonuses": {},
+        "bhp": 200,
+        "wp": 60,
+        "jp": 50,
+        "lp": 8,
+        "def": 31,
+        "hp_condition": null,
+        "requirements": [
+          "HeatSmash"
+        ],
+        "hidden_gear": [
+          {
+            "name": "SolGrail",
+            "values": [
+              1,
+              1,
+              1,
+              1,
+              100,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Protector",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "AccelerationSys.",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              10,
+              10,
+              5,
+              5
+            ]
+          }
+        ],
+        "defense_total": [
+          31,
+          31,
+          31,
+          46,
+          120,
+          21,
+          16,
+          16
+        ],
+        "source_line": 1302,
+        "variant": null,
+        "match": "unique",
+        "form": "0x6A"
+      }
+    ],
+    "0x6B": [
+      {
+        "name": "BigSlime",
+        "stats": {
+          "str": 12,
+          "qui": 3,
+          "int": 9,
+          "wil": 23,
+          "psy": 24,
+          "vit": 30,
+          "cha": 4
+        },
+        "stat_bonuses": {},
+        "bhp": 200,
+        "wp": 26,
+        "jp": 32,
+        "lp": 8,
+        "def": 17,
+        "hp_condition": "None",
+        "requirements": [
+          "Solvent",
+          "Spoil",
+          "HPDrain"
+        ],
+        "hidden_gear": [
+          {
+            "name": "SlimeSkin",
+            "values": [
+              8,
+              8,
+              32,
+              16,
+              8,
+              8,
+              8,
+              8
+            ]
+          },
+          {
+            "name": "AmuletofSpirit",
+            "values": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "defense_total": [
+          17,
+          17,
+          65,
+          33,
+          17,
+          17,
+          17,
+          17
+        ],
+        "source_line": 1285,
+        "variant": null,
+        "match": "unique",
+        "form": "0x6B"
+      }
+    ],
+    "0x6C": [
+      {
+        "name": "RedDragon",
+        "stats": {
+          "str": 67,
+          "qui": 56,
+          "int": 52,
+          "wil": 31,
+          "psy": 47,
+          "vit": 80,
+          "cha": 64
+        },
+        "stat_bonuses": {},
+        "bhp": 330,
+        "wp": 164,
+        "jp": 70,
+        "lp": 8,
+        "def": 49,
+        "hp_condition": "???",
+        "requirements": [
+          "Fang",
+          "HeatSmash",
+          "TailHit",
+          "FireBreath"
+        ],
+        "hidden_gear": [
+          {
+            "name": "SolGrail",
+            "values": [
+              1,
+              1,
+              1,
+              1,
+              100,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "SH-Armlet/Anklet",
+            "values": [
+              10,
+              10,
+              10,
+              10,
+              10,
+              10,
+              -10,
+              10
+            ]
+          },
+          {
+            "name": "GoldenFleece",
+            "values": [
+              28,
+              28,
+              28,
+              28,
+              38,
+              38,
+              38,
+              38
+            ]
+          }
+        ],
+        "defense_total": [
+          49,
+          49,
+          49,
+          49,
+          158,
+          59,
+          19,
+          59
+        ],
+        "source_line": 1660,
+        "variant": null,
+        "match": "unique",
+        "form": "0x6C"
+      }
+    ],
+    "0x6D": [
+      {
+        "name": "BlackDragon",
+        "stats": {
+          "str": 89,
+          "qui": 63,
+          "int": 49,
+          "wil": 64,
+          "psy": 71,
+          "vit": 92,
+          "cha": 61
+        },
+        "stat_bonuses": {
+          "psy": 8,
+          "cha": 8
+        },
+        "bhp": 330,
+        "wp": 182,
+        "jp": 96,
+        "lp": 8,
+        "def": 65,
+        "hp_condition": "???",
+        "requirements": [
+          "Fang",
+          "StoneGas",
+          "TailHit",
+          "starting out with one of them, I think",
+          "this form was madewith his quest in mind."
+        ],
+        "hidden_gear": [
+          {
+            "name": "MoonlightRobe",
+            "values": [
+              17,
+              17,
+              17,
+              27,
+              17,
+              62,
+              27,
+              27
+            ]
+          },
+          {
+            "name": "SH-Armlet/Anklet",
+            "values": [
+              10,
+              10,
+              10,
+              10,
+              10,
+              10,
+              -10,
+              10
+            ]
+          },
+          {
+            "name": "GoldenFleece",
+            "values": [
+              28,
+              28,
+              28,
+              28,
+              38,
+              38,
+              38,
+              38
+            ]
+          }
+        ],
+        "defense_total": [
+          65,
+          65,
+          65,
+          75,
+          75,
+          120,
+          45,
+          85
+        ],
+        "source_line": 1695,
+        "variant": null,
+        "match": "unique",
+        "form": "0x6D"
+      }
+    ],
+    "0x70": [
+      {
+        "name": "LivingAxe",
+        "stats": {
+          "str": 9,
+          "qui": 7,
+          "int": 1,
+          "wil": 4,
+          "psy": 18,
+          "vit": 13,
+          "cha": 11
+        },
+        "stat_bonuses": {},
+        "bhp": 75,
+        "wp": 24,
+        "jp": 16,
+        "lp": 5,
+        "def": 14,
+        "hp_condition": null,
+        "requirements": [
+          "DoubleAxe"
+        ],
+        "hidden_gear": [
+          {
+            "name": "JunkHelm",
+            "values": [
+              4,
+              4,
+              6,
+              6,
+              4,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "AccelerationSys.",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              10,
+              10,
+              5,
+              5
+            ]
+          }
+        ],
+        "defense_total": [
+          11,
+          11,
+          35,
+          21,
+          21,
+          21,
+          21,
+          21
+        ],
+        "source_line": 1322,
+        "variant": null,
+        "match": "unique",
+        "form": "0x70"
+      }
+    ],
+    "0x71": [
+      {
+        "name": "LivingLance",
+        "stats": {
+          "str": 15,
+          "qui": 14,
+          "int": 3,
+          "wil": 9,
+          "psy": 31,
+          "vit": 14,
+          "cha": 16
+        },
+        "stat_bonuses": {},
+        "bhp": 125,
+        "wp": 36,
+        "jp": 26,
+        "lp": 5,
+        "def": 24,
+        "hp_condition": null,
+        "requirements": [
+          "Thrust"
+        ],
+        "hidden_gear": [
+          {
+            "name": "JunkHelm",
+            "values": [
+              4,
+              4,
+              6,
+              6,
+              4,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "AccelerationSys.",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              10,
+              10,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "Protector",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              5,
+              5,
+              5,
+              5
+            ]
+          }
+        ],
+        "defense_total": [
+          24,
+          24,
+          26,
+          36,
+          19,
+          16,
+          11,
+          11
+        ],
+        "source_line": 1338,
+        "variant": null,
+        "match": "unique",
+        "form": "0x71"
+      }
+    ],
+    "0x73": [
+      {
+        "name": "LivingArmor",
+        "stats": {
+          "str": 27,
+          "qui": 22,
+          "int": 29,
+          "wil": 16,
+          "psy": 51,
+          "vit": 35,
+          "cha": 28
+        },
+        "stat_bonuses": {},
+        "bhp": 250,
+        "wp": 70,
+        "jp": 52,
+        "lp": 5,
+        "def": 31,
+        "hp_condition": null,
+        "requirements": [
+          "Hypnosis/StunGaze/CharmGaze/StoneGaze",
+          "Dash/Trample/Stampede"
+        ],
+        "hidden_gear": [
+          {
+            "name": "Living Armour",
+            "values": [
+              26,
+              26,
+              26,
+              26,
+              26,
+              26,
+              26,
+              26
+            ]
+          },
+          {
+            "name": "EMES Tag",
+            "values": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              15
+            ]
+          }
+        ],
+        "defense_total": [
+          31,
+          31,
+          31,
+          31,
+          31,
+          31,
+          31,
+          41
+        ],
+        "source_line": 1355,
+        "variant": null,
+        "match": "unique",
+        "form": "0x73"
+      }
+    ],
+    "0x74": [
+      {
+        "name": "LivingSword",
+        "stats": {
+          "str": 35,
+          "qui": 35,
+          "int": 35,
+          "wil": 35,
+          "psy": 35,
+          "vit": 35,
+          "cha": 35
+        },
+        "stat_bonuses": {},
+        "bhp": 300,
+        "wp": 86,
+        "jp": 56,
+        "lp": 5,
+        "def": 30,
+        "hp_condition": null,
+        "requirements": [
+          "Blade"
+        ],
+        "hidden_gear": [
+          {
+            "name": "AccelerationSys.",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              10,
+              10,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "Protector",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              5,
+              5,
+              5,
+              5
+            ]
+          }
+        ],
+        "defense_total": [
+          30,
+          30,
+          30,
+          45,
+          20,
+          20,
+          15,
+          15
+        ],
+        "source_line": 1371,
+        "variant": null,
+        "match": "unique",
+        "form": "0x74"
+      }
+    ],
+    "0x76": [
+      {
+        "name": "LivingMirror",
+        "stats": {
+          "str": 51,
+          "qui": 46,
+          "int": 22,
+          "wil": 34,
+          "psy": 82,
+          "vit": 45,
+          "cha": 51
+        },
+        "stat_bonuses": {},
+        "bhp": 400,
+        "wp": 122,
+        "jp": 74,
+        "lp": 5,
+        "def": 30,
+        "hp_condition": "???",
+        "requirements": [
+          "PsyReflector"
+        ],
+        "hidden_gear": [
+          {
+            "name": "AccelerationSys.",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              10,
+              10,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "Protector",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              5,
+              5,
+              5,
+              5
+            ]
+          }
+        ],
+        "defense_total": [
+          30,
+          30,
+          30,
+          45,
+          20,
+          20,
+          15,
+          15
+        ],
+        "source_line": 1388,
+        "variant": null,
+        "match": "unique",
+        "form": "0x76"
+      }
+    ],
+    "0x78": [
+      {
+        "name": "RockScout",
+        "stats": {
+          "str": 77,
+          "qui": 70,
+          "int": 30,
+          "wil": 35,
+          "psy": 74,
+          "vit": 60,
+          "cha": 55
+        },
+        "stat_bonuses": {},
+        "bhp": 500,
+        "wp": 158,
+        "jp": 74,
+        "lp": 5,
+        "def": 45,
+        "hp_condition": "???",
+        "requirements": [
+          "StoneGaze",
+          "GrountHit/PowerBeat/Beat"
+        ],
+        "hidden_gear": [
+          {
+            "name": "AccelerationSys.",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              10,
+              10,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "Protector",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "ElectroArmor",
+            "values": [
+              25,
+              25,
+              25,
+              33,
+              35,
+              35,
+              35,
+              35
+            ]
+          }
+        ],
+        "defense_total": [
+          45,
+          45,
+          45,
+          63,
+          50,
+          50,
+          45,
+          45
+        ],
+        "source_line": 1405,
+        "variant": null,
+        "match": "unique",
+        "form": "0x78"
+      }
+    ],
+    "0x7F": [
+      {
+        "name": "Mariche",
+        "stats": {
+          "str": 77,
+          "qui": 77,
+          "int": 77,
+          "wil": 77,
+          "psy": 77,
+          "vit": 77,
+          "cha": 77
+        },
+        "stat_bonuses": {},
+        "bhp": 500,
+        "wp": 192,
+        "jp": 120,
+        "lp": 5,
+        "def": 33,
+        "hp_condition": "None",
+        "requirements": [
+          "StunGaze",
+          "CharmGaze",
+          "StoneGaze",
+          "DeathGaze"
+        ],
+        "hidden_gear": [
+          {
+            "name": "HarmoniumArmour",
+            "values": [
+              24,
+              24,
+              24,
+              24,
+              20,
+              20,
+              24,
+              40
+            ]
+          },
+          {
+            "name": "KrisKnife",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              13,
+              13,
+              13,
+              13
+            ]
+          }
+        ],
+        "defense_total": [
+          33,
+          33,
+          33,
+          33,
+          59,
+          59,
+          63,
+          79
+        ],
+        "source_line": 1715,
+        "variant": null,
+        "match": "unique",
+        "form": "0x7F"
+      }
+    ],
+    "0x80": [
+      {
+        "name": "Skeleton",
+        "stats": {
+          "str": 11,
+          "qui": 8,
+          "int": 3,
+          "wil": 15,
+          "psy": 4,
+          "vit": 15,
+          "cha": 6
+        },
+        "stat_bonuses": {},
+        "bhp": 55,
+        "wp": 22,
+        "jp": 16,
+        "lp": 4,
+        "def": 20,
+        "hp_condition": null,
+        "requirements": [
+          "Deathsynthesis"
+        ],
+        "hidden_gear": [
+          {
+            "name": "JunkHelm",
+            "values": [
+              4,
+              4,
+              6,
+              6,
+              4,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "SkeleMail",
+            "values": [
+              16,
+              16,
+              4,
+              32,
+              4,
+              16,
+              16,
+              4
+            ]
+          }
+        ],
+        "defense_total": [
+          20,
+          20,
+          10,
+          38,
+          8,
+          17,
+          17,
+          5
+        ],
+        "source_line": 1425,
+        "variant": null,
+        "match": "unique",
+        "form": "0x80"
+      }
+    ],
+    "0x81": [
+      {
+        "name": "Ghost",
+        "stats": {
+          "str": 14,
+          "qui": 16,
+          "int": 13,
+          "wil": 22,
+          "psy": 16,
+          "vit": 12,
+          "cha": 8
+        },
+        "stat_bonuses": {},
+        "bhp": 90,
+        "wp": 28,
+        "jp": 30,
+        "lp": 4,
+        "def": 24,
+        "hp_condition": null,
+        "requirements": [
+          "Deathsynthesis"
+        ],
+        "hidden_gear": [
+          {
+            "name": "DarkRobe",
+            "values": [
+              8,
+              8,
+              8,
+              26,
+              2,
+              8,
+              8,
+              26
+            ]
+          },
+          {
+            "name": "SkeleMail",
+            "values": [
+              16,
+              16,
+              4,
+              32,
+              4,
+              16,
+              16,
+              4
+            ]
+          }
+        ],
+        "defense_total": [
+          24,
+          24,
+          12,
+          58,
+          6,
+          24,
+          24,
+          30
+        ],
+        "source_line": 1441,
+        "variant": null,
+        "match": "unique",
+        "form": "0x81"
+      }
+    ],
+    "0x82": [
+      {
+        "name": "Zombie",
+        "stats": {
+          "str": 28,
+          "qui": 6,
+          "int": 2,
+          "wil": 34,
+          "psy": 1,
+          "vit": 44,
+          "cha": 1
+        },
+        "stat_bonuses": {},
+        "bhp": 145,
+        "wp": 40,
+        "jp": 22,
+        "lp": 4,
+        "def": 16,
+        "hp_condition": null,
+        "requirements": [
+          "Deathsynthesis"
+        ],
+        "hidden_gear": [
+          {
+            "name": "SkeleMail",
+            "values": [
+              16,
+              16,
+              4,
+              32,
+              4,
+              16,
+              16,
+              4
+            ]
+          }
+        ],
+        "defense_total": [
+          16,
+          16,
+          4,
+          32,
+          12,
+          4,
+          16,
+          4
+        ],
+        "source_line": 1457,
+        "variant": null,
+        "match": "unique",
+        "form": "0x82"
+      }
+    ],
+    "0x83": [
+      {
+        "name": "Ghostrider",
+        "stats": {
+          "str": null,
+          "qui": null,
+          "int": null,
+          "wil": null,
+          "psy": null,
+          "vit": null,
+          "cha": null
+        },
+        "stat_bonuses": {},
+        "bhp": null,
+        "wp": null,
+        "jp": null,
+        "lp": 4,
+        "def": null,
+        "hp_condition": null,
+        "requirements": [
+          "Deathsynthesis",
+          "Supersonic/Scream"
+        ],
+        "hidden_gear": [
+          {
+            "name": "SkeleMail",
+            "values": [
+              16,
+              16,
+              4,
+              32,
+              4,
+              16,
+              16,
+              4
+            ]
+          },
+          {
+            "name": "DarkRobe",
+            "values": [
+              8,
+              8,
+              8,
+              26,
+              2,
+              8,
+              8,
+              26
+            ]
+          },
+          {
+            "name": "Protector",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "name": "KrisKnife",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              13,
+              13,
+              13,
+              13
+            ]
+          }
+        ],
+        "defense_total": [
+          37,
+          37,
+          25,
+          76,
+          24,
+          42,
+          42,
+          48
+        ],
+        "source_line": 1472,
+        "variant": null,
+        "match": "unique",
+        "form": "0x83"
+      }
+    ],
+    "0x84": [
+      {
+        "name": "DeadKnight",
+        "stats": {
+          "str": 42,
+          "qui": 34,
+          "int": 24,
+          "wil": 41,
+          "psy": 24,
+          "vit": 40,
+          "cha": 41
+        },
+        "stat_bonuses": {},
+        "bhp": 225,
+        "wp": 98,
+        "jp": 48,
+        "lp": 4,
+        "def": 42,
+        "hp_condition": "???",
+        "requirements": [
+          "Deathsynthesis"
+        ],
+        "hidden_gear": [
+          {
+            "name": "SkeleMail",
+            "values": [
+              16,
+              16,
+              4,
+              32,
+              4,
+              16,
+              16,
+              4
+            ]
+          },
+          {
+            "name": "Protector",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              5,
+              5,
+              5,
+              5
+            ]
+          }
+        ],
+        "defense_total": [
+          42,
+          42,
+          18,
+          79,
+          13,
+          37,
+          37,
+          13
+        ],
+        "source_line": 1490,
+        "variant": null,
+        "match": "unique",
+        "form": "0x84"
+      }
+    ],
+    "0x85": [
+      {
+        "name": "Ankheg",
+        "stats": {
+          "str": 57,
+          "qui": 51,
+          "int": 19,
+          "wil": 46,
+          "psy": 29,
+          "vit": 57,
+          "cha": 13
+        },
+        "stat_bonuses": {},
+        "bhp": 265,
+        "wp": 94,
+        "jp": 52,
+        "lp": 4,
+        "def": 42,
+        "hp_condition": "x-445",
+        "requirements": [
+          "Fang/FangCrush/Bloodsucker",
+          "Deathsynthesis"
+        ],
+        "hidden_gear": [
+          {
+            "name": "SkeleMail",
+            "values": [
+              16,
+              16,
+              4,
+              32,
+              4,
+              16,
+              16,
+              4
+            ]
+          },
+          {
+            "name": "Protector",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              5,
+              5,
+              5,
+              5
+            ]
+          }
+        ],
+        "defense_total": [
+          42,
+          42,
+          18,
+          79,
+          13,
+          37,
+          37,
+          13
+        ],
+        "source_line": 1507,
+        "variant": null,
+        "match": "unique",
+        "form": "0x85"
+      }
+    ],
+    "0x87": [
+      {
+        "name": "Skullasaurus",
+        "stats": {
+          "str": 71,
+          "qui": 61,
+          "int": 37,
+          "wil": 77,
+          "psy": 34,
+          "vit": 40,
+          "cha": 47
+        },
+        "stat_bonuses": {},
+        "bhp": 350,
+        "wp": 132,
+        "jp": 78,
+        "lp": 4,
+        "def": 52,
+        "hp_condition": null,
+        "requirements": [
+          "Fang/FangCrush",
+          "Deathsynthesis"
+        ],
+        "hidden_gear": [
+          {
+            "name": "SkeleMail",
+            "values": [
+              16,
+              16,
+              4,
+              32,
+              4,
+              16,
+              16,
+              4
+            ]
+          },
+          {
+            "name": "Protector",
+            "values": [
+              10,
+              10,
+              10,
+              15,
+              5,
+              5,
+              5,
+              5
+            ]
+          }
+        ],
+        "defense_total": [
+          52,
+          52,
+          28,
+          94,
+          18,
+          42,
+          42,
+          18
+        ],
+        "source_line": 1524,
+        "variant": null,
+        "match": "unique",
+        "form": "0x87"
+      }
+    ],
+    "0x8B": [
+      {
+        "name": "Nidheg",
+        "stats": {
+          "str": 59,
+          "qui": 63,
+          "int": 13,
+          "wil": 32,
+          "psy": 14,
+          "vit": 37,
+          "cha": 13
+        },
+        "stat_bonuses": {},
+        "bhp": 240,
+        "wp": 92,
+        "jp": 34,
+        "lp": 4,
+        "def": 35,
+        "hp_condition": "None",
+        "requirements": [
+          "Deathsynthesis",
+          "CentipedeCrush"
+        ],
+        "hidden_gear": [
+          {
+            "name": "SkeleMail",
+            "values": [
+              16,
+              16,
+              4,
+              32,
+              4,
+              16,
+              16,
+              4
+            ]
+          },
+          {
+            "name": "KrisKnife",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              13,
+              13,
+              13,
+              13
+            ]
+          }
+        ],
+        "defense_total": [
+          35,
+          35,
+          11,
+          67,
+          21,
+          45,
+          45,
+          21
+        ],
+        "source_line": 1569,
+        "variant": null,
+        "match": "ambiguous",
+        "form": "0x8B",
+        "ambiguous_with": [
+          "0x8B",
+          "0x8C"
+        ]
+      }
+    ],
+    "0x8C": [
+      {
+        "name": "Nidheg",
+        "stats": {
+          "str": 59,
+          "qui": 63,
+          "int": 13,
+          "wil": 32,
+          "psy": 14,
+          "vit": 37,
+          "cha": 13
+        },
+        "stat_bonuses": {},
+        "bhp": 240,
+        "wp": 92,
+        "jp": 34,
+        "lp": 4,
+        "def": 35,
+        "hp_condition": "None",
+        "requirements": [
+          "Deathsynthesis",
+          "CentipedeCrush"
+        ],
+        "hidden_gear": [
+          {
+            "name": "SkeleMail",
+            "values": [
+              16,
+              16,
+              4,
+              32,
+              4,
+              16,
+              16,
+              4
+            ]
+          },
+          {
+            "name": "KrisKnife",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              13,
+              13,
+              13,
+              13
+            ]
+          }
+        ],
+        "defense_total": [
+          35,
+          35,
+          11,
+          67,
+          21,
+          45,
+          45,
+          21
+        ],
+        "source_line": 1569,
+        "variant": null,
+        "match": "ambiguous",
+        "form": "0x8C",
+        "ambiguous_with": [
+          "0x8B",
+          "0x8C"
+        ]
+      }
+    ],
+    "0x8D": [
+      {
+        "name": "Deathlord",
+        "stats": {
+          "str": 41,
+          "qui": 34,
+          "int": 34,
+          "wil": 40,
+          "psy": 34,
+          "vit": 44,
+          "cha": 40
+        },
+        "stat_bonuses": {},
+        "bhp": 240,
+        "wp": 99,
+        "jp": 66,
+        "lp": 4,
+        "def": 35,
+        "hp_condition": "None",
+        "requirements": [
+          "Deathsynthesis",
+          "Kusanagi",
+          "SacredSong"
+        ],
+        "hidden_gear": [
+          {
+            "name": "SkeleMail",
+            "values": [
+              16,
+              16,
+              4,
+              32,
+              4,
+              16,
+              16,
+              4
+            ]
+          },
+          {
+            "name": "KrisKnife",
+            "values": [
+              3,
+              3,
+              3,
+              3,
+              13,
+              13,
+              13,
+              13
+            ]
+          },
+          {
+            "name": "Mizukagami",
+            "values": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "defense_total": [
+          35,
+          35,
+          11,
+          67,
+          21,
+          45,
+          45,
+          21
+        ],
+        "source_line": 1586,
+        "variant": null,
+        "match": "unique",
+        "form": "0x8D"
+      }
+    ],
+    "0x8F": [
+      {
+        "name": "Dullahan",
+        "stats": {
+          "str": 94,
+          "qui": 72,
+          "int": 61,
+          "wil": 72,
+          "psy": 54,
+          "vit": 75,
+          "cha": 79
+        },
+        "stat_bonuses": {
+          "str": 5,
+          "vit": 5
+        },
+        "bhp": 400,
+        "wp": 198,
+        "jp": 98,
+        "lp": 4,
+        "def": 54,
+        "hp_condition": "???",
+        "requirements": [
+          "Hypnosis/StunGaze/CharmGaze/StoneGaze",
+          "Blade/IceSmash/HeatSmash",
+          "Deathsynthesis",
+          "Siren",
+          "Stampede"
+        ],
+        "hidden_gear": [],
+        "defense_total": null,
+        "source_line": 1542,
+        "variant": null,
+        "match": "unique",
+        "form": "0x8F"
+      }
+    ],
+    "0xA7": [
+      {
+        "name": "Lunatic",
+        "stats": {
+          "str": 44,
+          "qui": 64,
+          "int": 18,
+          "wil": 6,
+          "psy": 84,
+          "vit": 20,
+          "cha": 66
+        },
+        "stat_bonuses": {},
+        "bhp": 620,
+        "wp": 130,
+        "jp": 58,
+        "lp": 6,
+        "def": 6,
+        "hp_condition": null,
+        "requirements": [
+          "Psychout",
+          "Tail/TailHit",
+          "Wing/GliderSpike"
+        ],
+        "hidden_gear": [
+          {
+            "name": "BeastLeather",
+            "values": [
+              6,
+              6,
+              12,
+              12,
+              2,
+              12,
+              2,
+              2
+            ]
+          }
+        ],
+        "defense_total": [
+          6,
+          6,
+          12,
+          12,
+          2,
+          12,
+          2,
+          2
+        ],
+        "source_line": 1733,
+        "variant": null,
+        "match": "unique",
+        "form": "0xA7"
+      }
+    ]
+  }
+}

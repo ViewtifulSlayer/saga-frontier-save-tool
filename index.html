@@ -15,7 +15,7 @@
     <div class="header-meta">
       <!-- Static copy of SaveCore.BUILD: it still reads correctly if app.js fails,
            and verify_viewer.js fails when the header and both script URLs drift. -->
-      <span class="build-stamp" id="build-stamp">Build 2026-10-30.2</span>
+      <span class="build-stamp" id="build-stamp">Build 2026-10-30.4</span>
       <span class="pill">client-side only</span>
     </div>
   </header>
@@ -218,6 +218,12 @@
     </div>
   </main>
 
+  <!-- Rendered outside #detail so a character or slot re-render cannot destroy
+       the open entity. The hash route owns it; the container is hidden until a
+       valid #entity/<type>/<id> address arrives. -->
+  <aside class="entity-drawer" id="entity-drawer" role="dialog"
+    aria-labelledby="entity-drawer-title" hidden></aside>
+
   <footer class="app-footer">
     <p>
       Read-only viewer. Integrity fields (<code>sfSys.chk*</code>) are not validated or recomputed.
@@ -230,7 +236,7 @@
   <!-- v= is the build id: bump it with SaveCore.BUILD so a changed app is never
        served from a stale HTTP cache. platform.js must load before app.js so
        window.SaveSource exists when the controller binds. -->
-  <script src="platform.js?v=2026-10-30.2"></script>
-  <script src="app.js?v=2026-10-30.2"></script>
+  <script src="platform.js?v=2026-10-30.4"></script>
+  <script src="app.js?v=2026-10-30.4"></script>
 </body>
 </html>

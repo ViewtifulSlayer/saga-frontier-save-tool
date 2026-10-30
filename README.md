@@ -5,7 +5,8 @@ files.
 Drop `SaveData.bin` or a decrypted JSON mirror into the page and inspect every
 snapshot in the file: party, money, inventory, location, scenario flags, shop
 progress, the full character roster, learned and equipped arts, Mystic absorbs,
-Monster forms, and the four INIT stat sets.
+Monster forms and the Monster Lab, an ability/form/item Encyclopedia, and the
+four INIT stat sets.
 
 Nothing is uploaded or edited. All parsing happens in the browser tab, and the
 only download is an optional snapshot copy you export yourself.
@@ -60,6 +61,19 @@ Feature history is in [CHANGELOG.md](CHANGELOG.md).
   its Race line, as it does for a Mec body TYPE. Riki's starting green Lummox
   is labeled as inferred from his INIT record because it is not a
   transformation target.
+- **Monster Lab** - one card for the selected Monster PC, driven by the save:
+  a 128-ability checklist grouped by the six transformation categories, marked
+  absorbed or equipped and filterable by absorbed, missing or needed; a form
+  library of all 256 ids with Oulak's documented BHP, stats, hidden gear and
+  transformation rows; and a calculator that simulates the next absorb in the
+  documented 8, 1-7 slot order, resolves the Table 1 and Table 2 checks, and
+  plans the menu for a target form. A Try changes mode keeps the what-if menu
+  temporary and never writes to the file.
+- **Encyclopedia** - a searchable index of all 512 abilities, 256 Monster form
+  ids and 248 named items, assembled from tables the page already loads. Open
+  any name for its record, documentation status and every place it appears in
+  the save. The selection is kept in the address bar (`#entity/<type>/<id>`),
+  so a record can be reloaded or shared.
 - **Ability tables** - eight ability schools with holder counts, and element
   coverage across the roster.
 - **INIT sets** - all four documented INIT rosters, scored against the save,
@@ -72,7 +86,7 @@ than sideways-scrolling tables.
 
 - The file is read once with `FileReader`, cloned, and parsed locally.
 - No server, no analytics, no upload.
-- The only requests the page makes are the ten local table files under
+- The only requests the page makes are the eleven local table files under
   `docs/`.
 - The browser folder watcher stores its directory handle, settings and any
   snapshot copies in local IndexedDB. That store stays on this device and is
@@ -145,19 +159,32 @@ save format.
   here.
 - Names marked `documented` come from community tables and are not verified
   against your file. Names marked `asset` come from the game itself.
-- **Monster form names and transformation rows are documented, not observed.**
-  The form byte, base HP and Prime HP arithmetic are read from your save; the
-  names and requirement rows come from the guide's transformation tables. Riki's
-  green Lummox is inferred from his INIT record and the Monster FAQ because the
-  transformation tables never list a starting form.
+- **Monster form names, transformation rows and stat lines are documented,
+  not observed.** The form byte, base HP, Prime HP and equipped menu are read
+  from your save; the names, requirement rows and BHP/stat lines come from the
+  guide's transformation tables and Oulak's Monster FAQ. Riki's green Lummox
+  is inferred from his INIT record and the Monster FAQ because the
+  transformation tables never list a starting form. Documented and observed
+  values are shown side by side and are never reconciled.
+- **The Monster Lab calculator models the documented check, not the game.**
+  It applies the first matching row in table order, starts Table 2 at the row
+  for the current max HP, treats Space Magic as a Head ability that cannot
+  satisfy a requirement, and adds four Prime HP only for a new ability. A
+  successful absorb is an input, not something the tool can predict.
+- **Two target forms have no documented stat line** (Gunfish and LiquidMetal),
+  and three blocks carry no BHP line (the two `**` variants and Ghostrider).
+  Mandrake's documented 110 BHP differs from the 160 stored in the fixture
+  record. The library labels these facts instead of patching them.
 
 ## Verification
 
 The project is checked with four Node harnesses (descriptor checks, a DOM
 stub that drives the real controller, a fake-directory adapter test, and a
 fixture audit against two real saves), plus a publish probe that serves only
-the files in this repository. They live in the maintainer's workspace and are
-not part of this repository.
+the files in this repository. The Monster Lab adds the generated-table gates
+(`build_monster_lab.py --check`) and calculator assertions to the viewer and
+fixture harnesses. They live in the maintainer's workspace and are not part of
+this repository.
 
 ## License
 

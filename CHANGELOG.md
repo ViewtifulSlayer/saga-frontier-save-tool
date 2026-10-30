@@ -2,6 +2,100 @@
 
 All notable changes to the SaGa Frontier Remastered Save Tool.
 
+## [1.2.0] - 2026-10-30
+
+BUILD 2026-10-30.4.
+
+### Inspection
+
+- **Encyclopedia** card with a single searchable index of 1,016 entities:
+  all 512 abilities, all 256 Monster form ids and all 248 named items. The
+  type filter, name/id search and 40-row page keep the card lightweight while
+  the counts stay visible in the type selector.
+- Entity links on ability, form and item names throughout the existing cards,
+  plus a detail drawer with the record, its documentation status and every
+  place the entity appears in the loaded save. The selected entity rides in the
+  address bar as `#entity/<type>/<id>`, so a record can be reloaded or shared,
+  and a hash change opens or closes the drawer.
+- The drawer is keyboard reachable and closes on Escape. Close clears the
+  entity hash with `replaceState`, so Back does not reopen the record. The page
+  index picks the card up automatically as its fourteenth entry.
+
+### Verification
+
+- 280 fixture, 944 viewer, 360 DOM, 35 platform and 136 publish checks.
+- The viewer harness covers route parsing, link formatting, the full entity
+  index, type filters, search, the 40-row cap, drawer contents, close handling
+  and the wrapping rules for the entity table. The DOM harness follows
+  ability, form and item hash routes, checks the drawer contents and closing
+  control, and rejects an invalid route.
+- Browser pass at 1600x900 and 380x700: link click, hash reload, Back and
+  Escape open and close the drawer, the mobile index lists 14 links, and both
+  the page and the entity table stay inside their wrappers. The 380px pass
+  caught the summary column inheriting `nowrap`; the table and phone rules now
+  wrap, and no console errors were logged.
+
+## [1.1.0] - 2026-10-30
+
+BUILD 2026-10-30.3.
+
+### Inspection
+
+- Monster Lab card for the selected Monster PC, with three panels that share
+  one selection and one save record:
+  - **Checklist** - all 128 monster abilities grouped by the six documented
+    transformation categories, marked absorbed (the `getskill` history) or
+    equipped (the live `eqpAtk` slot 1-8), filterable to all, absorbed, missing
+    or needed by a documented form, and with every documented target form's
+    requirements resolved against the current menu. Status is labelled as a
+    requirements check, not a promise of the game's result.
+  - **Library** - all 256 form ids with the number of reachable tables, Oulak's
+    documented BHP and seven stats, hidden gear, HP condition and requirement
+    rows, shown separately from the observed record; filters for documented
+    stats, transformation rows and no row, plus name/id search.
+  - **Calculator** - a next-absorb simulator that replaces slot 8, adds four
+    Prime HP only for a new ability, applies the first matching Table 1 row,
+    then starts Table 2 at the row for the current max HP and walks it in
+    table order, with a full trace; a first-ability-per-category table; and a
+    target planner that lists every row reaching the chosen form, what is
+    missing, and a one-click suggested menu for a what-if pass.
+- **Try changes** what-if mode keeps temporary absorbed/slot edits in the
+  controller only. Reset to save discards them; the record and file are never
+  mutated. A slot switch and a new file clear the overrides.
+- The checklist, library and calculator are native `<details>` panels, so
+  their open state survives a re-render and is controlled by the existing
+  Monster PC picker. The controller restores focus to the edited control after
+  each re-render.
+
+### Data
+
+- New eleventh runtime table, `docs/monster_lab.json` (155,889 bytes): 128
+  monster ability categories plus six Space Magic Head entries from
+  `[MTRAN04]`, and 86 documented Oulak form blocks stored as 88 form-id
+  entries, with BHP, the seven stats, WP/JP/LP/Def, HP condition, hidden gear
+  and the guide's own requirement lines.
+- Built by `tests/sfr_save_tool/build_monster_lab.py` with gates on the six
+  category counts, the 128-id monster range, the six Space Magic ids, the
+  86/83 block counts, the 80 unique form ids, the 84 target forms, and ten
+  fixture stat matches. `--check` fails on a stale table.
+- Space Magic is treated as a Head ability for the first-ability check but
+  cannot satisfy a requirement, matching the guide. Documented values are not
+  reconciled with the save; the two target forms with no stat line
+  (Gunfish, LiquidMetal) and Mandrake's 110 vs 160 BHP stay labelled.
+
+### Verification
+
+- 280 fixture, 907 viewer, 350 DOM, 35 platform and 136 publish checks.
+- The viewer harness covers the category map, first-ability order, Table 1 and
+  Table 2 simulation, current-form skip, Prime HP arithmetic, planner menus,
+  all three filters, observed/documented separation, and missing-table
+  fallbacks on both the form and lab tables.
+- The DOM harness drives the real controller: Try changes, an absorb toggle, a
+  slot select, the absorbed filter, the Lummox library detail, target
+  selection and Load into what-if, then re-reads the record to prove no
+  what-if value reached the save. The publish probe serves 19 files and eleven
+  tables.
+
 ## [1.0.1] - 2026-10-30
 
 BUILD 2026-10-30.2.
