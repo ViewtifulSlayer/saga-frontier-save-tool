@@ -39,12 +39,30 @@
   // The save only stores the enemy id, stat mask and amount, so this table is
   // what turns those bytes into a monster name and an art name.
   var MYSTIC_ABSORB_PATH = 'docs/mystic_absorbs.json';
+  // Monster form names and the guide's documented transformation targets. The
+  // save only stores a form id in tribial_work.data[0]; this table turns that
+  // byte into a name and lists the ability sets that reach the form.
+  var MONSTER_FORMS_PATH = 'docs/monster_forms.json';
+  var MONSTER_RACES = [0x08, 0x98];
+  // Monster abilities are ids 128-255, the block the ability table calls
+  // `monster`. Prime HP is four points per distinct absorbed ability.
+  var MONSTER_ABILITY_LOW = 128;
+  var MONSTER_ABILITY_HIGH = 255;
+  var PRIME_HP_PER_ABILITY = 4;
+  var MONSTER_CATEGORY_LABELS = {
+    head: 'Head',
+    arm: 'Arm',
+    leg: 'Leg',
+    body: 'Body',
+    breath: 'Breath',
+    magical: 'Magical'
+  };
   // One build identifier, used three ways: the script URLs in index.html, the
   // version query on every runtime table fetch, and the stamp in the header.
   // Bump it whenever app.js, platform.js or a table changes. verify_viewer.js
   // fails if the index.html copies drift from this constant, which is the only
   // silent way a stale page could keep being served.
-  var BUILD = '2026-10-30.1';
+  var BUILD = '2026-10-30.2';
   var SLOT_PAGE_SIZE = 3;
   // Browser-only live-folder preferences. The directory handle itself lives in
   // IndexedDB inside platform.js; this is only the user's chosen behavior.
@@ -1053,11 +1071,15 @@
    * Name resolution
    * ------------------------------------------------------------------ */
 
-  function makeResolver(constants, abilities, maps, flags, shops, itemStats, mysticAbsorbs) {
+  function makeResolver(constants, abilities, maps, flags, shops, itemStats, mysticAbsorbs, monsterForms) {
     var characters = (constants && constants.characters) || {};
     var items = (constants && constants.items) || {};
     var itemTable = (itemStats && itemStats.items) || {};
     var mysticTable = (mysticAbsorbs && mysticAbsorbs.enemies) || {};
+    var monsterTable = (monsterForms && monsterForms.forms) || {};
+    var monsterTargets = (monsterForms && Array.isArray(monsterForms.targets))
+      ? monsterForms.targets
+      : [];
     var mapTable = (maps && maps.maps) || {};
     var areaTable = (constants && constants.areas) || {};
     var flagTable = (flags && flags.flags) || {};
@@ -1173,7 +1195,28 @@
           arts: entry.arts || {}
         };
       },
-      hasMysticAbsorbs: function () { return Object.keys(mysticTable).length > 0; }
+      hasMysticAbsorbs: function () { return Object.keys(mysticTable).length > 0; },
+      // A Monster's form byte shares the enemy-id namespace, so the names come
+      // from the same guide section as the Mystic rows. An id outside the table
+      // is reported as unknown rather than dressed up as a form.
+      monsterForm: function (id) {
+        var entry = monsterTable[hex2(id)];
+        if (!entry || typeof entry !== 'object') {
+          return { known: false, name: null, variant: null };
+        }
+        return {
+          known: true,
+          name: entry.name || null,
+          variant: entry.variant || null
+        };
+      },
+      monsterTargetsFor: function (id) {
+        var key = hex2(id);
+        return monsterTargets.filter(function (target) {
+          return target && target.form === key;
+        });
+      },
+      hasMonsterForms: function () { return Object.keys(monsterTable).length > 0; }
     };
   }
 
@@ -1972,7 +2015,12 @@
       var enemyId = scratch.length > 4 + index ? num(scratch[4 + index]) : null;
       var mask = scratch.length > 7 + index ? num(scratch[7 + index]) : null;
       var amount = scratch.length > 10 + index ? num(scratch[10 + index]) : null;
-      var empty = enemyId === null || enemyId === 255;
+      // A Monster's scratch block is zero-filled, not 0xFF-filled: Riki's INIT
+      // record carries an enemy id of 0 and no mask or amount. A recorded
+      // absorb always has both a stat bit and a nonzero amount, so a zero
+      // triple means "nothing stored", not enemy 0x00 (Rocky).
+      var empty = enemyId === null || enemyId === 255 ||
+        mask === null || mask === 0 || amount === null || amount === 0;
       var resolved = empty || !resolver || typeof resolver.mysticAbsorb !== 'function'
         ? { known: false, name: null, normal: {}, variants: {}, arts: {} }
         : resolver.mysticAbsorb(enemyId);
@@ -2089,6 +2137,141 @@
     );
   }
 
+  // A Monster's current form is tribial_work.data[0]. The record stores the
+  // form's base HP in hpMax; Prime HP is four points per distinct monster
+  // ability the character has absorbed (the 128-bit block at ids 128-255).
+  function buildMonsterForm(record, resolver) {
+    if (!record) return null;
+    var race = num(record.race);
+    if (MONSTER_RACES.indexOf(race) === -1) return null;
+
+    var scratch = toNumberArray(record.tribialWork || []);
+    var formId = scratch.length ? num(scratch[0]) : null;
+    var form = formId === null || !resolver || typeof resolver.monsterForm !== 'function'
+      ? { known: false, name: null, variant: null }
+      : resolver.monsterForm(formId);
+    var absorbed = (record.skills || []).filter(function (entry) {
+      return entry.abilityId >= MONSTER_ABILITY_LOW && entry.abilityId <= MONSTER_ABILITY_HIGH;
+    });
+    var targets = formId === null || !resolver || typeof resolver.monsterTargetsFor !== 'function'
+      ? []
+      : resolver.monsterTargetsFor(formId);
+
+    var baseHp = num(record.hpMax);
+    var primeHp = absorbed.length * PRIME_HP_PER_ABILITY;
+    return {
+      race: race,
+      formId: formId,
+      known: form.known,
+      name: form.name,
+      variant: form.variant,
+      baseHp: baseHp,
+      absorbedCount: absorbed.length,
+      primeHp: primeHp,
+      maxHp: baseHp === null ? null : baseHp + primeHp,
+      targets: targets
+    };
+  }
+
+  function monsterRequirementText(ids, resolver) {
+    return (ids || []).map(function (id) {
+      var value = parseInt(id, 16);
+      var resolved = resolver && typeof resolver.ability === 'function'
+        ? resolver.ability(value)
+        : { name: null };
+      return resolved.name || hex2(value);
+    }).join(', ');
+  }
+
+  function monsterTargetLines(target, resolver) {
+    if (target.table === 1) {
+      return [h('span', { className: 'monster-line' },
+        'Requires all of ' + monsterRequirementText(target.requires && target.requires.all, resolver) + '.')];
+    }
+    var lines = [];
+    Object.keys(MONSTER_CATEGORY_LABELS).forEach(function (key) {
+      var ids = target.requires && target.requires[key];
+      if (!ids || !ids.length) return;
+      lines.push(h('span', { className: 'monster-line' },
+        MONSTER_CATEGORY_LABELS[key] + ': any of ' + monsterRequirementText(ids, resolver) + '.'));
+    });
+    return lines;
+  }
+
+  function buildMonsterFormBlock(profile, options) {
+    if (!profile) return null;
+    options = options || {};
+
+    var formHead;
+    if (profile.known && profile.name) {
+      formHead = [t(profile.name + '  '), h('span', { className: 'mono' }, hex2(profile.formId))];
+      if (profile.variant) {
+        formHead.push(h('span', {
+          className: 'chip' + (profile.variant === 'green' ? ' chip-inferred' : ''),
+          title: profile.variant === 'green'
+            ? 'Inferred: Riki INIT form 15 plus Asura\'s FAQ; not a transformation target'
+            : 'Documented in the guide transformation table'
+        }, profile.variant));
+      }
+    } else {
+      formHead = [t(profile.formId === null
+        ? 'not in the record'
+        : 'form ' + hex2(profile.formId) + ' has no name')];
+    }
+
+    var targetBlock;
+    if (options.monsterFormsError) {
+      // The table did not load, so this is not evidence that no row exists.
+      // The error paragraph below explains what stayed hidden.
+      targetBlock = null;
+    } else if (!profile.targets.length) {
+      targetBlock = h('p', { className: 'hint' }, profile.known
+        ? 'Starting form: the guide lists no transformation check that reaches it.'
+        : 'No documented transformation row matches this form id.');
+    } else {
+      var first = profile.targets[0];
+      targetBlock = h('div', { className: 'monster-target' },
+        h('h5', null, 'Transformation check  ',
+          h('span', { className: 'count' }, 'table ' + formatNumber(first.table))),
+        monsterTargetLines(first, options.resolver),
+        first.table === 2 && first.hp_below !== null
+          ? h('span', { className: 'monster-line' },
+              'Checked while max HP is below ' + formatNumber(first.hp_below) + '.')
+          : null,
+        profile.targets.length > 1
+          ? h('p', { className: 'hint' },
+              countLabel(profile.targets.length, 'documented row', 'documented rows') +
+              ' reach this form; the first is shown.')
+          : null
+      );
+    }
+
+    return h('div', { className: 'detail-block monster-form' },
+      h('h4', null, 'Monster form  ', h('span', { className: 'count' }, 'race ' + hex2(profile.race))),
+      h('dl', { className: 'kv' },
+        kv('Current form', h('span', { className: 'monster-value' }, formHead)),
+        kv('Base HP', formatNumber(profile.baseHp)),
+        kv('Prime HP', h('span', { className: 'monster-value' },
+          t(formatNumber(profile.primeHp) + '  '),
+          h('span', { className: 'hint' },
+            '(' + formatNumber(profile.absorbedCount) + ' of 128 monster abilities x ' +
+            formatNumber(PRIME_HP_PER_ABILITY) + ')'))),
+        kv('Max in form', formatNumber(profile.maxHp)),
+        kv('Absorbed', formatNumber(profile.absorbedCount) + ' of 128 monster abilities')
+      ),
+      targetBlock,
+      options.monsterFormsError
+        ? h('p', { className: 'hint' }, options.monsterFormsError +
+            '. The form id and Prime HP still decode; names and requirements stay hidden until that table loads.')
+        : null,
+      h('p', { className: 'hint' },
+        'The form byte is the first byte of the record\u2019s private scratch block. ' +
+        'Base HP is the value stored in this record; Prime HP is four points per distinct ' +
+        'absorbed monster ability (ids 128-255). Names and requirement rows are documented ' +
+        'data from the Data Mechanics Guide transformation tables.')
+    );
+  }
+
   // Per-character drill-down. Pure: it takes the view model and returns a
   // descriptor tree, so the harness can assert on it without a DOM.
   function buildCharacterDetail(vm, resolver, chrNo, options) {
@@ -2104,6 +2287,7 @@
     // the card is exactly what it was.
     var profile = buildMecProfile(record, resolver);
     var mystic = buildMysticAbsorbs(record, resolver);
+    var monster = buildMonsterForm(record, resolver);
     var hasMysticGift = gifts.gifts.some(function (bit) { return bit.name === 'Mystic'; });
 
     // Position in the roster, 1-based, so a keyboard user scrolled down to this
@@ -2204,6 +2388,10 @@
             'Mystic gift, but no Mystic weapon arts and no stored absorbs. This record cannot absorb monsters.')
         : null,
       buildMysticAbsorbBlock(mystic, options),
+      buildMonsterFormBlock(monster, {
+        resolver: resolver,
+        monsterFormsError: options && options.monsterFormsError
+      }),
       h('div', { className: 'detail-columns' }, equipped, learnedBlock)
     );
   }
@@ -2230,6 +2418,16 @@
     // The compact summary carries it on the Race line rather than as a new row,
     // so the sidebar does not grow.
     var profile = buildMecProfile(record, resolver);
+    // A Monster's current form is its identity too: "Monster" alone does not
+    // say Lummox or Skeleton. It rides on the Race line beside the Mec TYPE, so
+    // the summary keeps the same two rows. Without the form table the id still
+    // decodes, so show that rather than dropping the identity entirely.
+    var monster = buildMonsterForm(record, resolver);
+    var formText = monster && monster.formId !== null
+      ? (monster.name
+          ? monster.name + (monster.variant ? ' (' + monster.variant + ')' : '')
+          : 'form ' + hex2(monster.formId))
+      : null;
     var giftNames = gifts.gifts.map(function (bit) { return bit.name; });
     var giftText = giftNames.length ? giftNames.join(', ') : 'none';
     if (gifts.undecoded) giftText += ' + undecoded ' + hex2(gifts.undecoded);
@@ -2263,6 +2461,7 @@
           h('dd', null,
             race.label || 'undecoded',
             profile && profile.bodyName ? ' ' + profile.bodyName : null,
+            formText ? ' ' + formText : null,
             h('span', { className: 'rail-raw mono' }, '  ' + hex2(race.raw)))
         ),
         h('div', null,
@@ -3617,6 +3816,8 @@
       itemStatsError: null,
       mysticAbsorbs: null,
       mysticAbsorbsError: null,
+      monsterForms: null,
+      monsterFormsError: null,
       shopNames: null,
       shopNamesError: null,
       // Which still-to-buy stops are expanded, by location name. Survives slot
@@ -3680,7 +3881,7 @@
         visible,
         state.selected ? state.selected.key : null,
         selectSlot,
-        makeResolver(state.constants, state.abilities, state.maps, state.flags, state.shopNames, state.itemStats, state.mysticAbsorbs)
+        makeResolver(state.constants, state.abilities, state.maps, state.flags, state.shopNames, state.itemStats, state.mysticAbsorbs, state.monsterForms)
       ), dom.slotList);
       // Hide the rows outside the page on the mounted <li>s. The whole picker
       // stays in the DOM so the selection and the row titles survive paging.
@@ -3696,7 +3897,7 @@
           state.slots,
           state.selected ? state.selected.key : null,
           selectSlot,
-          makeResolver(state.constants, state.abilities, state.maps, state.flags, state.shopNames, state.itemStats, state.mysticAbsorbs)
+          makeResolver(state.constants, state.abilities, state.maps, state.flags, state.shopNames, state.itemStats, state.mysticAbsorbs, state.monsterForms)
         ), dom.slotFast);
       }
       updateSlotPager(bounds);
@@ -3940,7 +4141,7 @@
         }
         var vm = buildViewModel(cached.data, state.selected, state.container.systemSaveData);
         var resolver = makeResolver(state.constants, state.abilities, state.maps, state.flags,
-          state.shopNames, state.itemStats, state.mysticAbsorbs);
+          state.shopNames, state.itemStats, state.mysticAbsorbs, state.monsterForms);
         var selectedChr = state.selectedCharacter;
         if (selectedChr === null || selectedChr === undefined) selectedChr = vm.party.heroNo;
         // A preserved character may not exist in a different save. Fall back
@@ -3954,6 +4155,7 @@
           shopTableError: state.shopNamesError,
           itemStatsError: state.itemStatsError,
           mysticAbsorbError: state.mysticAbsorbsError,
+          monsterFormsError: state.monsterFormsError,
           onShopToggle: function (location, isOpen) {
             if (isOpen) state.shopOpen[location] = true;
             else delete state.shopOpen[location];
@@ -4090,6 +4292,15 @@
         // names the missing table instead of inventing names or arts.
         state.mysticAbsorbs = null;
         state.mysticAbsorbsError = 'Could not load ' + MYSTIC_ABSORB_PATH + ' (' + err.message + ')';
+      }
+      try {
+        state.monsterForms = await fetchJson(tableUrl(MONSTER_FORMS_PATH));
+        state.monsterFormsError = null;
+      } catch (err) {
+        // Optional: a Monster card still shows the raw form id and Prime HP,
+        // and names the missing table instead of inventing a form.
+        state.monsterForms = null;
+        state.monsterFormsError = 'Could not load ' + MONSTER_FORMS_PATH + ' (' + err.message + ')';
       }
       try {
         state.shopNames = await fetchJson(tableUrl(SHOP_PATH));
@@ -4781,8 +4992,11 @@
     buildMecProfileBlock: buildMecProfileBlock,
     buildMysticAbsorbs: buildMysticAbsorbs,
     buildMysticAbsorbBlock: buildMysticAbsorbBlock,
+    buildMonsterForm: buildMonsterForm,
+    buildMonsterFormBlock: buildMonsterFormBlock,
     MEC_BODY_TYPES: MEC_BODY_TYPES,
     MYSTIC_WEAPONS: MYSTIC_WEAPONS,
+    MONSTER_RACES: MONSTER_RACES,
     STAT_FIELDS: STAT_FIELDS,
     rosterTargetFor: rosterTargetFor,
     formatNumber: formatNumber,

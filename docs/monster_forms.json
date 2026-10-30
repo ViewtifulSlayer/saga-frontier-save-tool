@@ -1,0 +1,2481 @@
+{
+  "schema": 1,
+  "meta": {
+    "description": "Monster form names and documented transformation targets",
+    "generator": "tests/sfr_save_tool/build_monster_forms.py",
+    "sources": {
+      "names": {
+        "file": "docs/gameinfo/gamefaqs/in-depth_guides/Data_Mechanics_Guide_by_Zaraktheus.txt",
+        "section": "[MYSAB02] Mystic Absorbs Data, Full Entries List",
+        "sha256": "0ebaa4824ae12aee8db106dbf549f01a65b045b75fdccc24c9b3ee4e66f46549"
+      },
+      "transformation": {
+        "file": "docs/gameinfo/zaraktheus/Monster_Transformation_Hex_Data_Tables.txt",
+        "table1": "0x2f590-0x2f61f",
+        "table2": "0x2e88c-0x2f58b",
+        "sha256": "49a2ab4af0c36144f765d6606fd0370791b28f225ef2caa7e6634ff15e392d0a"
+      },
+      "order": {
+        "file": "docs/gameinfo/zaraktheus/Monster_PC_Transformation_Data_by_Order.txt",
+        "sha256": "dab4ac43b150925bdfaeecf12ab65dca965f0f3b52922cde431320d84d755db1"
+      },
+      "starting_form": {
+        "file": "docs/gameinfo/gamefaqs/in-depth_guides/Monster_FAQ_by_Asura.txt",
+        "sha256": "20831a28f5277dd0b5728c73a8b7d7429bca0dab12f3c1ce93754b8dfdab7e94"
+      },
+      "init": {
+        "file": "docs/gameinfo/json/characters_init.json",
+        "sha256": "2ae94b3736e61e9fe655150e69d89b94c8e9bc9ab053ba9cc1746de2f880cfcd"
+      }
+    },
+    "form_count": 256,
+    "table1_rows": 16,
+    "table1_targets": 13,
+    "table2_rows": 128,
+    "table2_targets": 107,
+    "table2_forms": 74,
+    "prime_hp": {
+      "per_ability": 4,
+      "ability_low": 128,
+      "ability_high": 255,
+      "max": 512
+    },
+    "starting_forms": {
+      "0x0F": {
+        "name": "Lummox",
+        "variant": "green",
+        "init_form": 15,
+        "basis": "Riki's INIT record holds form 15 in all four INIT sets; Asura's Monster FAQ names the green Lummox as Riki's original form. The hex tables never list a green Lummox because it is not a transformation target."
+      }
+    },
+    "notes": "Table 2's first byte is the HP check, not base HP: a PC qualifies while its current max HP is below byte * 5. The record's hpMax is the form's base HP; Prime HP is four points per distinct absorbed monster ability (ids 128-255) and is computed from getskill, not stored here."
+  },
+  "forms": {
+    "0x00": {
+      "name": "Rocky"
+    },
+    "0x01": {
+      "name": "Hedgehog"
+    },
+    "0x02": {
+      "name": "Razorback"
+    },
+    "0x03": {
+      "name": "Aperider"
+    },
+    "0x04": {
+      "name": "Hellhound"
+    },
+    "0x05": {
+      "name": "Manticore"
+    },
+    "0x06": {
+      "name": "Unicorn"
+    },
+    "0x07": {
+      "name": "Butch"
+    },
+    "0x08": {
+      "name": "Chimera"
+    },
+    "0x09": {
+      "name": "Kylin"
+    },
+    "0x0A": {
+      "name": "Tidi"
+    },
+    "0x0B": {
+      "name": "Gargantu"
+    },
+    "0x0C": {
+      "name": "MaskCat"
+    },
+    "0x0D": {
+      "name": "RABI"
+    },
+    "0x0E": {
+      "name": "Chimera"
+    },
+    "0x0F": {
+      "name": "Lummox",
+      "variant": "green"
+    },
+    "0x10": {
+      "name": "Cactus"
+    },
+    "0x11": {
+      "name": "Sporepile"
+    },
+    "0x12": {
+      "name": "Mandrake"
+    },
+    "0x13": {
+      "name": "Trapvine"
+    },
+    "0x14": {
+      "name": "Nightshade"
+    },
+    "0x15": {
+      "name": "Treant"
+    },
+    "0x16": {
+      "name": "Sunflower"
+    },
+    "0x17": {
+      "name": "Shrieker"
+    },
+    "0x18": {
+      "name": "CrystalTree"
+    },
+    "0x19": {
+      "name": "Ironhopper"
+    },
+    "0x1A": {
+      "name": "MecGod"
+    },
+    "0x1B": {
+      "name": "Thundragon"
+    },
+    "0x1C": {
+      "name": "Meiren"
+    },
+    "0x1D": {
+      "name": "MasterRing"
+    },
+    "0x1E": {
+      "name": "Target"
+    },
+    "0x1F": {
+      "name": "Lummox",
+      "variant": "pink"
+    },
+    "0x20": {
+      "name": "Gekko"
+    },
+    "0x21": {
+      "name": "Gunfish"
+    },
+    "0x22": {
+      "name": "Platoonpus"
+    },
+    "0x23": {
+      "name": "FrillNeck"
+    },
+    "0x24": {
+      "name": "Gaeatoad"
+    },
+    "0x25": {
+      "name": "Trisaur"
+    },
+    "0x26": {
+      "name": "Genbu"
+    },
+    "0x27": {
+      "name": "Basilisk"
+    },
+    "0x28": {
+      "name": "Kraken"
+    },
+    "0x29": {
+      "name": "PlatyKing"
+    },
+    "0x2A": {
+      "name": "Platyhooks"
+    },
+    "0x2B": {
+      "name": "DevilSquid"
+    },
+    "0x2C": {
+      "name": "Hell'sLord"
+    },
+    "0x2D": {
+      "name": "Hell'sLord"
+    },
+    "0x2E": {
+      "name": "kraken"
+    },
+    "0x2F": {
+      "name": "TrisaurJr"
+    },
+    "0x30": {
+      "name": "Shellworm"
+    },
+    "0x31": {
+      "name": "Armorpilla"
+    },
+    "0x32": {
+      "name": "KillerBee"
+    },
+    "0x33": {
+      "name": "Scorpion"
+    },
+    "0x34": {
+      "name": "Battlefly"
+    },
+    "0x35": {
+      "name": "Slugger"
+    },
+    "0x36": {
+      "name": "SickleBug"
+    },
+    "0x37": {
+      "name": "Iceworm"
+    },
+    "0x38": {
+      "name": "Zeroworm"
+    },
+    "0x39": {
+      "name": "Flamefolk"
+    },
+    "0x3A": {
+      "name": "Waterfolk"
+    },
+    "0x3B": {
+      "name": "Shifter"
+    },
+    "0x3C": {
+      "name": "Sonicbat"
+    },
+    "0x3D": {
+      "name": "Straysheep"
+    },
+    "0x3E": {
+      "name": "Virus"
+    },
+    "0x3F": {
+      "name": "Blue"
+    },
+    "0x40": {
+      "name": "Pickbird"
+    },
+    "0x41": {
+      "name": "Rabbat"
+    },
+    "0x42": {
+      "name": "DragonPup"
+    },
+    "0x43": {
+      "name": "Harpy"
+    },
+    "0x44": {
+      "name": "Axebeak"
+    },
+    "0x45": {
+      "name": "Wyvern"
+    },
+    "0x46": {
+      "name": "Cockatrice"
+    },
+    "0x47": {
+      "name": "Sphinx"
+    },
+    "0x48": {
+      "name": "Suzaku"
+    },
+    "0x49": {
+      "name": "Griffin"
+    },
+    "0x4A": {
+      "name": "UnicornJr"
+    },
+    "0x4B": {
+      "name": "GriffinJr"
+    },
+    "0x4C": {
+      "name": "KylinJr"
+    },
+    "0x4D": {
+      "name": "Rabbat"
+    },
+    "0x4E": {
+      "name": "SuzakuJr"
+    },
+    "0x4F": {
+      "name": "Minidragon"
+    },
+    "0x50": {
+      "name": "PrimaBronza"
+    },
+    "0x51": {
+      "name": "Rockbaboon"
+    },
+    "0x52": {
+      "name": "PrimaMaska"
+    },
+    "0x53": {
+      "name": "Ettin"
+    },
+    "0x54": {
+      "name": "Goatgiant"
+    },
+    "0x55": {
+      "name": "Golem"
+    },
+    "0x56": {
+      "name": "Cyclops"
+    },
+    "0x57": {
+      "name": "Chariot"
+    },
+    "0x58": {
+      "name": "Giant"
+    },
+    "0x59": {
+      "name": "Jotnar"
+    },
+    "0x5A": {
+      "name": "Yeti"
+    },
+    "0x5B": {
+      "name": "OgreLord"
+    },
+    "0x5C": {
+      "name": "Berva"
+    },
+    "0x5D": {
+      "name": "MaskedGiant"
+    },
+    "0x5E": {
+      "name": "Berva"
+    },
+    "0x5F": {
+      "name": "Ogre"
+    },
+    "0x60": {
+      "name": "Xeno"
+    },
+    "0x61": {
+      "name": "Slime"
+    },
+    "0x62": {
+      "name": "WhipJelly"
+    },
+    "0x63": {
+      "name": "IceCrystal"
+    },
+    "0x64": {
+      "name": "Unknown"
+    },
+    "0x65": {
+      "name": "LiquidMetal"
+    },
+    "0x66": {
+      "name": "Airfolk"
+    },
+    "0x67": {
+      "name": "Gelatin"
+    },
+    "0x68": {
+      "name": "Snowfolk"
+    },
+    "0x69": {
+      "name": "K9Mec"
+    },
+    "0x6A": {
+      "name": "FireCrystal"
+    },
+    "0x6B": {
+      "name": "BigSlime"
+    },
+    "0x6C": {
+      "name": "RedDragon"
+    },
+    "0x6D": {
+      "name": "BlackDragon"
+    },
+    "0x6E": {
+      "name": "HugeSlime"
+    },
+    "0x6F": {
+      "name": "VitalityRune"
+    },
+    "0x70": {
+      "name": "LivingAxe"
+    },
+    "0x71": {
+      "name": "LivingLance"
+    },
+    "0x72": {
+      "name": "LivingGlove"
+    },
+    "0x73": {
+      "name": "LivingArmor"
+    },
+    "0x74": {
+      "name": "LivingSword"
+    },
+    "0x75": {
+      "name": "LivingMusket"
+    },
+    "0x76": {
+      "name": "LivingMirror"
+    },
+    "0x77": {
+      "name": "Mimic"
+    },
+    "0x78": {
+      "name": "RockScout"
+    },
+    "0x79": {
+      "name": "ElectroSheep"
+    },
+    "0x7A": {
+      "name": "BossX"
+    },
+    "0x7B": {
+      "name": "BlackX"
+    },
+    "0x7C": {
+      "name": "MBlack"
+    },
+    "0x7D": {
+      "name": "MBlackII"
+    },
+    "0x7E": {
+      "name": "MBlackIII"
+    },
+    "0x7F": {
+      "name": "Mariche"
+    },
+    "0x80": {
+      "name": "Skeleton"
+    },
+    "0x81": {
+      "name": "Ghost"
+    },
+    "0x82": {
+      "name": "Zombie"
+    },
+    "0x83": {
+      "name": "Ghostrider"
+    },
+    "0x84": {
+      "name": "DeadKnight"
+    },
+    "0x85": {
+      "name": "Ankheg"
+    },
+    "0x86": {
+      "name": "Lich"
+    },
+    "0x87": {
+      "name": "Skullasaurus"
+    },
+    "0x88": {
+      "name": "Dullahan"
+    },
+    "0x89": {
+      "name": "Bone"
+    },
+    "0x8A": {
+      "name": "Bonehead"
+    },
+    "0x8B": {
+      "name": "Nidheg"
+    },
+    "0x8C": {
+      "name": "Nidheg"
+    },
+    "0x8D": {
+      "name": "DeathLord"
+    },
+    "0x8E": {
+      "name": "Skulldrake"
+    },
+    "0x8F": {
+      "name": "Durahan"
+    },
+    "0x90": {
+      "name": "Battleaxe"
+    },
+    "0x91": {
+      "name": "Swordsman"
+    },
+    "0x92": {
+      "name": "NomadFighter"
+    },
+    "0x93": {
+      "name": "Soldier"
+    },
+    "0x94": {
+      "name": "Shadow"
+    },
+    "0x95": {
+      "name": "Gunbird"
+    },
+    "0x96": {
+      "name": "Ladyblade"
+    },
+    "0x97": {
+      "name": "Shaman"
+    },
+    "0x98": {
+      "name": "Grappler"
+    },
+    "0x99": {
+      "name": "BlackFighter"
+    },
+    "0x9A": {
+      "name": "RedFighter"
+    },
+    "0x9B": {
+      "name": "BlueFighter"
+    },
+    "0x9C": {
+      "name": "GreenFighter"
+    },
+    "0x9D": {
+      "name": "PinkFighter"
+    },
+    "0x9E": {
+      "name": "YellowFighter"
+    },
+    "0x9F": {
+      "name": "Blackgarb"
+    },
+    "0xA0": {
+      "name": "Rouge"
+    },
+    "0xA1": {
+      "name": "FireSage"
+    },
+    "0xA2": {
+      "name": "WaterSage"
+    },
+    "0xA3": {
+      "name": "BatKnight"
+    },
+    "0xA4": {
+      "name": "BlackKnight"
+    },
+    "0xA5": {
+      "name": "HunterKnight"
+    },
+    "0xA6": {
+      "name": "DragonLord"
+    },
+    "0xA7": {
+      "name": "Lunatic"
+    },
+    "0xA8": {
+      "name": "Ladyhawk"
+    },
+    "0xA9": {
+      "name": "LionPrincess"
+    },
+    "0xAA": {
+      "name": "Shade"
+    },
+    "0xAB": {
+      "name": "Stand"
+    },
+    "0xAC": {
+      "name": "Stand"
+    },
+    "0xAD": {
+      "name": "Stand"
+    },
+    "0xAE": {
+      "name": "Patient"
+    },
+    "0xAF": {
+      "name": "Patient"
+    },
+    "0xB0": {
+      "name": "Wonderdog"
+    },
+    "0xB1": {
+      "name": "Gargoyle"
+    },
+    "0xB2": {
+      "name": "Snakeman"
+    },
+    "0xB3": {
+      "name": "Fishman"
+    },
+    "0xB4": {
+      "name": "Mystic"
+    },
+    "0xB5": {
+      "name": "Gremlin"
+    },
+    "0xB6": {
+      "name": "FatDevil"
+    },
+    "0xB7": {
+      "name": "WereRhino"
+    },
+    "0xB8": {
+      "name": "Zyphon"
+    },
+    "0xB9": {
+      "name": "Abyssbat"
+    },
+    "0xBA": {
+      "name": "Minotaur"
+    },
+    "0xBB": {
+      "name": "Demongoat"
+    },
+    "0xBC": {
+      "name": "Goblin"
+    },
+    "0xBD": {
+      "name": "Shuzer"
+    },
+    "0xBE": {
+      "name": "SirDemon"
+    },
+    "0xBF": {
+      "name": "Furdo"
+    },
+    "0xC0": {
+      "name": "Sprite"
+    },
+    "0xC1": {
+      "name": "Undine"
+    },
+    "0xC2": {
+      "name": "KittyClawer"
+    },
+    "0xC3": {
+      "name": "Banshee"
+    },
+    "0xC4": {
+      "name": "Mellow"
+    },
+    "0xC5": {
+      "name": "SpearValkyrie"
+    },
+    "0xC6": {
+      "name": "Succubus"
+    },
+    "0xC7": {
+      "name": "Lamia"
+    },
+    "0xC8": {
+      "name": "Siren"
+    },
+    "0xC9": {
+      "name": "Darkfairy"
+    },
+    "0xCA": {
+      "name": "SwordValkyrie"
+    },
+    "0xCB": {
+      "name": "Dancer"
+    },
+    "0xCC": {
+      "name": "Cindy"
+    },
+    "0xCD": {
+      "name": "Titania"
+    },
+    "0xCE": {
+      "name": "KittyKicker"
+    },
+    "0xCF": {
+      "name": "Arachne"
+    },
+    "0xD0": {
+      "name": "SwordMec"
+    },
+    "0xD1": {
+      "name": "MecDobby"
+    },
+    "0xD2": {
+      "name": "WaspMec"
+    },
+    "0xD3": {
+      "name": "CancerMec"
+    },
+    "0xD4": {
+      "name": "BirdMec"
+    },
+    "0xD5": {
+      "name": "Hermes"
+    },
+    "0xD6": {
+      "name": "MecDobby100"
+    },
+    "0xD7": {
+      "name": "Skylab"
+    },
+    "0xD8": {
+      "name": "R&R"
+    },
+    "0xD9": {
+      "name": "BigDigger"
+    },
+    "0xDA": {
+      "name": "D-Tractor"
+    },
+    "0xDB": {
+      "name": "VulcanII"
+    },
+    "0xDC": {
+      "name": "Vulcan"
+    },
+    "0xDD": {
+      "name": "Guncart"
+    },
+    "0xDE": {
+      "name": "FlyMec"
+    },
+    "0xDF": {
+      "name": "A-Tractor"
+    },
+    "0xE0": {
+      "name": "TimeLord"
+    },
+    "0xE1": {
+      "name": "AutoBuffer"
+    },
+    "0xE2": {
+      "name": "MaskBuffer"
+    },
+    "0xE3": {
+      "name": "Tanzer"
+    },
+    "0xE4": {
+      "name": "Tentacle"
+    },
+    "0xE5": {
+      "name": "Tentacle"
+    },
+    "0xE6": {
+      "name": "GreenSage"
+    },
+    "0xE7": {
+      "name": "EarthDragon"
+    },
+    "0xE8": {
+      "name": "Quakeworm"
+    },
+    "0xE9": {
+      "name": "Wormbrood"
+    },
+    "0xEA": {
+      "name": "MegaTitan"
+    },
+    "0xEB": {
+      "name": "CrimeLady"
+    },
+    "0xEC": {
+      "name": "Mollasite"
+    },
+    "0xED": {
+      "name": "Bed"
+    },
+    "0xEE": {
+      "name": "Bed"
+    },
+    "0xEF": {
+      "name": "Mollasite"
+    },
+    "0xF0": {
+      "name": "Virgil"
+    },
+    "0xF1": {
+      "name": "Orlouge"
+    },
+    "0xF2": {
+      "name": "Diva"
+    },
+    "0xF3": {
+      "name": "Diva"
+    },
+    "0xF4": {
+      "name": "DivaAppear"
+    },
+    "0xF5": {
+      "name": "DivaSkull"
+    },
+    "0xF6": {
+      "name": "GenocideHeart"
+    },
+    "0xF7": {
+      "name": "HQcore"
+    },
+    "0xF8": {
+      "name": "T-Walker"
+    },
+    "0xF9": {
+      "name": "Spriggan"
+    },
+    "0xFA": {
+      "name": "Spriggan"
+    },
+    "0xFB": {
+      "name": "Spriggan"
+    },
+    "0xFC": {
+      "name": "Spriggan"
+    },
+    "0xFD": {
+      "name": "Spriggan"
+    },
+    "0xFE": {
+      "name": "Spriggan"
+    },
+    "0xFF": {
+      "name": "NotUse"
+    }
+  },
+  "targets": [
+    {
+      "form": "0x7F",
+      "name": "Mariche",
+      "table": 1,
+      "requires": {
+        "all": [
+          "0x85",
+          "0x86",
+          "0x87",
+          "0x88"
+        ]
+      }
+    },
+    {
+      "form": "0x4B",
+      "name": "GriffinJr",
+      "table": 1,
+      "requires": {
+        "all": [
+          "0x83",
+          "0xA4",
+          "0xA5",
+          "0xB3"
+        ]
+      }
+    },
+    {
+      "form": "0x4C",
+      "name": "KylinJr",
+      "table": 1,
+      "requires": {
+        "all": [
+          "0xD3"
+        ]
+      }
+    },
+    {
+      "form": "0x8B",
+      "name": "Nidheg",
+      "table": 1,
+      "requires": {
+        "all": [
+          "0xFC",
+          "0xFF"
+        ]
+      }
+    },
+    {
+      "form": "0x5F",
+      "name": "Ogre",
+      "table": 1,
+      "requires": {
+        "all": [
+          "0xC5",
+          "0x9D",
+          "0xB0"
+        ]
+      }
+    },
+    {
+      "form": "0x2A",
+      "name": "Platyhooks",
+      "table": 1,
+      "requires": {
+        "all": [
+          "0x83",
+          "0xC8",
+          "0xD0",
+          "0xFD"
+        ]
+      }
+    },
+    {
+      "form": "0x0D",
+      "name": "RABI",
+      "table": 1,
+      "requires": {
+        "all": [
+          "0x80",
+          "0x86",
+          "0x92",
+          "0xAD",
+          "0xE0"
+        ]
+      }
+    },
+    {
+      "form": "0x47",
+      "name": "Sphinx",
+      "table": 1,
+      "requires": {
+        "all": [
+          "0xD2"
+        ]
+      }
+    },
+    {
+      "form": "0x12",
+      "name": "Mandrake",
+      "table": 1,
+      "requires": {
+        "all": [
+          "0x8A",
+          "0x8E",
+          "0xCC",
+          "0xE9",
+          "0xEC"
+        ]
+      }
+    },
+    {
+      "form": "0x1F",
+      "name": "Lummox",
+      "table": 1,
+      "requires": {
+        "all": [
+          "0x93",
+          "0x95",
+          "0xE9"
+        ]
+      }
+    },
+    {
+      "form": "0x8F",
+      "name": "Durahan",
+      "table": 1,
+      "requires": {
+        "all": [
+          "0xA1",
+          "0xA3",
+          "0xB2",
+          "0xED",
+          "0xFF"
+        ]
+      }
+    },
+    {
+      "form": "0x8D",
+      "name": "DeathLord",
+      "table": 1,
+      "requires": {
+        "all": [
+          "0xC0",
+          "0xE1",
+          "0xFF"
+        ]
+      }
+    },
+    {
+      "form": "0x6B",
+      "name": "BigSlime",
+      "table": 1,
+      "requires": {
+        "all": [
+          "0xB9",
+          "0xD4",
+          "0xE4"
+        ]
+      }
+    },
+    {
+      "form": "0x80",
+      "name": "Skeleton",
+      "table": 2,
+      "threshold": 20,
+      "hp_below": 100,
+      "requires": {
+        "body": [
+          "0xFF"
+        ]
+      }
+    },
+    {
+      "form": "0x40",
+      "name": "Pickbird",
+      "table": 2,
+      "threshold": 21,
+      "hp_below": 105,
+      "requires": {
+        "head": [
+          "0x83"
+        ]
+      }
+    },
+    {
+      "form": "0x70",
+      "name": "LivingAxe",
+      "table": 2,
+      "threshold": 22,
+      "hp_below": 110,
+      "requires": {
+        "arm": [
+          "0x8D"
+        ]
+      }
+    },
+    {
+      "form": "0x60",
+      "name": "Xeno",
+      "table": 2,
+      "threshold": 24,
+      "hp_below": 120,
+      "requires": {
+        "head": [
+          "0x80"
+        ]
+      }
+    },
+    {
+      "form": "0x32",
+      "name": "KillerBee",
+      "table": 2,
+      "threshold": 25,
+      "hp_below": 125,
+      "requires": {
+        "leg": [
+          "0xA9",
+          "0xAA"
+        ]
+      }
+    },
+    {
+      "form": "0x21",
+      "name": "Gunfish",
+      "table": 2,
+      "threshold": 50,
+      "hp_below": 250,
+      "requires": {
+        "head": [
+          "0xC8"
+        ]
+      }
+    },
+    {
+      "form": "0x11",
+      "name": "Sporepile",
+      "table": 2,
+      "threshold": 27,
+      "hp_below": 135,
+      "requires": {
+        "body": [
+          "0xB7"
+        ]
+      }
+    },
+    {
+      "form": "0x41",
+      "name": "Rabbat",
+      "table": 2,
+      "threshold": 29,
+      "hp_below": 145,
+      "requires": {
+        "head": [
+          "0x8A"
+        ]
+      }
+    },
+    {
+      "form": "0x81",
+      "name": "Ghost",
+      "table": 2,
+      "threshold": 30,
+      "hp_below": 150,
+      "requires": {
+        "body": [
+          "0xFF"
+        ]
+      }
+    },
+    {
+      "form": "0x20",
+      "name": "Gekko",
+      "table": 2,
+      "threshold": 31,
+      "hp_below": 155,
+      "requires": {
+        "leg": [
+          "0xA2"
+        ]
+      }
+    },
+    {
+      "form": "0x61",
+      "name": "Slime",
+      "table": 2,
+      "threshold": 32,
+      "hp_below": 160,
+      "requires": {
+        "leg": [
+          "0xB9"
+        ]
+      }
+    },
+    {
+      "form": "0x71",
+      "name": "LivingLance",
+      "table": 2,
+      "threshold": 34,
+      "hp_below": 170,
+      "requires": {
+        "arm": [
+          "0xA1"
+        ]
+      }
+    },
+    {
+      "form": "0x30",
+      "name": "Shellworm",
+      "table": 2,
+      "threshold": 35,
+      "hp_below": 175,
+      "requires": {
+        "arm": [
+          "0x90"
+        ]
+      }
+    },
+    {
+      "form": "0x31",
+      "name": "Armorpilla",
+      "table": 2,
+      "threshold": 36,
+      "hp_below": 180,
+      "requires": {
+        "head": [
+          "0x84"
+        ]
+      }
+    },
+    {
+      "form": "0x62",
+      "name": "WhipJelly",
+      "table": 2,
+      "threshold": 37,
+      "hp_below": 185,
+      "requires": {
+        "leg": [
+          "0xA7"
+        ]
+      }
+    },
+    {
+      "form": "0x44",
+      "name": "Axebeak",
+      "table": 2,
+      "threshold": 39,
+      "hp_below": 195,
+      "requires": {
+        "magical": [
+          "0xF0"
+        ]
+      }
+    },
+    {
+      "form": "0x2F",
+      "name": "TrisaurJr",
+      "table": 2,
+      "threshold": 42,
+      "hp_below": 210,
+      "requires": {
+        "breath": [
+          "0xC5",
+          "0xC6"
+        ]
+      }
+    },
+    {
+      "form": "0x62",
+      "name": "WhipJelly",
+      "table": 2,
+      "threshold": 44,
+      "hp_below": 220,
+      "requires": {
+        "arm": [
+          "0x94"
+        ]
+      }
+    },
+    {
+      "form": "0x32",
+      "name": "KillerBee",
+      "table": 2,
+      "threshold": 45,
+      "hp_below": 225,
+      "requires": {
+        "magical": [
+          "0xD8",
+          "0xD9",
+          "0xDA"
+        ]
+      }
+    },
+    {
+      "form": "0x70",
+      "name": "LivingAxe",
+      "table": 2,
+      "threshold": 46,
+      "hp_below": 230,
+      "requires": {
+        "arm": [
+          "0x9B"
+        ]
+      }
+    },
+    {
+      "form": "0x00",
+      "name": "Rocky",
+      "table": 2,
+      "threshold": 47,
+      "hp_below": 235,
+      "requires": {
+        "magical": [
+          "0xEE"
+        ]
+      }
+    },
+    {
+      "form": "0x73",
+      "name": "LivingArmor",
+      "table": 2,
+      "threshold": 49,
+      "hp_below": 245,
+      "requires": {
+        "head": [
+          "0x85",
+          "0x86",
+          "0x87",
+          "0x89"
+        ],
+        "body": [
+          "0xAF",
+          "0xB0",
+          "0xB1",
+          "0xB2"
+        ]
+      }
+    },
+    {
+      "form": "0x13",
+      "name": "Trapvine",
+      "table": 2,
+      "threshold": 49,
+      "hp_below": 245,
+      "requires": {
+        "leg": [
+          "0xA7"
+        ]
+      }
+    },
+    {
+      "form": "0x42",
+      "name": "DragonPup",
+      "table": 2,
+      "threshold": 50,
+      "hp_below": 250,
+      "requires": {
+        "breath": [
+          "0xC1",
+          "0xC2",
+          "0xC3"
+        ]
+      }
+    },
+    {
+      "form": "0x02",
+      "name": "Razorback",
+      "table": 2,
+      "threshold": 51,
+      "hp_below": 255,
+      "requires": {
+        "body": [
+          "0xAF",
+          "0xB0",
+          "0xB1",
+          "0xB2"
+        ]
+      }
+    },
+    {
+      "form": "0x02",
+      "name": "Razorback",
+      "table": 2,
+      "threshold": 51,
+      "hp_below": 255,
+      "requires": {
+        "head": [
+          "0x80",
+          "0x81",
+          "0x82"
+        ]
+      }
+    },
+    {
+      "form": "0x10",
+      "name": "Cactus",
+      "table": 2,
+      "threshold": 52,
+      "hp_below": 260,
+      "requires": {
+        "body": [
+          "0xBA"
+        ]
+      }
+    },
+    {
+      "form": "0x33",
+      "name": "Scorpion",
+      "table": 2,
+      "threshold": 54,
+      "hp_below": 270,
+      "requires": {
+        "arm": [
+          "0x90"
+        ]
+      }
+    },
+    {
+      "form": "0x03",
+      "name": "Aperider",
+      "table": 2,
+      "threshold": 55,
+      "hp_below": 275,
+      "requires": {
+        "head": [
+          "0x89"
+        ]
+      }
+    },
+    {
+      "form": "0x82",
+      "name": "Zombie",
+      "table": 2,
+      "threshold": 56,
+      "hp_below": 280,
+      "requires": {
+        "body": [
+          "0xFF"
+        ]
+      }
+    },
+    {
+      "form": "0x22",
+      "name": "Platoonpus",
+      "table": 2,
+      "threshold": 57,
+      "hp_below": 285,
+      "requires": {
+        "head": [
+          "0x83"
+        ]
+      }
+    },
+    {
+      "form": "0x22",
+      "name": "Platoonpus",
+      "table": 2,
+      "threshold": 57,
+      "hp_below": 285,
+      "requires": {
+        "breath": [
+          "0xC7"
+        ]
+      }
+    },
+    {
+      "form": "0x33",
+      "name": "Scorpion",
+      "table": 2,
+      "threshold": 59,
+      "hp_below": 295,
+      "requires": {
+        "leg": [
+          "0xAA"
+        ]
+      }
+    },
+    {
+      "form": "0x63",
+      "name": "IceCrystal",
+      "table": 2,
+      "threshold": 60,
+      "hp_below": 300,
+      "requires": {
+        "arm": [
+          "0x9F"
+        ]
+      }
+    },
+    {
+      "form": "0x6A",
+      "name": "FireCrystal",
+      "table": 2,
+      "threshold": 60,
+      "hp_below": 300,
+      "requires": {
+        "arm": [
+          "0x9E"
+        ]
+      }
+    },
+    {
+      "form": "0x83",
+      "name": "Ghostrider",
+      "table": 2,
+      "threshold": 61,
+      "hp_below": 305,
+      "requires": {
+        "body": [
+          "0xFF"
+        ],
+        "magical": [
+          "0xEA",
+          "0xEC",
+          "0xED"
+        ]
+      }
+    },
+    {
+      "form": "0x43",
+      "name": "Harpy",
+      "table": 2,
+      "threshold": 62,
+      "hp_below": 310,
+      "requires": {
+        "magical": [
+          "0xEC"
+        ]
+      }
+    },
+    {
+      "form": "0x14",
+      "name": "Nightshade",
+      "table": 2,
+      "threshold": 64,
+      "hp_below": 320,
+      "requires": {
+        "head": [
+          "0x85",
+          "0x86",
+          "0x87",
+          "0x89"
+        ]
+      }
+    },
+    {
+      "form": "0x3D",
+      "name": "Straysheep",
+      "table": 2,
+      "threshold": 65,
+      "hp_below": 325,
+      "requires": {
+        "body": [
+          "0xB0",
+          "0xB2"
+        ],
+        "magical": [
+          "0xEB"
+        ]
+      }
+    },
+    {
+      "form": "0x0C",
+      "name": "MaskCat",
+      "table": 2,
+      "threshold": 66,
+      "hp_below": 330,
+      "requires": {
+        "magical": [
+          "0xEE"
+        ]
+      }
+    },
+    {
+      "form": "0x43",
+      "name": "Harpy",
+      "table": 2,
+      "threshold": 67,
+      "hp_below": 335,
+      "requires": {
+        "body": [
+          "0xB3",
+          "0xB4"
+        ]
+      }
+    },
+    {
+      "form": "0x34",
+      "name": "Battlefly",
+      "table": 2,
+      "threshold": 69,
+      "hp_below": 345,
+      "requires": {
+        "magical": [
+          "0xDC"
+        ]
+      }
+    },
+    {
+      "form": "0x24",
+      "name": "Gaeatoad",
+      "table": 2,
+      "threshold": 70,
+      "hp_below": 350,
+      "requires": {
+        "head": [
+          "0x8B"
+        ]
+      }
+    },
+    {
+      "form": "0x23",
+      "name": "FrillNeck",
+      "table": 2,
+      "threshold": 71,
+      "hp_below": 355,
+      "requires": {
+        "leg": [
+          "0xA2"
+        ]
+      }
+    },
+    {
+      "form": "0x23",
+      "name": "FrillNeck",
+      "table": 2,
+      "threshold": 71,
+      "hp_below": 355,
+      "requires": {
+        "body": [
+          "0xAF",
+          "0xB0",
+          "0xB1",
+          "0xB2"
+        ]
+      }
+    },
+    {
+      "form": "0x24",
+      "name": "Gaeatoad",
+      "table": 2,
+      "threshold": 74,
+      "hp_below": 370,
+      "requires": {
+        "leg": [
+          "0xA3"
+        ]
+      }
+    },
+    {
+      "form": "0xA7",
+      "name": "Lunatic",
+      "table": 2,
+      "threshold": 75,
+      "hp_below": 375,
+      "requires": {
+        "arm": [
+          "0x92"
+        ],
+        "leg": [
+          "0xA5",
+          "0xA6"
+        ],
+        "body": [
+          "0xB3",
+          "0xB4"
+        ]
+      }
+    },
+    {
+      "form": "0x3C",
+      "name": "Sonicbat",
+      "table": 2,
+      "threshold": 77,
+      "hp_below": 385,
+      "requires": {
+        "magical": [
+          "0xEA",
+          "0xEC"
+        ]
+      }
+    },
+    {
+      "form": "0x44",
+      "name": "Axebeak",
+      "table": 2,
+      "threshold": 80,
+      "hp_below": 400,
+      "requires": {
+        "arm": [
+          "0x9D"
+        ]
+      }
+    },
+    {
+      "form": "0x44",
+      "name": "Axebeak",
+      "table": 2,
+      "threshold": 80,
+      "hp_below": 400,
+      "requires": {
+        "head": [
+          "0x83"
+        ]
+      }
+    },
+    {
+      "form": "0x04",
+      "name": "Hellhound",
+      "table": 2,
+      "threshold": 81,
+      "hp_below": 405,
+      "requires": {
+        "breath": [
+          "0xC2",
+          "0xC3"
+        ]
+      }
+    },
+    {
+      "form": "0x6B",
+      "name": "BigSlime",
+      "table": 2,
+      "threshold": 81,
+      "hp_below": 405,
+      "requires": {
+        "body": [
+          "0xB9"
+        ]
+      }
+    },
+    {
+      "form": "0x64",
+      "name": "Unknown",
+      "table": 2,
+      "threshold": 82,
+      "hp_below": 410,
+      "requires": {
+        "head": [
+          "0x85",
+          "0x86",
+          "0x87",
+          "0x89"
+        ]
+      }
+    },
+    {
+      "form": "0x15",
+      "name": "Treant",
+      "table": 2,
+      "threshold": 84,
+      "hp_below": 420,
+      "requires": {
+        "body": [
+          "0xFE"
+        ]
+      }
+    },
+    {
+      "form": "0x05",
+      "name": "Manticore",
+      "table": 2,
+      "threshold": 86,
+      "hp_below": 430,
+      "requires": {
+        "breath": [
+          "0xC9",
+          "0xC7"
+        ]
+      }
+    },
+    {
+      "form": "0x45",
+      "name": "Wyvern",
+      "table": 2,
+      "threshold": 87,
+      "hp_below": 435,
+      "requires": {
+        "head": [
+          "0x80",
+          "0x81"
+        ],
+        "body": [
+          "0xB3",
+          "0xB4"
+        ]
+      }
+    },
+    {
+      "form": "0x85",
+      "name": "Ankheg",
+      "table": 2,
+      "threshold": 89,
+      "hp_below": 445,
+      "requires": {
+        "head": [
+          "0x8A"
+        ],
+        "body": [
+          "0xFF"
+        ]
+      }
+    },
+    {
+      "form": "0x85",
+      "name": "Ankheg",
+      "table": 2,
+      "threshold": 89,
+      "hp_below": 445,
+      "requires": {
+        "head": [
+          "0x80",
+          "0x81",
+          "0x82"
+        ],
+        "body": [
+          "0xFF"
+        ]
+      }
+    },
+    {
+      "form": "0x65",
+      "name": "LiquidMetal",
+      "table": 2,
+      "threshold": 91,
+      "hp_below": 455,
+      "requires": {
+        "arm": [
+          "0x9B",
+          "0x9E",
+          "0x9F"
+        ]
+      }
+    },
+    {
+      "form": "0x2F",
+      "name": "TrisaurJr",
+      "table": 2,
+      "threshold": 92,
+      "hp_below": 460,
+      "requires": {
+        "leg": [
+          "0xA3"
+        ]
+      }
+    },
+    {
+      "form": "0x45",
+      "name": "Wyvern",
+      "table": 2,
+      "threshold": 94,
+      "hp_below": 470,
+      "requires": {
+        "body": [
+          "0xB8"
+        ]
+      }
+    },
+    {
+      "form": "0x45",
+      "name": "Wyvern",
+      "table": 2,
+      "threshold": 94,
+      "hp_below": 470,
+      "requires": {
+        "leg": [
+          "0xAA"
+        ]
+      }
+    },
+    {
+      "form": "0x45",
+      "name": "Wyvern",
+      "table": 2,
+      "threshold": 95,
+      "hp_below": 475,
+      "requires": {
+        "leg": [
+          "0xAA"
+        ]
+      }
+    },
+    {
+      "form": "0x2F",
+      "name": "TrisaurJr",
+      "table": 2,
+      "threshold": 95,
+      "hp_below": 475,
+      "requires": {
+        "magical": [
+          "0xF0",
+          "0xF1",
+          "0xF2"
+        ]
+      }
+    },
+    {
+      "form": "0x2F",
+      "name": "TrisaurJr",
+      "table": 2,
+      "threshold": 95,
+      "hp_below": 475,
+      "requires": {
+        "head": [
+          "0x84",
+          "0x81",
+          "0x82"
+        ],
+        "body": [
+          "0xAF",
+          "0xB0",
+          "0xB1",
+          "0xB2"
+        ]
+      }
+    },
+    {
+      "form": "0x76",
+      "name": "LivingMirror",
+      "table": 2,
+      "threshold": 97,
+      "hp_below": 485,
+      "requires": {
+        "body": [
+          "0xBF"
+        ]
+      }
+    },
+    {
+      "form": "0x17",
+      "name": "Shrieker",
+      "table": 2,
+      "threshold": 99,
+      "hp_below": 495,
+      "requires": {
+        "body": [
+          "0xB7"
+        ],
+        "magical": [
+          "0xEA",
+          "0xF6",
+          "0xF0"
+        ]
+      }
+    },
+    {
+      "form": "0x74",
+      "name": "LivingSword",
+      "table": 2,
+      "threshold": 100,
+      "hp_below": 500,
+      "requires": {
+        "arm": [
+          "0x9B"
+        ]
+      }
+    },
+    {
+      "form": "0x45",
+      "name": "Wyvern",
+      "table": 2,
+      "threshold": 101,
+      "hp_below": 505,
+      "requires": {
+        "magical": [
+          "0xDF"
+        ]
+      }
+    },
+    {
+      "form": "0x29",
+      "name": "PlatyKing",
+      "table": 2,
+      "threshold": 104,
+      "hp_below": 520,
+      "requires": {
+        "breath": [
+          "0xC8",
+          "0xD0"
+        ],
+        "magical": [
+          "0xEE"
+        ]
+      }
+    },
+    {
+      "form": "0x29",
+      "name": "PlatyKing",
+      "table": 2,
+      "threshold": 104,
+      "hp_below": 520,
+      "requires": {
+        "head": [
+          "0x83"
+        ],
+        "magical": [
+          "0xEE"
+        ]
+      }
+    },
+    {
+      "form": "0x2F",
+      "name": "TrisaurJr",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "head": [
+          "0x84",
+          "0x81",
+          "0x82"
+        ],
+        "breath": [
+          "0xCB"
+        ]
+      }
+    },
+    {
+      "form": "0x07",
+      "name": "Butch",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "leg": [
+          "0xAA"
+        ]
+      }
+    },
+    {
+      "form": "0x6C",
+      "name": "RedDragon",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "head": [
+          "0x80",
+          "0x81",
+          "0x84"
+        ],
+        "arm": [
+          "0x9E"
+        ],
+        "leg": [
+          "0xA5",
+          "0xA6"
+        ],
+        "breath": [
+          "0xC2",
+          "0xC3"
+        ]
+      }
+    },
+    {
+      "form": "0x1B",
+      "name": "Thundragon",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "leg": [
+          "0xA9",
+          "0xB3",
+          "0xB4"
+        ],
+        "breath": [
+          "0xC5",
+          "0xC6"
+        ],
+        "magical": [
+          "0xDB"
+        ]
+      }
+    },
+    {
+      "form": "0x6D",
+      "name": "BlackDragon",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "head": [
+          "0x80",
+          "0x81",
+          "0x84"
+        ],
+        "leg": [
+          "0xA5",
+          "0xA6"
+        ],
+        "breath": [
+          "0xCB"
+        ]
+      }
+    },
+    {
+      "form": "0x37",
+      "name": "Iceworm",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "arm": [
+          "0x90",
+          "0x9F"
+        ],
+        "breath": [
+          "0xC4"
+        ]
+      }
+    },
+    {
+      "form": "0x46",
+      "name": "Cockatrice",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "head": [
+          "0x8C"
+        ]
+      }
+    },
+    {
+      "form": "0x07",
+      "name": "Butch",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "arm": [
+          "0x98",
+          "0x99",
+          "0x9A"
+        ],
+        "body": [
+          "0xFF"
+        ],
+        "breath": [
+          "0xD1"
+        ]
+      }
+    },
+    {
+      "form": "0x47",
+      "name": "Sphinx",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "magical": [
+          "0xD2"
+        ]
+      }
+    },
+    {
+      "form": "0x67",
+      "name": "Gelatin",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "body": [
+          "0xBD"
+        ],
+        "breath": [
+          "0xC5",
+          "0xC6"
+        ]
+      }
+    },
+    {
+      "form": "0x5B",
+      "name": "OgreLord",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "arm": [
+          "0x8D",
+          "0x9D",
+          "0xA0"
+        ],
+        "magical": [
+          "0xDB"
+        ]
+      }
+    },
+    {
+      "form": "0x27",
+      "name": "Basilisk",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "head": [
+          "0x87"
+        ],
+        "arm": [
+          "0x97"
+        ]
+      }
+    },
+    {
+      "form": "0x27",
+      "name": "Basilisk",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "head": [
+          "0x87"
+        ],
+        "breath": [
+          "0xCA"
+        ]
+      }
+    },
+    {
+      "form": "0x18",
+      "name": "CrystalTree",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "arm": [
+          "0x9B",
+          "0x9C"
+        ],
+        "breath": [
+          "0xCB"
+        ]
+      }
+    },
+    {
+      "form": "0x4E",
+      "name": "SuzakuJr",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "body": [
+          "0xBB"
+        ]
+      }
+    },
+    {
+      "form": "0x0E",
+      "name": "Chimera",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "breath": [
+          "0xC1"
+        ]
+      }
+    },
+    {
+      "form": "0x78",
+      "name": "RockScout",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "head": [
+          "0x87"
+        ],
+        "arm": [
+          "0x8F",
+          "0x91",
+          "0x9D"
+        ]
+      }
+    },
+    {
+      "form": "0x4A",
+      "name": "UnicornJr",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "magical": [
+          "0xF9"
+        ]
+      }
+    },
+    {
+      "form": "0x4A",
+      "name": "UnicornJr",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "arm": [
+          "0xA2"
+        ],
+        "magical": [
+          "0xE2"
+        ]
+      }
+    },
+    {
+      "form": "0x4A",
+      "name": "UnicornJr",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "head": [
+          "0x84",
+          "0x86"
+        ],
+        "magical": [
+          "0xE2"
+        ]
+      }
+    },
+    {
+      "form": "0x05",
+      "name": "Manticore",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "body": [
+          "0xBA"
+        ]
+      }
+    },
+    {
+      "form": "0x32",
+      "name": "KillerBee",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "arm": [
+          "0xA1"
+        ]
+      }
+    },
+    {
+      "form": "0x17",
+      "name": "Shrieker",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "magical": [
+          "0xEC"
+        ]
+      }
+    },
+    {
+      "form": "0x07",
+      "name": "Butch",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "arm": [
+          "0xCE"
+        ],
+        "magical": [
+          "0xE4"
+        ]
+      }
+    },
+    {
+      "form": "0x26",
+      "name": "Genbu",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "breath": [
+          "0xC4"
+        ],
+        "magical": [
+          "0xE0",
+          "0xF4"
+        ]
+      }
+    },
+    {
+      "form": "0x16",
+      "name": "Sunflower",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "body": [
+          "0xFE"
+        ]
+      }
+    },
+    {
+      "form": "0x8F",
+      "name": "Durahan",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "head": [
+          "0x85",
+          "0x86",
+          "0x87",
+          "0x89"
+        ],
+        "arm": [
+          "0x9B",
+          "0x9E",
+          "0x9F"
+        ],
+        "body": [
+          "0xFF"
+        ]
+      }
+    },
+    {
+      "form": "0x68",
+      "name": "Snowfolk",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "arm": [
+          "0x9F"
+        ],
+        "breath": [
+          "0xC4"
+        ]
+      }
+    },
+    {
+      "form": "0x38",
+      "name": "Zeroworm",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "head": [
+          "0x81",
+          "0x82"
+        ],
+        "arm": [
+          "0x90"
+        ],
+        "breath": [
+          "0xC5",
+          "0xC6"
+        ]
+      }
+    },
+    {
+      "form": "0x0E",
+      "name": "Chimera",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "body": [
+          "0xA3"
+        ]
+      }
+    },
+    {
+      "form": "0x87",
+      "name": "Skullasaurus",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "head": [
+          "0x80",
+          "0x81",
+          "0x82"
+        ],
+        "body": [
+          "0xFF"
+        ]
+      }
+    },
+    {
+      "form": "0x2E",
+      "name": "kraken",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "arm": [
+          "0x94"
+        ],
+        "magical": [
+          "0xE8"
+        ]
+      }
+    },
+    {
+      "form": "0x2E",
+      "name": "kraken",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "body": [
+          "0xAE"
+        ],
+        "magical": [
+          "0xE8"
+        ]
+      }
+    },
+    {
+      "form": "0x2E",
+      "name": "kraken",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "breath": [
+          "0xC7"
+        ],
+        "magical": [
+          "0xE7",
+          "0xE8"
+        ]
+      }
+    },
+    {
+      "form": "0x84",
+      "name": "DeadKnight",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "body": [
+          "0xFF"
+        ]
+      }
+    },
+    {
+      "form": "0x00",
+      "name": "Rocky",
+      "table": 2,
+      "threshold": 199,
+      "hp_below": 995,
+      "requires": {
+        "magical": [
+          "0xEE"
+        ]
+      }
+    }
+  ]
+}

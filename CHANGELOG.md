@@ -2,6 +2,37 @@
 
 All notable changes to the SaGa Frontier Remastered Save Tool.
 
+## [1.0.1] - 2026-10-30
+
+BUILD 2026-10-30.2.
+
+### Inspection
+
+- Monster form panel for Monster characters: the form byte, the form name,
+  base HP, Prime HP at four points per absorbed monster ability, and max HP in
+  the form, plus the guide's transformation check (required abilities or body
+  part, and the HP ceiling). The current form also rides on the Race line of
+  the compact character summary, beside the Mec body TYPE.
+- Riki's starting green Lummox is labeled as inferred from his INIT record; a
+  form the guide never lists as a transformation target says so instead of
+  showing an empty check.
+- Monster form names and transformation rows come from the guide's hex tables
+  in a new tenth runtime table, `docs/monster_forms.json` (256 form ids, 120
+  requirement rows).
+
+### Fixed
+
+- A zero-filled scratch block is no longer read as three Mystic absorbs. Riki's
+  record carries enemy id 0 with no mask or amount, which had produced three
+  bogus `Rocky` rows labelled `unlisted variant`.
+
+### Verification
+
+- Riki is the first fixture control in both saves: form 15, 60 base HP, three
+  absorbed abilities, 12 Prime HP, 72 max HP.
+- 258 fixture, 815 viewer, 333 DOM, 35 platform and 123 publish checks, with an
+  18-file manifest that boots all ten tables.
+
 ## [1.0.0] - 2026-10-30
 
 First public release, BUILD 2026-10-30.1.

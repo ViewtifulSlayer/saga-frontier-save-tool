@@ -1225,6 +1225,24 @@ kbd {
 }
 .mystic-line .mono { color: var(--text); }
 
+/* Monster forms: the form line carries a name, its hex id and, for Riki's
+   initial Lummox, a variant chip. Requirement rows wrap under the heading. */
+.monster-value { display: block; }
+.monster-form .chip { margin-left: 6px; }
+.chip-inferred {
+  color: var(--muted);
+  border-style: dashed;
+}
+.monster-target { margin-top: 10px; }
+.monster-target h5 { margin-top: 0; }
+.monster-line {
+  display: block;
+  margin-top: 3px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.monster-line .mono { color: var(--text); }
+
 .learned-group + .learned-group { margin-top: 6px; }
 
 /* Scenario flags: the label and meaning wrap, the byte and value stay narrow. */

@@ -1,5 +1,5 @@
 # Local research assets - never publish. The public site is the runtime
-# surface only: index.html, app.js, platform.js, styles.css and the nine JSON
+# surface only: index.html, app.js, platform.js, styles.css and the ten JSON
 # tables under docs/.
 docs/gameinfo/
 docs/gamedata/

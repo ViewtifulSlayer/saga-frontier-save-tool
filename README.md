@@ -5,7 +5,7 @@ files.
 Drop `SaveData.bin` or a decrypted JSON mirror into the page and inspect every
 snapshot in the file: party, money, inventory, location, scenario flags, shop
 progress, the full character roster, learned and equipped arts, Mystic absorbs,
-and the four INIT stat sets.
+Monster forms, and the four INIT stat sets.
 
 Nothing is uploaded or edited. All parsing happens in the browser tab, and the
 only download is an optional snapshot copy you export yourself.
@@ -53,6 +53,13 @@ Feature history is in [CHANGELOG.md](CHANGELOG.md).
   in the save, with the absorbed monster, stored boosts and granted art. A
   chip marks a weapon art the record does not know, and INIT or Possession
   variants are labeled from the guide instead of being recomputed.
+- **Monster forms** - for Monster characters, the current form, its base HP,
+  and Prime HP at four points per absorbed monster ability, with the guide's
+  transformation check for that form (required abilities or body part, and the
+  HP ceiling). The compact character summary also names the current form on
+  its Race line, as it does for a Mec body TYPE. Riki's starting green Lummox
+  is labeled as inferred from his INIT record because it is not a
+  transformation target.
 - **Ability tables** - eight ability schools with holder counts, and element
   coverage across the roster.
 - **INIT sets** - all four documented INIT rosters, scored against the save,
@@ -65,7 +72,7 @@ than sideways-scrolling tables.
 
 - The file is read once with `FileReader`, cloned, and parsed locally.
 - No server, no analytics, no upload.
-- The only requests the page makes are the nine local table files under
+- The only requests the page makes are the ten local table files under
   `docs/`.
 - The browser folder watcher stores its directory handle, settings and any
   snapshot copies in local IndexedDB. That store stays on this device and is
@@ -138,6 +145,11 @@ save format.
   here.
 - Names marked `documented` come from community tables and are not verified
   against your file. Names marked `asset` come from the game itself.
+- **Monster form names and transformation rows are documented, not observed.**
+  The form byte, base HP and Prime HP arithmetic are read from your save; the
+  names and requirement rows come from the guide's transformation tables. Riki's
+  green Lummox is inferred from his INIT record and the Monster FAQ because the
+  transformation tables never list a starting form.
 
 ## Verification
 
