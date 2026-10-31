@@ -29,6 +29,11 @@ Feature history is in [CHANGELOG.md](CHANGELOG.md).
   game writes a stable save, remembers the handle for Reconnect after a
   restart, and can keep deduplicated snapshot copies in this browser for
   export. The folder is opened read-only and is never written to.
+- **Opt-in region backdrop** - the header's *Region background* button adds a
+  slow indigo backdrop in the spirit of the region map. It is drawn with CSS
+  gradients, not a texture, so switching it on fetches nothing and ships no
+  game art. Off by default, remembered per browser, and it holds still when the
+  system asks for reduced motion.
 - **Navigation** - a sticky "On this page" index beside the cards, with the
   current section marked as you scroll. On desktop it can drill into a compact
   character summary for the selected roster row, with a Back control; on phones
@@ -90,6 +95,7 @@ than sideways-scrolling tables.
 - No server, no analytics, no upload.
 - The only requests the page makes are the eleven local table files under
   `docs/`.
+- The opt-in region backdrop is pure CSS: it adds no request and no image file.
 - The browser folder watcher stores its directory handle, settings and any
   snapshot copies in local IndexedDB. That store stays on this device and is
   never sent anywhere.

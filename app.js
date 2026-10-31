@@ -66,11 +66,15 @@
   // Bump it whenever app.js, platform.js or a table changes. verify_viewer.js
   // fails if the index.html copies drift from this constant, which is the only
   // silent way a stale page could keep being served.
-  var BUILD = '2026-10-30.5';
+  var BUILD = '2026-10-30.6';
   var SLOT_PAGE_SIZE = 3;
   // Browser-only live-folder preferences. The directory handle itself lives in
   // IndexedDB inside platform.js; this is only the user's chosen behavior.
   var LIVE_SETTINGS_KEY = 'sfr-save-viewer.live-settings.v1';
+  // Opt-in region-travel background. The effect is drawn procedurally in CSS,
+  // not from an extracted texture, so enabling it adds no file to the publish
+  // surface and the "ships no game assets" promise still holds.
+  var REGION_THEME_KEY = 'sfr-save-viewer.region-theme.v1';
   var LIVE_DEFAULT_SETTINGS = {
     watch: true,
     autoReload: true,
@@ -5514,6 +5518,8 @@
       // The filter only changes which rows the pager walks over; the file is
       // untouched and the selection survives the toggle.
       populatedOnly: false,
+      // Read once at startup from localStorage, then only by the toggle.
+      regionTheme: false,
       selected: null,
       selectedCharacter: null,
       slotCache: {},
@@ -6405,6 +6411,57 @@
       return source;
     }
 
+    /* ------------------------------------------------------------------ *
+     * Region-travel background (opt-in)
+     * ------------------------------------------------------------------ */
+
+    function loadRegionTheme() {
+      try {
+        if (!global.localStorage) return false;
+        return global.localStorage.getItem(REGION_THEME_KEY) === 'on';
+      } catch (err) {
+        return false;
+      }
+    }
+
+    function saveRegionTheme(on) {
+      try {
+        if (global.localStorage) {
+          global.localStorage.setItem(REGION_THEME_KEY, on ? 'on' : 'off');
+        }
+      } catch (err) {
+        // Private browsing can refuse storage. The toggle still works for the session.
+      }
+    }
+
+    function applyRegionTheme(on) {
+      var enabled = Boolean(on);
+      state.regionTheme = enabled;
+      // The class lives on <body> so the fixed gradient layers in styles.css can
+      // sit behind every panel without wrapping the whole document in a new node.
+      if (typeof document !== 'undefined' && document.body && document.body.classList) {
+        document.body.classList.toggle('theme-region', enabled);
+      }
+      if (dom.regionToggle) {
+        dom.regionToggle.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+      }
+      return enabled;
+    }
+
+    function initRegionTheme() {
+      return applyRegionTheme(loadRegionTheme());
+    }
+
+    function bindRegionTheme() {
+      initRegionTheme();
+      if (!dom.regionToggle) return;
+      dom.regionToggle.addEventListener('click', function () {
+        var next = !state.regionTheme;
+        applyRegionTheme(next);
+        saveRegionTheme(next);
+      });
+    }
+
     function loadLiveSettings() {
       try {
         if (!global.localStorage) return sanitizeLiveSettings(null);
@@ -6872,6 +6929,7 @@
       }
 
       bindPageIndex();
+      bindRegionTheme();
 
       if (state.constantsError) {
         setStatus(state.constantsError, 'warn');
@@ -6888,7 +6946,9 @@
       handleFile: handleFile,
       selectSlot: selectSlot,
       renderDetail: renderDetail,
-      handleEntityHash: handleEntityHash
+      handleEntityHash: handleEntityHash,
+      initRegionTheme: initRegionTheme,
+      applyRegionTheme: applyRegionTheme
     };
   }
 
@@ -7019,6 +7079,7 @@
         slotPageStatus: document.getElementById('slot-page'),
         detail: document.getElementById('detail'),
         buildStamp: document.getElementById('build-stamp'),
+        regionToggle: document.getElementById('region-toggle'),
         pageIndex: document.getElementById('page-index'),
         pageIndexView: document.getElementById('page-index-view'),
         characterOpen: document.getElementById('character-open'),

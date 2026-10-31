@@ -2494,3 +2494,114 @@ kbd {
     text-transform: uppercase;
   }
 }
+
+/* ==================================================================== *
+ * Region-travel background (opt-in, procedural)
+ * Reproduces the flowing indigo backdrop of the region map without any
+ * extracted texture. Everything below is plain CSS gradients, so the
+ * published file list does not change and no game art is shipped.
+ * Enabled by <body class="theme-region"> from the header toggle.
+ * ==================================================================== */
+
+body.theme-region {
+  --bg: #07081a;
+  --panel: rgba(21, 24, 38, 0.78);
+  --panel-soft: rgba(29, 33, 50, 0.84);
+  --line: rgba(96, 108, 170, 0.34);
+}
+
+/* Two fixed sheets behind the whole document: the broad base drift and a
+   counter-moving highlight pass. Both are scaled past the viewport so the
+   translate never exposes an edge. */
+body.theme-region::before,
+body.theme-region::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  will-change: transform;
+}
+
+body.theme-region::before {
+  background:
+    radial-gradient(42% 48% at 22% 30%, rgba(58, 48, 180, 0.85), rgba(58, 48, 180, 0) 70%),
+    radial-gradient(48% 52% at 76% 24%, rgba(38, 32, 140, 0.8), rgba(38, 32, 140, 0) 72%),
+    radial-gradient(56% 46% at 58% 80%, rgba(24, 22, 104, 0.9), rgba(24, 22, 104, 0) 74%),
+    linear-gradient(158deg, #05061c 0%, #0c0e40 48%, #05061c 100%);
+  animation: region-drift 58s ease-in-out infinite alternate;
+}
+
+body.theme-region::after {
+  background:
+    radial-gradient(30% 34% at 34% 72%, rgba(64, 54, 210, 0.45), rgba(64, 54, 210, 0) 70%),
+    radial-gradient(34% 30% at 66% 42%, rgba(44, 70, 210, 0.35), rgba(44, 70, 210, 0) 72%),
+    radial-gradient(28% 26% at 50% 12%, rgba(30, 26, 120, 0.5), rgba(30, 26, 120, 0) 75%),
+    radial-gradient(120% 90% at 50% 45%, rgba(4, 4, 16, 0) 42%, rgba(4, 4, 16, 0.5) 100%);
+  animation: region-drift-reverse 76s ease-in-out infinite alternate;
+}
+
+@keyframes region-drift {
+  0%   { transform: translate3d(-2%, -1%, 0) scale(1.22); }
+  50%  { transform: translate3d(2%, 2%, 0) scale(1.32); }
+  100% { transform: translate3d(-1%, 3%, 0) scale(1.26); }
+}
+
+@keyframes region-drift-reverse {
+  0%   { transform: translate3d(2%, 1%, 0) scale(1.3); }
+  100% { transform: translate3d(-3%, -2%, 0) scale(1.22); }
+}
+
+/* The backdrop is decoration; honouring the OS setting costs nothing. */
+@media (prefers-reduced-motion: reduce) {
+  body.theme-region::before,
+  body.theme-region::after { animation: none; }
+}
+
+body.theme-region .app-header {
+  background: linear-gradient(180deg, rgba(20, 23, 42, 0.9), rgba(13, 15, 30, 0.86));
+}
+
+/* Sticky table headers occlude scrolling rows, so they stay nearly opaque
+   even while the cards around them are translucent. Otherwise a row sliding
+   underneath ghosts through at the panel alpha and the numbers double up. */
+body.theme-region thead th {
+  background: rgba(19, 22, 36, 0.97);
+}
+
+/* The entity drawer is the other overlay, and on a phone it covers the whole
+   page. Left at the card alpha the roster reads through and the two columns
+   of text interleave, so this one is opaque: there is no page content whose
+   showing through would help. */
+body.theme-region .entity-drawer {
+  background: #111421;
+}
+
+.theme-toggle {
+  font: inherit;
+  font-size: 12px;
+  line-height: 1;
+  padding: 7px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--panel-soft);
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+
+.theme-toggle:hover {
+  color: var(--text);
+  border-color: rgba(110, 168, 254, 0.6);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.theme-toggle[aria-pressed="true"] {
+  color: #e3e9ff;
+  border-color: rgba(110, 168, 254, 0.75);
+  background: rgba(58, 74, 148, 0.45);
+}

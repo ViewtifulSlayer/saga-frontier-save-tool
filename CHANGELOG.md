@@ -2,6 +2,34 @@
 
 All notable changes to the SaGa Frontier Remastered Save Tool.
 
+## [1.2.2] - 2026-10-30
+
+BUILD 2026-10-30.6.
+
+### Appearance
+
+- New opt-in **Region background**: a header toggle adds an indigo backdrop
+  modelled on the region map. It is layered CSS gradients, not the extracted
+  texture, so the publish surface is unchanged at 19 files and the repository
+  still ships no game assets. Off by default, remembered in `localStorage`, and
+  frozen under `prefers-reduced-motion`.
+- While the theme is on, cards and the header are a little more translucent
+  (`--panel` 0.87 to 0.78, `--panel-soft` 0.90 to 0.84) so the drift reads
+  through the page instead of only around it. Dark text stays on dark glass;
+  the change only lets more of the backdrop show. Two overlays stay pinned
+  while the theme is on, because content passes under them: sticky table
+  headers at `rgba(19,22,36,0.97)` so scrolling rows do not ghost the numbers,
+  and the entity drawer at opaque `#111421` so the page behind it cannot read
+  through a full-screen detail view (most visible on phones).
+
+### Verification
+
+- 280 fixture, 961 viewer, 362 DOM, 35 platform and 136 publish checks.
+- Browser pass on `http://127.0.0.1:8771`: the toggle sets `theme-region` on
+  `<body>`, `::before` reports four gradient layers running `region-drift` at
+  `z-index: -1`, panels become `rgba(21,24,38,0.78)`, the choice survives a
+  reload, and the console stays empty.
+
 ## [1.2.1] - 2026-10-30
 
 BUILD 2026-10-30.5.
